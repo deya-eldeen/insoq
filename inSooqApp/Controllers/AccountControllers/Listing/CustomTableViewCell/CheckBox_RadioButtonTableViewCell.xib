@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckBox_RadioButtonTableViewCell" rowHeight="62" id="KGk-i7-Jjw" customClass="CheckBox_RadioButtonTableViewCell" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5B-Tb-CFo">
+                        <rect key="frame" x="15" y="21" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="j5B-Tb-CFo" secondAttribute="height" id="0eT-yY-Lsf"/>
+                            <constraint firstAttribute="width" constant="20" id="J4b-nA-BSf"/>
+                        </constraints>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature your car for 30 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jI-kI-Tvw">
+                        <rect key="frame" x="45" y="22.5" width="182.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYf-X7-1cE">
+                        <rect key="frame" x="240" y="10" width="70" height="42"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTW-HV-pOv">
+                                <rect key="frame" x="8" y="13" width="26" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.3411764706" green="0.27450980390000002" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="159" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-BZ-uQ6">
+                                <rect key="frame" x="39" y="10.5" width="32.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.3411764706" green="0.27450980390000002" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="LLc-du-rV3"/>
+                            <constraint firstItem="YTW-HV-pOv" firstAttribute="centerY" secondItem="WYf-X7-1cE" secondAttribute="centerY" id="ZLI-LW-7dd"/>
+                            <constraint firstItem="YTW-HV-pOv" firstAttribute="leading" secondItem="WYf-X7-1cE" secondAttribute="leading" constant="8" id="asd-wT-X6x"/>
+                            <constraint firstItem="Zeh-BZ-uQ6" firstAttribute="centerY" secondItem="YTW-HV-pOv" secondAttribute="centerY" id="yfi-tP-bKT"/>
+                            <constraint firstItem="Zeh-BZ-uQ6" firstAttribute="leading" secondItem="YTW-HV-pOv" secondAttribute="trailing" constant="5" id="zPV-yP-qDJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="AppBackground"/>
+                <constraints>
+                    <constraint firstItem="3jI-kI-Tvw" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="1Mu-SR-dPQ"/>
+                    <constraint firstItem="3jI-kI-Tvw" firstAttribute="centerY" secondItem="j5B-Tb-CFo" secondAttribute="centerY" id="3A5-Da-xRE"/>
+                    <constraint firstAttribute="trailing" secondItem="WYf-X7-1cE" secondAttribute="trailing" constant="10" id="4o8-uZ-hU1"/>
+                    <constraint firstItem="j5B-Tb-CFo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JSd-3l-Zsq"/>
+                    <constraint firstItem="WYf-X7-1cE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OCR-ec-J0k"/>
+                    <constraint firstAttribute="bottom" secondItem="WYf-X7-1cE" secondAttribute="bottom" constant="10" id="Pux-L9-2PO"/>
+                    <constraint firstItem="j5B-Tb-CFo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RpR-5J-Kdb"/>
+                    <constraint firstItem="WYf-X7-1cE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Scd-ab-uxx"/>
+                    <constraint firstItem="3jI-kI-Tvw" firstAttribute="leading" secondItem="j5B-Tb-CFo" secondAttribute="trailing" constant="10" id="kiz-Gw-akO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="AppBackground"/>
+            <connections>
+                <outlet property="contentView" destination="H2p-sc-9uM" id="COn-19-Dsj"/>
+                <outlet property="price" destination="Zeh-BZ-uQ6" id="DAR-xs-D9r"/>
+                <outlet property="priceView" destination="WYf-X7-1cE" id="pqE-2e-Dx4"/>
+                <outlet property="selectedButton" destination="j5B-Tb-CFo" id="wgM-T1-Hl9"/>
+                <outlet property="title" destination="3jI-kI-Tvw" id="Dyj-RH-BFI"/>
+            </connections>
+            <point key="canvasLocation" x="2.8985507246376816" y="75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBackground">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

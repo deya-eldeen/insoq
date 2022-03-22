@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SubCategoryHeader" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJk-kf-55N">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cZ4-3k-g9m">
+                    <rect key="frame" x="90" y="17.5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cZ4-3k-g9m" secondAttribute="height" multiplier="1:1" id="mP2-55-4Hf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRw-jP-atf">
+                    <rect key="frame" x="145" y="24.5" width="124.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2c-rL-PAY">
+                    <rect key="frame" x="354" y="0.0" width="60" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="c8W-OL-XIP"/>
+                    </constraints>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="bold"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hRw-jP-atf" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="BYA-Of-upe"/>
+                <constraint firstItem="cZ4-3k-g9m" firstAttribute="height" secondItem="JJk-kf-55N" secondAttribute="height" multiplier="0.5" id="H4O-2G-ovQ"/>
+                <constraint firstItem="hRw-jP-atf" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ke3-1y-nIe"/>
+                <constraint firstItem="l2c-rL-PAY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KoT-wK-jEh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="l2c-rL-PAY" secondAttribute="bottom" id="Mgl-ei-XNW"/>
+                <constraint firstItem="l2c-rL-PAY" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="WAH-Ki-NNK"/>
+                <constraint firstItem="hRw-jP-atf" firstAttribute="width" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="Zwo-Ye-SoR"/>
+                <constraint firstItem="hRw-jP-atf" firstAttribute="leading" secondItem="cZ4-3k-g9m" secondAttribute="trailing" constant="20" id="aXR-h7-vVe"/>
+                <constraint firstItem="JJk-kf-55N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iIW-1D-tJQ"/>
+                <constraint firstItem="JJk-kf-55N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mhp-rg-JNF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JJk-kf-55N" secondAttribute="trailing" id="qUa-mS-gb8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l2c-rL-PAY" secondAttribute="trailing" id="tkR-Hb-1u2"/>
+                <constraint firstItem="cZ4-3k-g9m" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="ugr-17-Rya"/>
+                <constraint firstAttribute="bottom" secondItem="JJk-kf-55N" secondAttribute="bottom" id="vTH-L3-oi0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="l2c-rL-PAY" id="EDn-f0-6n5"/>
+                <outlet property="categoryImage" destination="cZ4-3k-g9m" id="aiR-8f-6za"/>
+                <outlet property="categoryname" destination="hRw-jP-atf" id="Hb7-JK-xRk"/>
+                <outlet property="viewToColor" destination="JJk-kf-55N" id="p6Q-Wg-g5X"/>
+            </connections>
+            <point key="canvasLocation" x="131.19999999999999" y="54.872563718140931"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeaveSearchsView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="DvG-td-dEt" id="qXt-5H-FFW"/>
+                <outlet property="cancelButton" destination="G2z-KH-Z9A" id="LhZ-4I-YEI"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="rlF-Cc-ugj"/>
+                <outlet property="titleLabel" destination="aU1-fz-l3R" id="MZa-T4-tgq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2z-KH-Z9A">
+                    <rect key="frame" x="260" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="2gk-8e-ib3"/>
+                        <constraint firstAttribute="width" constant="40" id="Mx9-nW-oU9"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvG-td-dEt">
+                    <rect key="frame" x="105" y="88" width="90" height="32"/>
+                    <color key="backgroundColor" name="labelYelloBackground"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email me when ads match this search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-fz-l3R">
+                    <rect key="frame" x="0.0" y="40" width="300" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="DvG-td-dEt" firstAttribute="top" secondItem="aU1-fz-l3R" secondAttribute="bottom" constant="30" id="GxP-7l-KjT"/>
+                <constraint firstItem="DvG-td-dEt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LE1-K2-scz"/>
+                <constraint firstItem="G2z-KH-Z9A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PWm-CP-JrN"/>
+                <constraint firstAttribute="trailing" secondItem="G2z-KH-Z9A" secondAttribute="trailing" id="XPh-nU-eSb"/>
+                <constraint firstItem="aU1-fz-l3R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a8o-RK-OmQ"/>
+                <constraint firstItem="aU1-fz-l3R" firstAttribute="top" secondItem="G2z-KH-Z9A" secondAttribute="bottom" id="cFJ-m5-7vq"/>
+                <constraint firstItem="DvG-td-dEt" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="eoy-4v-hTB"/>
+                <constraint firstAttribute="trailing" secondItem="aU1-fz-l3R" secondAttribute="trailing" id="rE0-1Y-iuS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="62.276785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="labelYelloBackground">
+            <color red="1" green="0.68999999761581421" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

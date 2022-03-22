@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangePhoneView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="caG-HR-Qwt" id="YUp-b8-aas"/>
+                <outlet property="changePhoneButton" destination="qsx-9W-NLL" id="e9Y-T6-XdD"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="yOy-bW-Nl0"/>
+                <outlet property="countryCodeButton" destination="bGb-Br-HFJ" id="VWQ-bH-pvf"/>
+                <outlet property="phoneTxt" destination="uON-Xz-Z96" id="TUg-MC-2Cr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSm-yR-Dxe">
+                    <rect key="frame" x="5" y="5" width="404" height="280"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIc-KS-YDX">
+                            <rect key="frame" x="98" y="50" width="208" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGb-Br-HFJ">
+                            <rect key="frame" x="60.5" y="85" width="283" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="6YG-mb-HjB"/>
+                            </constraints>
+                            <state key="normal" title="Country Code">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fDV-2O-228">
+                            <rect key="frame" x="323.5" y="102.5" width="15" height="10.5"/>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="VqT-Eb-10d"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uON-Xz-Z96">
+                            <rect key="frame" x="60.5" y="140" width="283" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="YZh-P3-LD0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                    <integer key="value" value="9"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caG-HR-Qwt">
+                            <rect key="frame" x="344" y="10" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="P0e-B3-6eW"/>
+                                <constraint firstAttribute="width" constant="50" id="TWg-97-rTd"/>
+                            </constraints>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="xmark" catalog="system"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsx-9W-NLL">
+                            <rect key="frame" x="60.5" y="205" width="283" height="45"/>
+                            <color key="backgroundColor" name="labelYelloBackground"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="abF-Cv-xyA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="Change Phone">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="changePhone_pressed:" destination="-1" eventType="touchUpInside" id="aZT-eh-eic"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="fDV-2O-228" firstAttribute="centerY" secondItem="bGb-Br-HFJ" secondAttribute="centerY" id="3E9-gv-C1D"/>
+                        <constraint firstAttribute="bottom" secondItem="qsx-9W-NLL" secondAttribute="bottom" constant="30" id="4it-jv-AQa"/>
+                        <constraint firstItem="fDV-2O-228" firstAttribute="trailing" secondItem="bGb-Br-HFJ" secondAttribute="trailing" constant="-5" id="54O-oF-BHB"/>
+                        <constraint firstItem="uON-Xz-Z96" firstAttribute="width" secondItem="DSm-yR-Dxe" secondAttribute="width" multiplier="0.7" id="7m0-V7-2b5"/>
+                        <constraint firstItem="bGb-Br-HFJ" firstAttribute="width" secondItem="DSm-yR-Dxe" secondAttribute="width" multiplier="0.7" id="8a4-6w-ADu"/>
+                        <constraint firstItem="qsx-9W-NLL" firstAttribute="top" secondItem="uON-Xz-Z96" secondAttribute="bottom" constant="20" id="EOr-at-X2f"/>
+                        <constraint firstItem="qsx-9W-NLL" firstAttribute="centerX" secondItem="DSm-yR-Dxe" secondAttribute="centerX" id="KTK-YM-Feb"/>
+                        <constraint firstItem="VIc-KS-YDX" firstAttribute="top" secondItem="caG-HR-Qwt" secondAttribute="bottom" id="L8g-28-HV6"/>
+                        <constraint firstItem="uON-Xz-Z96" firstAttribute="centerX" secondItem="DSm-yR-Dxe" secondAttribute="centerX" id="MIs-Dg-1mm"/>
+                        <constraint firstItem="uON-Xz-Z96" firstAttribute="top" secondItem="bGb-Br-HFJ" secondAttribute="bottom" constant="10" id="YAD-KL-QDv"/>
+                        <constraint firstItem="VIc-KS-YDX" firstAttribute="centerX" secondItem="DSm-yR-Dxe" secondAttribute="centerX" id="hjL-ld-jxf"/>
+                        <constraint firstItem="bGb-Br-HFJ" firstAttribute="centerX" secondItem="DSm-yR-Dxe" secondAttribute="centerX" id="isk-Eb-cVp"/>
+                        <constraint firstItem="qsx-9W-NLL" firstAttribute="width" secondItem="DSm-yR-Dxe" secondAttribute="width" multiplier="0.7" id="rYU-Ll-tL8"/>
+                        <constraint firstItem="caG-HR-Qwt" firstAttribute="top" secondItem="DSm-yR-Dxe" secondAttribute="top" constant="10" id="wIV-QI-gXq"/>
+                        <constraint firstAttribute="trailing" secondItem="caG-HR-Qwt" secondAttribute="trailing" constant="10" id="zOX-Br-h41"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DSm-yR-Dxe" secondAttribute="bottom" constant="5" id="Cmu-dk-r8H"/>
+                <constraint firstItem="DSm-yR-Dxe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="NMf-kc-fyR"/>
+                <constraint firstItem="DSm-yR-Dxe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="dF2-Dy-24N"/>
+                <constraint firstAttribute="trailing" secondItem="DSm-yR-Dxe" secondAttribute="trailing" constant="5" id="eY7-48-q0g"/>
+                <constraint firstItem="DSm-yR-Dxe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="php-ha-dej"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="111.59420289855073" y="60.9375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="labelYelloBackground">
+            <color red="1" green="0.68999999761581421" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

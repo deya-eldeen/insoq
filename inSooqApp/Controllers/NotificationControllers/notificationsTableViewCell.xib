@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationsTableViewCell" rowHeight="108" id="KGk-i7-Jjw" customClass="notificationsTableViewCell" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSI-ev-tYD">
+                        <rect key="frame" x="5" y="5" width="414" height="133"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUn-cc-7w6">
+                                <rect key="frame" x="379" y="5" width="30" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="NkY-ZJ-6Ja"/>
+                                    <constraint firstAttribute="height" constant="40" id="Oea-kB-Maa"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="small"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car4.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="f9u-p5-KfH">
+                                <rect key="frame" x="5" y="6.5" width="119.5" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f9u-p5-KfH" secondAttribute="height" id="fHO-s4-NqH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You recived a new offer on your add &quot;Audi 2020 Full Options&quot;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgK-u5-0Pw">
+                                <rect key="frame" x="134.5" y="6.5" width="229" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 min ago " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1E-bc-Jcb">
+                                <rect key="frame" x="134.5" y="113" width="62" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Updates" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWf-X7-nLm">
+                                <rect key="frame" x="134.5" y="59.5" width="66.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P1E-bc-Jcb" firstAttribute="leading" secondItem="OgK-u5-0Pw" secondAttribute="leading" id="0or-a8-jtf"/>
+                            <constraint firstItem="OgK-u5-0Pw" firstAttribute="leading" secondItem="f9u-p5-KfH" secondAttribute="trailing" constant="10" id="10R-lc-Tjq"/>
+                            <constraint firstItem="f9u-p5-KfH" firstAttribute="leading" secondItem="fSI-ev-tYD" secondAttribute="leading" constant="5" id="18V-JB-EBP"/>
+                            <constraint firstItem="dWf-X7-nLm" firstAttribute="leading" secondItem="OgK-u5-0Pw" secondAttribute="leading" id="5zf-sr-V6W"/>
+                            <constraint firstItem="OgK-u5-0Pw" firstAttribute="top" secondItem="f9u-p5-KfH" secondAttribute="top" id="9RT-uT-UqC"/>
+                            <constraint firstItem="OgK-u5-0Pw" firstAttribute="width" relation="lessThanOrEqual" secondItem="fSI-ev-tYD" secondAttribute="width" multiplier="0.6" id="HfC-iP-nuC"/>
+                            <constraint firstItem="f9u-p5-KfH" firstAttribute="centerY" secondItem="fSI-ev-tYD" secondAttribute="centerY" id="IOP-dg-yD4"/>
+                            <constraint firstItem="P1E-bc-Jcb" firstAttribute="bottom" secondItem="f9u-p5-KfH" secondAttribute="bottom" id="Lgk-7F-XML"/>
+                            <constraint firstAttribute="trailing" secondItem="dUn-cc-7w6" secondAttribute="trailing" constant="5" id="Twm-mC-iHY"/>
+                            <constraint firstItem="OgK-u5-0Pw" firstAttribute="height" relation="lessThanOrEqual" secondItem="fSI-ev-tYD" secondAttribute="height" multiplier="0.7" id="bwB-hS-2QD"/>
+                            <constraint firstItem="dWf-X7-nLm" firstAttribute="centerY" secondItem="fSI-ev-tYD" secondAttribute="centerY" id="hXM-td-UkS"/>
+                            <constraint firstItem="dUn-cc-7w6" firstAttribute="top" secondItem="fSI-ev-tYD" secondAttribute="top" constant="5" id="hxK-bu-YVR"/>
+                            <constraint firstItem="f9u-p5-KfH" firstAttribute="height" secondItem="fSI-ev-tYD" secondAttribute="height" multiplier="0.9" id="vFx-7Q-blJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fSI-ev-tYD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="7jT-BT-6yt"/>
+                    <constraint firstItem="fSI-ev-tYD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Bxe-M1-zN3"/>
+                    <constraint firstAttribute="trailing" secondItem="fSI-ev-tYD" secondAttribute="trailing" constant="5" id="JHx-YL-a3c"/>
+                    <constraint firstAttribute="bottom" secondItem="fSI-ev-tYD" secondAttribute="bottom" constant="5" id="jmh-1P-FXA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="AppBackground"/>
+            <connections>
+                <outlet property="mainView" destination="fSI-ev-tYD" id="COj-y1-tRX"/>
+                <outlet property="notificationImage" destination="f9u-p5-KfH" id="8OK-5N-O2f"/>
+                <outlet property="notificationTime" destination="P1E-bc-Jcb" id="nGc-HC-Zrs"/>
+                <outlet property="notificationTitle" destination="OgK-u5-0Pw" id="8Rf-Co-QHq"/>
+            </connections>
+            <point key="canvasLocation" x="207.24637681159422" y="96.763392857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="car4.jpeg" width="275" height="183"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AppBackground">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

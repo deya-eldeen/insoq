@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridPlatesCollectionViewCell" id="gTV-IL-0wX" customClass="GridPlatesCollectionViewCell" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="223"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="223"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URf-4o-7P6">
+                        <rect key="frame" x="5" y="5" width="240" height="213"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="xgN-sd-Pir">
+                                <rect key="frame" x="8" y="5" width="224" height="102"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plate Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-2C-N4O">
+                                <rect key="frame" x="8" y="112" width="99" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plate Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JA-mH-JXN">
+                                <rect key="frame" x="8" y="136.5" width="83.5" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.70980392160000005" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T0-hz-vtA">
+                                <rect key="frame" x="8" y="161.5" width="59" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted 2 days ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABx-CH-PpU">
+                                <rect key="frame" x="143" y="193" width="89" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUN-8m-yrZ">
+                                <rect key="frame" x="192" y="101.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6sz-2a-oZF"/>
+                                    <constraint firstAttribute="width" secondItem="sUN-8m-yrZ" secondAttribute="height" multiplier="1:1" id="9PX-6G-XIR"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="heart" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="favo_Pressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="iiE-pv-96u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8JA-mH-JXN" firstAttribute="width" relation="lessThanOrEqual" secondItem="URf-4o-7P6" secondAttribute="width" multiplier="0.9" id="0gp-ia-Id1"/>
+                            <constraint firstItem="7T0-hz-vtA" firstAttribute="top" secondItem="8JA-mH-JXN" secondAttribute="bottom" constant="5" id="35U-da-tEY"/>
+                            <constraint firstItem="ABx-CH-PpU" firstAttribute="width" relation="lessThanOrEqual" secondItem="URf-4o-7P6" secondAttribute="width" multiplier="0.9" id="630-VU-nTg"/>
+                            <constraint firstItem="3Nv-2C-N4O" firstAttribute="centerY" secondItem="URf-4o-7P6" secondAttribute="centerY" constant="15" id="76x-70-WOt"/>
+                            <constraint firstItem="xgN-sd-Pir" firstAttribute="top" secondItem="URf-4o-7P6" secondAttribute="top" constant="5" id="Khh-nH-10h"/>
+                            <constraint firstItem="7T0-hz-vtA" firstAttribute="leading" secondItem="8JA-mH-JXN" secondAttribute="leading" id="MBn-t8-gTf"/>
+                            <constraint firstItem="8JA-mH-JXN" firstAttribute="leading" secondItem="3Nv-2C-N4O" secondAttribute="leading" id="NRo-NX-a8g"/>
+                            <constraint firstItem="7T0-hz-vtA" firstAttribute="width" relation="lessThanOrEqual" secondItem="URf-4o-7P6" secondAttribute="width" multiplier="0.9" id="Neo-uA-3ZP"/>
+                            <constraint firstAttribute="trailing" secondItem="xgN-sd-Pir" secondAttribute="trailing" constant="8" id="OSE-9o-V7z"/>
+                            <constraint firstItem="sUN-8m-yrZ" firstAttribute="centerY" secondItem="3Nv-2C-N4O" secondAttribute="centerY" id="YV5-AV-wUC"/>
+                            <constraint firstItem="8JA-mH-JXN" firstAttribute="top" secondItem="3Nv-2C-N4O" secondAttribute="bottom" constant="5" id="Yxh-9V-gyl"/>
+                            <constraint firstItem="xgN-sd-Pir" firstAttribute="leading" secondItem="URf-4o-7P6" secondAttribute="leading" constant="8" id="a9g-27-12r"/>
+                            <constraint firstAttribute="bottom" secondItem="ABx-CH-PpU" secondAttribute="bottom" constant="8" id="cdG-2Z-Ofb"/>
+                            <constraint firstItem="sUN-8m-yrZ" firstAttribute="trailing" secondItem="xgN-sd-Pir" secondAttribute="trailing" id="dew-FW-vmW"/>
+                            <constraint firstItem="3Nv-2C-N4O" firstAttribute="leading" secondItem="xgN-sd-Pir" secondAttribute="leading" id="fLv-Sf-x1h"/>
+                            <constraint firstItem="3Nv-2C-N4O" firstAttribute="top" secondItem="xgN-sd-Pir" secondAttribute="bottom" constant="5" id="gN7-ge-6cj"/>
+                            <constraint firstItem="3Nv-2C-N4O" firstAttribute="width" relation="lessThanOrEqual" secondItem="URf-4o-7P6" secondAttribute="width" multiplier="0.8" id="mJG-ge-iEC"/>
+                            <constraint firstAttribute="trailing" secondItem="ABx-CH-PpU" secondAttribute="trailing" constant="8" id="pI1-oF-Abv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="URf-4o-7P6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="5OL-6t-oey"/>
+                <constraint firstAttribute="bottom" secondItem="URf-4o-7P6" secondAttribute="bottom" constant="5" id="OL7-b7-PvE"/>
+                <constraint firstItem="URf-4o-7P6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="tl2-v3-x5j"/>
+                <constraint firstAttribute="trailing" secondItem="URf-4o-7P6" secondAttribute="trailing" constant="5" id="u9e-bs-1Y5"/>
+            </constraints>
+            <size key="customSize" width="250" height="223"/>
+            <connections>
+                <outlet property="datelbl" destination="ABx-CH-PpU" id="MEp-RD-kwc"/>
+                <outlet property="favoriteButton" destination="sUN-8m-yrZ" id="ux4-2u-0ok"/>
+                <outlet property="mainView" destination="URf-4o-7P6" id="4wR-g9-z8d"/>
+                <outlet property="plateImage" destination="xgN-sd-Pir" id="iic-ks-ii7"/>
+                <outlet property="plateLocationLabel" destination="7T0-hz-vtA" id="qHT-6Z-d5x"/>
+                <outlet property="plateNumberLabel" destination="3Nv-2C-N4O" id="ytq-ua-q2s"/>
+                <outlet property="platePriceLabel" destination="8JA-mH-JXN" id="EiU-ae-Jtd"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="48.549107142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Plate.png" width="326" height="90"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

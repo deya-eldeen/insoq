@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SellerInfoView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="gsn-bF-ku0" id="nDc-JQ-k0r"/>
+                <outlet property="memberSince" destination="OJI-KD-NIJ" id="sLV-vK-77B"/>
+                <outlet property="userImage" destination="ikX-0p-k12" id="lan-BP-DHq"/>
+                <outlet property="userName" destination="wFe-aj-Snp" id="MnH-q7-2xU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1d-sm-ebJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsn-bF-ku0">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gmail_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ikX-0p-k12">
+                                    <rect key="frame" x="171" y="10" width="72" height="72"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="ikX-0p-k12" secondAttribute="height" id="KWC-WP-aTB"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFe-aj-Snp">
+                                    <rect key="frame" x="170" y="87" width="74" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="textColor" red="0.3411764706" green="0.27450980390000002" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Since April 04, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-KD-NIJ">
+                                    <rect key="frame" x="131.5" y="109" width="151.5" height="13.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="CpM-eg-kC7">
+                                    <rect key="frame" x="0.0" y="179.5" width="414" height="0.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="0.5" id="CRP-Sp-DPk"/>
+                                    </constraints>
+                                    <color key="progressTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="OJI-KD-NIJ" firstAttribute="top" secondItem="wFe-aj-Snp" secondAttribute="bottom" constant="5" id="Rjb-Gl-xV9"/>
+                                <constraint firstItem="ikX-0p-k12" firstAttribute="centerX" secondItem="gsn-bF-ku0" secondAttribute="centerX" id="W1i-aY-emx"/>
+                                <constraint firstItem="wFe-aj-Snp" firstAttribute="centerX" secondItem="ikX-0p-k12" secondAttribute="centerX" id="bgh-Oo-ktp"/>
+                                <constraint firstItem="ikX-0p-k12" firstAttribute="top" secondItem="gsn-bF-ku0" secondAttribute="top" constant="10" id="ecu-Bh-4x9"/>
+                                <constraint firstAttribute="trailing" secondItem="CpM-eg-kC7" secondAttribute="trailing" id="gWs-8F-d5m"/>
+                                <constraint firstItem="OJI-KD-NIJ" firstAttribute="centerX" secondItem="wFe-aj-Snp" secondAttribute="centerX" id="j4h-4m-gGI"/>
+                                <constraint firstItem="ikX-0p-k12" firstAttribute="height" secondItem="gsn-bF-ku0" secondAttribute="height" multiplier="0.4" id="mtx-6g-yKZ"/>
+                                <constraint firstAttribute="bottom" secondItem="CpM-eg-kC7" secondAttribute="bottom" id="nzW-PK-pHG"/>
+                                <constraint firstItem="CpM-eg-kC7" firstAttribute="leading" secondItem="gsn-bF-ku0" secondAttribute="leading" id="vw1-th-mwV"/>
+                                <constraint firstItem="wFe-aj-Snp" firstAttribute="top" secondItem="ikX-0p-k12" secondAttribute="bottom" constant="5" id="yvc-Wl-63y"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="gsn-bF-ku0" firstAttribute="leading" secondItem="h1d-sm-ebJ" secondAttribute="leading" id="4dh-Hm-bIQ"/>
+                        <constraint firstAttribute="trailing" secondItem="gsn-bF-ku0" secondAttribute="trailing" id="S5Y-HU-WsP"/>
+                        <constraint firstAttribute="bottom" secondItem="gsn-bF-ku0" secondAttribute="bottom" id="XPj-Hy-mRZ"/>
+                        <constraint firstItem="gsn-bF-ku0" firstAttribute="top" secondItem="h1d-sm-ebJ" secondAttribute="top" id="lCe-p2-km5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="h1d-sm-ebJ" secondAttribute="bottom" id="IXK-Yv-Y8n"/>
+                <constraint firstItem="h1d-sm-ebJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kwn-h3-Kr6"/>
+                <constraint firstAttribute="trailing" secondItem="h1d-sm-ebJ" secondAttribute="trailing" id="VUP-zq-haM"/>
+                <constraint firstItem="h1d-sm-ebJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iAU-9m-4xC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="57.971014492753625" y="30.133928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gmail_icon" width="26.5" height="29"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

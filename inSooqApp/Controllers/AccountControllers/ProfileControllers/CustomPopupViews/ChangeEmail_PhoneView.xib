@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeEmail_PhoneView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="XT1-jR-ZBV" id="HkD-LA-QG0"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="XGj-I3-Qww"/>
+                <outlet property="phoneTxt" destination="eMA-bC-LCF" id="IPg-7k-goI"/>
+                <outlet property="sendCodeButton" destination="6Ns-jQ-tce" id="sXG-Fv-enk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="330"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-gp-cWN">
+                    <rect key="frame" x="5" y="5" width="401" height="320"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ee-fS-yx7">
+                            <rect key="frame" x="99.5" y="50" width="202" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-jR-ZBV">
+                            <rect key="frame" x="341" y="10" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="1k4-T0-Ywa"/>
+                                <constraint firstAttribute="height" constant="40" id="L2R-TD-hDf"/>
+                            </constraints>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="xmark" catalog="system"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will send you a verification code to your registered mobile number." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-d4-z6C">
+                            <rect key="frame" x="60" y="93" width="281" height="38.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMA-bC-LCF">
+                            <rect key="frame" x="60" y="181.5" width="281" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                            <color key="textColor" name="labelYelloBackground"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf0-rs-0iv">
+                            <rect key="frame" x="60" y="148.5" width="130" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ns-jQ-tce">
+                            <rect key="frame" x="60" y="250" width="281" height="45"/>
+                            <color key="backgroundColor" name="labelYelloBackground"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="VA6-Rd-Olq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="Send verification code">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="22.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="1YQ-d4-z6C" firstAttribute="centerX" secondItem="ZMU-gp-cWN" secondAttribute="centerX" id="0KI-9Z-yv2"/>
+                        <constraint firstItem="9ee-fS-yx7" firstAttribute="centerX" secondItem="ZMU-gp-cWN" secondAttribute="centerX" id="2JT-aB-BNd"/>
+                        <constraint firstItem="eMA-bC-LCF" firstAttribute="top" secondItem="Wf0-rs-0iv" secondAttribute="bottom" constant="10" id="3bh-Tv-Tpe"/>
+                        <constraint firstItem="1YQ-d4-z6C" firstAttribute="top" secondItem="9ee-fS-yx7" secondAttribute="bottom" constant="20" id="AmK-4V-Rsm"/>
+                        <constraint firstAttribute="trailing" secondItem="XT1-jR-ZBV" secondAttribute="trailing" constant="10" id="OET-g4-31a"/>
+                        <constraint firstItem="eMA-bC-LCF" firstAttribute="centerX" secondItem="ZMU-gp-cWN" secondAttribute="centerX" id="QlI-24-dt5"/>
+                        <constraint firstItem="Wf0-rs-0iv" firstAttribute="centerY" secondItem="ZMU-gp-cWN" secondAttribute="centerY" id="ZWT-zu-VB1"/>
+                        <constraint firstItem="1YQ-d4-z6C" firstAttribute="width" secondItem="ZMU-gp-cWN" secondAttribute="width" multiplier="0.7" id="ZWo-VF-Oqe"/>
+                        <constraint firstItem="6Ns-jQ-tce" firstAttribute="width" secondItem="ZMU-gp-cWN" secondAttribute="width" multiplier="0.700748" id="hEw-ED-iQG"/>
+                        <constraint firstItem="9ee-fS-yx7" firstAttribute="top" secondItem="XT1-jR-ZBV" secondAttribute="bottom" id="j1l-8Q-fsv"/>
+                        <constraint firstItem="XT1-jR-ZBV" firstAttribute="top" secondItem="ZMU-gp-cWN" secondAttribute="top" constant="10" id="jip-4Y-ypa"/>
+                        <constraint firstItem="Wf0-rs-0iv" firstAttribute="leading" secondItem="eMA-bC-LCF" secondAttribute="leading" id="lge-T1-XY3"/>
+                        <constraint firstItem="6Ns-jQ-tce" firstAttribute="centerX" secondItem="ZMU-gp-cWN" secondAttribute="centerX" id="p4z-Q4-JDb"/>
+                        <constraint firstAttribute="bottom" secondItem="6Ns-jQ-tce" secondAttribute="bottom" constant="25" id="rfm-XZ-Xtp"/>
+                        <constraint firstItem="eMA-bC-LCF" firstAttribute="width" secondItem="ZMU-gp-cWN" secondAttribute="width" multiplier="0.7" id="uW0-xA-oaN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZMU-gp-cWN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="NcH-Gc-dVU"/>
+                <constraint firstItem="ZMU-gp-cWN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="eJc-g6-sGk"/>
+                <constraint firstItem="ZMU-gp-cWN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="qSc-Ba-yeA"/>
+                <constraint firstAttribute="bottom" secondItem="ZMU-gp-cWN" secondAttribute="bottom" constant="5" id="yf5-zM-hLp"/>
+                <constraint firstAttribute="trailing" secondItem="ZMU-gp-cWN" secondAttribute="trailing" constant="5" id="zAe-on-Iho"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29.710144927536234" y="58.928571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="labelYelloBackground">
+            <color red="1" green="0.68999999761581421" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

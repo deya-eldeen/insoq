@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LanguageView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="zbp-gw-7fq" id="zPL-lc-kgb"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ktT-N7-JdK"/>
+                <outlet property="languagesTableView" destination="j2s-yg-MaC" id="Ugn-X2-nU1"/>
+                <outlet property="setLanguage_Button" destination="Sfc-3u-sUH" id="cLJ-Ub-yqS"/>
+                <outlet property="viewTitle" destination="RP7-mf-JUT" id="x8u-dU-aLK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j2s-yg-MaC">
+                    <rect key="frame" x="5" y="50" width="404" height="185"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfc-3u-sUH">
+                    <rect key="frame" x="62" y="250" width="290" height="35"/>
+                    <color key="backgroundColor" name="labelYelloBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="XwG-fU-2dR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Oki">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP7-mf-JUT">
+                    <rect key="frame" x="62" y="15" width="290" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbp-gw-7fq">
+                    <rect key="frame" x="374" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="5fQ-8J-G7Y"/>
+                        <constraint firstAttribute="height" constant="40" id="R3w-hV-aGz"/>
+                    </constraints>
+                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="AppBackground"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="j2s-yg-MaC" secondAttribute="trailing" constant="5" id="62M-mC-u4l"/>
+                <constraint firstItem="RP7-mf-JUT" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.7" id="ByX-Kk-m5D"/>
+                <constraint firstItem="Sfc-3u-sUH" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.7" id="MLX-xh-9bc"/>
+                <constraint firstItem="j2s-yg-MaC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="QUr-6g-Kwg"/>
+                <constraint firstItem="RP7-mf-JUT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b4L-df-BZp"/>
+                <constraint firstAttribute="trailing" secondItem="zbp-gw-7fq" secondAttribute="trailing" id="fje-2a-Loi"/>
+                <constraint firstItem="Sfc-3u-sUH" firstAttribute="top" secondItem="j2s-yg-MaC" secondAttribute="bottom" constant="15" id="kXu-eV-35C"/>
+                <constraint firstAttribute="bottom" secondItem="Sfc-3u-sUH" secondAttribute="bottom" constant="15" id="lm2-tn-AKb"/>
+                <constraint firstItem="RP7-mf-JUT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="o8p-4c-slh"/>
+                <constraint firstItem="Sfc-3u-sUH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oy3-fb-lbt"/>
+                <constraint firstItem="zbp-gw-7fq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rAP-Z7-LDp"/>
+                <constraint firstItem="j2s-yg-MaC" firstAttribute="top" secondItem="zbp-gw-7fq" secondAttribute="bottom" constant="10" id="v7n-XL-teF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="57.971014492753625" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AppBackground">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="labelYelloBackground">
+            <color red="1" green="0.68999999761581421" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

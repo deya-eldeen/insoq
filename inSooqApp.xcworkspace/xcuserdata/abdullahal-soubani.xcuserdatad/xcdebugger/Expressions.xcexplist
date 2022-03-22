@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Add_CategoryViewController.setDesign():Add_CategoryViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "modelOfCategory">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Add_TitleViewController.getCarModelByMaker(maker:):Add_TitleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.modelCarModel">
+            </PersistentString>
+            <PersistentString
+               value = "response.compactMap {$0.enText}">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Add_TitleViewController.nextButtonDidTabbed(_:):Add_TitleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "param">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in Add_TitleViewController.usedCarsSetupAdapter():Add_TitleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "modelCarModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

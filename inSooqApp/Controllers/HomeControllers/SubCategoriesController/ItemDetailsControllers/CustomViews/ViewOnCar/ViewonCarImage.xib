@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewonCarImage" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="carImage" destination="ey9-x9-cj0" id="tqK-IP-k8Y"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="YJE-Cn-4h2"/>
+                <outlet property="plateImage" destination="pBP-AB-kYT" id="hiv-SJ-Vc9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="279"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merc.png" translatesAutoresizingMaskIntoConstraints="NO" id="ey9-x9-cj0">
+                    <rect key="frame" x="5" y="5" width="340" height="269"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="pBP-AB-kYT">
+                    <rect key="frame" x="107" y="203.5" width="136" height="28"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="pBP-AB-kYT" firstAttribute="width" secondItem="ey9-x9-cj0" secondAttribute="width" multiplier="0.4" id="CwE-sW-P4T"/>
+                <constraint firstAttribute="bottom" secondItem="ey9-x9-cj0" secondAttribute="bottom" constant="5" id="D2m-JR-0MK"/>
+                <constraint firstItem="ey9-x9-cj0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="Ggb-zX-lFD"/>
+                <constraint firstItem="pBP-AB-kYT" firstAttribute="height" secondItem="ey9-x9-cj0" secondAttribute="height" multiplier="0.103448" id="Lf1-0L-bEL"/>
+                <constraint firstItem="pBP-AB-kYT" firstAttribute="centerY" secondItem="ey9-x9-cj0" secondAttribute="centerY" constant="78" id="Qke-YS-4Vn"/>
+                <constraint firstAttribute="trailing" secondItem="ey9-x9-cj0" secondAttribute="trailing" constant="5" id="ZoF-Nz-OTm"/>
+                <constraint firstItem="pBP-AB-kYT" firstAttribute="centerX" secondItem="ey9-x9-cj0" secondAttribute="centerX" id="lW4-0K-N8r"/>
+                <constraint firstItem="ey9-x9-cj0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="m7w-h4-xfn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="168.11594202898553" y="58.59375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Plate.png" width="326" height="90"/>
+        <image name="merc.png" width="480" height="480"/>
+    </resources>
+</document>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewSummeryInfoOfItem" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="imgFavorite" destination="VKt-Xk-dFb" id="M4U-gn-sES"/>
+                <outlet property="imgVItem" destination="EGL-lI-qAR" id="0NI-wG-D3h"/>
+                <outlet property="lblCarYear" destination="aL2-9u-hcG" id="tdW-AD-E0P"/>
+                <outlet property="lblLocation" destination="7Co-ES-fer" id="Njt-1r-VN5"/>
+                <outlet property="lblMileage" destination="elx-AR-ar8" id="DPN-t6-G7t"/>
+                <outlet property="lblName" destination="FKA-g9-S9R" id="BMY-w8-YCr"/>
+                <outlet property="lblPrice" destination="WdV-oD-4yS" id="8aW-R4-3dK"/>
+                <outlet property="lblTimeDays" destination="mOL-45-7As" id="0QA-m6-PVQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="533" height="181"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ASKPlateNo.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="EGL-lI-qAR">
+                    <rect key="frame" x="16" y="16" width="203" height="149"/>
+                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Dd5-BH-yfS">
+                    <rect key="frame" x="235" y="16" width="257" height="68"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKA-g9-S9R">
+                            <rect key="frame" x="0.0" y="0.0" width="257" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Co-ES-fer">
+                            <rect key="frame" x="0.0" y="24" width="87.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="38f-G1-dIl">
+                            <rect key="frame" x="0.0" y="48" width="152.5" height="20"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wc3-kO-uYs">
+                                    <rect key="frame" x="0.0" y="0.0" width="81" height="20"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_mileage" translatesAutoresizingMaskIntoConstraints="NO" id="6fY-Js-HOa">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="BlS-ja-Atb"/>
+                                                <constraint firstAttribute="width" secondItem="6fY-Js-HOa" secondAttribute="height" multiplier="1:1" id="iFE-4H-MNg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx,xxx KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elx-AR-ar8">
+                                            <rect key="frame" x="28" y="3.5" width="53" height="13.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-op-ZLy">
+                                    <rect key="frame" x="101" y="0.0" width="51.5" height="20"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_year" translatesAutoresizingMaskIntoConstraints="NO" id="gUF-cM-GX4">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="ctT-Gr-gg8"/>
+                                                <constraint firstAttribute="width" secondItem="gUF-cM-GX4" secondAttribute="height" multiplier="1:1" id="wcB-SK-qYm"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL2-9u-hcG">
+                                            <rect key="frame" x="28" y="3.5" width="23.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="FKA-g9-S9R" firstAttribute="width" secondItem="Dd5-BH-yfS" secondAttribute="width" id="t2a-Es-8F2"/>
+                    </constraints>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite_tab" translatesAutoresizingMaskIntoConstraints="NO" id="VKt-Xk-dFb">
+                    <rect key="frame" x="497" y="16" width="20" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="1Ed-uq-DDB"/>
+                        <constraint firstAttribute="width" secondItem="VKt-Xk-dFb" secondAttribute="height" multiplier="1:1" id="PDG-9B-wFw"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alP-KT-4MF">
+                    <rect key="frame" x="492" y="11" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                    <connections>
+                        <action selector="favoriteAction:" destination="-1" eventType="touchUpInside" id="0pr-QN-4sz"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED xxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdV-oD-4yS">
+                    <rect key="frame" x="235" y="150.5" width="56.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" name="labelOrange"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 day ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOL-45-7As">
+                    <rect key="frame" x="461.5" y="150.5" width="55.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EGL-lI-qAR" secondAttribute="bottom" constant="16" id="3UI-bG-Fyb"/>
+                <constraint firstItem="mOL-45-7As" firstAttribute="centerY" secondItem="WdV-oD-4yS" secondAttribute="centerY" id="6QY-MH-byK"/>
+                <constraint firstItem="Dd5-BH-yfS" firstAttribute="top" secondItem="EGL-lI-qAR" secondAttribute="top" id="CRy-8Z-sZp"/>
+                <constraint firstItem="Dd5-BH-yfS" firstAttribute="leading" secondItem="EGL-lI-qAR" secondAttribute="trailing" constant="16" id="EU4-xs-JRF"/>
+                <constraint firstItem="EGL-lI-qAR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="LcT-1a-tyc"/>
+                <constraint firstItem="alP-KT-4MF" firstAttribute="leading" secondItem="Dd5-BH-yfS" secondAttribute="trailing" id="Q06-XA-GTk"/>
+                <constraint firstItem="alP-KT-4MF" firstAttribute="centerX" secondItem="VKt-Xk-dFb" secondAttribute="centerX" id="RJb-U5-CS2"/>
+                <constraint firstItem="alP-KT-4MF" firstAttribute="width" secondItem="VKt-Xk-dFb" secondAttribute="width" multiplier="1.5" id="UGI-kj-BkP"/>
+                <constraint firstItem="alP-KT-4MF" firstAttribute="centerY" secondItem="VKt-Xk-dFb" secondAttribute="centerY" id="W8D-9d-BgN"/>
+                <constraint firstItem="EGL-lI-qAR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.380863" id="aid-fu-Ra0"/>
+                <constraint firstItem="EGL-lI-qAR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="bTY-Tj-qB9"/>
+                <constraint firstItem="VKt-Xk-dFb" firstAttribute="top" secondItem="EGL-lI-qAR" secondAttribute="top" id="eWm-KS-AFA"/>
+                <constraint firstItem="mOL-45-7As" firstAttribute="trailing" secondItem="VKt-Xk-dFb" secondAttribute="trailing" id="fJX-Gl-0KH"/>
+                <constraint firstItem="alP-KT-4MF" firstAttribute="height" secondItem="VKt-Xk-dFb" secondAttribute="height" multiplier="1.5" id="kAX-IR-vjf"/>
+                <constraint firstAttribute="bottom" secondItem="WdV-oD-4yS" secondAttribute="bottom" constant="16" id="rg1-7i-JJq"/>
+                <constraint firstAttribute="trailing" secondItem="VKt-Xk-dFb" secondAttribute="trailing" constant="16" id="sTo-jk-ZCh"/>
+                <constraint firstItem="WdV-oD-4yS" firstAttribute="leading" secondItem="Dd5-BH-yfS" secondAttribute="leading" id="wqv-MB-IYV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="218.11594202898553" y="-159.04017857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ASKPlateNo.jpeg" width="620" height="350"/>
+        <image name="car_mileage" width="34" height="30"/>
+        <image name="car_year" width="27" height="31"/>
+        <image name="favorite_tab" width="15" height="13.5"/>
+        <namedColor name="labelOrange">
+            <color red="1" green="0.54100000858306885" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SortView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Gph-hG-q75" id="kP4-at-Pmq"/>
+                <outlet property="sortButton" destination="DZX-gR-0fY" id="iyR-eS-r97"/>
+                <outlet property="sortTableView" destination="MgA-6e-zxQ" id="z6e-py-5FC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Gph-hG-q75">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKv-Xt-mL4">
+                    <rect key="frame" x="173.5" y="15" width="67.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MgA-6e-zxQ">
+                    <rect key="frame" x="10" y="46" width="394" height="399"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" name="AppBackground"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZX-gR-0fY">
+                    <rect key="frame" x="41.5" y="455" width="331" height="30"/>
+                    <color key="backgroundColor" name="labelYelloBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="wo6-96-4RH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Sort">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="AppBackground"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DZX-gR-0fY" secondAttribute="bottom" constant="15" id="3C3-oC-8ru"/>
+                <constraint firstItem="gKv-Xt-mL4" firstAttribute="top" secondItem="Gph-hG-q75" secondAttribute="top" constant="15" id="Mce-na-EzZ"/>
+                <constraint firstItem="MgA-6e-zxQ" firstAttribute="top" secondItem="gKv-Xt-mL4" secondAttribute="bottom" constant="10" id="NJG-rL-nZN"/>
+                <constraint firstItem="DZX-gR-0fY" firstAttribute="top" secondItem="MgA-6e-zxQ" secondAttribute="bottom" constant="10" id="OGA-uw-enl"/>
+                <constraint firstAttribute="trailing" secondItem="MgA-6e-zxQ" secondAttribute="trailing" constant="10" id="cIm-9A-kJ5"/>
+                <constraint firstItem="gKv-Xt-mL4" firstAttribute="centerX" secondItem="Gph-hG-q75" secondAttribute="centerX" id="okC-24-TX8"/>
+                <constraint firstItem="DZX-gR-0fY" firstAttribute="width" secondItem="Gph-hG-q75" secondAttribute="width" multiplier="0.8" id="pAv-D8-MTl"/>
+                <constraint firstItem="DZX-gR-0fY" firstAttribute="centerX" secondItem="Gph-hG-q75" secondAttribute="centerX" id="rra-er-ubm"/>
+                <constraint firstItem="MgA-6e-zxQ" firstAttribute="leading" secondItem="Gph-hG-q75" secondAttribute="leading" constant="10" id="vrV-tN-Nt4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="26" y="56"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppBackground">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="labelYelloBackground">
+            <color red="1" green="0.68999999761581421" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumbersView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="8kl-9P-JaR"/>
+                <outlet property="plateLocationLabel" destination="SXn-JK-f9Q" id="T0e-rC-Zf0"/>
+                <outlet property="plateNumberLabel" destination="go3-Rs-VIg" id="SfQ-Id-w2a"/>
+                <outlet property="plateOrgineLabel" destination="BsO-kt-IVG" id="W1I-Id-cSS"/>
+                <outlet property="platePriceLabel" destination="ZDL-TG-lDF" id="Zt7-31-8IZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plate Orgine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-kt-IVG">
+                    <rect key="frame" x="8" y="8" width="90.5" height="25"/>
+                    <color key="backgroundColor" red="1" green="0.70980392160000005" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="g7F-mS-Nmr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plate Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go3-Rs-VIg">
+                    <rect key="frame" x="8" y="43" width="106" height="19.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plate Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-TG-lDF">
+                    <rect key="frame" x="8" y="115" width="83.5" height="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <color key="textColor" red="1" green="0.70980392160000005" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXn-JK-f9Q">
+                    <rect key="frame" x="8" y="72.5" width="59" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="go3-Rs-VIg" firstAttribute="leading" secondItem="BsO-kt-IVG" secondAttribute="leading" id="BJ0-v3-zYZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZDL-TG-lDF" secondAttribute="bottom" constant="15" id="Bt1-X0-GV4"/>
+                <constraint firstItem="SXn-JK-f9Q" firstAttribute="top" secondItem="go3-Rs-VIg" secondAttribute="bottom" constant="10" id="NyL-X6-989"/>
+                <constraint firstItem="BsO-kt-IVG" firstAttribute="width" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="TdG-iF-7Dd"/>
+                <constraint firstItem="ZDL-TG-lDF" firstAttribute="leading" secondItem="BsO-kt-IVG" secondAttribute="leading" id="Z39-My-t0S"/>
+                <constraint firstItem="ZDL-TG-lDF" firstAttribute="width" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="bpg-Qn-aUJ"/>
+                <constraint firstItem="go3-Rs-VIg" firstAttribute="top" secondItem="BsO-kt-IVG" secondAttribute="bottom" constant="10" id="c0x-Vu-Sms"/>
+                <constraint firstItem="BsO-kt-IVG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="hgv-cu-4Ew"/>
+                <constraint firstItem="SXn-JK-f9Q" firstAttribute="leading" secondItem="go3-Rs-VIg" secondAttribute="leading" id="l7c-oQ-SPz"/>
+                <constraint firstItem="BsO-kt-IVG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="pbB-6K-7sB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132.80000000000001" y="25.187406296851577"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

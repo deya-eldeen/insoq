@@ -1,0 +1,8 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://MOHANNAD_RAMADAN@bitbucket.org/mohannad_ramadan/insouq.git

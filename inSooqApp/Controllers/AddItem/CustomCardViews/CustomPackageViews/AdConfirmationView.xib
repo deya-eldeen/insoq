@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdConfirmationView" customModule="inSooqApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="t9H-Su-nlg" id="KFW-Qp-nHb"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="XEx-ST-fpX"/>
+                <outlet property="continueButton" destination="exR-vv-M0y" id="u3S-jv-Qrt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="961"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Ad Confirmation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnU-IN-RrZ">
+                    <rect key="frame" x="113" y="50" width="188" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9H-Su-nlg">
+                    <rect key="frame" x="354" y="10" width="50" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1e9-Ja-PZZ"/>
+                        <constraint firstAttribute="height" constant="40" id="gao-1q-MKw"/>
+                    </constraints>
+                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your payment has been received and we will send you the invoice to your email." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BP-7S-r3j">
+                    <rect key="frame" x="41.5" y="88" width="331" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your ad is under review, we will notify you when the ad is active." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG4-aZ-P8Q">
+                    <rect key="frame" x="41.5" y="136.5" width="331" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fds-ZH-BYG">
+                    <rect key="frame" x="10" y="185" width="394" height="745"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QT-UW-MKn">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1p-Sp-UtA">
+                                    <rect key="frame" x="10" y="10" width="65.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlM-iy-rs2">
+                                    <rect key="frame" x="10" y="38" width="68.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="PlM-iy-rs2" firstAttribute="top" secondItem="l1p-Sp-UtA" secondAttribute="bottom" constant="10" id="C0j-Va-WKy"/>
+                                <constraint firstItem="l1p-Sp-UtA" firstAttribute="leading" secondItem="5QT-UW-MKn" secondAttribute="leading" constant="10" id="R7U-5U-Jtr"/>
+                                <constraint firstItem="PlM-iy-rs2" firstAttribute="leading" secondItem="l1p-Sp-UtA" secondAttribute="leading" id="YhE-uh-vQB"/>
+                                <constraint firstAttribute="height" constant="70" id="k3C-wv-8Hl"/>
+                                <constraint firstItem="l1p-Sp-UtA" firstAttribute="top" secondItem="5QT-UW-MKn" secondAttribute="top" constant="10" id="qSg-ZQ-DA8"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDI-jo-0TH">
+                            <rect key="frame" x="0.0" y="75" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qz-9e-gcm">
+                                    <rect key="frame" x="10" y="10" width="62.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYO-rX-YPY">
+                                    <rect key="frame" x="10" y="38" width="73.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="9Qz-9e-gcm" firstAttribute="top" secondItem="WDI-jo-0TH" secondAttribute="top" constant="10" id="V6c-7C-i8u"/>
+                                <constraint firstItem="9Qz-9e-gcm" firstAttribute="leading" secondItem="WDI-jo-0TH" secondAttribute="leading" constant="10" id="h1d-jR-3o7"/>
+                                <constraint firstItem="xYO-rX-YPY" firstAttribute="leading" secondItem="9Qz-9e-gcm" secondAttribute="leading" id="icS-xQ-eTp"/>
+                                <constraint firstItem="xYO-rX-YPY" firstAttribute="top" secondItem="9Qz-9e-gcm" secondAttribute="bottom" constant="10" id="wPu-57-CoH"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBG-zu-BDb">
+                            <rect key="frame" x="0.0" y="150" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-zI-ZKU">
+                                    <rect key="frame" x="10" y="10" width="104.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJv-zk-7uT">
+                                    <rect key="frame" x="10" y="38" width="112.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="QJv-zk-7uT" firstAttribute="top" secondItem="JBX-zI-ZKU" secondAttribute="bottom" constant="10" id="JBH-oc-VOx"/>
+                                <constraint firstItem="JBX-zI-ZKU" firstAttribute="top" secondItem="WBG-zu-BDb" secondAttribute="top" constant="10" id="R9g-mB-e31"/>
+                                <constraint firstItem="QJv-zk-7uT" firstAttribute="leading" secondItem="JBX-zI-ZKU" secondAttribute="leading" id="gHD-pZ-UQV"/>
+                                <constraint firstItem="JBX-zI-ZKU" firstAttribute="leading" secondItem="WBG-zu-BDb" secondAttribute="leading" constant="10" id="yjn-pX-El2"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJu-22-ZAa">
+                            <rect key="frame" x="0.0" y="225" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD REFERANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLB-0v-o1g">
+                                    <rect key="frame" x="10" y="10" width="111.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Reference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrE-bo-5sV">
+                                    <rect key="frame" x="10" y="38" width="121" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="yrE-bo-5sV" firstAttribute="leading" secondItem="dLB-0v-o1g" secondAttribute="leading" id="MVR-3r-rbo"/>
+                                <constraint firstItem="dLB-0v-o1g" firstAttribute="leading" secondItem="lJu-22-ZAa" secondAttribute="leading" constant="10" id="Rbg-ED-LUO"/>
+                                <constraint firstItem="yrE-bo-5sV" firstAttribute="top" secondItem="dLB-0v-o1g" secondAttribute="bottom" constant="10" id="bYS-ER-1OY"/>
+                                <constraint firstItem="dLB-0v-o1g" firstAttribute="top" secondItem="lJu-22-ZAa" secondAttribute="top" constant="10" id="dwW-OP-Ujo"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3i1-WS-fVb">
+                            <rect key="frame" x="0.0" y="300" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD PACKAGE NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsH-CX-OhE">
+                                    <rect key="frame" x="10" y="10" width="140.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0z9-R8-p0i">
+                                    <rect key="frame" x="10" y="38" width="134.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="0z9-R8-p0i" firstAttribute="leading" secondItem="CsH-CX-OhE" secondAttribute="leading" id="Bhy-ay-dDw"/>
+                                <constraint firstItem="0z9-R8-p0i" firstAttribute="top" secondItem="CsH-CX-OhE" secondAttribute="bottom" constant="10" id="LjF-RX-fzr"/>
+                                <constraint firstItem="CsH-CX-OhE" firstAttribute="top" secondItem="3i1-WS-fVb" secondAttribute="top" constant="10" id="U0e-J2-4Qt"/>
+                                <constraint firstItem="CsH-CX-OhE" firstAttribute="leading" secondItem="3i1-WS-fVb" secondAttribute="leading" constant="10" id="fZB-V6-nky"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-3Q-aJf">
+                            <rect key="frame" x="0.0" y="375" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD PACKAGE PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1y-ec-8cB">
+                                    <rect key="frame" x="10" y="10" width="140.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIw-gt-TIH">
+                                    <rect key="frame" x="10" y="38" width="127.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="B1y-ec-8cB" firstAttribute="leading" secondItem="t4E-3Q-aJf" secondAttribute="leading" constant="10" id="BHv-YY-Cia"/>
+                                <constraint firstItem="TIw-gt-TIH" firstAttribute="top" secondItem="B1y-ec-8cB" secondAttribute="bottom" constant="10" id="HoR-6Z-muN"/>
+                                <constraint firstItem="B1y-ec-8cB" firstAttribute="top" secondItem="t4E-3Q-aJf" secondAttribute="top" constant="10" id="muy-qo-hzA"/>
+                                <constraint firstItem="TIw-gt-TIH" firstAttribute="leading" secondItem="B1y-ec-8cB" secondAttribute="leading" id="qwg-Sr-KZ4"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfC-B2-Ohc">
+                            <rect key="frame" x="0.0" y="450" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRS-Uo-MZW">
+                                    <rect key="frame" x="10" y="10" width="28" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5% VAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSC-la-mYH">
+                                    <rect key="frame" x="10" y="38" width="71" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="NSC-la-mYH" firstAttribute="leading" secondItem="gRS-Uo-MZW" secondAttribute="leading" id="0vd-8Y-QT0"/>
+                                <constraint firstItem="gRS-Uo-MZW" firstAttribute="top" secondItem="gfC-B2-Ohc" secondAttribute="top" constant="10" id="cZG-6O-Anr"/>
+                                <constraint firstItem="gRS-Uo-MZW" firstAttribute="leading" secondItem="gfC-B2-Ohc" secondAttribute="leading" constant="10" id="eg3-b8-Hqy"/>
+                                <constraint firstItem="NSC-la-mYH" firstAttribute="top" secondItem="gRS-Uo-MZW" secondAttribute="bottom" constant="10" id="s3Y-v4-Yd7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eME-lz-7iU">
+                            <rect key="frame" x="0.0" y="525" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cg-NL-gxG">
+                                    <rect key="frame" x="10" y="10" width="78" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQ8-3g-rMY">
+                                    <rect key="frame" x="10" y="38" width="80.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="6Cg-NL-gxG" firstAttribute="top" secondItem="eME-lz-7iU" secondAttribute="top" constant="10" id="EKZ-TL-5od"/>
+                                <constraint firstItem="pQ8-3g-rMY" firstAttribute="top" secondItem="6Cg-NL-gxG" secondAttribute="bottom" constant="10" id="LTO-V7-j0U"/>
+                                <constraint firstItem="pQ8-3g-rMY" firstAttribute="leading" secondItem="6Cg-NL-gxG" secondAttribute="leading" id="PuV-Bx-ga2"/>
+                                <constraint firstItem="6Cg-NL-gxG" firstAttribute="leading" secondItem="eME-lz-7iU" secondAttribute="leading" constant="10" id="jBF-p7-gTG"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBN-JN-7Iu">
+                            <rect key="frame" x="0.0" y="600" width="394" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMOUNT PAID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2s-6q-7oU">
+                                    <rect key="frame" x="10" y="10" width="104" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Paid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDD-bF-ANM">
+                                    <rect key="frame" x="10" y="38" width="115" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" name="labelYelloBackground"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="dDD-bF-ANM" firstAttribute="top" secondItem="M2s-6q-7oU" secondAttribute="bottom" constant="10" id="6te-oa-awE"/>
+                                <constraint firstItem="dDD-bF-ANM" firstAttribute="leading" secondItem="M2s-6q-7oU" secondAttribute="leading" id="HQQ-k1-3rM"/>
+                                <constraint firstItem="M2s-6q-7oU" firstAttribute="top" secondItem="oBN-JN-7Iu" secondAttribute="top" constant="10" id="l81-fY-Ddk"/>
+                                <constraint firstItem="M2s-6q-7oU" firstAttribute="leading" secondItem="oBN-JN-7Iu" secondAttribute="leading" constant="10" id="w1d-xC-4mR"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Het-Wa-uz9">
+                            <rect key="frame" x="0.0" y="675" width="394" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exR-vv-M0y">
+                                    <rect key="frame" x="19.5" y="16" width="355" height="38"/>
+                                    <color key="backgroundColor" name="labelYelloBackground"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="leL-dw-Rjp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="CONTINUE">
+                                        <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="exR-vv-M0y" firstAttribute="height" secondItem="Het-Wa-uz9" secondAttribute="height" multiplier="0.540541" id="6np-NA-awV"/>
+                                <constraint firstItem="exR-vv-M0y" firstAttribute="width" secondItem="Het-Wa-uz9" secondAttribute="width" multiplier="0.9" id="91L-f6-jkl"/>
+                                <constraint firstItem="exR-vv-M0y" firstAttribute="centerX" secondItem="Het-Wa-uz9" secondAttribute="centerX" id="Toc-FF-YoY"/>
+                                <constraint firstItem="exR-vv-M0y" firstAttribute="centerY" secondItem="Het-Wa-uz9" secondAttribute="centerY" id="i2L-Qz-pzq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2BP-7S-r3j" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="0w3-po-b61"/>
+                <constraint firstItem="OG4-aZ-P8Q" firstAttribute="trailing" secondItem="2BP-7S-r3j" secondAttribute="trailing" id="8XW-hB-ZPu"/>
+                <constraint firstItem="2BP-7S-r3j" firstAttribute="top" secondItem="rnU-IN-RrZ" secondAttribute="bottom" constant="15" id="FQ5-Xq-KI1"/>
+                <constraint firstItem="OG4-aZ-P8Q" firstAttribute="leading" secondItem="2BP-7S-r3j" secondAttribute="leading" id="K9a-Xa-tcV"/>
+                <constraint firstItem="rnU-IN-RrZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="N3d-gf-d9p"/>
+                <constraint firstItem="2BP-7S-r3j" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nmb-2R-sCv"/>
+                <constraint firstAttribute="bottom" secondItem="fds-ZH-BYG" secondAttribute="bottom" constant="31" id="OgU-hg-uko"/>
+                <constraint firstAttribute="trailing" secondItem="t9H-Su-nlg" secondAttribute="trailing" constant="10" id="dz5-dF-tfN"/>
+                <constraint firstItem="fds-ZH-BYG" firstAttribute="top" secondItem="OG4-aZ-P8Q" secondAttribute="bottom" constant="15" id="fqo-uW-gqG"/>
+                <constraint firstItem="OG4-aZ-P8Q" firstAttribute="top" secondItem="2BP-7S-r3j" secondAttribute="bottom" constant="15" id="hge-J1-k87"/>
+                <constraint firstItem="rnU-IN-RrZ" firstAttribute="top" secondItem="t9H-Su-nlg" secondAttribute="bottom" id="pb0-L8-CVW"/>
+                <constraint firstAttribute="trailing" secondItem="fds-ZH-BYG" secondAttribute="trailing" constant="10" id="xcK-Jp-pCQ"/>
+                <constraint firstItem="fds-ZH-BYG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="xd8-rX-aGQ"/>
+                <constraint firstItem="t9H-Su-nlg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="zFa-9R-Pah"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="182.60869565217394" y="-45.200892857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="labelYelloBackground">
+            <color red="1" green="0.68999999761581421" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

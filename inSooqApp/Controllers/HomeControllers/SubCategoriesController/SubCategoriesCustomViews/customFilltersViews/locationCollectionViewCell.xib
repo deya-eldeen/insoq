@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="locationCollectionViewCell" id="gTV-IL-0wX" customClass="locationCollectionViewCell" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="287" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="89"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-vd-GPt">
+                        <rect key="frame" x="5" y="5" width="277" height="79"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-wH-z67">
+                                <rect key="frame" x="229" y="19.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ysV-wH-z67" secondAttribute="height" id="QHI-5l-FC4"/>
+                                    <constraint firstAttribute="height" constant="40" id="V1T-2s-Ozp"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjz-9y-uQp">
+                                <rect key="frame" x="8" y="8" width="213" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.90196078431372551" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pjz-9y-uQp" secondAttribute="bottom" constant="8" id="EHr-u7-nXd"/>
+                            <constraint firstAttribute="trailing" secondItem="ysV-wH-z67" secondAttribute="trailing" constant="8" id="H3A-kF-hca"/>
+                            <constraint firstItem="ysV-wH-z67" firstAttribute="leading" secondItem="pjz-9y-uQp" secondAttribute="trailing" constant="8" id="Smo-Pd-FdI"/>
+                            <constraint firstItem="pjz-9y-uQp" firstAttribute="leading" secondItem="ui3-vd-GPt" secondAttribute="leading" constant="8" id="lNZ-xh-eeS"/>
+                            <constraint firstItem="ysV-wH-z67" firstAttribute="centerY" secondItem="ui3-vd-GPt" secondAttribute="centerY" id="mbI-SX-XN4"/>
+                            <constraint firstItem="pjz-9y-uQp" firstAttribute="top" secondItem="ui3-vd-GPt" secondAttribute="top" constant="8" id="yvC-lA-MnQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="AppBackground"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ui3-vd-GPt" secondAttribute="bottom" constant="5" id="KTZ-5r-tnY"/>
+                <constraint firstItem="ui3-vd-GPt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="bDS-vl-coO"/>
+                <constraint firstItem="ui3-vd-GPt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="cDo-nl-LY6"/>
+                <constraint firstAttribute="trailing" secondItem="ui3-vd-GPt" secondAttribute="trailing" constant="5" id="u93-7w-hA8"/>
+            </constraints>
+            <size key="customSize" width="287" height="89"/>
+            <connections>
+                <outlet property="backview" destination="ui3-vd-GPt" id="q5t-cy-qTX"/>
+                <outlet property="cancelButton" destination="ysV-wH-z67" id="ual-FW-aoA"/>
+                <outlet property="locationTitl" destination="pjz-9y-uQp" id="OuW-zH-aqH"/>
+            </connections>
+            <point key="canvasLocation" x="238.40579710144928" y="65.959821428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AppBackground">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

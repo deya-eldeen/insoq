@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemsSliderCollectionViewCell" id="UCu-aA-DKF" customClass="ItemsSliderCollectionViewCell" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="189" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="13F-qL-ikr">
+                <rect key="frame" x="0.0" y="0.0" width="189" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-dd-zR2">
+                        <rect key="frame" x="5" y="5" width="179" height="143"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U6w-Nr-PN6">
+                                <rect key="frame" x="5" y="5" width="169" height="133"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="U6w-Nr-PN6" firstAttribute="leading" secondItem="3ae-dd-zR2" secondAttribute="leading" constant="5" id="DQr-eZ-cOW"/>
+                            <constraint firstAttribute="bottom" secondItem="U6w-Nr-PN6" secondAttribute="bottom" constant="5" id="L7c-WI-uGv"/>
+                            <constraint firstItem="U6w-Nr-PN6" firstAttribute="top" secondItem="3ae-dd-zR2" secondAttribute="top" constant="5" id="ODz-dB-rQp"/>
+                            <constraint firstAttribute="trailing" secondItem="U6w-Nr-PN6" secondAttribute="trailing" constant="5" id="bMq-Ib-3QU"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item NameItem NameItem NameItem NameItem Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igG-wS-Jsv">
+                        <rect key="frame" x="8" y="153" width="188.5" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED 18,000 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1m-Tw-tiV">
+                        <rect key="frame" x="8" y="192" width="90" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" name="labelOrange"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="AppBackground"/>
+                <constraints>
+                    <constraint firstItem="3ae-dd-zR2" firstAttribute="leading" secondItem="13F-qL-ikr" secondAttribute="leading" constant="5" id="0zg-Ki-DIW"/>
+                    <constraint firstItem="D1m-Tw-tiV" firstAttribute="width" relation="lessThanOrEqual" secondItem="13F-qL-ikr" secondAttribute="width" id="3Td-bc-xcE"/>
+                    <constraint firstItem="igG-wS-Jsv" firstAttribute="width" relation="lessThanOrEqual" secondItem="13F-qL-ikr" secondAttribute="width" id="7gc-QJ-kEA"/>
+                    <constraint firstItem="igG-wS-Jsv" firstAttribute="top" secondItem="3ae-dd-zR2" secondAttribute="bottom" constant="5" id="DTw-dk-EsY"/>
+                    <constraint firstAttribute="bottom" secondItem="D1m-Tw-tiV" secondAttribute="bottom" constant="10" id="Imf-dr-5od"/>
+                    <constraint firstItem="D1m-Tw-tiV" firstAttribute="leading" secondItem="13F-qL-ikr" secondAttribute="leading" constant="8" id="Qma-S9-TpI"/>
+                    <constraint firstItem="3ae-dd-zR2" firstAttribute="height" secondItem="13F-qL-ikr" secondAttribute="height" multiplier="0.65" id="RUq-J9-2DF"/>
+                    <constraint firstItem="igG-wS-Jsv" firstAttribute="leading" secondItem="13F-qL-ikr" secondAttribute="leading" constant="8" id="hn8-Dh-Q3K"/>
+                    <constraint firstAttribute="trailing" secondItem="3ae-dd-zR2" secondAttribute="trailing" constant="5" id="vCY-zy-Zdg"/>
+                    <constraint firstItem="3ae-dd-zR2" firstAttribute="top" secondItem="13F-qL-ikr" secondAttribute="top" constant="5" id="zI2-bW-L16"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" name="AppBackground"/>
+            <size key="customSize" width="189" height="183"/>
+            <connections>
+                <outlet property="itemImage" destination="U6w-Nr-PN6" id="5Tq-GQ-N39"/>
+                <outlet property="itemName" destination="igG-wS-Jsv" id="QsR-If-vjx"/>
+                <outlet property="itemPrice" destination="D1m-Tw-tiV" id="nxO-qv-Eov"/>
+            </connections>
+            <point key="canvasLocation" x="299.27536231884062" y="47.879464285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBackground">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="labelOrange">
+            <color red="1" green="0.54100000858306885" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
