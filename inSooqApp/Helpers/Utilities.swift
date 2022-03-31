@@ -213,7 +213,16 @@ public func presentCategoryVC(viewController: UIViewController,endPoint: String)
 }
 
 public func forcePresentViewController(viewController: UIViewController,storyBoardId: String){
-    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    var sbID = "Main"
+    
+    let MetaVCIds = ["FAQViewController", "ContactViewController", "Terms_PrivacyViewController", "GuidlinesViewController", "HowItWorksViewController"]
+    
+    if MetaVCIds.contains(storyBoardId) {
+        sbID = "Meta"
+    }
+    
+    let mainStoryboard = UIStoryboard(name: sbID, bundle: nil)
         
     let vc = mainStoryboard.instantiateViewController(identifier: storyBoardId)
     vc.modalPresentationStyle = .fullScreen

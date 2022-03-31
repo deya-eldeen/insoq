@@ -61,6 +61,7 @@
 		CEBFE10E27E735DB006B5D32 /* GetAllMotorMakerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */; };
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
+		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
 		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
 		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
 		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
@@ -477,6 +478,7 @@
 		CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorMakerM.swift; sourceTree = "<group>"; };
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
 		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
@@ -1235,6 +1237,7 @@
 				F107A1DB25CFCFB800FC6340 /* Helpers */,
 				F15BC4C12615AB0B0094ACF0 /* Extentions_SupportFiles */,
 				F107A21E25D012F500FC6340 /* Models */,
+				E380353427F64AB400FF0212 /* Meta.storyboard */,
 			);
 			path = inSooqApp;
 			sourceTree = "<group>";
@@ -2183,6 +2186,7 @@
 				F1CBEC482627A82F00DC7F05 /* Mask.png in Resources */,
 				F150F81125D40C2B0077C970 /* logoTest.png in Resources */,
 				F15592432679DC5E007D7E1A /* plate_dubai.png in Resources */,
+				E380353627F64AB400FF0212 /* Meta.storyboard in Resources */,
 				F1FFB7A5265A2C8800BCBBEB /* RowPlatesCollectionViewCell.xib in Resources */,
 				F12F03092642172E00989A1B /* serv.png in Resources */,
 				F12F030A2642172E00989A1B /* numbers.png in Resources */,
@@ -2508,6 +2512,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E380353427F64AB400FF0212 /* Meta.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E380353527F64AB400FF0212 /* Base */,
+			);
+			name = Meta.storyboard;
+			sourceTree = "<group>";
+		};
 		F107A1C525CFCC9F00FC6340 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
