@@ -180,7 +180,7 @@ public func newRoot(NavId:String)
 }
 
 public func pushtoViewController(viewController: UIViewController,storyBoardId: String,animate:Bool){
-    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainStoryboard = UIStoryboard(name: sbFromVC(vcID: storyBoardId), bundle: nil)
     let detailsVC = mainStoryboard.instantiateViewController(identifier: storyBoardId)
     viewController.navigationController?.pushViewController(detailsVC, animated: animate)
 }
@@ -212,23 +212,27 @@ public func presentCategoryVC(viewController: UIViewController,endPoint: String)
     viewController.present(vc, animated: false)
 }
 
-public func forcePresentViewController(viewController: UIViewController,storyBoardId: String){
-    
+func sbFromVC(vcID: String) -> String {
     var sbID = "Main"
     
     let MetaVCIds = ["FAQViewController", "ContactViewController", "Terms_PrivacyViewController", "GuidlinesViewController", "HowItWorksViewController"]
     
-    let UserVCIds = ["ForgetPasswordViewController", "OTPViewController", ]
+    let UserVCIds = ["ForgetPasswordViewController", "OTPViewController", "SignUpViewController", "SignUp_PhoneViewController"]
     
-    if MetaVCIds.contains(storyBoardId) {
+    if MetaVCIds.contains(vcID) {
         sbID = "Meta"
     }
     
-    if UserVCIds.contains(storyBoardId) {
+    if UserVCIds.contains(vcID) {
         sbID = "User"
     }
     
-    let mainStoryboard = UIStoryboard(name: sbID, bundle: nil)
+    return sbID
+}
+
+public func forcePresentViewController(viewController: UIViewController,storyBoardId: String){
+    
+    let mainStoryboard = UIStoryboard(name: sbFromVC(vcID: storyBoardId), bundle: nil)
         
     let vc = mainStoryboard.instantiateViewController(identifier: storyBoardId)
     vc.modalPresentationStyle = .fullScreen
