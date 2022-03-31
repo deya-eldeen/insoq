@@ -29,8 +29,8 @@ class SigninMethodsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-            emailTxt.text = "samarelias3@gmail.com"
-            passwordTxt.text = "Samar@123"
+            emailTxt.text = "salah_3wadi91@yahoo.com" //"samarelias3@gmail.com"
+            passwordTxt.text = "Salah@1991" //"Samar@123"
         #endif
         
         setGradientBackground(view: view, colorTop: #colorLiteral(red: 0.5490196078, green: 0.3882352941, blue: 0.9058823529, alpha: 1), colorBottom: #colorLiteral(red: 0.3411764706, green: 0.2745098039, blue: 0.9882352941, alpha: 1))
