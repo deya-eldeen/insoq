@@ -64,6 +64,7 @@
 		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
 		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
 		E380353B27F6506E00FF0212 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353A27F6506E00FF0212 /* Account.storyboard */; };
+		E380353E27F653E500FF0212 /* Adding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353C27F653E500FF0212 /* Adding.storyboard */; };
 		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
 		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
 		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
@@ -483,6 +484,7 @@
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
 		E380353827F64CE000FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		E380353A27F6506E00FF0212 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		E380353D27F653E500FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Adding.storyboard; sourceTree = "<group>"; };
 		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
@@ -1226,7 +1228,9 @@
 				F107A1C825CFCCA100FC6340 /* Assets.xcassets */,
 				F107A1C125CFCC9F00FC6340 /* SceneDelegate.swift */,
 				F107A1C525CFCC9F00FC6340 /* Main.storyboard */,
+				E380353C27F653E500FF0212 /* Adding.storyboard */,
 				E380353A27F6506E00FF0212 /* Account.storyboard */,
+				E380353427F64AB400FF0212 /* Meta.storyboard */,
 				E380353727F64CE000FF0212 /* User.storyboard */,
 				F107A1CA25CFCCA100FC6340 /* LaunchScreen.storyboard */,
 				2862BAF1277D2C55009F4B7E /* Assemblies */,
@@ -1243,7 +1247,6 @@
 				F107A1DB25CFCFB800FC6340 /* Helpers */,
 				F15BC4C12615AB0B0094ACF0 /* Extentions_SupportFiles */,
 				F107A21E25D012F500FC6340 /* Models */,
-				E380353427F64AB400FF0212 /* Meta.storyboard */,
 			);
 			path = inSooqApp;
 			sourceTree = "<group>";
@@ -2093,6 +2096,7 @@
 				F1F7AF4B261F1337008E527B /* WantedJobDetailsView.xib in Resources */,
 				F1FFB7B4265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib in Resources */,
 				F1F352F12647EDE3001A065B /* playground.png in Resources */,
+				E380353E27F653E500FF0212 /* Adding.storyboard in Resources */,
 				F12F02F82642170600989A1B /* favo.png in Resources */,
 				F12F02F52642170600989A1B /* clasified.png in Resources */,
 				F19A567F2619A165007D2ABC /* MainNavView.xib in Resources */,
@@ -2534,6 +2538,14 @@
 				E380353827F64CE000FF0212 /* Base */,
 			);
 			name = User.storyboard;
+			sourceTree = "<group>";
+		};
+		E380353C27F653E500FF0212 /* Adding.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E380353D27F653E500FF0212 /* Base */,
+			);
+			name = Adding.storyboard;
 			sourceTree = "<group>";
 		};
 		F107A1C525CFCC9F00FC6340 /* Main.storyboard */ = {

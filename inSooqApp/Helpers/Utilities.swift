@@ -221,6 +221,7 @@ func sbFromVC(vcID: String) -> String {
     
     let AccountVCIds = ["AccountViewController", "AdvertisingViewController", "MyFavoritesViewController", "MyAdsViewController", "SavedSearchesViewController", "JobDashBoardViewController", "CompanyProfileViewController", "GetMoreViewsViewController", "StatisticsViewController", "MyProfileViewController"]
 
+    let AddingVCIds = ["AddViewControllerNav", "AddViewController", "Add_CategoryViewController", "Add_TitleViewController", "Add_BrandViewController", "Add_FullSpecesViewController", "AdPackageViewController", "CardDetailsViewController"]
     
     if MetaVCIds.contains(vcID) {
         sbID = "Meta"
@@ -232,6 +233,10 @@ func sbFromVC(vcID: String) -> String {
     
     if AccountVCIds.contains(vcID) {
         sbID = "Account"
+    }
+    
+    if AddingVCIds.contains(vcID) {
+        sbID = "Adding"
     }
     
     return sbID

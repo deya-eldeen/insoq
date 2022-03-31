@@ -21,25 +21,25 @@ extension ViewControllersAssembly {
     }
     
     static var addViewController: UIViewController {
-        let controller: AddViewController = main.makeViewController()
+        let controller: AddViewController = adding.makeViewController()
         return controller.containedInNavigation()
     }
 
     static func Add_TitleViewController(type: MotorGategorys, model: Category) -> UIViewController {
-        let controller: Add_TitleViewController = main.makeViewController()
+        let controller: Add_TitleViewController = adding.makeViewController()
         controller.type = type
         controller.selectedCategory = model
         return controller
     }
     
     static func add_CategoryViewController(model: CategoriesModel) -> UIViewController {
-        let controller: Add_CategoryViewController = main.makeViewController()
+        let controller: Add_CategoryViewController = adding.makeViewController()
         controller.modelOfCategory = model
         return controller
     }
     
     static func add_FullSpecesViewController(allModel: AllSelectedModel, addedUsesCarItemsID:Int, response: AddInitialMotorModel) -> UIViewController {
-        let controller: Add_FullSpecesViewController = main.makeViewController()
+        let controller: Add_FullSpecesViewController = adding.makeViewController()
         controller.addedUsesCarItemsID = addedUsesCarItemsID
         controller.allModel = allModel
         return controller
