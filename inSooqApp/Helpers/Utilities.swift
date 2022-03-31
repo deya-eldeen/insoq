@@ -218,8 +218,14 @@ public func forcePresentViewController(viewController: UIViewController,storyBoa
     
     let MetaVCIds = ["FAQViewController", "ContactViewController", "Terms_PrivacyViewController", "GuidlinesViewController", "HowItWorksViewController"]
     
+    let UserVCIds = ["ForgetPasswordViewController", "OTPViewController", ]
+    
     if MetaVCIds.contains(storyBoardId) {
         sbID = "Meta"
+    }
+    
+    if UserVCIds.contains(storyBoardId) {
+        sbID = "User"
     }
     
     let mainStoryboard = UIStoryboard(name: sbID, bundle: nil)

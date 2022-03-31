@@ -62,6 +62,7 @@
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
 		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
+		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
 		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
 		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
 		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
@@ -479,6 +480,7 @@
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
+		E380353827F64CE000FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
@@ -1222,6 +1224,7 @@
 				F107A1C825CFCCA100FC6340 /* Assets.xcassets */,
 				F107A1C125CFCC9F00FC6340 /* SceneDelegate.swift */,
 				F107A1C525CFCC9F00FC6340 /* Main.storyboard */,
+				E380353727F64CE000FF0212 /* User.storyboard */,
 				F107A1CA25CFCCA100FC6340 /* LaunchScreen.storyboard */,
 				2862BAF1277D2C55009F4B7E /* Assemblies */,
 				2862BAE8277D2B46009F4B7E /* Alerts */,
@@ -2081,6 +2084,7 @@
 				F1BA5936262ADC1E00B12D9C /* EditMotorsAdView.xib in Resources */,
 				F1FB1AF925D48D0C008CEB50 /* notificationsTableViewCell.xib in Resources */,
 				F14A2699261EF5C30041FBB4 /* WantedJobsCollectionViewCell.xib in Resources */,
+				E380353927F64CE000FF0212 /* User.storyboard in Resources */,
 				F150F81C25D415A90077C970 /* JobsCollectionViewCell.xib in Resources */,
 				F103490C25E7A79700785B07 /* PaymentMethodView.xib in Resources */,
 				F1F7AF4B261F1337008E527B /* WantedJobDetailsView.xib in Resources */,
@@ -2518,6 +2522,14 @@
 				E380353527F64AB400FF0212 /* Base */,
 			);
 			name = Meta.storyboard;
+			sourceTree = "<group>";
+		};
+		E380353727F64CE000FF0212 /* User.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E380353827F64CE000FF0212 /* Base */,
+			);
+			name = User.storyboard;
 			sourceTree = "<group>";
 		};
 		F107A1C525CFCC9F00FC6340 /* Main.storyboard */ = {
