@@ -65,6 +65,7 @@
 		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
 		E380353B27F6506E00FF0212 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353A27F6506E00FF0212 /* Account.storyboard */; };
 		E380353E27F653E500FF0212 /* Adding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353C27F653E500FF0212 /* Adding.storyboard */; };
+		E380354027F657E500FF0212 /* Items.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353F27F657E500FF0212 /* Items.storyboard */; };
 		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
 		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
 		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
@@ -485,6 +486,7 @@
 		E380353827F64CE000FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		E380353A27F6506E00FF0212 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		E380353D27F653E500FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Adding.storyboard; sourceTree = "<group>"; };
+		E380353F27F657E500FF0212 /* Items.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Items.storyboard; sourceTree = "<group>"; };
 		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
@@ -1229,6 +1231,7 @@
 				F107A1C125CFCC9F00FC6340 /* SceneDelegate.swift */,
 				F107A1C525CFCC9F00FC6340 /* Main.storyboard */,
 				E380353C27F653E500FF0212 /* Adding.storyboard */,
+				E380353F27F657E500FF0212 /* Items.storyboard */,
 				E380353A27F6506E00FF0212 /* Account.storyboard */,
 				E380353427F64AB400FF0212 /* Meta.storyboard */,
 				E380353727F64CE000FF0212 /* User.storyboard */,
@@ -2125,6 +2128,7 @@
 				2862BAED277D2B46009F4B7E /* Alerts.storyboard in Resources */,
 				F1C53A432636EC1300476793 /* AddOpeningJobsView.xib in Resources */,
 				F107A1CC25CFCCA100FC6340 /* LaunchScreen.storyboard in Resources */,
+				E380354027F657E500FF0212 /* Items.storyboard in Resources */,
 				1782F6AA2797331700D880B8 /* RowCollecctionUsedCarCell.xib in Resources */,
 				F1B8B5AE25D9636A00AB3E83 /* ServicesDetailsView.xib in Resources */,
 				F192DFA4265A3B9E00E122B0 /* ServiceRowCollectionViewCell.xib in Resources */,
