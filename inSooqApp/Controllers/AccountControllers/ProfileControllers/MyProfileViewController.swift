@@ -9,7 +9,9 @@ import UIKit
 import MobileCoreServices
 import UniformTypeIdentifiers
 import DropDown
+
 class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
+    
     @IBOutlet weak var topBar: UIView!
     @IBOutlet weak var bottomBar: BottomBar!
     @IBOutlet weak var userImage: UIImageView!
@@ -28,6 +30,8 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     @IBOutlet weak var changePasswordButton: UIButton!
     
     @IBOutlet weak var cvView: UIView!
+    @IBOutlet weak var industryView: UIView!
+
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var customView: UIView!
     @IBOutlet weak var backGroundView: UIView!
@@ -43,10 +47,11 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     @IBOutlet weak var companyTxt: UITextField!
     @IBOutlet weak var jobPositionTxt: UITextField!
     @IBOutlet weak var locationTxt: UITextField!
-    @IBOutlet weak var industryTxt: UITextField!
     @IBOutlet weak var updateButton: UIButton!
     
     @IBOutlet weak var uploadCVButton: UIButton!
+    @IBOutlet weak var uploadIndustryButton: UIButton!
+
     @IBOutlet weak var coverNoteTxv: UITextView!
     
     @IBOutlet weak var hideDataCheck: UIButton!
@@ -69,6 +74,11 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     let educationDropDown = DropDown()
     let careerDropDown = DropDown()
     let languageDropDown = DropDown()
+    
+    
+    var documentURL = ""
+    var cvURL = ""
+    
     lazy var dropDowns: [DropDown] = {
         return [
             self.genderDropDown,
@@ -83,18 +93,79 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     static var _NewPhone:String=""
     private var _isNewsChecked:Bool=true
     private var _isAdsChecked:Bool=true
-    private var _hideData:Bool=false
+    private var _hideData:Bool=true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let loc = Locale(identifier: "en")
+        birthDate.locale = loc
+
+        
         bottomBar.setVC(viewController: self)
         setGradientBackground(view: topBar, colorTop: #colorLiteral(red: 0.5490196078, green: 0.3882352941, blue: 0.9058823529, alpha: 1), colorBottom: #colorLiteral(red: 0.3411764706, green: 0.2745098039, blue: 0.9882352941, alpha: 1))
-    }
-    override func viewWillAppear(_ animated: Bool) {
+        
+        hideDataCheck.setImage(#imageLiteral(resourceName: "checked_checkbox"), for: .normal)
+
+
         setTargets()
         setupbrandsDropDown()
         setupDropDownTregers()
         hideCustomViews(hide:true)
+        
+
+        let id = Shared.shared.getUserId() ?? 0
+
+        ApiRequests.profileDetails(id: id) { response in
+            let firstName = response.value?.firstName ?? ""
+            let lastName = response.value?.lastName ?? ""
+            let email = response.value?.email ?? ""
+            let gender = (response.value?.gender ?? "")
+            let defaultLocation = (response.value?.defaultLocation ?? "")
+            let defaultLanguage = (response.value?.defaultLanguage ?? "")
+            let careerLevel = (response.value?.careerLevel ?? "")
+            let education = (response.value?.education ?? "")
+            let nationality = (response.value?.nationality ?? "")
+
+            self.genderButton.setTitle(gender, for: .normal)
+            self.locationButton.setTitle(defaultLocation, for: .normal)
+            self.languageButton.setTitle(defaultLanguage, for: .normal)
+            self.careerButton.setTitle(careerLevel, for: .normal)
+            self.educationButton.setTitle(education, for: .normal)
+            self.countryButton.setTitle(nationality, for: .normal)
+
+            self.userName.text = "\(firstName) \(lastName)"
+            let imageURL = response.value?.profilePicture ?? ""
+            self.userImage.setImage(url: imageURL.fullImageUrl())
+            self.firstNameTxt.text = firstName
+            self.lastNameTxt.text = lastName
+            self.emailTxt.text = email
+            
+            self.locationTxt.text = (response.value?.currentLocation ?? "")
+            self.jobPositionTxt.text = (response.value?.currentPosition ?? "")
+            self.companyTxt.text = (response.value?.currentCompany ?? "")
+            self.coverNoteTxv.text = (response.value?.coverNote ?? "")
+
+            
+//            let nationality = (response.value?.defaultLocation ?? "")
+//            let nationality = (response.value?.nationality ?? "")
+//            let nationality = (response.value?.nationality ?? "")
+
+        }
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+
+        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
     }
     override func viewDidLayoutSubviews() {
         CATransaction.begin()
@@ -107,6 +178,8 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     }
     
     @IBAction func logout_Pressed(_ sender: Any) {
+        Shared.shared.saveIsLogin(login: false)
+
         newRoot(NavId: "RegistrationNav")
     }
     //MARK:-override touches-
@@ -128,15 +201,68 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
 
     }
     
+        
+    //    --form 'FirstName="voluptate tempor"' \
+    //    --form 'LastName="sed aliqua laboris"' \
+    //    --form 'Gender="veniam aute quis dolor"' \
+    //    --form 'DOB="1994-04-20"' \
+    //    --form 'Nationality="nisi ex aute adipisicing"' \
+    //    --form 'DefaultLocation="fugiat quis enim"' \
+    //    --form 'DefaultLanguage="amet"' \
+    //    --form 'CareerLevel="Ut esse"' \
+    //    --form 'Education="irure elit"' \
+    //    --form 'CurrentLocation="sit exercitation"' \
+    //    --form 'CurrentPosition="sint"' \
+    //    --form 'CurrentCompany="et est Duis dolor"' \
+    //    --form 'CVFile=@"/path/to/file"' \
+    //    --form 'CoverNote="ipsum Lorem in"' \
+    //    --form 'ProfilePictureFile=@"/path/to/file"' \
+    //    --form 'IndustryFile=@"/path/to/file"' \
+    //    --form 'HideInfromation="true"'
+    
+    
     @IBAction func update_Pressed(_ sender: Any) {
-        dismiss(animated: true) {
-            clearViewData(controller: self)
+        
+        let params = [
+            "FirstName": "\(self.firstNameTxt.text ?? "")", //="voluptate tempor"' \
+            "LastName": "\(self.firstNameTxt.text ?? "")", //="sed aliqua laboris"' \
+            "Gender": "\(self.genderButton.titleLabel?.text ?? "")", //="veniam aute quis dolor"' \
+            "DOB": self.birthDate.date.toYMDDateString(), //="1994-04-20"' \
+            "Nationality": "\(self.countryButton.titleLabel?.text ?? "")", //="nisi ex aute adipisicing"' \
+            "DefaultLocation": "\(self.locationButton.titleLabel?.text ?? "")", //="fugiat quis enim"' \
+            "DefaultLanguage": "\(self.languageButton.titleLabel?.text ?? "")", //="amet"' \
+            "CareerLevel": "\(self.careerButton.titleLabel?.text ?? "")", //="Ut esse"' \
+            "Education": "\(self.educationButton.titleLabel?.text ?? "")", //="irure elit"' \
+            "CurrentLocation": "\(self.locationTxt.text ?? "")", //="sit exercitation"' \
+            "CurrentPosition": "\(self.jobPositionTxt.text ?? "")", //="sint"' \
+            "CurrentCompany": "\(self.companyTxt.text ?? "")", //="et est Duis dolor"' \
+            //"CVFile": "t", //=@"/path/to/file"' \
+            "CoverNote": "\(self.coverNoteTxv.text ?? "")", //="ipsum Lorem in"' \
+            //"ProfilePictureFile": "u", //=@"/path/to/file"' \
+            //"IndustryFile": "i", //=@"/path/to/file"' \
+            "HideInfromation": "true", //="true"'
+        ] as [String : Any]
+        
+        let image = self.userImage.image
+//        let data = Data()
+
+        let cvData = try? Data(contentsOf: self.cvURL.asURL())
+        let docData = try? Data(contentsOf: self.documentURL.asURL())
+        
+        ApiRequests.editProfile(CVFile: cvData, ProfilePictureFile: image, IndustryFile: docData, params: params) { response in
+            print("R",response.value)
+            self.showAlert(title: "Success", body: "")
         }
+        
+//        dismiss(animated: true) {
+//            clearViewData(controller: self)
+//        }
     }
     
     @IBAction func birthDate_Selected(_ sender: Any) {
-        debugPrint(birthDate.date)
+        debugPrint(birthDate.date.toIsoDateString())
     }
+    
     //MARK:-Private Methods-
     private func setupDropDownTregers(){
         /**
@@ -149,7 +275,7 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         ///Draw Down down list...
         coverNoteTxv.delegate=self
         coverNoteTxv.text = "Tell us more...".localized
-        coverNoteTxv.textColor = UIColor.lightGray
+        coverNoteTxv.textColor = UIColor.black
 
         genderButton.addTarget(self, action: #selector(genderAction), for: .touchUpInside)
         locationButton.addTarget(self, action: #selector(locationAction), for: .touchUpInside)
@@ -226,6 +352,7 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         
         // Action triggered on selection
         genderDropDown.selectionAction = { [weak self] (index, item) in
+            print("DID_SELECT_GENDER")
             self?.genderButton.setTitle(" \(item)", for: .normal)
         }
         // Action triggered on selection
@@ -272,11 +399,15 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         passwordTxt.isUserInteractionEnabled=false
         phoneTxt.isUserInteractionEnabled=false
         cvView.addShadowToView()
+        industryView.addShadowToView()
+        
         customView.addShadowToView()
         customView.clipsToBounds=true
         objectCornerRadius(object: customView, cornerRadius: 10)
         
         objectCornerRadius(object: cvView, cornerRadius: 5)
+        objectCornerRadius(object: industryView, cornerRadius: 5)
+        
         for v in viewsToDesign{
             bottomBorder(object: v)
         }
@@ -287,8 +418,11 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
        /// let uploadFileGesture = UITapGestureRecognizer(target: self, action: #selector(uploadFileAction))
 ///https://stackoverflow.com/questions/29300772/my-app-is-getting-crashed-on-uidocumentpickerviewcontroller
         
-       let uploadFileGesture = UITapGestureRecognizer(target: self, action: #selector(selectFiles))
+        let uploadFileGesture = UITapGestureRecognizer(target: self, action: #selector(selectFiles))
+        let uploadFileGestureIndustry = UITapGestureRecognizer(target: self, action: #selector(selectFilesForIndustry))
+
         cvView.addGestureRecognizer(uploadFileGesture)
+        industryView.addGestureRecognizer(uploadFileGestureIndustry)
 
         changePhoneButton.addTarget(self, action: #selector(showPhoneView), for: .touchUpInside)
         
@@ -329,7 +463,10 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     }
     //MARK:-Upload Fiels
     
+    var documentSelectionType = ""
+    
     @objc func selectFiles() {
+        documentSelectionType = "cv"
      if #available(iOS 14.0, *) {
          
          let documentPickerController = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeImage), String(kUTTypeMovie), String(kUTTypeVideo), String(kUTTypePlainText), String(kUTTypeText)], in: .import)
@@ -349,6 +486,31 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
          debugPrint(" selectFiles not available ")
      }
      }
+    
+    @objc func selectFilesForIndustry() {
+        
+     if #available(iOS 14.0, *) {
+         
+         documentSelectionType = "industry"
+         
+         let documentPickerController = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeImage), String(kUTTypeMovie), String(kUTTypeVideo), String(kUTTypePlainText), String(kUTTypeText)], in: .import)
+         documentPickerController.delegate = self
+         present(documentPickerController, animated: true, completion: nil)
+
+ //        let typess = UTType.types(tag: "json",
+ //                                  tagClass: UTTagClass.filenameExtension,
+ //                                  conformingTo: nil)
+        // let documentPickerController = UIDocumentPickerViewController(             forOpeningContentTypes: typess)
+         
+         //documentPickerController.delegate = self
+        /// self.present(documentPickerController, animated: true, completion: nil)
+         
+     } else {
+         // Fallback on earlier versions
+         debugPrint(" selectFiles not available ")
+     }
+        
+    }
     
     @objc func uploadFileAction(){
     let importMenu = UIDocumentMenuViewController(documentTypes: [String(kUTTypePDF),String(kUTTypePNG)  ,String(kUTTypeJPEG)], in: .import)
@@ -504,13 +666,25 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
 
 
 extension MyProfileViewController: UIDocumentPickerDelegate,UINavigationControllerDelegate {
+    
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         guard let myURL = urls.first else {
             return
         }
-        let cvName:String = myURL.lastPathComponent
-        uploadCVButton.setTitle(cvName, for: .normal)
-        print("import result : \(myURL)")
+        
+        if (documentSelectionType == "cv") {
+            let cvName:String = myURL.lastPathComponent
+            uploadCVButton.setTitle(cvName, for: .normal)
+            self.cvURL = myURL.path
+            print("import result : \(myURL)")
+        } else {
+            let industryName:String = myURL.lastPathComponent
+            uploadIndustryButton.setTitle(industryName, for: .normal)
+            self.documentURL = myURL.path
+            print("import result : \(myURL)")
+        }
+        
+
     }
           
 
@@ -599,3 +773,5 @@ extension MyProfileViewController: UITextViewDelegate{
         }
     }
 }
+
+

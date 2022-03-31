@@ -8,6 +8,7 @@
 import UIKit
 
 class NotificationsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
 //    private var lastContentOffset: CGFloat = 0
     @IBOutlet weak var fillterButton: UIButton!
     
@@ -22,6 +23,8 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
     @IBOutlet weak var sideMenuRightConstraint: NSLayoutConstraint!
     var  _sideMenuShown:Bool = true
 
+    var data = [NotificationModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        showAddButton(alpha: 0, hidden: true)
@@ -30,6 +33,17 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
 
     }
 
+    func fetchData() {
+        ApiRequests.notifications { response in
+            self.data = response.value ?? []
+            self.notificationsTableView.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetchData()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         setDesign()
         notificationsTableView.delegate=self
@@ -43,7 +57,9 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
         fillterButton.setTitle(Statics.icons.fillter_icon, for: .normal)
         fillterButton.tintColor=#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
-    private func registerFillter(){
+    
+    private func registerFillter() {
+        
         debugPrint("ServicesDetailsView")
         let fillterView: NotificationFillterView = {
             let view = NotificationFillterView()
@@ -59,7 +75,8 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
         fillterView.heightAnchor.constraint(equalTo: sideMenu_FillterView.heightAnchor, multiplier: 1).isActive=true
         fillterView.centerXAnchor.constraint(equalTo: sideMenu_FillterView.centerXAnchor).isActive=true
         fillterView.centerYAnchor.constraint(equalTo: sideMenu_FillterView.centerYAnchor).isActive=true
-}
+    }
+    
     @IBAction func back_Pressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -87,13 +104,17 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        100
+        self.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "notificationsTableViewCell", for: indexPath) as! notificationsTableViewCell
         
-       return cell
+        cell.renderCell(item: self.data[indexPath.row])
+        cell.delegate = self
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -103,6 +124,21 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
 
     }
 
+}
+
+extension NotificationsViewController: NotificationTableViewCellDelegate {
+    
+    func deleteAd(id: Int) {
+        print("delete",id)
+        
+        let params = ["notificationId":id]
+
+        ApiRequests.deleteNotification(params: params) { response in
+            self.fetchData()
+        }
+        
+    }
+    
 }
 
 //MARK: Search Text field Delegate:-

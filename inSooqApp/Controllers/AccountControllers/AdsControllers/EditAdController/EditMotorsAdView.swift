@@ -127,7 +127,7 @@ class EditMotorsAdView: UIView {
     
     @objc func ditictLocationAction(){
     guard let vc = self.vc else { return }
-        showAlert(controller: vc, message: "deticting location...", seconds: 1)
+        showAlertDeprecated(controller: vc, message: "deticting location...", seconds: 1)
 
     }
     
@@ -137,7 +137,7 @@ class EditMotorsAdView: UIView {
         }
         if ((vc.isKind(of: EditAdViewController.self))){
             if let vcMainControllor:EditAdViewController = vc as? EditAdViewController{
-                showAlert(controller: vc, message: "updating item...", seconds: 1)
+                showAlertDeprecated(controller: vc, message: "updating item...", seconds: 1)
             }
         }
         vc.dismiss(animated: true, completion: nil)
@@ -205,7 +205,7 @@ class EditMotorsAdView: UIView {
         else{
             guard let vc = self.vc else{ return }
 
-            showAlert(controller: vc, message: "You added 10 pictures.", seconds: 1)
+            showAlertDeprecated(controller: vc, message: "You added 10 pictures.", seconds: 1)
         }
        // calculateHeight()
 

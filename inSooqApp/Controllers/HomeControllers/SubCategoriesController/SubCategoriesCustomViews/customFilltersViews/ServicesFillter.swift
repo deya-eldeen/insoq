@@ -189,7 +189,7 @@ extension ServicesFillter:UICollectionViewDelegateFlowLayout,UICollectionViewDat
         }
         //Show location popup
         debugPrint("Add pressed")
-        showAlert(controller: vc, message: "Showing Locations Popuo soon", seconds: 1)
+        showAlertDeprecated(controller: vc, message: "Showing Locations Popuo soon", seconds: 1)
     }
 
 

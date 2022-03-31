@@ -11,7 +11,6 @@ import SwiftUI
 enum EndPoint {
     
     case Register
-    case Login
     case CategoriesGetByTypeId(id: String)
     case CategoriesAdsGetByTypeId(id: String)
     case GetMotorMaker
@@ -50,7 +49,6 @@ extension EndPoint {
         switch self {
         case .CategoriesAdsGetByTypeId(let id):  return "\(baseURL)Ads/GetLatestAds?typeId=\(id)"
         case .Register: return "\(baseURL)Users/Add"
-        case .Login: return "\(baseURL)Accounts/login"
         case .CategoriesGetByTypeId(let id): return "\(baseURL)Categories/GetByTypeId?id=\(id)"
         case .GetMotorMaker: return "\(baseURL)DropDowns/GetAllMotorMaker"
         case .GetAllMotorModelByMaker(let maker): return "\(baseURL)DropDowns/GetAllMotorModelByMaker?maker=\(maker)-"

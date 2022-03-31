@@ -61,6 +61,40 @@
 		CEBFE10E27E735DB006B5D32 /* GetAllMotorMakerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */; };
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
+		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
+		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
+		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
+		E3D9AFAA27F0E079005D68B9 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */; };
+		E3D9AFAC27F0E4C7005D68B9 /* ApiRequests+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */; };
+		E3FD210527EA508600FDA9DD /* ApiRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD20F927EA508600FDA9DD /* ApiRequests.swift */; };
+		E3FD210627EA508600FDA9DD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD20FA27EA508600FDA9DD /* NetworkService.swift */; };
+		E3FD210D27EA508600FDA9DD /* ApiRequests+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD210227EA508600FDA9DD /* ApiRequests+Auth.swift */; };
+		E3FD210E27EA508600FDA9DD /* cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD210327EA508600FDA9DD /* cURL.swift */; };
+		E3FD210F27EA508600FDA9DD /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD210427EA508600FDA9DD /* APIConfig.swift */; };
+		E3FD211127EA51FA00FDA9DD /* Extensions2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211027EA51FA00FDA9DD /* Extensions2.swift */; };
+		E3FD213327EA524000FDA9DD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211327EA524000FDA9DD /* Constants.swift */; };
+		E3FD213427EA524000FDA9DD /* AlignmentAwareCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211427EA524000FDA9DD /* AlignmentAwareCollectionViewLayout.swift */; };
+		E3FD213527EA524000FDA9DD /* TableState.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FD211627EA524000FDA9DD /* TableState.xib */; };
+		E3FD213627EA524000FDA9DD /* TableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211727EA524000FDA9DD /* TableState.swift */; };
+		E3FD213727EA524000FDA9DD /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211827EA524000FDA9DD /* Kingfisher.swift */; };
+		E3FD213827EA524000FDA9DD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211927EA524000FDA9DD /* Environment.swift */; };
+		E3FD213927EA524000FDA9DD /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211A27EA524000FDA9DD /* Localize.swift */; };
+		E3FD213A27EA524000FDA9DD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211C27EA524000FDA9DD /* CardView.swift */; };
+		E3FD213B27EA524000FDA9DD /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211D27EA524000FDA9DD /* StyledButton.swift */; };
+		E3FD213C27EA524000FDA9DD /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211E27EA524000FDA9DD /* AppColors.swift */; };
+		E3FD213D27EA524000FDA9DD /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD211F27EA524000FDA9DD /* StoryboardInitializable.swift */; };
+		E3FD213E27EA524000FDA9DD /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212027EA524000FDA9DD /* CustomNavigation.swift */; };
+		E3FD213F27EA524000FDA9DD /* NibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212127EA524000FDA9DD /* NibInitializable.swift */; };
+		E3FD214427EA524000FDA9DD /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212927EA524000FDA9DD /* BaseVC.swift */; };
+		E3FD214527EA524000FDA9DD /* BaseSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212A27EA524000FDA9DD /* BaseSearchBar.swift */; };
+		E3FD214627EA524000FDA9DD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212B27EA524000FDA9DD /* Extensions.swift */; };
+		E3FD214727EA524000FDA9DD /* SwiftLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212C27EA524000FDA9DD /* SwiftLoader.swift */; };
+		E3FD214827EA524000FDA9DD /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212D27EA524000FDA9DD /* FirebaseAuthManager.swift */; };
+		E3FD214927EA524000FDA9DD /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD212E27EA524000FDA9DD /* Defaults.swift */; };
+		E3FD214A27EA524000FDA9DD /* SocialAuth+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD213027EA524000FDA9DD /* SocialAuth+Functions.swift */; };
+		E3FD214B27EA524000FDA9DD /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD213127EA524000FDA9DD /* SocialAuth.swift */; };
+		E3FD214C27EA524000FDA9DD /* AppleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD213227EA524000FDA9DD /* AppleAuth.swift */; };
+		E3FD214E27EA53E900FDA9DD /* BasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD214D27EA53E900FDA9DD /* BasicResponse.swift */; };
 		F10348FC25E7905300785B07 /* BusinessMobilesFillter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10348FB25E7905300785B07 /* BusinessMobilesFillter.swift */; };
 		F10348FF25E7906B00785B07 /* Business_MobileFillter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F10348FE25E7906B00785B07 /* Business_MobileFillter.xib */; };
 		F103490325E7958F00785B07 /* PlatesFillter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F103490225E7958F00785B07 /* PlatesFillter.xib */; };
@@ -443,6 +477,40 @@
 		CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorMakerM.swift; sourceTree = "<group>"; };
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
+		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
+		E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Notification.swift"; sourceTree = "<group>"; };
+		E3FD20F927EA508600FDA9DD /* ApiRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequests.swift; sourceTree = "<group>"; };
+		E3FD20FA27EA508600FDA9DD /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E3FD210227EA508600FDA9DD /* ApiRequests+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Auth.swift"; sourceTree = "<group>"; };
+		E3FD210327EA508600FDA9DD /* cURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cURL.swift; sourceTree = "<group>"; };
+		E3FD210427EA508600FDA9DD /* APIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		E3FD211027EA51FA00FDA9DD /* Extensions2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions2.swift; sourceTree = "<group>"; };
+		E3FD211327EA524000FDA9DD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E3FD211427EA524000FDA9DD /* AlignmentAwareCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignmentAwareCollectionViewLayout.swift; sourceTree = "<group>"; };
+		E3FD211627EA524000FDA9DD /* TableState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableState.xib; sourceTree = "<group>"; };
+		E3FD211727EA524000FDA9DD /* TableState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableState.swift; sourceTree = "<group>"; };
+		E3FD211827EA524000FDA9DD /* Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kingfisher.swift; sourceTree = "<group>"; };
+		E3FD211927EA524000FDA9DD /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		E3FD211A27EA524000FDA9DD /* Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
+		E3FD211C27EA524000FDA9DD /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E3FD211D27EA524000FDA9DD /* StyledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		E3FD211E27EA524000FDA9DD /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		E3FD211F27EA524000FDA9DD /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		E3FD212027EA524000FDA9DD /* CustomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		E3FD212127EA524000FDA9DD /* NibInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInitializable.swift; sourceTree = "<group>"; };
+		E3FD212927EA524000FDA9DD /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		E3FD212A27EA524000FDA9DD /* BaseSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSearchBar.swift; sourceTree = "<group>"; };
+		E3FD212B27EA524000FDA9DD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E3FD212C27EA524000FDA9DD /* SwiftLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLoader.swift; sourceTree = "<group>"; };
+		E3FD212D27EA524000FDA9DD /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		E3FD212E27EA524000FDA9DD /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		E3FD213027EA524000FDA9DD /* SocialAuth+Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SocialAuth+Functions.swift"; sourceTree = "<group>"; };
+		E3FD213127EA524000FDA9DD /* SocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAuth.swift; sourceTree = "<group>"; };
+		E3FD213227EA524000FDA9DD /* AppleAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleAuth.swift; sourceTree = "<group>"; };
+		E3FD214D27EA53E900FDA9DD /* BasicResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResponse.swift; sourceTree = "<group>"; };
 		F10348FB25E7905300785B07 /* BusinessMobilesFillter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMobilesFillter.swift; sourceTree = "<group>"; };
 		F10348FE25E7906B00785B07 /* Business_MobileFillter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Business_MobileFillter.xib; sourceTree = "<group>"; };
 		F103490225E7958F00785B07 /* PlatesFillter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlatesFillter.xib; sourceTree = "<group>"; };
@@ -1029,6 +1097,101 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E3C011EC27EF2892003126E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3C011ED27EF289D003126E9 /* ProfileModel.swift */,
+				E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */,
+				E3C011F127EFB27A003126E9 /* NationalityModel.swift */,
+				E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E3FD20F827EA508600FDA9DD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E3C011EC27EF2892003126E9 /* Models */,
+				E3FD214D27EA53E900FDA9DD /* BasicResponse.swift */,
+				E3FD20FA27EA508600FDA9DD /* NetworkService.swift */,
+				E3FD20FC27EA508600FDA9DD /* Requests */,
+				E3FD210327EA508600FDA9DD /* cURL.swift */,
+				E3FD210427EA508600FDA9DD /* APIConfig.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E3FD20FC27EA508600FDA9DD /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD20F927EA508600FDA9DD /* ApiRequests.swift */,
+				E3FD210227EA508600FDA9DD /* ApiRequests+Auth.swift */,
+				E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		E3FD211227EA524000FDA9DD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD211327EA524000FDA9DD /* Constants.swift */,
+				E3FD211427EA524000FDA9DD /* AlignmentAwareCollectionViewLayout.swift */,
+				E3FD211527EA524000FDA9DD /* TableState */,
+				E3FD211827EA524000FDA9DD /* Kingfisher.swift */,
+				E3FD211927EA524000FDA9DD /* Environment.swift */,
+				E3FD211A27EA524000FDA9DD /* Localize.swift */,
+				E3FD211B27EA524000FDA9DD /* UIKit */,
+				E3FD212227EA524000FDA9DD /* BaseComponents */,
+				E3FD212B27EA524000FDA9DD /* Extensions.swift */,
+				E3FD212C27EA524000FDA9DD /* SwiftLoader.swift */,
+				E3FD212D27EA524000FDA9DD /* FirebaseAuthManager.swift */,
+				E3FD212E27EA524000FDA9DD /* Defaults.swift */,
+				E3FD212F27EA524000FDA9DD /* SocialAuth */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E3FD211527EA524000FDA9DD /* TableState */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD211627EA524000FDA9DD /* TableState.xib */,
+				E3FD211727EA524000FDA9DD /* TableState.swift */,
+			);
+			path = TableState;
+			sourceTree = "<group>";
+		};
+		E3FD211B27EA524000FDA9DD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD211C27EA524000FDA9DD /* CardView.swift */,
+				E3FD211D27EA524000FDA9DD /* StyledButton.swift */,
+				E3FD211E27EA524000FDA9DD /* AppColors.swift */,
+				E3FD211F27EA524000FDA9DD /* StoryboardInitializable.swift */,
+				E3FD212027EA524000FDA9DD /* CustomNavigation.swift */,
+				E3FD212127EA524000FDA9DD /* NibInitializable.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E3FD212227EA524000FDA9DD /* BaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD212927EA524000FDA9DD /* BaseVC.swift */,
+				E3FD212A27EA524000FDA9DD /* BaseSearchBar.swift */,
+			);
+			path = BaseComponents;
+			sourceTree = "<group>";
+		};
+		E3FD212F27EA524000FDA9DD /* SocialAuth */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD213027EA524000FDA9DD /* SocialAuth+Functions.swift */,
+				E3FD213127EA524000FDA9DD /* SocialAuth.swift */,
+				E3FD213227EA524000FDA9DD /* AppleAuth.swift */,
+			);
+			path = SocialAuth;
+			sourceTree = "<group>";
+		};
 		F107A1B325CFCC9F00FC6340 = {
 			isa = PBXGroup;
 			children = (
@@ -1061,6 +1224,7 @@
 				2862BAF1277D2C55009F4B7E /* Assemblies */,
 				2862BAE8277D2B46009F4B7E /* Alerts */,
 				2862BADB277D28C3009F4B7E /* Enums */,
+				E3FD20F827EA508600FDA9DD /* API */,
 				2862BAD4277D2455009F4B7E /* Network */,
 				F10D3E5A261DC6C800AF1CAC /* inSooqApp.entitlements */,
 				F107A1CD25CFCCA100FC6340 /* Info.plist */,
@@ -1349,6 +1513,8 @@
 		F15BC4C12615AB0B0094ACF0 /* Extentions_SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E3FD211227EA524000FDA9DD /* Utilities */,
+				E3FD211027EA51FA00FDA9DD /* Extensions2.swift */,
 				F15BC4BC2615AB060094ACF0 /* UIApplication+Extensions.swift */,
 				F15BC4BA2615AB050094ACF0 /* UIBarButtonItem+Extensions.swift */,
 				F15BC4BB2615AB050094ACF0 /* UIView+Extensions.swift */,
@@ -1931,6 +2097,7 @@
 				F1E2CE1725D1492600F64F67 /* DropDownTableViewCell.xib in Resources */,
 				F11A4AE8261B33AD003E70BD /* FIRAuthCodeView.xib in Resources */,
 				F12F03062642172E00989A1B /* busn.png in Resources */,
+				E3FD213527EA524000FDA9DD /* TableState.xib in Resources */,
 				F107A20E25D0105900FC6340 /* CustomSectionHeader.xib in Resources */,
 				F13B519D267893F10093BBBF /* SharedDetailsView.xib in Resources */,
 				F1C3378E25DBB3CC00DD6BBA /* InfoCollectionViewCell.xib in Resources */,
@@ -2093,6 +2260,7 @@
 				F1FB1AF825D48D0C008CEB50 /* notificationsTableViewCell.swift in Sources */,
 				F1F7AF47261F0B40008E527B /* WantedJobFillter.swift in Sources */,
 				F1CC5A5D26473996008342BA /* MotorsTableViewCell.swift in Sources */,
+				E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */,
 				F107A20925D0090F00FC6340 /* itemsDataCollectionViewCell.swift in Sources */,
 				F1CC833A26283EC100FE1241 /* CompanyProfileViewController.swift in Sources */,
 				F19A56822619A19B007D2ABC /* MainNavView.swift in Sources */,
@@ -2106,6 +2274,7 @@
 				F107A21825D012CA00FC6340 /* GetDateFunctions.swift in Sources */,
 				F107A21C25D012D300FC6340 /* Extentions.swift in Sources */,
 				2862BAE1277D28D6009F4B7E /* Errors.swift in Sources */,
+				E3D9AFAC27F0E4C7005D68B9 /* ApiRequests+Notification.swift in Sources */,
 				F1D6793D2619B63C00170779 /* AccountViewController.swift in Sources */,
 				F1C049D925D297F300647170 /* BottomBar.swift in Sources */,
 				F11A4AFC261B379E003E70BD /* ChangeEmailView.swift in Sources */,
@@ -2130,6 +2299,7 @@
 				F175E8DD25E669C700873F20 /* AddViewController.swift in Sources */,
 				F1DC09772612F73E007BC57F /* ChatItemView.swift in Sources */,
 				F192DFA3265A3B9E00E122B0 /* ServiceRowCollectionViewCell.swift in Sources */,
+				E3FD210527EA508600FDA9DD /* ApiRequests.swift in Sources */,
 				F107A22525D0135800FC6340 /* HomeItemsModel.swift in Sources */,
 				1EC5849D27CC071E002181DC /* BusinessModel.swift in Sources */,
 				CE8CC6F627E4F46800DC0F85 /* GetAllEmirateM.swift in Sources */,
@@ -2142,9 +2312,13 @@
 				F1CBEC4B2627AE8200DC7F05 /* ForgetPasswordViewController.swift in Sources */,
 				2862BAE4277D2918009F4B7E /* WebService.swift in Sources */,
 				F1AD891425E4FB1B00326065 /* MainCategoriesCollectionViewCell.swift in Sources */,
+				E3FD214E27EA53E900FDA9DD /* BasicResponse.swift in Sources */,
 				F19CC1E8261C56FB002CDE4F /* SavedSearchesTableViewCell.swift in Sources */,
+				E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */,
 				F1CC83462628495700FE1241 /* SliderCollectionViewCell.swift in Sources */,
+				E3FD210F27EA508600FDA9DD /* APIConfig.swift in Sources */,
 				F107A22125D0131000FC6340 /* Statics.swift in Sources */,
+				E3FD214427EA524000FDA9DD /* BaseVC.swift in Sources */,
 				F1FFB7A9265A2E7800BCBBEB /* GridPlatesCollectionViewCell.swift in Sources */,
 				F1DC098926133EA5007BC57F /* ChangePasswordView.swift in Sources */,
 				F1A82DF625D5651800EDF023 /* MotorsDetailsView.swift in Sources */,
@@ -2153,14 +2327,18 @@
 				CE8CC6F227E4E6E400DC0F85 /* SubBrandVc.swift in Sources */,
 				F1AD892925E531F500326065 /* GetMoreViewsViewController.swift in Sources */,
 				F107A21925D012CA00FC6340 /* Utilities.swift in Sources */,
+				E3FD213A27EA524000FDA9DD /* CardView.swift in Sources */,
 				F1790E3625D3E9BF008E4D2C /* JobsTableViewCell.swift in Sources */,
 				F114DC7426556816006B33CF /* AdConfirmationView.swift in Sources */,
 				CE8CC6EE27E3FF3F00DC0F85 /* ControllerService.swift in Sources */,
 				1EC5849B27CAABF8002181DC /* ServicesModel.swift in Sources */,
+				E3FD210D27EA508600FDA9DD /* ApiRequests+Auth.swift in Sources */,
 				2862BAF4277D2C65009F4B7E /* ViewControllersAssembly.swift in Sources */,
 				F1CBEC432627A79600DC7F05 /* HowItWorksViewController.swift in Sources */,
 				F107A21725D012CA00FC6340 /* NetworkMonitor.swift in Sources */,
+				E3FD211127EA51FA00FDA9DD /* Extensions2.swift in Sources */,
 				F1D8219225DAA9920032A3E4 /* BusinessDetailsView.swift in Sources */,
+				E3FD214C27EA524000FDA9DD /* AppleAuth.swift in Sources */,
 				F175E8EB25E6761500873F20 /* Add_CategoryViewController.swift in Sources */,
 				17AA1C1B2788CDFE008B5409 /* CellPopupListItme.swift in Sources */,
 				F1B8B59E25D9578D00AB3E83 /* BordersDesign.swift in Sources */,
@@ -2174,11 +2352,14 @@
 				F12A2C8725E3F3A10043E3DA /* FAQViewController.swift in Sources */,
 				CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */,
 				F1790E4A25D3F78F008E4D2C /* PlatesTableViewCell.swift in Sources */,
+				E3FD210E27EA508600FDA9DD /* cURL.swift in Sources */,
 				F107A21625D012CA00FC6340 /* ViewControllerTransition.swift in Sources */,
 				F1AF4D892625C9BC007BE23D /* AdPackageViewController.swift in Sources */,
 				F175E8D525E64F5800873F20 /* JobsFillter.swift in Sources */,
+				E3FD213827EA524000FDA9DD /* Environment.swift in Sources */,
 				F1FE008B2653D11700A276D7 /* PropertiesGridCollectionViewCell.swift in Sources */,
 				1782F6A92797331700D880B8 /* RowCollecctionUsedCarCell.swift in Sources */,
+				E3FD213E27EA524000FDA9DD /* CustomNavigation.swift in Sources */,
 				F1EDDDE726790ABA00A3641E /* SeaveSearchsView.swift in Sources */,
 				F1730F0A262C84A200882749 /* LanguageView.swift in Sources */,
 				F15BC4C52615AD6F0094ACF0 /* SigninMethodsViewController.swift in Sources */,
@@ -2220,6 +2401,9 @@
 				2862BAF8277D2D7D009F4B7E /* Helleber.swift in Sources */,
 				F1790E1625D3D378008E4D2C /* PropertyView.swift in Sources */,
 				F15592472679E74B007D7E1A /* ViewOnCarCollectionViewCell.swift in Sources */,
+				E3FD213627EA524000FDA9DD /* TableState.swift in Sources */,
+				E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */,
+				E3FD213327EA524000FDA9DD /* Constants.swift in Sources */,
 				F150F81625D40DDF0077C970 /* PlatesCollectionViewCell.swift in Sources */,
 				1EC584A127CD8F4A002181DC /* SubTypesModel.swift in Sources */,
 				1ECB3B8327C1B47C004F3C91 /* ItemsSubCategoryVC.swift in Sources */,
@@ -2230,8 +2414,10 @@
 				F1FFB7A4265A2C8800BCBBEB /* RowPlatesCollectionViewCell.swift in Sources */,
 				F1A82DFA25D566D900EDF023 /* MotorsSpecificationCollectionViewCell.swift in Sources */,
 				F1F352DE2647EC35001A065B /* AmenitiesCollectionViewCell.swift in Sources */,
+				E3FD213727EA524000FDA9DD /* Kingfisher.swift in Sources */,
 				F1E2CE3D25D1650D00F64F67 /* SubCategoryHeader.swift in Sources */,
 				F11A4AEB261B3403003E70BD /* FIRAuthCodeView.swift in Sources */,
+				E3FD213F27EA524000FDA9DD /* NibInitializable.swift in Sources */,
 				F135DCCE25E1355B00186FC5 /* Shimmer.swift in Sources */,
 				F107A1D725CFCD6700FC6340 /* HomeViewController.swift in Sources */,
 				F14A2693261EEC530041FBB4 /* WantedJobsTableViewCell.swift in Sources */,
@@ -2242,26 +2428,35 @@
 				F12093CA25D13C4B004D5205 /* CountryModel.swift in Sources */,
 				F1730ED8262C38A400882749 /* MyAdsMotorsTableViewCell.swift in Sources */,
 				F1B5E53525E3B41600F19163 /* NiceButton.swift in Sources */,
+				E3FD213C27EA524000FDA9DD /* AppColors.swift in Sources */,
 				F1B8B5B125D9638100AB3E83 /* ServicesDetailsView.swift in Sources */,
+				E3FD213D27EA524000FDA9DD /* StoryboardInitializable.swift in Sources */,
 				F1790E1925D3D4A6008E4D2C /* SubCategoriesModels.swift in Sources */,
+				E3FD214527EA524000FDA9DD /* BaseSearchBar.swift in Sources */,
 				F1B8B59625D9429100AB3E83 /* ItemsSliderCollectionViewCell.swift in Sources */,
 				F132BD95261478F100F83837 /* SignUpViewController.swift in Sources */,
 				CEA987B827E681060042544D /* SubCategoryM.swift in Sources */,
+				E3FD213427EA524000FDA9DD /* AlignmentAwareCollectionViewLayout.swift in Sources */,
+				E3FD214927EA524000FDA9DD /* Defaults.swift in Sources */,
 				F148FD4525D5562000F5DDFC /* DetailsViewController.swift in Sources */,
 				F11EDC32262A53A4004D6D91 /* DeleteAdView.swift in Sources */,
 				F1AD890D25E4F92100326065 /* MyAdsViewController.swift in Sources */,
+				E3FD213927EA524000FDA9DD /* Localize.swift in Sources */,
 				F1CBEC362627860200DC7F05 /* CardDetailsViewController.swift in Sources */,
 				F19CC1CD261C4FBA002CDE4F /* SavedSearchesViewController.swift in Sources */,
 				F1BA5932262ADBA500B12D9C /* EditAdViewController.swift in Sources */,
 				2862BAF6277D2CFB009F4B7E /* Alert.swift in Sources */,
 				F1BF3C7C266904CF00DE6FCE /* AdvertisingViewController.swift in Sources */,
 				F107A1DD25CFCFDF00FC6340 /* GradiantColors.swift in Sources */,
+				E3D9AFAA27F0E079005D68B9 /* NotificationModel.swift in Sources */,
 				CEA987BA27E683070042544D /* SubTypeM.swift in Sources */,
 				F148FD3425D5295D00F5DDFC /* CategoriesModel.swift in Sources */,
 				F1790E4025D3ED2D008E4D2C /* ServicesTableViewCell.swift in Sources */,
 				F1C04A0725D2C17300647170 /* ImagesCollectionViewCell.swift in Sources */,
 				CED3020127E3DC090095B4AB /* Shared.swift in Sources */,
+				E3FD214827EA524000FDA9DD /* FirebaseAuthManager.swift in Sources */,
 				F1FB1AF325D48C8A008CEB50 /* NotificationsViewController.swift in Sources */,
+				E3FD213B27EA524000FDA9DD /* StyledButton.swift in Sources */,
 				F1C049DC25D2A30300647170 /* FillterCollectionViewCell.swift in Sources */,
 				F1ED49D525E24D1D0088E390 /* MyFavoritesViewController.swift in Sources */,
 				F1B8B5A425D95CF300AB3E83 /* PropertyDetailsView.swift in Sources */,
@@ -2279,7 +2474,9 @@
 				1ECB3B8727C3019A004F3C91 /* JobsModel.swift in Sources */,
 				F13E6FFC25ECDD0F00A26E2D /* Add_FullSpecesViewController.swift in Sources */,
 				2862BAFD277E5713009F4B7E /* PrfileModel.swift in Sources */,
+				E3FD214B27EA524000FDA9DD /* SocialAuth.swift in Sources */,
 				F107A20D25D0105900FC6340 /* CustomSectionHeader.swift in Sources */,
+				E3FD214A27EA524000FDA9DD /* SocialAuth+Functions.swift in Sources */,
 				F12A2C8225E3CA710043E3DA /* AddLocationCollectionViewCell.swift in Sources */,
 				F1DB1BF9262CF3DD00A0E93A /* ItemImagesCollectionViewCell.swift in Sources */,
 				F12269D625E63B4500E30E30 /* PropertyFillterView.swift in Sources */,
@@ -2289,10 +2486,13 @@
 				F1B8B5A725D95F5F00AB3E83 /* JobDetailsView.swift in Sources */,
 				F150F81B25D415A90077C970 /* JobsCollectionViewCell.swift in Sources */,
 				F107A1E625CFD8EB00FC6340 /* HeaderCollectionReusableView.swift in Sources */,
+				E3FD210627EA508600FDA9DD /* NetworkService.swift in Sources */,
+				E3FD214627EA524000FDA9DD /* Extensions.swift in Sources */,
 				2862BAF0277D2B75009F4B7E /* AlertType.swift in Sources */,
 				F107A1E325CFD76300FC6340 /* CategoriesCollectionViewCell.swift in Sources */,
 				F1E5B45D265282FF00FB8900 /* RowCollectionViewCell.swift in Sources */,
 				F15BC4BD2615AB060094ACF0 /* UIBarButtonItem+Extensions.swift in Sources */,
+				E3FD214727EA524000FDA9DD /* SwiftLoader.swift in Sources */,
 				F15592252679CDE7007D7E1A /* ViewonCarImage.swift in Sources */,
 				F1F6AFB3262EEA1700DF60D4 /* ChangeEmail_PhoneView.swift in Sources */,
 				F11EDC2B262A486C004D6D91 /* SignUp_PhoneViewController.swift in Sources */,

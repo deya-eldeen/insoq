@@ -112,7 +112,7 @@ class AgencyViewController: UIViewController,UITableViewDelegate,UITableViewData
             
             
         default:
-            showAlert(controller: self, message: "Something went wrong, please try again later", seconds: 1)
+            showAlertDeprecated(controller: self, message: "Something went wrong, please try again later", seconds: 1)
             return UITableViewCell()
         }
     }

@@ -29,8 +29,8 @@ class SigninMethodsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-            emailTxt.text = "salah_3wadi91@yahoo.com"
-            passwordTxt.text = "Salah@1991"
+            emailTxt.text = "samarelias3@gmail.com"
+            passwordTxt.text = "Samar@123"
         #endif
         
         setGradientBackground(view: view, colorTop: #colorLiteral(red: 0.5490196078, green: 0.3882352941, blue: 0.9058823529, alpha: 1), colorBottom: #colorLiteral(red: 0.3411764706, green: 0.2745098039, blue: 0.9882352941, alpha: 1))
@@ -170,18 +170,34 @@ class SigninMethodsViewController: UIViewController {
             self.showFailureAlert(title: "Please fill in all fields")
             return
         }
-        self.view.showLoading()
+//        self.view.showLoading()
         
-        WebService.shared.Login(emailOrPhone: emailTxt.text! , password: passwordTxt.text!) { [weak self] response, error in
-            guard let self = self else { return }
-            self.view.hideLoading()
+//        WebService.shared.Login(emailOrPhone: emailTxt.text! , password: passwordTxt.text!) { [weak self] response, error in
+//            guard let self = self else { return }
+//            self.view.hideLoading()
+//
+//            guard let response = response, error == nil else {
+//                self.showFailureAlert(title: error?.localizedDescription)
+//                return
+//            }
+//
+//            User.profile = response
+//            Shared.shared.saveIsLogin(login: true)
+//            Shared.shared.saveToken(auth: User.profile?.token ?? "")
+//            Shared.shared.saveUserId(id: User.profile?.userID ?? 0)
+//            Shared.shared.saveUserPhoneNumber(phone: User.profile?.phoneNumber ?? "")
+//
+//            let controller = Assembly.menuController
+//            self.present(controller, animated: true)
+//
+//        }
+        
+        let parameters = ["emailOrPhone": emailTxt.text ?? "", "password":  passwordTxt.text ?? ""]
 
-            guard let response = response, error == nil else {
-                self.showFailureAlert(title: error?.localizedDescription)
-                return
-            }
+        ApiRequests.login(params: parameters) { response in
+            print("RR",response)
             
-            User.profile = response
+            User.profile = response.value
             Shared.shared.saveIsLogin(login: true)
             Shared.shared.saveToken(auth: User.profile?.token ?? "")
             Shared.shared.saveUserId(id: User.profile?.userID ?? 0)
@@ -191,6 +207,7 @@ class SigninMethodsViewController: UIViewController {
             self.present(controller, animated: true)
             
         }
+        
     }
     ///apply facebook bulk
     @objc func facebookAction(){

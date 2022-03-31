@@ -15,8 +15,6 @@ extension ViewControllersAssembly {
         return controller
     }
     
-  
-    
     static var menuController: UIViewController {
         let controller: UINavigationController = main.makeViewNavigationController(with: "MainNav")
         return controller
@@ -46,6 +44,7 @@ extension ViewControllersAssembly {
         controller.allModel = allModel
         return controller
     }
+    
 }
 
 extension UIViewController {

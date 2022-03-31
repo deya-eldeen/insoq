@@ -43,4 +43,8 @@ pod 'Firebase/Messaging'
 pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
 pod 'AlamofireNetworkActivityLogger', '~> 3.4'
+
+pod 'Defaults'
+pod 'CodableCache'
+
 end

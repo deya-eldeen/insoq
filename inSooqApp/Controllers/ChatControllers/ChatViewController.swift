@@ -49,9 +49,11 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showAlert(controller: self, message: "Comming Soon...", seconds: 0.5)
+        showAlertDeprecated(controller: self, message: "Comming Soon...", seconds: 0.5)
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
             return 30
     }
@@ -77,7 +79,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
   private func makeDeleteContextualAction(forRowAt indexPath: IndexPath) -> UIContextualAction {
       return UIContextualAction(style: .destructive, title: "Delete") { (action, swipeButtonView, completion) in
           print("DELETE HERE")
-        showAlert(controller: self, message: "Comming Soon", seconds: 0.5)
+        showAlertDeprecated(controller: self, message: "Comming Soon", seconds: 0.5)
           completion(true)
       }
   }

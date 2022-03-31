@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,13 +13,13 @@
         <!--Alert Controler-->
         <scene sceneID="emJ-Xq-ehD">
             <objects>
-                <viewController storyboardIdentifier="AlertControler" id="q2s-ZG-UWX" customClass="AlertControler" customModule="WaterFront" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlertControler" id="q2s-ZG-UWX" customClass="AlertControler" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJr-x8-Fx6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uem-fZ-fCo">
-                                <rect key="frame" x="50" y="313.5" width="314" height="269"/>
+                                <rect key="frame" x="50" y="286.5" width="314" height="323"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Failure" translatesAutoresizingMaskIntoConstraints="NO" id="ifW-85-ATT">
                                         <rect key="frame" x="122" y="10" width="70" height="70"/>
@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eh-Dp-MJw">
-                                        <rect key="frame" x="30" y="209" width="254" height="50"/>
+                                        <rect key="frame" x="30" y="263" width="254" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="rPX-o9-ouS"/>
                                         </constraints>
@@ -83,7 +83,7 @@
                             <constraint firstItem="Itb-Dm-t44" firstAttribute="trailing" secondItem="uem-fZ-fCo" secondAttribute="trailing" constant="50" id="CYC-Ed-bMT"/>
                             <constraint firstItem="uem-fZ-fCo" firstAttribute="leading" secondItem="Itb-Dm-t44" secondAttribute="leading" constant="50" id="D1w-XV-gMp"/>
                             <constraint firstItem="uem-fZ-fCo" firstAttribute="centerY" secondItem="bJr-x8-Fx6" secondAttribute="centerY" id="c2E-I9-Jf0"/>
-                            <constraint firstItem="uem-fZ-fCo" firstAttribute="height" secondItem="bJr-x8-Fx6" secondAttribute="height" multiplier="0.3" id="cNk-CD-2bu"/>
+                            <constraint firstItem="uem-fZ-fCo" firstAttribute="height" secondItem="bJr-x8-Fx6" secondAttribute="height" multiplier="0.36" id="cNk-CD-2bu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -99,7 +99,7 @@
         <!--Success For Get Password Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SuccessForGetPasswordController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="SuccessForGetPasswordController" customModule="WaterFront" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessForGetPasswordController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="SuccessForGetPasswordController" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,7 +130,7 @@ a new password</string>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV5-I7-Hrj" customClass="GradientButton" customModule="WaterFront" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV5-I7-Hrj" customClass="GradientButton" customModule="inSooqApp" customModuleProvider="target">
                                 <rect key="frame" x="50" y="712" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Oak-8W-3xQ"/>

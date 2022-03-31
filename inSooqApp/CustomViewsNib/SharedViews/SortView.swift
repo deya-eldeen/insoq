@@ -33,7 +33,7 @@ class SortView: UIView,UITableViewDataSource,UITableViewDelegate {
     }
     @IBAction func continue_Pressed(_ sender: Any) {
         guard let vc = self.vc else { return }
-        showAlert(controller: vc, message: "SortView view...", seconds: 1)
+        showAlertDeprecated(controller: vc, message: "SortView view...", seconds: 1)
     }
     
     func xibSetup() {

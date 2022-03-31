@@ -111,7 +111,7 @@ extension Notification.Name {
 }
 
 extension String{
-    var localized: String { return NSLocalizedString(self, comment: "")}
+//    var localized: String { return NSLocalizedString(self, comment: "")}
     //MARK: calculate label height
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
@@ -157,7 +157,7 @@ extension UITextField{
         }
     }
 }
-public func showAlert(controller: UIViewController, message: String ,seconds: Double)
+public func showAlertDeprecated(controller: UIViewController, message: String ,seconds: Double)
 {
     let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
     alert.view.backgroundColor = UIColor.gray
@@ -306,3 +306,13 @@ extension UIApplication {
     
 }
 
+extension UIColor {
+    convenience init(hex: Int) {
+        let components = (
+            R: CGFloat((hex >> 16) & 0xff) / 255,
+            G: CGFloat((hex >> 08) & 0xff) / 255,
+            B: CGFloat((hex >> 00) & 0xff) / 255
+        )
+        self.init(red: components.R, green: components.G, blue: components.B, alpha: 1)
+    }
+}

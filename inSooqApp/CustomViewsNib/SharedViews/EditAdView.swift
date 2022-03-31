@@ -21,7 +21,7 @@ class EditAdView: UIView {
     }
     @IBAction func continue_Pressed(_ sender: Any) {
         guard let vc = self.vc else { return }
-        showAlert(controller: vc, message: "EditAdView...", seconds: 1)
+        showAlertDeprecated(controller: vc, message: "EditAdView...", seconds: 1)
     }
     
     func xibSetup() {

@@ -396,7 +396,7 @@ extension Add_FullSpecesViewController {
         if collectionImages.count < 10 {
             selectImage()
         }
-        else{ showAlert(controller: self, message: "You've added 10 photos.", seconds: 1)}
+        else{ showAlertDeprecated(controller: self, message: "You've added 10 photos.", seconds: 1)}
     }
     
     @IBAction func back_Pressed(_ sender: Any) {

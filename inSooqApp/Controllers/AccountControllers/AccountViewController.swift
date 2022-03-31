@@ -8,15 +8,16 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    
     @IBOutlet weak var mainNavBar: MainNavView!
     @IBOutlet weak var bottomView: BottomView!
-    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
-    @IBOutlet weak var countryButton: UIButton!
-    @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var userImage: UIImageView!
+
+
+
+    
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var profileIcon: UILabel!
     @IBOutlet weak var adsIcon: UILabel!
     @IBOutlet weak var savedSearchesIcon: UILabel!
@@ -24,6 +25,11 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var jobsIcon: UILabel!
     @IBOutlet weak var logOutIcon: UILabel!
     @IBOutlet weak var advertisingIcon: UILabel!
+
+    @IBOutlet weak var countryButton: UIButton!
+    @IBOutlet weak var languageButton: UIButton!
+
+
     
     @IBOutlet weak var countryFlagImg: UIImageView!
     
@@ -37,6 +43,19 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         mainNavBar.setVC(viewController: self)
         bottomView.setVC(viewController: self)
+        
+        let id = Shared.shared.getUserId() ?? 0
+        
+        ApiRequests.profileDetails(id: id) { response in
+            let firstName = response.value?.firstName
+            let lastName = response.value?.lastName
+            self.userName.text = "\(firstName ?? "") \(lastName ?? "")"
+            print("RRR",response.value)
+
+            let imageURL = response.value?.profilePicture ?? ""
+            self.userImage.setImage(url: imageURL.fullImageUrl())
+
+        }
         
     }
     
@@ -121,6 +140,8 @@ class AccountViewController: UIViewController {
         listingView.isHidden = !listingView.isHidden
     }
     @IBAction func logout_Pressed(_ sender: Any) {
+        Shared.shared.saveIsLogin(login: false)
+
         removeViewDataFromMemory(controller: self, vcToClear: AccountViewController.self)
         //clearViewData(controller: self)
         newRoot(NavId: "RegistrationNav")

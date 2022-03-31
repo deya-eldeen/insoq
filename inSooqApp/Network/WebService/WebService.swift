@@ -16,19 +16,14 @@ class WebService {
     let networkManager = NetworkManager()
     
     // MARK: - register
-    func register(
-        firstName: String,
-        lastName: String,
-        mobileNumber: String,
-        email: String,
-        password: String,
-        completion: @escaping(RegisterModel?,AppError?)->()
-    )  {
+    func register( firstName: String, lastName: String, mobileNumber: String, email: String, password: String, completion: @escaping(RegisterModel?,AppError?)->()) {
+
         let parameters = ["firstName": firstName,
                           "lastName":lastName,
                           "mobileNumber": mobileNumber,
                           "email": email,
                           "password": password]
+
         networkManager.GenericRequest(urlString: EndPoint.Register.path, method: .post, params: parameters) { (response: RegisterModel?, error) in
             if error == nil {
                 completion(response,nil)
@@ -36,32 +31,26 @@ class WebService {
             }
             completion(nil,error)
         }
+
     }
     
     // MARK: - Login
-    
-    func Login(
-        emailOrPhone: String,
-        password: String,
-        completion: @escaping(LoginModel?,AppError?)->()
-    )  {
-        let parameters = ["emailOrPhone": emailOrPhone,
-                          "password": password]
-        networkManager.GenericRequest(urlString: EndPoint.Login.path, method: .post, params: parameters) { (response: LoginModel?, error) in
-            if error == nil {
-                completion(response,nil)
-                return
-            }
-            completion(nil,error)
-        }
-    }
+//    func Login( emailOrPhone: String, password: String, completion: @escaping(LoginModel?,AppError?)->())  {
+//
+//        let parameters = ["emailOrPhone": emailOrPhone, "password": password]
+//
+//        networkManager.GenericRequest(urlString: EndPoint.Login.path, method: .post, params: parameters) { (response: LoginModel?, error) in
+//            if error == nil {
+//                completion(response,nil)
+//                return
+//            }
+//            completion(nil,error)
+//        }
+//
+//    }
     
     // MARK: - CategoriesGetByTypeId
-    
-    func CategoriesGetByTypeId(
-        id: String,
-        completion: @escaping([Category]?,AppError?)->()
-    )  {
+    func CategoriesGetByTypeId( id: String, completion: @escaping([Category]?,AppError?)->())  {
         networkManager.GenericRequestGet(urlString: EndPoint.CategoriesGetByTypeId(id: id).path, method: .get, params: nil) { (response: [Category]?, error) in
             if error == nil {
                 completion(response,nil)
@@ -69,12 +58,10 @@ class WebService {
             }
             completion(nil,error)
         }
-        
     }
-    func CategoriesADSGetByTypeId(
-        id: String,
-        completion: @escaping([AdsOfCategoryModel]?,AppError?)->()
-    )  {
+    
+    func CategoriesADSGetByTypeId( id: String, completion: @escaping([AdsOfCategoryModel]?,AppError?)->() ) {
+        
         networkManager.GenericRequestGet(urlString: EndPoint.CategoriesAdsGetByTypeId(id: id).path, method: .get, params: nil) { (response: [AdsOfCategoryModel]?, error) in
             if error == nil {
                 
@@ -90,10 +77,8 @@ class WebService {
     
     
     
-    func getSubTypes(
-        endPoint: String,
-        completion: @escaping([SubTypesModel]?,AppError?)->()
-    )  {
+    func getSubTypes( endPoint: String, completion: @escaping([SubTypesModel]?,AppError?)->()) {
+        
         networkManager.GenericRequestGet(urlString: endPoint, method: .get, params: nil) { (response: [SubTypesModel]?, error) in
             if error == nil {
                 
@@ -106,10 +91,9 @@ class WebService {
         }
         
     }
-    func getSubCategories(
-        endPoint: String,
-        completion: @escaping([SubCategoriesModel]?,AppError?)->()
-    )  {
+    
+    func getSubCategories( endPoint: String, completion: @escaping([SubCategoriesModel]?,AppError?)->() ) {
+        
         networkManager.GenericRequestGet(urlString: endPoint, method: .get, params: nil) { (response: [SubCategoriesModel]?, error) in
             if error == nil {
                 
@@ -123,11 +107,10 @@ class WebService {
         
     }
     
-    func getSubCategoriesByCatID(
-        catID: String,
-        completion: @escaping([SubCategoriesModel]?,AppError?)->()
-    )  {
+    func getSubCategoriesByCatID( catID: String, completion: @escaping([SubCategoriesModel]?,AppError?)->()) {
+        
         networkManager.GenericRequestGet(urlString: EndPoint.GetSubCatByCatID(id: catID).path, method: .get, params: nil) { (response: [SubCategoriesModel]?, error) in
+            
             if error == nil {
                 
                 completion(response,nil)
@@ -140,10 +123,8 @@ class WebService {
         
     }
     
-    func GetAllCareerLevel(
-        endPoint: String,
-        completion: @escaping([CategoriesModelsNew]?,AppError?)->()
-    )  {
+    func GetAllCareerLevel( endPoint: String, completion: @escaping([CategoriesModelsNew]?,AppError?)->() )  {
+        
         networkManager.GenericRequestGet(urlString: endPoint, method: .get, params: nil) { (response: [CategoriesModelsNew]?, error) in
             if error == nil {
                 
@@ -156,13 +137,10 @@ class WebService {
         }
         
     }
-//    GET MOTOR FILTER
-    func getMotorFilter(
-        maker: String,
-        model: String,
-        categoryId: String,
-        completion: @escaping([AdsOfCategoryModel]?,AppError?)->()
-    )  {
+    
+    //GET MOTOR FILTER
+    func getMotorFilter( maker: String, model: String, categoryId: String, completion: @escaping([AdsOfCategoryModel]?,AppError?)->())  {
+        
         let parameters = ["fromPrice": "0",
                           "toPrice": "1000000",
                           "fromYear": "1900",
@@ -190,12 +168,8 @@ class WebService {
         
     }
     
-    func getJobs(
-        categoryId: String,
-        careerLevel: String,
-        employmentType: String,
-        completion: @escaping([JobsModel]?,AppError?)->()
-    )  {
+    func getJobs( categoryId: String, careerLevel: String, employmentType: String, completion: @escaping([JobsModel]?,AppError?)->() ) {
+        
         let parameters = ["jobType": "",
                           "careerLevel": careerLevel,
                           "location": "",
@@ -221,13 +195,8 @@ class WebService {
     }
     
     
-    func getServices(
-        categoryId: Int,
-        subCategoryID: Int,
-        postedIN: Int,
-        location: String,
-        completion: @escaping([ServicesModel]?,AppError?)->()
-    )  {
+    func getServices( categoryId: Int, subCategoryID: Int, postedIN: Int, location: String, completion: @escaping([ServicesModel]?,AppError?)->()) {
+        
         let parameters = [
                           "subCategoryId": "\(subCategoryID)",
                           "location": location,
@@ -250,21 +219,8 @@ class WebService {
     }
     
     
-    func getClassified(
-        categoryId: Int,
-        subCategoryID: Int,
-        postedIN: Int,
-        age: String,
-        usage: String,
-        brand: String,
-        keyword: String,
-        subTypeId: String,
-        sortBy: Int,
-        location: String,
-        fromPrice: Int,
-        toPrice: Int,
-        completion: @escaping([ClassifiedModel]?,AppError?)->()
-    )  {
+    func getClassified( categoryId: Int, subCategoryID: Int, postedIN: Int, age: String, usage: String, brand: String, keyword: String, subTypeId: String, sortBy: Int, location: String, fromPrice: Int, toPrice: Int,completion: @escaping([ClassifiedModel]?,AppError?)->()) {
+        
         let parameters = [
                           "subCategoryId": "\(subCategoryID)",
                           "location": location,
@@ -423,4 +379,6 @@ class WebService {
             completion(nil,error)
         }
     }
+    
+    
 }

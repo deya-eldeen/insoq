@@ -32,7 +32,7 @@ class DeleteAdView: UIView,UITableViewDelegate,UITableViewDataSource{
     }
     @IBAction func continue_Pressed(_ sender: Any) {
         guard let vc = self.vc else { return }
-        showAlert(controller: vc, message: "Deleting Ad...", seconds: 1)
+        showAlertDeprecated(controller: vc, message: "Deleting Ad...", seconds: 1)
     }
     
     func xibSetup() {
