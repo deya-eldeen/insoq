@@ -9,8 +9,8 @@ import Foundation
 
 struct NationalityModel: Codable {
     
-    let id:  Int?
-    let ar_Text:  String?
-    let en_Text:  String?
+    var id:  Int?
+    var ar_Text:  String?
+    var en_Text:  String?
     
 }

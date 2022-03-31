@@ -17,6 +17,9 @@ struct Endpoint {
 
 class NetworkService {
     
+    static let shared = NetworkService()
+
+    
     func showError(error:String){
         DispatchQueue.main.async {
             UIViewController().showAlert(title: "error", body: error)
@@ -52,14 +55,25 @@ class NetworkService {
     func simpleRequest<T:Decodable>(url:String, method: HTTPMethod,params:Parameters? = .none, withLoading: Bool = true, completion:@escaping (DataResponse<T,AFError>) -> Void) {
         let headers = requestHeaders()
         
-        if(withLoading == true) { UIViewController().showLoading() }
+        print("AA_1")
+        
+        DispatchQueue.main.async {
+            if(withLoading == true) { UIViewController().showLoading() }
+        }
+        
+        print("AA_2")
         
         let escapedURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         
+        print("AA_3")
         AF.request(escapedURL, method: method,parameters: params, encoding: APIConfig.encoding, headers: headers).responseDecodable { (response: (DataResponse<T,AFError>)) in
-            if(withLoading == true) { UIViewController().hideLoading() }
-
+            print("AA_4")
+            DispatchQueue.main.async {
+                if(withLoading == true) { UIViewController().hideLoading() }
+            }
+            print("AA_5")
             if(response.error != nil){completion(response)}
+            print("AA_6")
             
             print("🛠Req\n",response.request?.cURL() ?? "","\n")
             print("🛠Res\n",response.value,response.value)

@@ -116,7 +116,12 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
 
         let id = Shared.shared.getUserId() ?? 0
 
-        ApiRequests.profileDetails(id: id) { response in
+        self.requestDetails()
+
+        ApiRequests.profileDetails(id: id) { [weak self] response in
+
+            guard let self = self else { return }
+
             let firstName = response.value?.firstName ?? ""
             let lastName = response.value?.lastName ?? ""
             let email = response.value?.email ?? ""
@@ -140,27 +145,38 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
             self.firstNameTxt.text = firstName
             self.lastNameTxt.text = lastName
             self.emailTxt.text = email
-            
+
             self.locationTxt.text = (response.value?.currentLocation ?? "")
             self.jobPositionTxt.text = (response.value?.currentPosition ?? "")
             self.companyTxt.text = (response.value?.currentCompany ?? "")
             self.coverNoteTxv.text = (response.value?.coverNote ?? "")
 
-            
-//            let nationality = (response.value?.defaultLocation ?? "")
-//            let nationality = (response.value?.nationality ?? "")
-//            let nationality = (response.value?.nationality ?? "")
-
         }
         
+
+    }
+    
+    func requestDetails() {
+
+        ApiRequests.nationalities { response in
+            print("🟩_nationalities_response",response)
+        }
         
+        ApiRequests.locations { response in
+            print("🟩_locations_response",response)
+        }
+
+        ApiRequests.educationLevels { response in
+            print("🟩_educationLevels_response",response)
+        }
+
+        ApiRequests.careerLevels { response in
+            print("🟩_careerLevels_response",response)
+        }
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        
-
-        
 
     }
     

@@ -151,6 +151,18 @@ struct APIUrls {
         return "DropDowns/GetAllNationality".fullUrl()
     }
     
+    static func locations() -> String {
+        return "DropDowns/GetAllLocation".fullUrl()
+    }
+    
+    static func educationLevels() -> String {
+        return "DropDowns/GetAllEducationLevel".fullUrl()
+    }
+    
+    static func careerLevels() -> String {
+        return "DropDowns/GetAllCareerLevel".fullUrl()
+    }
+    
     static func notifications() -> String {
         return "Notifications/GetNotifications".fullUrl()
     }

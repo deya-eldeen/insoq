@@ -66,6 +66,9 @@
 		E380353B27F6506E00FF0212 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353A27F6506E00FF0212 /* Account.storyboard */; };
 		E380353E27F653E500FF0212 /* Adding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353C27F653E500FF0212 /* Adding.storyboard */; };
 		E380354027F657E500FF0212 /* Items.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353F27F657E500FF0212 /* Items.storyboard */; };
+		E380354227F6602700FF0212 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354127F6602700FF0212 /* LocationModel.swift */; };
+		E380354427F6608600FF0212 /* EducationLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354327F6608600FF0212 /* EducationLevelModel.swift */; };
+		E380354627F660F800FF0212 /* CareerLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354527F660F800FF0212 /* CareerLevelModel.swift */; };
 		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
 		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
 		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
@@ -487,6 +490,9 @@
 		E380353A27F6506E00FF0212 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		E380353D27F653E500FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Adding.storyboard; sourceTree = "<group>"; };
 		E380353F27F657E500FF0212 /* Items.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Items.storyboard; sourceTree = "<group>"; };
+		E380354127F6602700FF0212 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		E380354327F6608600FF0212 /* EducationLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationLevelModel.swift; sourceTree = "<group>"; };
+		E380354527F660F800FF0212 /* CareerLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerLevelModel.swift; sourceTree = "<group>"; };
 		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
@@ -1113,6 +1119,9 @@
 				E3C011ED27EF289D003126E9 /* ProfileModel.swift */,
 				E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */,
 				E3C011F127EFB27A003126E9 /* NationalityModel.swift */,
+				E380354127F6602700FF0212 /* LocationModel.swift */,
+				E380354327F6608600FF0212 /* EducationLevelModel.swift */,
+				E380354527F660F800FF0212 /* CareerLevelModel.swift */,
 				E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */,
 			);
 			path = Models;
@@ -2323,6 +2332,7 @@
 				F107A22525D0135800FC6340 /* HomeItemsModel.swift in Sources */,
 				1EC5849D27CC071E002181DC /* BusinessModel.swift in Sources */,
 				CE8CC6F627E4F46800DC0F85 /* GetAllEmirateM.swift in Sources */,
+				E380354227F6602700FF0212 /* LocationModel.swift in Sources */,
 				F192DFA8265A3CE300E122B0 /* ServiceGridCollectionViewCell.swift in Sources */,
 				F10D3E55261DA73B00AF1CAC /* ContactViewController.swift in Sources */,
 				1EC584A827D394B3002181DC /* AddBoatsVC.swift in Sources */,
@@ -2434,6 +2444,7 @@
 				F1FFB7A4265A2C8800BCBBEB /* RowPlatesCollectionViewCell.swift in Sources */,
 				F1A82DFA25D566D900EDF023 /* MotorsSpecificationCollectionViewCell.swift in Sources */,
 				F1F352DE2647EC35001A065B /* AmenitiesCollectionViewCell.swift in Sources */,
+				E380354427F6608600FF0212 /* EducationLevelModel.swift in Sources */,
 				E3FD213727EA524000FDA9DD /* Kingfisher.swift in Sources */,
 				F1E2CE3D25D1650D00F64F67 /* SubCategoryHeader.swift in Sources */,
 				F11A4AEB261B3403003E70BD /* FIRAuthCodeView.swift in Sources */,
@@ -2489,6 +2500,7 @@
 				F1E2CE4E25D17E5C00F64F67 /* TopNavigationbar.swift in Sources */,
 				F175E8D125E64BB200873F20 /* ServicesFillter.swift in Sources */,
 				F1C049E425D2B60B00647170 /* MotorsView.swift in Sources */,
+				E380354627F660F800FF0212 /* CareerLevelModel.swift in Sources */,
 				F1F6DE2425DD1EFE0073F9A7 /* ARSelectionType.swift in Sources */,
 				F1FE007A2653C7BF00A276D7 /* JobsRowCollectionViewCell.swift in Sources */,
 				1ECB3B8727C3019A004F3C91 /* JobsModel.swift in Sources */,
