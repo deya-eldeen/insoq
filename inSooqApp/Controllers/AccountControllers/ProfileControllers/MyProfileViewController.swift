@@ -95,6 +95,11 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     private var _isAdsChecked:Bool=true
     private var _hideData:Bool=true
     
+    var nationalitiesData = [NationalityModel]()
+    var locationsData = [LocationModel]()
+    var educationLevelsData = [EducationLevelModel]()
+    var careerLevelsData = [CareerLevelModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -159,19 +164,23 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     func requestDetails() {
 
         ApiRequests.nationalities { response in
-            print("🟩_nationalities_response",response)
+            self.nationalitiesData = response.value ?? []
+            self.countryDropDown.dataSource = self.nationalitiesData.compactMap { $0.en_Text }
         }
         
         ApiRequests.locations { response in
-            print("🟩_locations_response",response)
+            self.locationsData = response.value ?? []
+            self.locationDropDown.dataSource = self.locationsData.compactMap { $0.en_Text }
         }
 
         ApiRequests.educationLevels { response in
-            print("🟩_educationLevels_response",response)
+            self.educationLevelsData = response.value ?? []
+            self.educationDropDown.dataSource = self.educationLevelsData.compactMap { $0.en_Text }
         }
 
         ApiRequests.careerLevels { response in
-            print("🟩_careerLevels_response",response)
+            self.careerLevelsData = response.value ?? []
+            self.careerDropDown.dataSource = self.careerLevelsData.compactMap { $0.en_Text }
         }
 
     }
@@ -339,33 +348,14 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         languageDropDown.bottomOffset = CGPoint(x: 0, y: languageButton.bounds.height)
         countryDropDown.bottomOffset = CGPoint(x: 0, y: countryButton.bounds.height)
 
-        genderDropDown.dataSource = [
-            "Male","Female","Other"
-        ]
+        genderDropDown.dataSource = ["Male","Female"]
+        languageDropDown.dataSource = ["Arabic","English"]
         
-        locationDropDown.dataSource=[
-            "All UAE",
-            "Abu Dhabi",
-            "Al Ain",
-            "Ajman",
-            "Dubai",
-            "Fujairah",
-            "Ras Al Khaimah"
-            ]
-        educationDropDown.dataSource = [
-            "i.e 1","i.e 2","i.e 3"
-        ]
-        careerDropDown.dataSource = [
-            "i.e 1","i.e 2","i.e 3"
-        ]
-        languageDropDown.dataSource = [
-            "Arabic","English"
-        ]
-        countryDropDown.dataSource = [
-            "Jordan", "China", "UK","UAE", "USA"
-        ]
+        locationDropDown.dataSource = []
+        educationDropDown.dataSource = []
+        careerDropDown.dataSource = []
+        countryDropDown.dataSource = []
 
-        
         // Action triggered on selection
         genderDropDown.selectionAction = { [weak self] (index, item) in
             print("DID_SELECT_GENDER")

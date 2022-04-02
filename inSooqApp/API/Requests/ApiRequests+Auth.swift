@@ -23,7 +23,7 @@ extension ApiRequests {
     
     typealias ProfileCompletionHandler = (DataResponse<ProfileModel,AFError>)
     static func profileDetails(id: Int, completion:@escaping (ProfileCompletionHandler) -> Void) {
-        NetworkService.shared.simpleRequest(url: APIUrls.profileDetails(id: id), method: .get, withLoading: false) { (response: ProfileCompletionHandler) in completion(response) }
+        NetworkService.shared.simpleRequest(url: APIUrls.profileDetails(id: id), method: .get) { (response: ProfileCompletionHandler) in completion(response) }
     }
     
     typealias EditProfileCompletionHandler = (DataResponse<FullEditProfileModel,AFError>)

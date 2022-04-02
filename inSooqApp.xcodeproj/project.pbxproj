@@ -69,6 +69,10 @@
 		E380354227F6602700FF0212 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354127F6602700FF0212 /* LocationModel.swift */; };
 		E380354427F6608600FF0212 /* EducationLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354327F6608600FF0212 /* EducationLevelModel.swift */; };
 		E380354627F660F800FF0212 /* CareerLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354527F660F800FF0212 /* CareerLevelModel.swift */; };
+		E380354927F8513D00FF0212 /* Misc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380354727F8513D00FF0212 /* Misc.storyboard */; };
+		E380354B27F85ED600FF0212 /* ApiRequests+Advertisting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354A27F85ED600FF0212 /* ApiRequests+Advertisting.swift */; };
+		E380354D27F85F3B00FF0212 /* AdvertisingBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354C27F85F3B00FF0212 /* AdvertisingBudget.swift */; };
+		E380354F27F85F7E00FF0212 /* AdvertisingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380354E27F85F7E00FF0212 /* AdvertisingModel.swift */; };
 		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
 		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
 		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
@@ -493,6 +497,10 @@
 		E380354127F6602700FF0212 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E380354327F6608600FF0212 /* EducationLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationLevelModel.swift; sourceTree = "<group>"; };
 		E380354527F660F800FF0212 /* CareerLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerLevelModel.swift; sourceTree = "<group>"; };
+		E380354827F8513D00FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Misc.storyboard; sourceTree = "<group>"; };
+		E380354A27F85ED600FF0212 /* ApiRequests+Advertisting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Advertisting.swift"; sourceTree = "<group>"; };
+		E380354C27F85F3B00FF0212 /* AdvertisingBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingBudget.swift; sourceTree = "<group>"; };
+		E380354E27F85F7E00FF0212 /* AdvertisingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingModel.swift; sourceTree = "<group>"; };
 		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
@@ -1120,9 +1128,11 @@
 				E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */,
 				E3C011F127EFB27A003126E9 /* NationalityModel.swift */,
 				E380354127F6602700FF0212 /* LocationModel.swift */,
+				E380354C27F85F3B00FF0212 /* AdvertisingBudget.swift */,
 				E380354327F6608600FF0212 /* EducationLevelModel.swift */,
 				E380354527F660F800FF0212 /* CareerLevelModel.swift */,
 				E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */,
+				E380354E27F85F7E00FF0212 /* AdvertisingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1146,6 +1156,7 @@
 				E3FD20F927EA508600FDA9DD /* ApiRequests.swift */,
 				E3FD210227EA508600FDA9DD /* ApiRequests+Auth.swift */,
 				E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */,
+				E380354A27F85ED600FF0212 /* ApiRequests+Advertisting.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -1239,6 +1250,7 @@
 				F107A1C825CFCCA100FC6340 /* Assets.xcassets */,
 				F107A1C125CFCC9F00FC6340 /* SceneDelegate.swift */,
 				F107A1C525CFCC9F00FC6340 /* Main.storyboard */,
+				E380354727F8513D00FF0212 /* Misc.storyboard */,
 				E380353C27F653E500FF0212 /* Adding.storyboard */,
 				E380353F27F657E500FF0212 /* Items.storyboard */,
 				E380353A27F6506E00FF0212 /* Account.storyboard */,
@@ -2107,6 +2119,7 @@
 				F103490C25E7A79700785B07 /* PaymentMethodView.xib in Resources */,
 				F1F7AF4B261F1337008E527B /* WantedJobDetailsView.xib in Resources */,
 				F1FFB7B4265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib in Resources */,
+				E380354927F8513D00FF0212 /* Misc.storyboard in Resources */,
 				F1F352F12647EDE3001A065B /* playground.png in Resources */,
 				E380353E27F653E500FF0212 /* Adding.storyboard in Resources */,
 				F12F02F82642170600989A1B /* favo.png in Resources */,
@@ -2313,6 +2326,7 @@
 				F1C53A462636EC3200476793 /* AddOpeningJobsView.swift in Sources */,
 				2862BAD7277D247C009F4B7E /* EndPoint.swift in Sources */,
 				F148FD3B25D538F400F5DDFC /* ChatViewController.swift in Sources */,
+				E380354D27F85F3B00FF0212 /* AdvertisingBudget.swift in Sources */,
 				F195F85225E39343007FABFA /* MotorsFillter.swift in Sources */,
 				F1EDDDEF2679245100A3641E /* ViewPlateViewController.swift in Sources */,
 				F114DCAC265647DD006B33CF /* JobsDashBoardTableViewCell.swift in Sources */,
@@ -2361,6 +2375,7 @@
 				F1790E3625D3E9BF008E4D2C /* JobsTableViewCell.swift in Sources */,
 				F114DC7426556816006B33CF /* AdConfirmationView.swift in Sources */,
 				CE8CC6EE27E3FF3F00DC0F85 /* ControllerService.swift in Sources */,
+				E380354F27F85F7E00FF0212 /* AdvertisingModel.swift in Sources */,
 				1EC5849B27CAABF8002181DC /* ServicesModel.swift in Sources */,
 				E3FD210D27EA508600FDA9DD /* ApiRequests+Auth.swift in Sources */,
 				2862BAF4277D2C65009F4B7E /* ViewControllersAssembly.swift in Sources */,
@@ -2505,6 +2520,7 @@
 				F1FE007A2653C7BF00A276D7 /* JobsRowCollectionViewCell.swift in Sources */,
 				1ECB3B8727C3019A004F3C91 /* JobsModel.swift in Sources */,
 				F13E6FFC25ECDD0F00A26E2D /* Add_FullSpecesViewController.swift in Sources */,
+				E380354B27F85ED600FF0212 /* ApiRequests+Advertisting.swift in Sources */,
 				2862BAFD277E5713009F4B7E /* PrfileModel.swift in Sources */,
 				E3FD214B27EA524000FDA9DD /* SocialAuth.swift in Sources */,
 				F107A20D25D0105900FC6340 /* CustomSectionHeader.swift in Sources */,
@@ -2562,6 +2578,14 @@
 				E380353D27F653E500FF0212 /* Base */,
 			);
 			name = Adding.storyboard;
+			sourceTree = "<group>";
+		};
+		E380354727F8513D00FF0212 /* Misc.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E380354827F8513D00FF0212 /* Base */,
+			);
+			name = Misc.storyboard;
 			sourceTree = "<group>";
 		};
 		F107A1C525CFCC9F00FC6340 /* Main.storyboard */ = {

@@ -225,6 +225,8 @@ func sbFromVC(vcID: String) -> String {
     
     let ItemsVCIds = ["ItemsCategoryVC", "ItemsSubCategoryVC", "ItemDetailsCollectionViewController"]
     
+    let MiscVCIds = ["ChatViewController", "NotificationsViewController", "AgencyViewController", "EditAdViewController"]
+    
     if MetaVCIds.contains(vcID) {
         sbID = "Meta"
     }
@@ -243,6 +245,10 @@ func sbFromVC(vcID: String) -> String {
     
     if ItemsVCIds.contains(vcID) {
         sbID = "Items"
+    }
+    
+    if MiscVCIds.contains(vcID) {
+        sbID = "Misc"
     }
     
     return sbID

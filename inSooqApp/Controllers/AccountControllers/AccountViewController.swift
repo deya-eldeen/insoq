@@ -13,9 +13,6 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var bottomView: BottomView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userImage: UIImageView!
-
-
-
     
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var profileIcon: UILabel!
@@ -29,8 +26,6 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var countryButton: UIButton!
     @IBOutlet weak var languageButton: UIButton!
 
-
-    
     @IBOutlet weak var countryFlagImg: UIImageView!
     
     @IBOutlet weak var insouqAppIcon: UILabel!

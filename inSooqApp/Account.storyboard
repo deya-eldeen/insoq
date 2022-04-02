@@ -2810,13 +2810,13 @@ protect You.</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58w-o1-Ift">
-                                                <rect key="frame" x="9.5" y="1580" width="409" height="102.5"/>
+                                                <rect key="frame" x="17.5" y="1580" width="393" height="98.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_photo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="L7Z-3A-FgB">
-                                                        <rect key="frame" x="20" y="20.5" width="61" height="61.5"/>
+                                                        <rect key="frame" x="20" y="19.5" width="59" height="59"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN4-3e-EaF">
-                                                        <rect key="frame" x="91" y="36" width="308" height="30"/>
+                                                        <rect key="frame" x="89" y="34" width="294" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <state key="normal" title="ADD YOUR CV">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2836,13 +2836,13 @@ protect You.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbl-I1-Fki">
-                                                <rect key="frame" x="9.5" y="1686.5" width="409" height="102"/>
+                                                <rect key="frame" x="17.5" y="1686.5" width="393" height="98"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_photo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="WIO-GD-sZD">
-                                                        <rect key="frame" x="20" y="20.5" width="61" height="61"/>
+                                                        <rect key="frame" x="20" y="19.5" width="59" height="59"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQx-EQ-Kmq">
-                                                        <rect key="frame" x="91" y="36" width="308" height="30"/>
+                                                        <rect key="frame" x="89" y="34" width="294" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <state key="normal" title="ADD INDUSTRY">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2862,7 +2862,7 @@ protect You.</string>
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1Q-vi-5Hu">
-                                                <rect key="frame" x="9.5" y="1790.5" width="409" height="128"/>
+                                                <rect key="frame" x="17.5" y="1786.5" width="393" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="r4Z-DW-Czh"/>
                                                 </constraints>
@@ -2883,7 +2883,7 @@ protect You.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5E-G0-1Td">
-                                                <rect key="frame" x="9.5" y="1938.5" width="409" height="80"/>
+                                                <rect key="frame" x="17.5" y="1934.5" width="393" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUX-TE-4lF">
                                                         <rect key="frame" x="10" y="8" width="64" height="18"/>
@@ -2921,7 +2921,7 @@ protect You.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbl-ci-Tt5">
-                                                <rect key="frame" x="9.5" y="2038.5" width="409" height="140"/>
+                                                <rect key="frame" x="17.5" y="2034.5" width="393" height="140"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBSCRIBE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GR-dG-IlV">
                                                         <rect key="frame" x="10" y="8" width="84.5" height="18"/>
@@ -2941,7 +2941,7 @@ protect You.</string>
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The weekly InSooq  newsletter of the most popular steals" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sq-Id-Brf">
-                                                        <rect key="frame" x="55" y="38" width="334" height="36"/>
+                                                        <rect key="frame" x="55" y="38" width="318" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2958,7 +2958,7 @@ protect You.</string>
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing offers and bargains from our advertising partners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTj-D1-IUk">
-                                                        <rect key="frame" x="55" y="93" width="334" height="36"/>
+                                                        <rect key="frame" x="55" y="93" width="318" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2982,7 +2982,7 @@ protect You.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbm-fL-oFK">
-                                                <rect key="frame" x="85.5" y="2218.5" width="257" height="40"/>
+                                                <rect key="frame" x="85.5" y="2214.5" width="257" height="40"/>
                                                 <color key="backgroundColor" name="labelYelloBackground"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="ybf-Pj-hTX"/>
@@ -3023,7 +3023,7 @@ protect You.</string>
                                             <constraint firstItem="Cbl-I1-Fki" firstAttribute="width" secondItem="Cbl-I1-Fki" secondAttribute="height" multiplier="4:1" id="Yf6-6x-QPq"/>
                                             <constraint firstItem="Hre-7P-RXg" firstAttribute="width" secondItem="Hre-7P-RXg" secondAttribute="height" id="aKF-6c-9Qs"/>
                                             <constraint firstItem="Cbl-I1-Fki" firstAttribute="leading" secondItem="58w-o1-Ift" secondAttribute="leading" id="aSx-oG-xWg"/>
-                                            <constraint firstItem="Cbl-I1-Fki" firstAttribute="top" secondItem="58w-o1-Ift" secondAttribute="bottom" constant="4" id="cQA-r5-WLu"/>
+                                            <constraint firstItem="Cbl-I1-Fki" firstAttribute="top" secondItem="58w-o1-Ift" secondAttribute="bottom" constant="8" id="cQA-r5-WLu"/>
                                             <constraint firstItem="Zbl-ci-Tt5" firstAttribute="leading" secondItem="X5E-G0-1Td" secondAttribute="leading" id="e8N-1H-ESY"/>
                                             <constraint firstItem="eyt-6c-nCD" firstAttribute="leading" secondItem="REh-KA-xvs" secondAttribute="leading" id="ekV-9A-jKB"/>
                                             <constraint firstItem="Cbl-I1-Fki" firstAttribute="height" secondItem="58w-o1-Ift" secondAttribute="height" id="fBb-Bo-0cC"/>

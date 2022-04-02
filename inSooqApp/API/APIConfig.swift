@@ -171,6 +171,16 @@ struct APIUrls {
         return "Notifications/DeleteNotification".fullUrl()
     }
     
+    // advertising
+    
+    static func advertisingBudgets() -> String {
+        return "StaticData/GetAdvertisingBudget".fullUrl()
+    }
+    
+    static func submitAdvertisment() -> String {
+        return "StaticData/TransAdvertising".fullUrl()
+    }
+    
 }
 
 extension String {
