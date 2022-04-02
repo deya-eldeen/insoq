@@ -71,26 +71,26 @@ class AdvertisingViewController: UIViewController {
     
     @objc func submitAction(){
         
-//        let params = [
-//            "Email": self.emailTxt.text ?? "",
-//            "FirstName": self._FirstNameTxt.text ?? "",
-//            "LastName": self._LastNameTxt.text ?? "",
-//            "Phone": self._PhoneNumberTxt.text ?? "",
-//            "AdvertisingBudgetId":self.reasonsDropDown.dataSource.first ?? "",
-//            "Company": self._CompanyNameTxt.text ?? "",
-//            "Description": "_",
-//        ]
-        
         let params = [
-            "Email": "a@b.com",
-            "FirstName": "some name",
-            "LastName": "some last name",
-            "Phone": "0797228550",
-            "AdvertisingBudgetId":"88",
-            "Company": "A",
-            "Description": "Desc",
+            "Email": self.emailTxt.text ?? "",
+            "FirstName": self._FirstNameTxt.text ?? "",
+            "LastName": self._LastNameTxt.text ?? "",
+            "Phone": self._PhoneNumberTxt.text ?? "",
+            //"AdvertisingBudgetId":self.reasonsDropDown.dataSource.first ?? "",
+            //"Company": self._CompanyNameTxt.text ?? "",
+            "Description": "_",
         ]
-        
+
+//        let params = [
+//            "Email": "a@b.com",
+//            "FirstName": "some name",
+//            "LastName": "some last name",
+//            "Phone": "0797228550",
+//            "AdvertisingBudgetId":"88",
+//            "Company": "A",
+//            "Description": "Desc",
+//        ]
+
         ApiRequests.submitAdvertisment(params: params) { response in
             print("response",response)
             self.dismiss(animated: true, completion: nil)

@@ -250,7 +250,7 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         
         let params = [
             "FirstName": "\(self.firstNameTxt.text ?? "")", //="voluptate tempor"' \
-            "LastName": "\(self.firstNameTxt.text ?? "")", //="sed aliqua laboris"' \
+            "LastName": "\(self.lastNameTxt.text ?? "")", //="sed aliqua laboris"' \
             "Gender": "\(self.genderButton.titleLabel?.text ?? "")", //="veniam aute quis dolor"' \
             "DOB": self.birthDate.date.toYMDDateString(), //="1994-04-20"' \
             "Nationality": "\(self.countryButton.titleLabel?.text ?? "")", //="nisi ex aute adipisicing"' \
