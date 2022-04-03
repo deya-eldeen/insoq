@@ -8,11 +8,11 @@
 import UIKit
 
 class AddViewController: UIViewController {
+    
     @IBOutlet weak var bottomBar: BottomBar!
     @IBOutlet weak var tag_icon: UILabel!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
@@ -32,7 +32,6 @@ class AddViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
     //MARK:-Private functions
     private func setDesign(){
         labelFont(object: tag_icon, style: Statics.fontStyle.light, size: 30)
@@ -43,24 +42,23 @@ class AddViewController: UIViewController {
     private func setDelegate(){
         categoriesCollectionView.delegate=self
         categoriesCollectionView.dataSource=self
-
     }
+    
 }
 
 //MARK:-CollectionView Controllers-
-extension AddViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
+extension AddViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return Statics.sellItemModel.count
+        return Statics.sellItemModel.count
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddItemCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
-            cell.setCategoriesData(data: Statics.sellItemModel[indexPath.row])
-            cell.coloredView.addShadowToView()
-            return cell
-            
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddItemCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
+        cell.setCategoriesData(data: Statics.sellItemModel[indexPath.row])
+        cell.coloredView.addShadowToView()
+        return cell
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = Assembly.add_CategoryViewController(model: Statics.sellItemModel[indexPath.row])
@@ -68,15 +66,11 @@ extension AddViewController: UICollectionViewDelegateFlowLayout,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            
-            let layout = self.categoriesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-            layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
-            layout.minimumInteritemSpacing = 0
-            layout.itemSize = CGSize(width: Int((categoriesCollectionView.frame.width-10)/3), height: 110 )
-            return layout.itemSize
-            
-        
-        
+        let layout = self.categoriesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: Int((categoriesCollectionView.frame.width-10)/3), height: 110 )
+        return layout.itemSize
     }
     
 }

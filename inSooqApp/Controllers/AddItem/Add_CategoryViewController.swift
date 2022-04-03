@@ -38,14 +38,12 @@ class Add_CategoryViewController: UIViewController {
     
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var subCategoriesTableView: UITableView!
-    
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var shadowView: UIView!
-    
     @IBOutlet weak var bottomBar: BottomBar!
     
     var modelOfCategory: CategoriesModel?
-    var model =  [Category]()
+    var model = [Category]()
     var selectedType: MotorGategorys?
     
     override func viewDidLoad() {
@@ -58,7 +56,6 @@ class Add_CategoryViewController: UIViewController {
     
     //MARK: - Functions
     private func setDesign() {
-        
         title = modelOfCategory?.categoryName
         iconImage.image = modelOfCategory?.categoryImage
         titleLable.text = String(format: "%@ it is...", modelOfCategory?.categoryName ?? "")
@@ -66,22 +63,20 @@ class Add_CategoryViewController: UIViewController {
     }
     
     private func setDelegate() {
-        
         subCategoriesTableView.delegate = self
         subCategoriesTableView.dataSource = self
     }
+    
 }
 
 //MARK: - TableView
 extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return model.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let subCategoryData:SubCategoriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SubCategoriesTableViewCell", for: indexPath) as! SubCategoriesTableViewCell
         
         subCategoryData.setSubCategoryDataModel(model: model[indexPath.row])
@@ -90,27 +85,24 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         if let cell = tableView.cellForRow(at: indexPath) as? SubCategoriesTableViewCell {
             cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1)
             cell.subName.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
+        
         selectedType = MotorGategorys.allCases.first{$0.rawValue == model[indexPath.row].id} ?? .usedCars
    
         if let catID = Int(modelOfCategory?.categoyID ?? "-1"){
             switch catID {
             case 1:
-       
                 break
-                
             case 2:
-                
                 break
-                
             default:
                 break
             }
         }
+        
         switch selectedType{
         case .boats:
             goToBoats(category: model[indexPath.row])
@@ -119,12 +111,13 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         default:
             break
         }
+        
         let controller = Assembly.Add_TitleViewController(type: selectedType ?? .usedCars, model: model[indexPath.row])
         navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
-        
         if let cell = tableView.cellForRow(at: indexPath) as? SubCategoriesTableViewCell {
             cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             cell.subName.textColor=#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -133,10 +126,9 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         return indexPath
     }
     
-    
     func goToBoats(category: Category){
         let mainStoryboard = UIStoryboard(name: "addStory", bundle: nil)
-            
+        
         let vc = mainStoryboard.instantiateViewController(identifier: "AddBoatsVC") as! AddBoatsVC
         vc.modalPresentationStyle = .fullScreen
         vc.categoryId = Int(modelOfCategory?.categoyID ?? "-1") ?? -1
@@ -144,6 +136,7 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
 
 
@@ -152,7 +145,6 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
 extension Add_CategoryViewController {
     
     func getSubCategory() {
-        
         view.showLoading()
         WebService.shared.CategoriesGetByTypeId(id: modelOfCategory?.categoyID ?? "") { [weak self] response, error in
             guard let self = self else { return }
@@ -166,4 +158,5 @@ extension Add_CategoryViewController {
             self.subCategoriesTableView.reloadData()
         }
     }
+    
 }
