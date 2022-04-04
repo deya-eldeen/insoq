@@ -94,6 +94,7 @@ public struct PictureModel:Codable{
  }
     
 }
+
 public struct AdsOfCategoryModel: Codable {
     
     var id:IntOrString? = nil
@@ -135,7 +136,7 @@ public struct AdsOfCategoryModel: Codable {
             var year:IntOrString? = nil
             var en_Doors:IntOrString? = nil
             var ar_Doors:IntOrString? = nil
-            var warranty:Bool?  = nil
+            var warranty:Int?  = nil
             var en_Transmission:IntOrString? = nil
             var ar_Transmission:IntOrString? = nil
             var en_RegionalSpecs:IntOrString? = nil

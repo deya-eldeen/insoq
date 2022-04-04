@@ -416,26 +416,31 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
 
             
             let key:String = keys[section]
-            
+            print("key",key)
             
             let keyIndex:Int =  (Int(key) ?? 0 ) - 1
-            let image =  Statics.categoyModel[keyIndex].categoryImage //Statics.adsArray[keyIndex]
-            let categoryModel =  Statics.categoyModel[keyIndex]
-     
-            debugPrint("imageimage:\(image)")
+            print("keyIndex",keyIndex)
+
+            if(Statics.categoyModel.count >= (keyIndex + 1)) {
+                let image =  Statics.categoyModel[keyIndex].categoryImage //Statics.adsArray[keyIndex]
+                print("key",key)
+                let categoryModel =  Statics.categoyModel[keyIndex]
+                debugPrint("imageimage:\(image)")
+                //header.setCustomHeaders(image: image, title: categoryModel.categoryName)
+                header.itemImage.image = image.withRenderingMode(.alwaysTemplate)
+                header.itemImage.tintColor = Statics.categoyModel[keyIndex].categoyColor
+                header.titleLabel.text = categoryModel.categoryName
+            }
             
-//            header.setCustomHeaders(image: image, title: categoryModel.categoryName)
-            
-            header.itemImage.image = image.withRenderingMode(.alwaysTemplate)
-             header.itemImage.tintColor = Statics.categoyModel[keyIndex].categoyColor
-            header.titleLabel.text = categoryModel.categoryName
             
             header.viewAllButton.tag = keyIndex
             header.viewAllButton.setTitleColor(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), for: .normal)
             header.titleLabel.adjustsFontSizeToFitWidth=true
             header.titleLabel.font=UIFont.boldSystemFont(ofSize: 16)
             header.viewAllButton.addTarget(self, action: #selector(viewAll_Pressed(sender:)), for: .touchUpInside)
+            
             return header
+
             
         }
     }

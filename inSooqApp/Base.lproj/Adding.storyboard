@@ -274,20 +274,21 @@
         <scene sceneID="dbL-uZ-DtF">
             <objects>
                 <viewController storyboardIdentifier="Add_TitleViewController" id="AC6-DF-teP" customClass="Add_TitleViewController" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Kaz-zF-oH7">
+                    <view key="view" contentMode="scaleToFill" id="Kaz-zF-oH7">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQd-ov-ql4" customClass="BottomBar" customModule="inSooqApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="856" width="494" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQd-ov-ql4" customClass="BottomBar" customModule="inSooqApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="1430" width="400" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="1xG-c5-7aP"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6t-I4-kVx">
-                                <rect key="frame" x="0.0" y="44" width="494" height="652.33333333333337"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6t-I4-kVx">
+                                <rect key="frame" x="0.0" y="44" width="400" height="1226"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0L0-P0-1sN">
-                                        <rect key="frame" x="0.0" y="0.0" width="494" height="327"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="369"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s start with the title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LK5-Vb-73Q">
                                                 <rect key="frame" x="20" y="30" width="216.5" height="24"/>
@@ -296,13 +297,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try to have an informative title that’s to be point and not very long." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwb-Vt-rAm">
-                                                <rect key="frame" x="20" y="64" width="454" height="18"/>
+                                                <rect key="frame" x="20" y="64" width="360" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-vs-wkO">
-                                                <rect key="frame" x="20" y="92" width="454" height="40"/>
+                                                <rect key="frame" x="20" y="110" width="360" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="DcU-MG-bvu"/>
@@ -323,19 +324,19 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended 40 characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9e-8M-ytN">
-                                                <rect key="frame" x="20" y="136" width="191.5" height="17"/>
+                                                <rect key="frame" x="20" y="154" width="191.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now let's add your car make and model" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9j-sY-0Ev">
-                                                <rect key="frame" x="20" y="183" width="454" height="24"/>
+                                                <rect key="frame" x="20" y="201" width="360" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WFK-Ts-WH1">
-                                                <rect key="frame" x="20" y="227" width="454" height="0.0"/>
+                                                <rect key="frame" x="20" y="269" width="360" height="0.0"/>
                                                 <subviews>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FaB-BR-Can">
                                                         <rect key="frame" x="0.0" y="0.0" width="388" height="190"/>
@@ -1634,7 +1635,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISS-45-6lx">
-                                                <rect key="frame" x="50" y="247" width="394" height="50"/>
+                                                <rect key="frame" x="50" y="289" width="300" height="50"/>
                                                 <color key="backgroundColor" name="labelYelloBackground"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="3q6-Sd-3re"/>
@@ -1689,8 +1690,8 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="HR3-lX-RJn"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="gk9-4Z-3mX"/>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uys-OV-eNx">
-                                <rect key="frame" x="10" y="696.33333333333348" width="474" height="196"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uys-OV-eNx">
+                                <rect key="frame" x="10" y="1270" width="380" height="196"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here’s how your ad will look" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIp-Z0-EXx">
                                         <rect key="frame" x="0.0" y="0.0" width="168.5" height="16"/>
@@ -1698,8 +1699,8 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00X-7O-eO9" customClass="ViewSummeryInfoOfItem" customModule="inSooqApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="16" width="474" height="180"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00X-7O-eO9" customClass="ViewSummeryInfoOfItem" customModule="inSooqApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="16" width="380" height="180"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="frg-hX-5vR"/>
@@ -1727,7 +1728,7 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="0.0" height="0.0"/>
+                    <size key="freeformSize" width="400" height="1500"/>
                     <connections>
                         <outlet property="bikesCategoryTextFiled" destination="kDe-Bq-kow" id="YGt-mx-h2O"/>
                         <outlet property="bikesManufactureTextFiled" destination="8e7-qU-xk3" id="PqQ-lV-M0e"/>

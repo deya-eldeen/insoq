@@ -68,7 +68,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_1:\(error)")
 
             completion(nil,error)
         }
@@ -85,7 +85,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_2:\(error)")
 
             completion(nil,error)
         }
@@ -100,7 +100,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_3:\(error)")
 
             completion(nil,error)
         }
@@ -116,7 +116,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_4:\(error)")
 
             completion(nil,error)
         }
@@ -131,7 +131,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_5:\(error)")
 
             completion(nil,error)
         }
@@ -161,7 +161,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_6:\(error)")
 
             completion(nil,error)
         }
@@ -187,7 +187,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_7:\(error)")
 
             completion(nil,error)
         }
@@ -211,7 +211,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_8:\(error)")
 
             completion(nil,error)
         }
@@ -242,7 +242,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_9:\(error)")
 
             completion(nil,error)
         }
@@ -274,7 +274,7 @@ class WebService {
                 completion(response,nil)
                 return
             }
-            debugPrint("error:\(error)")
+            debugPrint("error_10:\(error)")
 
             completion(nil,error)
         }
