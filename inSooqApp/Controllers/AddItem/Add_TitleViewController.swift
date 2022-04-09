@@ -125,7 +125,7 @@ class Add_TitleViewController: UIViewController {
                 }
             }
         }
-            viewPopupListOfItems.setData(vc:self,list: strings)
+        viewPopupListOfItems.setData(vc:self,list: strings)
         viewPopupListOfItems.onItmeClick = { (index, item) in
             
             if index >= self.makerModel?.count ?? 0{
@@ -134,14 +134,14 @@ class Add_TitleViewController: UIViewController {
                 return
             }
             self.stackVOtherCarBrand.isHidden = true
-
+            
             self.viewPopupListOfItems.isHidden = true
             self.carModelTextFiled.text = ""
             self.trimTextFiled.text = ""
             if let makerModel = self.makerModel {
                 
                 let nameEn = makerModel[safe: index]!.enText  ?? ""
-
+                
                 self.carBrandTextFiled.text = nameEn
                 self.getCarModelByMaker(maker:  nameEn + "-" )
             }

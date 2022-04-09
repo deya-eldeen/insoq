@@ -92,28 +92,38 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         
         selectedType = MotorGategorys.allCases.first{$0.rawValue == model[indexPath.row].id} ?? .usedCars
    
-        if let catID = Int(modelOfCategory?.categoyID ?? "-1"){
-            switch catID {
-            case 1:
-                break
-            case 2:
-                break
-            default:
-                break
-            }
-        }
-        
-        switch selectedType{
-        case .boats:
-            goToBoats(category: model[indexPath.row])
-            return
-  
-        default:
-            break
-        }
-        
-        let controller = Assembly.Add_TitleViewController(type: selectedType ?? .usedCars, model: model[indexPath.row])
+                
+        let controller: Motors_Used_VC = ViewControllersAssembly.forms.makeViewController()
         navigationController?.pushViewController(controller, animated: true)
+        
+//        let controller = Assembly.Add_TitleViewController(type: selectedType ?? .usedCars, model: model[indexPath.row])
+//        navigationController?.pushViewController(controller, animated: true)
+        
+        return
+        
+//        navigationController?.pushViewController(controller, animated: true)
+//        
+//        if let catID = Int(modelOfCategory?.categoyID ?? "-1"){
+//            switch catID {
+//            case 1:
+//                break
+//            case 2:
+//                break
+//            default:
+//                break
+//            }
+//        }
+//        
+//        switch selectedType{
+//        case .boats:
+//            goToBoats(category: model[indexPath.row])
+//            return
+//  
+//        default:
+//            break
+//        }
+//        
+
         
     }
     

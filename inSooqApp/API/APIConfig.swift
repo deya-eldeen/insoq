@@ -17,7 +17,7 @@ class APIConfig {
 struct APIUrls {
 
     static func register() -> String {
-        return "Users/Add".fullUrl()
+        return "User/Add".fullUrl()
     }
     
     static func login() -> String {
@@ -140,11 +140,11 @@ struct APIUrls {
     // New Implementation
     
     static func profileDetails(id: Int) -> String {
-        return "Users/GetById?id=\(id)".fullUrl()
+        return "User/GetById?id=\(id)".fullUrl()
     }
     
     static func editProfile() -> String {
-        return "Users/UpdateProfile".fullUrl()
+        return "User/UpdateProfile".fullUrl()
     }
     
     static func nationalities() -> String {
@@ -172,7 +172,6 @@ struct APIUrls {
     }
     
     // advertising
-    
     static func advertisingBudgets() -> String {
         return "StaticData/GetAdvertisingBudget".fullUrl()
     }
@@ -180,6 +179,20 @@ struct APIUrls {
     static func submitAdvertisment() -> String {
         return "StaticData/TransAdvertising".fullUrl()
     }
+    
+    // Motors
+    static func motorMakers() -> String {
+        return "DropDowns/GetAllMotorMaker".fullUrl()
+    }
+    
+    static func motorModels(makerId: Int) -> String {
+        return "DropDowns/GetAllMotorModelByMakerId?makerId=\(makerId)".fullUrl()
+    }
+    
+    static func motorTrims(modelNameAr: String, modelNameEn: String) -> String {
+        return "DropDowns/GetAllMotorTrimByModel?model=\(modelNameAr)-\(modelNameEn)".fullUrl()
+    }
+
     
 }
 
