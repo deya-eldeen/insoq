@@ -442,7 +442,7 @@ extension Add_FullSpecesViewController: UITextFieldDelegate {
             }
             
             viewPopupListOfItems.setData(vc:self,list: list,hideOther: true)
-        viewPopupListOfItems.onItmeClick = { (index, item) in
+        viewPopupListOfItems.onItemClick = { (index, item) in
             self.selectedTextField?.text = item
             self.selectedTextField?.tag = index
         }

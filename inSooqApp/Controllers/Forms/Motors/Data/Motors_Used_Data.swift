@@ -28,16 +28,19 @@ extension Motors_Used_VC {
         addSubLabel.text = "Try to have an information title that's to be point and not very long."
         
         let brandPicker = FormPicker()
-        brandPicker.placeholder = "What brand is your car?"
+        brandPicker.setPlaceHolder("What brand is your car?")
+        brandPicker.id = .carBrand
         
         let modelPicker = FormPicker()
-        modelPicker.placeholder = "What model is it?"
+        modelPicker.setPlaceHolder("What model is it?")
+        modelPicker.id = .model
         
         let trimPicker = FormPicker()
-        trimPicker.placeholder = "What is the trim?"
+        trimPicker.setPlaceHolder("What is the trim?")
+        trimPicker.id = .trim
         
         let yearField = FormField()
-        yearField.placeholder = "Year"
+        //yearField.placeholder = "Year"
         
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("Continue", for: .normal)

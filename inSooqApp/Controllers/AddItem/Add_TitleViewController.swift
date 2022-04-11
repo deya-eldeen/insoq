@@ -126,7 +126,7 @@ class Add_TitleViewController: UIViewController {
             }
         }
         viewPopupListOfItems.setData(vc:self,list: strings)
-        viewPopupListOfItems.onItmeClick = { (index, item) in
+        viewPopupListOfItems.onItemClick = { (index, item) in
             
             if index >= self.makerModel?.count ?? 0{
                 self.stackVOtherCarBrand.isHidden = false
@@ -161,7 +161,7 @@ class Add_TitleViewController: UIViewController {
         }
         
         viewPopupListOfItems.setData(vc:self,list: strings)
-    viewPopupListOfItems.onItmeClick = { (index, item) in
+    viewPopupListOfItems.onItemClick = { (index, item) in
         
         if index >= self.modelCarModel?.count ?? 0{
             self.stackVOtherCarModel.isHidden = false
@@ -203,7 +203,7 @@ class Add_TitleViewController: UIViewController {
         }
         
         viewPopupListOfItems.setData(vc:self,list: strings)
-    viewPopupListOfItems.onItmeClick = { (index, item) in
+    viewPopupListOfItems.onItemClick = { (index, item) in
         if index >= self.trimCarModel?.count ?? 0{
             self.stackVOtherTrim.isHidden = false
             self.trimTextFiled.text = item
@@ -231,7 +231,9 @@ let item = list[0].enText  ?? ""
     }
     
     @IBAction func boatCatAction(_ sender: Any) {
+        
         var strings:[String] = []
+        
         for makrs in self.boatCatModel {
             if let itemName = makrs.enName {
                 strings.append(itemName)
@@ -239,19 +241,17 @@ let item = list[0].enText  ?? ""
         }
         
         viewPopupListOfItems.setData(vc:self,list: strings)
-    viewPopupListOfItems.onItmeClickIndex = { index in
         
-        if index >= self.boatCatModel.count {
-            return
-        }
-        let item = self.boatCatModel[index].enName ?? ""
+        viewPopupListOfItems.onItemClickIndex = { index in
+            
+            if index >= self.boatCatModel.count { return }
+            let item = self.boatCatModel[index].enName ?? ""
 
-        self.boatCategoryTextFiled.text = item
-        self.selectedBoatCat = self.boatCatModel[index]
-        self.boatSubCatTextFiled.text = ""
-        self.getBoatSubCat(id: self.selectedBoatCat?.id?.description ?? "")
-        
-    }
+            self.boatCategoryTextFiled.text = item
+            self.selectedBoatCat = self.boatCatModel[index]
+            self.boatSubCatTextFiled.text = ""
+            self.getBoatSubCat(id: self.selectedBoatCat?.id?.description ?? "")
+        }
         
 //        baotCatDropDown.selectionAction = { [unowned self] (index, item) in
 //            self.boatCategoryTextFiled.text = item
@@ -276,7 +276,7 @@ let item = list[0].enText  ?? ""
         }
         
         viewPopupListOfItems.setData(vc:self,list: strings)
-    viewPopupListOfItems.onItmeClick = { (index, item) in
+    viewPopupListOfItems.onItemClick = { (index, item) in
         self.boatSubCatTextFiled.text = item
         
         if index >= self.boatSubCatModel.count {
@@ -307,7 +307,7 @@ let item = list[0].enText  ?? ""
             }
         }
         viewPopupListOfItems.setData(vc:self,list: strings)
-    viewPopupListOfItems.onItmeClick = { (index, item) in
+    viewPopupListOfItems.onItemClick = { (index, item) in
           self.trimTextFiled.text = item
        
         }

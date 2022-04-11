@@ -69,7 +69,7 @@ class AddBoatsVC: UIViewController {
             }
         }
             viewPopupListOfItems.setData(vc:self,list: strings)
-            viewPopupListOfItems.onItmeClick = { (index, item) in
+            viewPopupListOfItems.onItemClick = { (index, item) in
                 if index == 0 {
                     self.btnTypeSubCategory.setTitle(item, for: .normal)
                     return
@@ -100,7 +100,7 @@ class AddBoatsVC: UIViewController {
         }
         
             viewPopupListOfItems.setData(vc:self,list: strings)
-            viewPopupListOfItems.onItmeClick = { (index, item) in
+            viewPopupListOfItems.onItemClick = { (index, item) in
                 if index == 0 {
                     self.btnTypeCategory.setTitle(item, for: .normal)
                     return

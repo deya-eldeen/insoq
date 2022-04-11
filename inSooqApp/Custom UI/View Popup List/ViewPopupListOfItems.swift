@@ -6,17 +6,21 @@
 //
 
 import UIKit
-//
+
 //struct ModelListPopupItem{
 //    var name:String?
 //    var id:String?
 //}
+
 class ViewPopupListOfItems: UIView {
     
     private let cellIdOrName = "CellPopupListItme"
     private let itemHeight:CGFloat = 50
-    var onItmeClickIndex:((Int)->Void)?
-    var onItmeClick:((Int,String)->Void)?
+    
+    var onItemClickIndex: ( (Int) -> Void )?
+    var onItemClick: ( (Int, String) -> Void )?
+    var didSelectListItem: ( (String, PickerID) -> Void )?
+
     let itemOther =  "Other"
     var vc:UIViewController?
     
@@ -28,11 +32,15 @@ class ViewPopupListOfItems: UIView {
     }
     
     var listOrginal:[String]  = []
+    var pickerID = PickerID.none
     
     @IBOutlet weak var txtFSearch: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var constraintHeightOfView: NSLayoutConstraint!
     
+    @IBOutlet weak var customValueField: UITextField!
+    @IBOutlet weak var customValueFieldView: UIView!
+
     /*
      // Only override draw() if you perform custom drawing.
      // An empty implementation adversely affects performance during animation.
@@ -41,8 +49,13 @@ class ViewPopupListOfItems: UIView {
      }
      */
     
+    
     @IBAction func closeAction(_ sender: Any) {
         self.showNavBar(show: true)
+        
+
+//        self.didSelectListItem?(item, self.pickerID)
+        
         showView(show: false)
     }
     
@@ -81,6 +94,12 @@ class ViewPopupListOfItems: UIView {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         txtFSearch.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        customValueFieldView.isHidden = true
+    }
+    
+    func showListing() {
+        customValueFieldView.isHidden = true
+        self.isHidden = false
     }
     
     func showNavBar(show:Bool){
@@ -126,12 +145,19 @@ extension ViewPopupListOfItems:UITableViewDelegate,UITableViewDataSource {
         let item = list[indexPath.row]
         cell.lblName.text = item
         cell.onClick =  {
-            self.showNavBar(show: true)
-            self.onItmeClickIndex?(indexPath.row)
-            self.onItmeClick?(indexPath.row,item)
+            if item == self.itemOther {
+                print("itemOther")
+                self.customValueFieldView.isHidden = false
+                return
+            } else {
+                print("_itemOther")
+                self.customValueFieldView.isHidden = true
+            }
+            self.showNavBar(show: false)
+            self.onItemClickIndex?(indexPath.row)
+            self.onItemClick?(indexPath.row,item)
+            self.didSelectListItem?(item, self.pickerID)
             self.showView(show:false)
-            
-            
         }
         return cell
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NationalityModel: Codable {
+struct NationalityModel: Codable, Listable {
     
     var id:  Int?
     var ar_Text:  String?

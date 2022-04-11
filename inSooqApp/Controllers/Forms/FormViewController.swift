@@ -15,12 +15,13 @@ class FormViewController: UIViewController {
     var scrollView = UIScrollView()
 
     var offset: CGFloat = 20
-    var forElements = [UIView]()
+    var formElements = [UIView]()
     
     // MARK: DropDowns
     var viewPopupListOfItems:ViewPopupListOfItems = .fromNib()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.view.backgroundColor = .systemGray5
         prepareStackView()
         feedStackView()
@@ -74,4 +75,27 @@ class FormViewController: UIViewController {
         
     }
 
+    func updateTextForPicker(with id: PickerID, value: String) {
+        
+        for element in formElements {
+            if type(of: element) == FormPicker.self {
+                let picker = (element as! FormPicker)
+                if picker.id == id {
+                    picker.textfield.text = value
+                }
+            }
+        }
+        
+    }
+    
+}
+
+extension FormViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x != 0 {
+            scrollView.contentOffset.x = 0
+        }
+    }
+    
 }
