@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AdvertisingBudget: Codable {
+struct AdvertisingBudget: Codable, Listable {
     
     let id:  Int?
     let ar_Text:  String?

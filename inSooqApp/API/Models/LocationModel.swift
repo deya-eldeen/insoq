@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LocationModel: Codable {
+struct LocationModel: Codable, Listable {
     
     let id:  Int?
     let ar_Text:  String?

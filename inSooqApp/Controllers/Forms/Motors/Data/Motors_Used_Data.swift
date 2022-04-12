@@ -5,7 +5,6 @@
 //  Created by Deya on 09/04/2022.
 //
 
-import Foundation
 import UIKit
 
 extension Motors_Used_VC {
@@ -40,7 +39,8 @@ extension Motors_Used_VC {
         trimPicker.id = .trim
         
         let yearField = FormField()
-        //yearField.placeholder = "Year"
+        yearField.placeholder = "Year"
+        yearField.keyboardType = .numberPad
         
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("Continue", for: .normal)

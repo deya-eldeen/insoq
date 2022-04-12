@@ -1,14 +1,14 @@
 //
-//  UsedCars.swift
+//  Motors_Used_Details_VC.swift
 //  inSooqApp
 //
-//  Created by Deya on 05/04/2022.
+//  Created by Deya on 12/04/2022.
 //
 
 import UIKit
 import Foundation
 
-class Motors_Used_VC: FormViewController {
+class Motors_Used_Details_VC: FormViewController {
     
     var dataMakers = [MotorMaker]()
     var dataMotorModels = [MotorModel]()
@@ -19,28 +19,28 @@ class Motors_Used_VC: FormViewController {
     var selectedModelNameAr = ""
 
     // Requests
-    func requestMakers() {
-        ApiRequests.motorMakers { response in
-            self.dataMakers = response.value ?? []
-        }
-    }
-    func requestModels() {
-        ApiRequests.motorModels(makerId: selectedMakerID) { response in
-            self.dataMotorModels = response.value ?? []
-        }
-    }
-    func requestTrims() {
-        ApiRequests.motorTrims(modelNameAr: selectedModelNameAr, modelNameEn: selectedModelNameEn) { response in
-            self.dataMotorTrim = response.value ?? []
-        }
-    }
+//    func requestMakers() {
+//        ApiRequests.motorMakers { response in
+//            self.dataMakers = response.value ?? []
+//        }
+//    }
+//    func requestModels() {
+//        ApiRequests.motorModels(makerId: selectedMakerID) { response in
+//            self.dataMotorModels = response.value ?? []
+//        }
+//    }
+//    func requestTrims() {
+//        ApiRequests.motorTrims(modelNameAr: selectedModelNameAr, modelNameEn: selectedModelNameEn) { response in
+//            self.dataMotorTrim = response.value ?? []
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.requestTrims()
-        self.requestMakers()
-        self.requestModels()
+//        self.requestTrims()
+//        self.requestMakers()
+//        self.requestModels()
     }
     
     // Feed Logic
@@ -63,17 +63,13 @@ class Motors_Used_VC: FormViewController {
         
         print("didTapContinue")
         
-        let controller: Motors_Used_Details_VC = ViewControllersAssembly.forms.makeViewController()
-        navigationController?.pushViewController(controller, animated: true)
-        
         // Validation
         
         // Agree to terms
-        //if(self.userAgrees == false) { self.showAlert(title: "", body: self.userShouldAgreeError); return }
+        if(self.userAgrees == false) { self.showAlert(title: "", body: self.userShouldAgreeError); return }
             
         // See if all fields are filled
         // ...
-        
         
     }
     

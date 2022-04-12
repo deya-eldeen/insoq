@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MotorMaker: Codable {
+struct MotorMaker: Codable, Listable {
     
     var id:  Int?
     var ar_Text:  String?

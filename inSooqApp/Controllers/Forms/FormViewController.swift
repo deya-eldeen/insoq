@@ -17,8 +17,12 @@ class FormViewController: UIViewController {
     var offset: CGFloat = 20
     var formElements = [UIView]()
     
+    var userAgrees = false
+
     // MARK: DropDowns
-    var viewPopupListOfItems:ViewPopupListOfItems = .fromNib()
+    var customeListView: CustomListView = .fromNib()
+    
+    let userShouldAgreeError = "User Should Agree"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +33,9 @@ class FormViewController: UIViewController {
     }
     
     func addSearchView() {
-        viewPopupListOfItems.frame = self.view.bounds
-        viewPopupListOfItems.isHidden = true
-        self.view.addSubview(viewPopupListOfItems)
+        customeListView.frame = self.view.bounds
+        customeListView.isHidden = true
+        self.view.addSubview(customeListView)
     }
     
     func feedStackView() {

@@ -61,6 +61,7 @@
 		CEBFE10E27E735DB006B5D32 /* GetAllMotorMakerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */; };
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
+		E327E5D5280633BA000968C0 /* FormAcceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327E5D4280633BA000968C0 /* FormAcceptView.swift */; };
 		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
 		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
 		E380353B27F6506E00FF0212 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353A27F6506E00FF0212 /* Account.storyboard */; };
@@ -107,6 +108,10 @@
 		E3A8113428043698003A2CC0 /* Home_Electronics_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8113328043698003A2CC0 /* Home_Electronics_Data.swift */; };
 		E3A81136280436A8003A2CC0 /* Computers_Networking_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A81135280436A8003A2CC0 /* Computers_Networking_Data.swift */; };
 		E3A811382804A922003A2CC0 /* Listable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A811372804A922003A2CC0 /* Listable.swift */; };
+		E3BB1EB82804EE3300D65DA7 /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BB1EB62804EE3300D65DA7 /* CustomListView.swift */; };
+		E3BB1EB92804EE3300D65DA7 /* CustomListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3BB1EB72804EE3300D65DA7 /* CustomListView.xib */; };
+		E3BB1EBB2804F37C00D65DA7 /* Motors_Used_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BB1EBA2804F37C00D65DA7 /* Motors_Used_Details_VC.swift */; };
+		E3BB1EBD2804F47E00D65DA7 /* FormTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BB1EBC2804F47E00D65DA7 /* FormTextView.swift */; };
 		E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011ED27EF289D003126E9 /* ProfileModel.swift */; };
 		E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */; };
 		E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C011F127EFB27A003126E9 /* NationalityModel.swift */; };
@@ -530,6 +535,7 @@
 		CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorMakerM.swift; sourceTree = "<group>"; };
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		E327E5D4280633BA000968C0 /* FormAcceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAcceptView.swift; sourceTree = "<group>"; };
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
 		E380353827F64CE000FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		E380353A27F6506E00FF0212 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
@@ -576,6 +582,10 @@
 		E3A8113328043698003A2CC0 /* Home_Electronics_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Electronics_Data.swift; sourceTree = "<group>"; };
 		E3A81135280436A8003A2CC0 /* Computers_Networking_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Computers_Networking_Data.swift; sourceTree = "<group>"; };
 		E3A811372804A922003A2CC0 /* Listable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listable.swift; sourceTree = "<group>"; };
+		E3BB1EB62804EE3300D65DA7 /* CustomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
+		E3BB1EB72804EE3300D65DA7 /* CustomListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomListView.xib; sourceTree = "<group>"; };
+		E3BB1EBA2804F37C00D65DA7 /* Motors_Used_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Used_Details_VC.swift; sourceTree = "<group>"; };
+		E3BB1EBC2804F47E00D65DA7 /* FormTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextView.swift; sourceTree = "<group>"; };
 		E3C011ED27EF289D003126E9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		E3C011EF27EF3D56003126E9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		E3C011F127EFB27A003126E9 /* NationalityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalityModel.swift; sourceTree = "<group>"; };
@@ -981,6 +991,7 @@
 		17AA1C0E2788B66F008B5409 /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
+				E3BB1EB52804EE3300D65DA7 /* CustomListView */,
 				17AA1C132788C72C008B5409 /* View Popup List */,
 				17AA1C0F2788B6C2008B5409 /* ViewSummeryInfoOfItem.swift */,
 				17AA1C112788B6D5008B5409 /* ViewSummeryInfoOfItem.xib */,
@@ -1223,6 +1234,7 @@
 			isa = PBXGroup;
 			children = (
 				E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */,
+				E3BB1EBA2804F37C00D65DA7 /* Motors_Used_Details_VC.swift */,
 				E3F99BC62801A0770084E95C /* Data */,
 			);
 			path = Motors;
@@ -1315,6 +1327,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		E3BB1EB52804EE3300D65DA7 /* CustomListView */ = {
+			isa = PBXGroup;
+			children = (
+				E3BB1EB62804EE3300D65DA7 /* CustomListView.swift */,
+				E3BB1EB72804EE3300D65DA7 /* CustomListView.xib */,
+			);
+			path = CustomListView;
+			sourceTree = "<group>";
+		};
 		E3C011EC27EF2892003126E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1370,7 +1391,9 @@
 				E3A810F528035706003A2CC0 /* FormField.swift */,
 				E3A810F728035737003A2CC0 /* FormPicker.swift */,
 				E3A810F928035AF4003A2CC0 /* FormContinueButton.swift */,
+				E327E5D4280633BA000968C0 /* FormAcceptView.swift */,
 				E3A810FB28036246003A2CC0 /* FormPhotoPicker.swift */,
+				E3BB1EBC2804F47E00D65DA7 /* FormTextView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -2447,6 +2470,7 @@
 				F15592222679CC6D007D7E1A /* ViewonCarImage.xib in Resources */,
 				F1F352D72647DE7C001A065B /* SellerInfoView.xib in Resources */,
 				F1D2BAD2261C8CEC000078B3 /* splashScreen.mp4 in Resources */,
+				E3BB1EB92804EE3300D65DA7 /* CustomListView.xib in Resources */,
 				F1CCE023266F736B00490501 /* sort-down.png in Resources */,
 				F1E77EAC25D2DABC0060355D /* PropertyView.xib in Resources */,
 				F1F352F32647EDE3001A065B /* Ac.png in Resources */,
@@ -2592,6 +2616,7 @@
 				E39BAE1D27FC9AE1001F5438 /* FormElement.swift in Sources */,
 				E3A8113428043698003A2CC0 /* Home_Electronics_Data.swift in Sources */,
 				F1C53A462636EC3200476793 /* AddOpeningJobsView.swift in Sources */,
+				E327E5D5280633BA000968C0 /* FormAcceptView.swift in Sources */,
 				2862BAD7277D247C009F4B7E /* EndPoint.swift in Sources */,
 				F148FD3B25D538F400F5DDFC /* ChatViewController.swift in Sources */,
 				E380354D27F85F3B00FF0212 /* AdvertisingBudget.swift in Sources */,
@@ -2611,6 +2636,7 @@
 				F175E8DD25E669C700873F20 /* AddViewController.swift in Sources */,
 				E3A8110E28042FCD003A2CC0 /* Motors_Machinery_Export_Details_Data.swift in Sources */,
 				F1DC09772612F73E007BC57F /* ChatItemView.swift in Sources */,
+				E3BB1EBB2804F37C00D65DA7 /* Motors_Used_Details_VC.swift in Sources */,
 				E3A8110628042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift in Sources */,
 				F192DFA3265A3B9E00E122B0 /* ServiceRowCollectionViewCell.swift in Sources */,
 				E3A81124280431FA003A2CC0 /* Classified_Details_Data.swift in Sources */,
@@ -2629,6 +2655,7 @@
 				F1CCE02F266F9F9100490501 /* ItemDetailsCollectionViewCell.swift in Sources */,
 				F1CBEC4B2627AE8200DC7F05 /* ForgetPasswordViewController.swift in Sources */,
 				2862BAE4277D2918009F4B7E /* WebService.swift in Sources */,
+				E3BB1EBD2804F47E00D65DA7 /* FormTextView.swift in Sources */,
 				F1AD891425E4FB1B00326065 /* MainCategoriesCollectionViewCell.swift in Sources */,
 				E3A810FC28036246003A2CC0 /* FormPhotoPicker.swift in Sources */,
 				E3FD214E27EA53E900FDA9DD /* BasicResponse.swift in Sources */,
@@ -2738,6 +2765,7 @@
 				F15592472679E74B007D7E1A /* ViewOnCarCollectionViewCell.swift in Sources */,
 				E3FD213627EA524000FDA9DD /* TableState.swift in Sources */,
 				E3C011EE27EF289D003126E9 /* ProfileModel.swift in Sources */,
+				E3BB1EB82804EE3300D65DA7 /* CustomListView.swift in Sources */,
 				E3FD213327EA524000FDA9DD /* Constants.swift in Sources */,
 				F150F81625D40DDF0077C970 /* PlatesCollectionViewCell.swift in Sources */,
 				1EC584A127CD8F4A002181DC /* SubTypesModel.swift in Sources */,

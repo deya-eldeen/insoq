@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EducationLevelModel: Codable {
+struct EducationLevelModel: Codable, Listable {
     
     let id:  Int?
     let ar_Text:  String?

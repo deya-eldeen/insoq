@@ -39,6 +39,21 @@
             </objects>
             <point key="canvasLocation" x="4788" y="-1258"/>
         </scene>
+        <!--Motors Used DetailsVC-->
+        <scene sceneID="Zo1-WB-u72">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Used_Details_VC" id="OC2-xa-alw" customClass="Motors_Used_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLz-q6-EPD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iZB-hJ-Pym"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCy-aZ-WUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4157" y="-1258"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
