@@ -6,22 +6,22 @@ class CustomListView: UIView {
     private let cellIdOrName = "CellPopupListItme"
     private let itemHeight:CGFloat = 50
     
-    var onItemClickIndex: ( (Int) -> Void )?
-    var onItemClick: ( (Int, String) -> Void )?
-    var didSelectListItem: ( (String, PickerID) -> Void )?
+    var didSelectListItem: ( (Listable, PickerID) -> Void )?
 
-    let itemOther = "Other"
-    var vc:UIViewController?
+    let itemOther = ListItem.init(id: 0, ar_Text: "Other", en_Text: "Other")
     
-    var list:[String]  = [] {
+    var vc: UIViewController?
+    
+    var list: [Listable] = [] {
         didSet {
             checkHeight()
             tableView.reloadData()
         }
     }
     
-    var listOrginal:[String]  = []
     var pickerID = PickerID.none
+    
+    var selectedItem: Listable?
     
     @IBOutlet weak var txtFSearch: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -30,8 +30,15 @@ class CustomListView: UIView {
     @IBOutlet weak var customValueFieldView: UIView!
     
     @IBAction func closeAction(_ sender: Any) {
-        self.showNavBar(show: true)
-        //self.didSelectListItem?(item, self.pickerID)
+        
+        // if the user has selected other
+        if (self.selectedItem?.id == 0 ) {
+            let otherItem = ListItem.init(id: 0, ar_Text: self.customValueField.text ?? "", en_Text: self.customValueField.text ?? "")
+            self.didSelectListItem?(otherItem, self.pickerID)
+        } else {
+            self.didSelectListItem?(selectedItem ?? itemOther, self.pickerID)
+        }
+        
         showView(show: false)
     }
     
@@ -39,15 +46,13 @@ class CustomListView: UIView {
         self.isHidden = !show
     }
     
-    func setData(vc:UIViewController?, list:[String], hideOther:Bool? = false){
+    func setData(vc:UIViewController?, list: [Listable], hideOther:Bool? = false){
         
-        self.showNavBar(show: false)
         var listFinal = list
         if !(hideOther ?? false){
             listFinal.append(itemOther)
         }
         self.list = listFinal
-        self.listOrginal = listFinal
         
         self.vc = vc
         
@@ -80,25 +85,20 @@ class CustomListView: UIView {
         vc.resignFirstResponder()
     }
     
-    func showNavBar(show:Bool) {
-        
-        //self.vc?.navigationController?.setNavigationBarHidden(!show, animated: false)
-    }
-    
     @objc func textFieldDidChange() {
         
         let text = (txtFSearch.text ?? "").lowercased()
-        let  listTemp = list.filter{
-            let id = ($0).lowercased()
+        let  listTemp = list.filter {
+            let id = ($0).en_Text?.lowercased() ?? ""
             debugPrint("id:\(id)  text :\(text)")
             return id.contains(text)
         }
         
-        if listTemp.count > 0{
+        if listTemp.count > 0 {
             self.list = listTemp
         }
         else{
-            self.list = self.listOrginal
+            //self.list = self.listOrginal
             
         }
     }
@@ -122,18 +122,21 @@ extension CustomListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdOrName, for: indexPath) as! CellPopupListItme
         let item = list[indexPath.row]
-        cell.lblName.text = item
+        
+        cell.lblName.text = item.en_Text
         cell.onClick =  {
-            if item == self.itemOther {
+            
+            self.selectedItem = item
+            
+            if item.id == 0 {
                 self.customValueFieldView.isHidden = false
                 return
             } else {
                 self.customValueFieldView.isHidden = true
             }
-            self.showNavBar(show: false)
-            self.onItemClickIndex?(indexPath.row)
-            self.onItemClick?(indexPath.row,item)
+            
             self.didSelectListItem?(item, self.pickerID)
+            
             self.showView(show:false)
         }
         return cell

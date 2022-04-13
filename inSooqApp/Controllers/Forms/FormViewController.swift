@@ -79,13 +79,13 @@ class FormViewController: UIViewController {
         
     }
 
-    func updateTextForPicker(with id: PickerID, value: String) {
+    func updateTextForPicker(with id: PickerID, value: Listable) {
         
         for element in formElements {
             if type(of: element) == FormPicker.self {
                 let picker = (element as! FormPicker)
                 if picker.id == id {
-                    picker.textfield.text = value
+                    picker.textfield.text = value.en_Text
                 }
             }
         }

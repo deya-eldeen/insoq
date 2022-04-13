@@ -58,6 +58,7 @@ class FormPicker: UIView, FormElement {
         self.addSubview(pickerImageView)
         pickerImageView.translatesAutoresizingMaskIntoConstraints = false
         pickerImageView.image = pickerImage
+        pickerImageView.tintColor = .orange
         
         pickerImageView.centerYAnchor.constraint(equalTo: self.textfield.centerYAnchor).isActive = true
         pickerImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -12).isActive = true

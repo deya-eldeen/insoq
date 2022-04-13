@@ -23,7 +23,7 @@ class FormField: UITextField, FormElement {
         self.borderStyle = .roundedRect
         self.textColor = .gray
         self.backgroundColor = .white
-        self.tintColor = .systemBlue
+        self.tintColor = .orange
         self.sizeToFit()
     }
     

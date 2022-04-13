@@ -21,4 +21,10 @@ class FormAcceptView: UIView, FormElement {
         self.backgroundColor = .darkGray
     }
     
+    func render() -> UIView {
+        let targetView = Bundle(for: FormAcceptView.self).loadNibNamed(String(describing: FormAcceptView.self), owner: nil, options: nil)![0] as! FormAcceptView
+        targetView.translatesAutoresizingMaskIntoConstraints = false
+        return targetView
+    }
+    
 }

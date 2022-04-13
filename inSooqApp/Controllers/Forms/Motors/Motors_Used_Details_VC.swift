@@ -89,7 +89,7 @@ class Motors_Used_Details_VC: FormViewController {
             default: break
         }
         
-        customeListView.setData(vc:self,list: strings)
+        customeListView.setData(vc:self,list: self.dataMakers)
 
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)

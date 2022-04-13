@@ -21,5 +21,12 @@ class FormPhotoPicker: UIView, FormElement {
         self.backgroundColor = .darkGray
     }
     
+    func render() -> UIView {
+        let picker = Bundle(for: FormPhotoPicker.self).loadNibNamed(String(describing: FormPhotoPicker.self), owner: nil, options: nil)![0] as! FormPhotoPicker
+        
+        picker.translatesAutoresizingMaskIntoConstraints = false
+        
+        return picker
+    }
 }
 

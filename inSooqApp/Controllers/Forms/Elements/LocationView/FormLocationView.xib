@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FormLocationView" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixq-bu-JOc">
+                    <rect key="frame" x="4" y="4" width="406" height="72"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fz-AJ-7go">
+                            <rect key="frame" x="0.0" y="0.0" width="132" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="2FA-os-CHA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJo-Il-2LL">
+                            <rect key="frame" x="0.0" y="21" width="93" height="51"/>
+                            <color key="tintColor" name="labelOrange"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="LOCATION"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="8fz-AJ-7go" firstAttribute="top" secondItem="Ixq-bu-JOc" secondAttribute="top" id="1ev-v8-1Vh"/>
+                        <constraint firstItem="8fz-AJ-7go" firstAttribute="leading" secondItem="Ixq-bu-JOc" secondAttribute="leading" id="25B-xb-3kZ"/>
+                        <constraint firstAttribute="bottom" secondItem="MJo-Il-2LL" secondAttribute="bottom" id="jEe-jv-4fl"/>
+                        <constraint firstItem="MJo-Il-2LL" firstAttribute="leading" secondItem="8fz-AJ-7go" secondAttribute="leading" id="qm8-oZ-KcU"/>
+                        <constraint firstItem="MJo-Il-2LL" firstAttribute="top" secondItem="8fz-AJ-7go" secondAttribute="bottom" id="uI2-SK-7ko"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ixq-bu-JOc" secondAttribute="trailing" constant="4" id="MN1-rT-162"/>
+                <constraint firstItem="Ixq-bu-JOc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="gZh-SC-x93"/>
+                <constraint firstItem="Ixq-bu-JOc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="jyq-KY-clB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ixq-bu-JOc" secondAttribute="bottom" constant="4" id="lpa-Df-faz"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="99.107142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="labelOrange">
+            <color red="1" green="0.54100000858306885" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

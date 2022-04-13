@@ -17,7 +17,7 @@ extension Motors_Used_Details_VC {
         let looksGoodLabel = FormLabel()
         looksGoodLabel.text = "Looks good, now please add more details ..."
         
-        let photoPicker = FormPhotoPicker()
+        let photoPicker = FormPhotoPicker().render()
         
         let listingPriceField = FormField()
         listingPriceField.placeholder = "Listing Price"
@@ -27,8 +27,8 @@ extension Motors_Used_Details_VC {
         phoneNumberField.placeholder = "Phone Number"
         phoneNumberField.keyboardType = .phonePad
         
-        let description = FormTextView()
-        description.setPlaceHolder("Description")
+        let description = FormTextView().render()
+        //description.setPlaceHolder("Description")
 
         let specificationsLabel = FormLabel()
         specificationsLabel.text = "Specifications"
@@ -81,10 +81,12 @@ extension Motors_Used_Details_VC {
         horsePowerPicker.setPlaceHolder("Location")
         horsePowerPicker.id = .location
         
+        let locationView = FormLocationView().render()
+        
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("Continue", for: .normal)
         
-        let acceptView = FormAcceptView()
+        let acceptView = FormAcceptView().render()
         
         let adPreview = FormPreviewView()
 
@@ -109,8 +111,9 @@ extension Motors_Used_Details_VC {
             steeringSidePicker,
             horsePowerPicker,
             locationPicker,
-            formContinueButton,
+            locationView,
             acceptView,
+            formContinueButton,
             adPreview
         ]
         

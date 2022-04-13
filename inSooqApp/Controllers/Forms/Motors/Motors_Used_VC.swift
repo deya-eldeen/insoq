@@ -82,19 +82,16 @@ class Motors_Used_VC: FormViewController {
         
         customeListView.pickerID = picker.id
         
-        var strings = [String]()
         switch picker.id {
             case .carBrand:
-            strings = self.dataMakers.compactMap { $0.en_Text }
+            customeListView.setData(vc:self,list: self.dataMakers)
             case .model:
-            strings = self.dataMotorModels.compactMap { $0.en_Text }
+            customeListView.setData(vc:self,list: self.dataMotorModels)
             case .trim:
-            strings = self.dataMotorTrim.compactMap { $0.en_Text }
+            customeListView.setData(vc:self,list: self.dataMotorTrim)
             default: break
         }
         
-        customeListView.setData(vc:self,list: strings)
-
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
         }
