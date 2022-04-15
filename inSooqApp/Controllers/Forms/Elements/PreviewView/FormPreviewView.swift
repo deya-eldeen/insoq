@@ -2,13 +2,13 @@
 //  FormPreviewView.swift
 //  inSooqApp
 //
-//  Created by Deya on 10/04/2022.
+//  Created by Deya on 13/04/2022.
 //
 
 import UIKit
 
 class FormPreviewView: UIView, FormElement {
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
@@ -19,6 +19,12 @@ class FormPreviewView: UIView, FormElement {
     
     func commonInit() {
         self.backgroundColor = .darkGray
+    }
+    
+    func render() -> UIView {
+        let targetView = Bundle(for: FormPreviewView.self).loadNibNamed(String(describing: FormPreviewView.self), owner: nil, options: nil)![0] as! FormPreviewView
+        targetView.translatesAutoresizingMaskIntoConstraints = false
+        return targetView
     }
     
 }

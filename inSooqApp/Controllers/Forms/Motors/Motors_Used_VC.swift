@@ -37,48 +37,19 @@ class Motors_Used_VC: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_Details_VC")
         
         self.requestTrims()
         self.requestMakers()
         self.requestModels()
     }
     
-    // Feed Logic
     override func feedStackView() {
         self.formElements = self.formElements()
-        for element in formElements {
-            stackView.addArrangedSubview(element)
-            if type(of: element) == FormPicker.self {
-                let picker = (element as! FormPicker)
-                picker.button.addTarget(self, action: #selector(self.didTapPicker(picker:)), for: .touchUpInside)
-            }
-            if type(of: element) == FormContinueButton.self {
-                let button = (element as! FormContinueButton)
-                button.addTarget(self, action: #selector(self.didTapContinue), for: .touchUpInside)
-            }
-        }
+        super.feedStackView()
     }
     
-    @objc func didTapContinue() {
-        
-        print("didTapContinue")
-        
-        let controller: Motors_Used_Details_VC = ViewControllersAssembly.forms.makeViewController()
-        navigationController?.pushViewController(controller, animated: true)
-        
-        // Validation
-        
-        // Agree to terms
-        //if(self.userAgrees == false) { self.showAlert(title: "", body: self.userShouldAgreeError); return }
-            
-        // See if all fields are filled
-        // ...
-        
-        
-    }
-    
-    // Selection Logic
-    @objc func didTapPicker(picker: PickerButton) {
+    @objc override func didTapPicker(picker: PickerButton) {
         
         customeListView.pickerID = picker.id
         
@@ -94,6 +65,18 @@ class Motors_Used_VC: FormViewController {
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
+            
+            switch picker.id {
+            case .carBrand:
+                self.selectedMakerID = item.id ?? 0
+                self.requestModels()
+            case .model:
+                self.selectedModelNameEn = item.en_Text ?? ""
+                self.selectedModelNameAr = item.ar_Text ?? ""
+                self.requestTrims()
+            default: break
+            }
+            
         }
         
         self.customeListView.showListing(vc: self)

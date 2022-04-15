@@ -27,10 +27,10 @@ class FormTextView: UIView, FormElement {
         self.textView.sizeToFit()
     }
     
-    
-    func render() -> UIView {
+    func render(placeholder: String = "") -> UIView {
         let targetView = Bundle(for: FormTextView.self).loadNibNamed(String(describing: FormTextView.self), owner: nil, options: nil)![0] as! FormTextView
         targetView.translatesAutoresizingMaskIntoConstraints = false
+        targetView.textView.placeholder = placeholder
         return targetView
     }
     

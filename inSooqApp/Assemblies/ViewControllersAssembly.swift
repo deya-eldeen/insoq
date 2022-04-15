@@ -17,6 +17,7 @@ enum ViewControllersAssembly {
     private(set) static var alerts: UIStoryboard = { UIStoryboard(name: "Alerts")}()
     private(set) static var adding: UIStoryboard = { UIStoryboard(name: "Adding") }()
     private(set) static var forms: UIStoryboard = { UIStoryboard(name: "Forms") }()
+    private(set) static var misc: UIStoryboard = { UIStoryboard(name: "Misc") }()
 
     
 }

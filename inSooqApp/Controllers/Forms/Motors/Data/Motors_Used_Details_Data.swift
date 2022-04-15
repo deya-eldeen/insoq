@@ -27,7 +27,7 @@ extension Motors_Used_Details_VC {
         phoneNumberField.placeholder = "Phone Number"
         phoneNumberField.keyboardType = .phonePad
         
-        let description = FormTextView().render()
+        let description = FormTextView().render(placeholder: "Description")
         //description.setPlaceHolder("Description")
 
         let specificationsLabel = FormLabel()
@@ -88,7 +88,7 @@ extension Motors_Used_Details_VC {
         
         let acceptView = FormAcceptView().render()
         
-        let adPreview = FormPreviewView()
+        let adPreview = FormPreviewView().render()
 
         
         return [

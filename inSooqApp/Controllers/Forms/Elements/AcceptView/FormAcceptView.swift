@@ -9,6 +9,8 @@ import UIKit
 
 class FormAcceptView: UIView, FormElement {
     
+    var isChecked = false
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }

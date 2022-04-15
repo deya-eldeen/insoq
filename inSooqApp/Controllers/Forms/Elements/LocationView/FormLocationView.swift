@@ -9,6 +9,8 @@ import UIKit
 
 class FormLocationView: UIView, FormElement {
     
+    @IBOutlet weak var button: UIButton!
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }

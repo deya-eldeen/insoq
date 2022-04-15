@@ -67,6 +67,8 @@
 		E31E6EA728075AAD001A4E9A /* FormLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E6EA628075AAD001A4E9A /* FormLocationView.swift */; };
 		E31E6EAC28075B1A001A4E9A /* FormLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EAB28075B1A001A4E9A /* FormLocationView.xib */; };
 		E31E6EB028076A25001A4E9A /* FormTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EAF28076A25001A4E9A /* FormTextView.xib */; };
+		E31E6EB4280798AC001A4E9A /* FormPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E6EB2280798AC001A4E9A /* FormPreviewView.swift */; };
+		E31E6EB5280798AC001A4E9A /* FormPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */; };
 		E327E5D5280633BA000968C0 /* FormAcceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327E5D4280633BA000968C0 /* FormAcceptView.swift */; };
 		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
 		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
@@ -83,13 +85,14 @@
 		E39BAE1B27FC8E7F001F5438 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BAE1A27FC8E7F001F5438 /* FormViewController.swift */; };
 		E39BAE1D27FC9AE1001F5438 /* FormElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BAE1C27FC9AE1001F5438 /* FormElement.swift */; };
 		E39BAE2027FCDDF1001F5438 /* Motors_Used_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */; };
+		E39DC4FA2809C71B00BAE09D /* MapPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC4F92809C71B00BAE09D /* MapPickerViewController.swift */; };
+		E39DC4FD2809E54600BAE09D /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC4FC2809E54600BAE09D /* PricesViewController.swift */; };
 		E3A810F228035649003A2CC0 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F128035649003A2CC0 /* FormLabel.swift */; };
 		E3A810F428035669003A2CC0 /* FormSubLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F328035669003A2CC0 /* FormSubLabel.swift */; };
 		E3A810F628035706003A2CC0 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F528035706003A2CC0 /* FormField.swift */; };
 		E3A810F828035737003A2CC0 /* FormPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F728035737003A2CC0 /* FormPicker.swift */; };
 		E3A810FA28035AF4003A2CC0 /* FormContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F928035AF4003A2CC0 /* FormContinueButton.swift */; };
 		E3A810FC28036246003A2CC0 /* FormPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810FB28036246003A2CC0 /* FormPhotoPicker.swift */; };
-		E3A810FE280362B2003A2CC0 /* FormPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810FD280362B2003A2CC0 /* FormPreviewView.swift */; };
 		E3A8110028042DF7003A2CC0 /* Motors_Boats_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810FF28042DF7003A2CC0 /* Motors_Boats_Data.swift */; };
 		E3A8110228042E34003A2CC0 /* Motors_Used_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */; };
 		E3A8110428042E51003A2CC0 /* Motors_Machinery_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110328042E51003A2CC0 /* Motors_Machinery_Data.swift */; };
@@ -547,6 +550,8 @@
 		E31E6EA628075AAD001A4E9A /* FormLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLocationView.swift; sourceTree = "<group>"; };
 		E31E6EAB28075B1A001A4E9A /* FormLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormLocationView.xib; sourceTree = "<group>"; };
 		E31E6EAF28076A25001A4E9A /* FormTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextView.xib; sourceTree = "<group>"; };
+		E31E6EB2280798AC001A4E9A /* FormPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormPreviewView.swift; sourceTree = "<group>"; };
+		E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormPreviewView.xib; sourceTree = "<group>"; };
 		E327E5D4280633BA000968C0 /* FormAcceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAcceptView.swift; sourceTree = "<group>"; };
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
 		E380353827F64CE000FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
@@ -563,13 +568,14 @@
 		E39BAE1A27FC8E7F001F5438 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		E39BAE1C27FC9AE1001F5438 /* FormElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormElement.swift; sourceTree = "<group>"; };
 		E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Used_VC.swift; sourceTree = "<group>"; };
+		E39DC4F92809C71B00BAE09D /* MapPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerViewController.swift; sourceTree = "<group>"; };
+		E39DC4FC2809E54600BAE09D /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
 		E3A810F128035649003A2CC0 /* FormLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabel.swift; sourceTree = "<group>"; };
 		E3A810F328035669003A2CC0 /* FormSubLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSubLabel.swift; sourceTree = "<group>"; };
 		E3A810F528035706003A2CC0 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		E3A810F728035737003A2CC0 /* FormPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPicker.swift; sourceTree = "<group>"; };
 		E3A810F928035AF4003A2CC0 /* FormContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContinueButton.swift; sourceTree = "<group>"; };
 		E3A810FB28036246003A2CC0 /* FormPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPhotoPicker.swift; sourceTree = "<group>"; };
-		E3A810FD280362B2003A2CC0 /* FormPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPreviewView.swift; sourceTree = "<group>"; };
 		E3A810FF28042DF7003A2CC0 /* Motors_Boats_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Boats_Data.swift; sourceTree = "<group>"; };
 		E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Used_Details_Data.swift; sourceTree = "<group>"; };
 		E3A8110328042E51003A2CC0 /* Motors_Machinery_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Data.swift; sourceTree = "<group>"; };
@@ -1261,6 +1267,15 @@
 			path = FormTextView;
 			sourceTree = "<group>";
 		};
+		E31E6EB1280797EB001A4E9A /* PreviewView */ = {
+			isa = PBXGroup;
+			children = (
+				E31E6EB2280798AC001A4E9A /* FormPreviewView.swift */,
+				E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */,
+			);
+			path = PreviewView;
+			sourceTree = "<group>";
+		};
 		E39BAE1927FC8E52001F5438 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1286,6 +1301,22 @@
 				E3F99BC62801A0770084E95C /* Data */,
 			);
 			path = Motors;
+			sourceTree = "<group>";
+		};
+		E39DC4F82809C6E100BAE09D /* MapPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E39DC4F92809C71B00BAE09D /* MapPickerViewController.swift */,
+			);
+			path = MapPickerViewController;
+			sourceTree = "<group>";
+		};
+		E39DC4FB2809E52400BAE09D /* PricesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E39DC4FC2809E54600BAE09D /* PricesViewController.swift */,
+			);
+			path = PricesViewController;
 			sourceTree = "<group>";
 		};
 		E3A8111328043004003A2CC0 /* Jobs */ = {
@@ -1434,11 +1465,11 @@
 			isa = PBXGroup;
 			children = (
 				E39BAE1C27FC9AE1001F5438 /* FormElement.swift */,
+				E31E6EB1280797EB001A4E9A /* PreviewView */,
 				E31E6EAE28076A0F001A4E9A /* FormTextView */,
 				E31E6EAA28075B06001A4E9A /* LocationView */,
 				E31E6EA928075ADA001A4E9A /* AcceptView */,
 				E31E6EA828075AB2001A4E9A /* PhotoPicker */,
-				E3A810FD280362B2003A2CC0 /* FormPreviewView.swift */,
 				E3A810F128035649003A2CC0 /* FormLabel.swift */,
 				E3A810F328035669003A2CC0 /* FormSubLabel.swift */,
 				E3A810F528035706003A2CC0 /* FormField.swift */,
@@ -1609,6 +1640,8 @@
 		F107A1D525CFCD4100FC6340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E39DC4FB2809E52400BAE09D /* PricesViewController */,
+				E39DC4F82809C6E100BAE09D /* MapPickerViewController */,
 				E39BAE1927FC8E52001F5438 /* Forms */,
 				F168C61C25EB84F600434AE7 /* Registration */,
 				F175E8DB25E669A700873F20 /* AddItem */,
@@ -2457,6 +2490,7 @@
 				F1F352F12647EDE3001A065B /* playground.png in Resources */,
 				E380353E27F653E500FF0212 /* Adding.storyboard in Resources */,
 				F12F02F82642170600989A1B /* favo.png in Resources */,
+				E31E6EB5280798AC001A4E9A /* FormPreviewView.xib in Resources */,
 				F12F02F52642170600989A1B /* clasified.png in Resources */,
 				F19A567F2619A165007D2ABC /* MainNavView.xib in Resources */,
 				F175E8CE25E64B9300873F20 /* ServicesFillter.xib in Resources */,
@@ -2714,6 +2748,7 @@
 				E3A810FC28036246003A2CC0 /* FormPhotoPicker.swift in Sources */,
 				E3FD214E27EA53E900FDA9DD /* BasicResponse.swift in Sources */,
 				F19CC1E8261C56FB002CDE4F /* SavedSearchesTableViewCell.swift in Sources */,
+				E39DC4FA2809C71B00BAE09D /* MapPickerViewController.swift in Sources */,
 				E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */,
 				F1CC83462628495700FE1241 /* SliderCollectionViewCell.swift in Sources */,
 				E3FD210F27EA508600FDA9DD /* APIConfig.swift in Sources */,
@@ -2808,6 +2843,7 @@
 				CE8CC6F827E4F47400DC0F85 /* GetAllPlateTypeM.swift in Sources */,
 				F11CD7BD2627085800551D0C /* GoldPackageView.swift in Sources */,
 				F11CD7B72626F19B00551D0C /* SilverPackageView.swift in Sources */,
+				E31E6EB4280798AC001A4E9A /* FormPreviewView.swift in Sources */,
 				E3D2FEBF2801B6A500EECA95 /* MotorTrim.swift in Sources */,
 				F1DC294226474F340064A018 /* PropertiresTableViewCell.swift in Sources */,
 				F13FEEA22626571B003AB5A2 /* SegmentsCollectionViewCell.swift in Sources */,
@@ -2837,6 +2873,7 @@
 				F1F352DE2647EC35001A065B /* AmenitiesCollectionViewCell.swift in Sources */,
 				E380354427F6608600FF0212 /* EducationLevelModel.swift in Sources */,
 				E3FD213727EA524000FDA9DD /* Kingfisher.swift in Sources */,
+				E39DC4FD2809E54600BAE09D /* PricesViewController.swift in Sources */,
 				F1E2CE3D25D1650D00F64F67 /* SubCategoryHeader.swift in Sources */,
 				F11A4AEB261B3403003E70BD /* FIRAuthCodeView.swift in Sources */,
 				E3FD213F27EA524000FDA9DD /* NibInitializable.swift in Sources */,
@@ -2857,7 +2894,6 @@
 				E3FD214527EA524000FDA9DD /* BaseSearchBar.swift in Sources */,
 				F1B8B59625D9429100AB3E83 /* ItemsSliderCollectionViewCell.swift in Sources */,
 				F132BD95261478F100F83837 /* SignUpViewController.swift in Sources */,
-				E3A810FE280362B2003A2CC0 /* FormPreviewView.swift in Sources */,
 				CEA987B827E681060042544D /* SubCategoryM.swift in Sources */,
 				E3FD213427EA524000FDA9DD /* AlignmentAwareCollectionViewLayout.swift in Sources */,
 				E3FD214927EA524000FDA9DD /* Defaults.swift in Sources */,

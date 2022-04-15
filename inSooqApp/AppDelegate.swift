@@ -15,9 +15,9 @@ import AlamofireNetworkActivityLogger
 import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     let gcmMessageIDKey = "gcm.message_id"
     let window = UIApplication.shared.keyWindow
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         debugPrint("appe is in forground")

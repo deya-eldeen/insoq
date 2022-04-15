@@ -55,6 +55,9 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="MJo-Il-2LL" id="zLu-d3-sS9"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="99.107142857142847"/>
         </view>
     </objects>
