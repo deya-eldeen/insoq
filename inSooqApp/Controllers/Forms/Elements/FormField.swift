@@ -9,6 +9,8 @@ import UIKit
 
 class FormField: UITextField, FormElement {
     
+    var id: FieldID?
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         self.commonInit()
@@ -29,3 +31,10 @@ class FormField: UITextField, FormElement {
     
 }
 
+enum FieldID {
+    case title
+    case year
+    case price
+    case phoneNumber
+    case none
+}

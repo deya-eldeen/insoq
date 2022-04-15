@@ -78,6 +78,8 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
 
         var targetController: UIViewController?
         
+        FormViewController.selectedCatID = id ?? 0
+        
         switch adType {
         case .usedCars:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_VC")
@@ -129,6 +131,10 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Computers_Networking_VC")
         case .none:
             print("NONE")
+        case .business:
+            print("business")
+        case .classified:
+            print("classified")
         }
         
         if let tc = targetController {
@@ -215,11 +221,7 @@ enum AdCategory: Int {
     case homeElectronics = 36
     case computersNetworking = 37
     
-//    case business = 1001
-//    case classified = 1000
-    
+    case business = 1001
+    case classified = 1000
     
 }
-
-
-

@@ -24,6 +24,11 @@ class FormViewController: UIViewController {
     var formElements = [UIView]()
     
     var images = [UIImage]()
+    
+    static var selectedCatID = 0
+    
+    var adTitle = ""
+    var adLocation = ""
 
     // MARK: DropDowns
     var customeListView: CustomListView = .fromNib()
@@ -68,9 +73,18 @@ class FormViewController: UIViewController {
     
     var nextViewController: UIViewController!
     
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        self.updatePreview()
+    }
+    
     func feedStackView() {
         for element in formElements {
             stackView.addArrangedSubview(element)
+            
+            if type(of: element) == FormField.self {
+                let field = (element as! FormField)
+                field.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+            }
             if type(of: element) == FormPicker.self {
                 let picker = (element as! FormPicker)
                 picker.button.addTarget(self, action: #selector(self.didTapPicker(picker:)), for: .touchUpInside)
@@ -136,6 +150,8 @@ class FormViewController: UIViewController {
             }
         }
         
+        self.updatePreview()
+        
     }
     
     func clearNextPickers(with id: PickerID, value: Listable) {
@@ -162,14 +178,14 @@ class FormViewController: UIViewController {
     func isValid() -> (Bool,FormValidationError) {
         
 //        for element in formElements {
-//            
+//
 //            if type(of: element) == FormAcceptView.self {
 //                let acceptView = (element as! FormAcceptView)
 //                if (acceptView.isChecked == false) {
 //                    return (false,.userShouldAgreeError)
 //                }
 //            }
-//            
+//
 //            if type(of: element) == FormPicker.self {
 //                let picker = (element as! FormPicker)
 //                let text = picker.textfield.text ?? ""
@@ -177,7 +193,7 @@ class FormViewController: UIViewController {
 //                    return (false,.shouldFillForm)
 //                }
 //            }
-//            
+//
 //            if type(of: element) == FormField.self {
 //                let field = (element as! FormField)
 //                let text = field.text ?? ""
@@ -185,10 +201,38 @@ class FormViewController: UIViewController {
 //                    return (false,.shouldFillForm)
 //                }
 //            }
-//            
+//
 //        }
         
         return (true, .none)
+    }
+    
+    func updatePreview() {
+        
+        for element in formElements {
+            
+            if type(of: element) == FormField.self {
+                let field = (element as! FormField)
+                if field.id == .title {
+                    adTitle = field.text ?? ""
+                }
+            }
+            
+            if type(of: element) == FormPicker.self {
+                let picker = (element as! FormPicker)
+                if picker.id == .location {
+                    adLocation = picker.textfield.text ?? ""
+                }
+            }
+            
+            
+            if type(of: element) == FormPreviewView.self {
+                (element as! FormPreviewView).adTitleLabel.text = adTitle
+                (element as! FormPreviewView).adLocationLabel.text = adLocation
+            }
+            
+        }
+
     }
     
 }
@@ -202,3 +246,12 @@ extension FormViewController: UIScrollViewDelegate {
     }
     
 }
+
+//extension FormViewController: UITextFieldDelegate {
+//
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        print("textFieldDidBeginEditing",textField)
+//        self.updatePreview()
+//    }
+//
+//}

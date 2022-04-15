@@ -1,13 +1,13 @@
 //
-//  Motors_Boats_VC.swift
+//  Motors_Boats_Details_VC.swift
 //  inSooqApp
 //
-//  Created by Deya on 15/04/2022.
+//  Created by Deya on 16/04/2022.
 //
 
 import UIKit
 
-class Motors_Boats_VC: FormViewController {
+class Motors_Boats_Details_VC: FormViewController {
     
     var dataMakers = [MotorMaker]()
     var dataMotorModels = [MotorModel]()
@@ -36,7 +36,7 @@ class Motors_Boats_VC: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Boats_Details_VC") 
+        self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_Details_VC")
         
         self.requestTrims()
         self.requestMakers()

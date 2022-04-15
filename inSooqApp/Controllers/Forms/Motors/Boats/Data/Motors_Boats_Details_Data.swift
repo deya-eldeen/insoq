@@ -1,13 +1,13 @@
 //
-//  Motors_Used_Details_Data.swift
+//  Motors_Boats_Details_VC.swift
 //  inSooqApp
 //
-//  Created by Deya on 11/04/2022.
+//  Created by Deya on 16/04/2022.
 //
 
 import UIKit
 
-extension Motors_Used_Details_VC {
+extension Motors_Boats_Details_VC {
     
     func formElements() -> [UIView] {
         
@@ -59,30 +59,29 @@ extension Motors_Used_Details_VC {
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
         warrantyPicker.id = .numberOfDoors
-        
-        let transmissionPicker = FormPicker()
-        transmissionPicker.setPlaceHolder("Please Select Transmission")
-        transmissionPicker.id = .transmission
-        
-        let bodyTypePicker = FormPicker()
-        bodyTypePicker.setPlaceHolder("Please Select Body Type")
-        bodyTypePicker.id = .bodyType
-        
-        let fuelTypePicker = FormPicker()
-        fuelTypePicker.setPlaceHolder("Please Select Fuel Type")
-        fuelTypePicker.id = .transmission
-        
-        let cylindersPicker = FormPicker()
-        cylindersPicker.setPlaceHolder("Please Select Cylinders Type")
-        cylindersPicker.id = .cylinders
-        
-        let steeringSidePicker = FormPicker()
-        steeringSidePicker.setPlaceHolder("Please Select Steering Side")
-        steeringSidePicker.id = .steeringSide
-        
+
+        // pickers
         let horsePowerPicker = FormPicker()
-        horsePowerPicker.setPlaceHolder("Please Select Horse-Power")
+        horsePowerPicker.setPlaceHolder("Please Select Horse Power")
         horsePowerPicker.id = .horsePower
+        
+        let agePicker = FormPicker()
+        agePicker.setPlaceHolder("Please Select Age")
+        agePicker.id = .age
+        
+        let usagePicker = FormPicker()
+        usagePicker.setPlaceHolder("Please Select Usage")
+        usagePicker.id = .usage
+        
+        let conditionPicker = FormPicker()
+        conditionPicker.setPlaceHolder("Please Select Condition")
+        conditionPicker.id = .condition
+        
+        let lengthPicker = FormPicker()
+        lengthPicker.setPlaceHolder("Please Select Length")
+        lengthPicker.id = .length
+        //
+        
         
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
@@ -108,16 +107,14 @@ extension Motors_Used_Details_VC {
             description,
             specificationsLabel,
             milageField,
-            regionalSpecPicker,
-            colorPicker,
-            numberOfDoorsPicker,
             warrantyPicker,
-            transmissionPicker,
-            bodyTypePicker,
-            fuelTypePicker,
-            cylindersPicker,
-            steeringSidePicker,
+            
             horsePowerPicker,
+            agePicker,
+            usagePicker,
+            conditionPicker,
+            lengthPicker,
+
             locationPicker,
             locationView,
             acceptView,
@@ -128,4 +125,32 @@ extension Motors_Used_Details_VC {
     }
     
 }
+
+//Label: Looks good, now please add more details...
+//Label Pictures of your ad
+//View: Photo Upload View 10 pictures vertically
+//Label: Listing Price
+//Field: 0.00
+//Label: Phone Number
+//Field: Phone Number
+//Label: Add a shot description (Optional)
+//Field: Write more about your ad...
+//Label: Specifications
+//Field: Milage (km)
+//Picker: Under Warranty?
+
+//Picker: Please select horse-power
+//Picker: Please select age
+//Picker: Please select usage
+//Picker: Please select condition
+//Picker: Please select length
+//Picker: Please select location
+
+//Label: Your Location
+//Location View: Location >> on click opens map
+//Check box: By submitting this ad, I agree on {terms & conditions} and {Privacy
+//Policy}
+//Label: Once you submit the ad, we will review before publishing. You will be
+//notified once approved
+//Button: Continue
 

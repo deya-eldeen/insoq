@@ -9,6 +9,9 @@ import UIKit
 
 class FormPreviewView: UIView, FormElement {
     
+    @IBOutlet weak var adTitleLabel: UILabel!
+    @IBOutlet weak var adLocationLabel: UILabel!
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }

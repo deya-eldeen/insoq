@@ -21,6 +21,7 @@ extension Motors_Used_VC {
         addSubLabel.text = "Try to have an information title that's to be point and not very long."
         
         let titleField = FormField()
+        titleField.id = .title
         titleField.placeholder = "Ad Title"
         
         let addLabel = FormLabel()
@@ -39,6 +40,7 @@ extension Motors_Used_VC {
         trimPicker.id = .trim
         
         let yearField = FormField()
+        yearField.id = .year
         yearField.placeholder = "Year"
         yearField.keyboardType = .numberPad
         

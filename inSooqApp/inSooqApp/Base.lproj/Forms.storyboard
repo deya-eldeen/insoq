@@ -279,6 +279,21 @@
             </objects>
             <point key="canvasLocation" x="7113" y="2113"/>
         </scene>
+        <!--Motors Boats DetailsVC-->
+        <scene sceneID="sQl-GM-fKP">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Boats_Details_VC" id="IiR-xZ-FcZ" customClass="Motors_Boats_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Azp-Gn-qvw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QiF-yo-1Rp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXn-yt-wYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5797" y="-662"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

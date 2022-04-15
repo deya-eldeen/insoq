@@ -110,6 +110,8 @@
 		E39DC534280A03EE00BAE09D /* Plate_Numbers_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC533280A03EE00BAE09D /* Plate_Numbers_VC.swift */; };
 		E39DC536280A03FC00BAE09D /* Mobile_Numbers_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC535280A03FC00BAE09D /* Mobile_Numbers_VC.swift */; };
 		E39DC538280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC537280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift */; };
+		E39DC53A280A2F5700BAE09D /* Motors_Boats_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC539280A2F5700BAE09D /* Motors_Boats_Details_VC.swift */; };
+		E39DC53C280A2F9800BAE09D /* Motors_Boats_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC53B280A2F9800BAE09D /* Motors_Boats_Details_Data.swift */; };
 		E3A810F228035649003A2CC0 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F128035649003A2CC0 /* FormLabel.swift */; };
 		E3A810F428035669003A2CC0 /* FormSubLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F328035669003A2CC0 /* FormSubLabel.swift */; };
 		E3A810F628035706003A2CC0 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F528035706003A2CC0 /* FormField.swift */; };
@@ -616,6 +618,8 @@
 		E39DC533280A03EE00BAE09D /* Plate_Numbers_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plate_Numbers_VC.swift; sourceTree = "<group>"; };
 		E39DC535280A03FC00BAE09D /* Mobile_Numbers_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Numbers_VC.swift; sourceTree = "<group>"; };
 		E39DC537280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobiles_Tablets_Accessories_VC.swift; sourceTree = "<group>"; };
+		E39DC539280A2F5700BAE09D /* Motors_Boats_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Boats_Details_VC.swift; sourceTree = "<group>"; };
+		E39DC53B280A2F9800BAE09D /* Motors_Boats_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Boats_Details_Data.swift; sourceTree = "<group>"; };
 		E3A810F128035649003A2CC0 /* FormLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabel.swift; sourceTree = "<group>"; };
 		E3A810F328035669003A2CC0 /* FormSubLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSubLabel.swift; sourceTree = "<group>"; };
 		E3A810F528035706003A2CC0 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
@@ -1382,6 +1386,7 @@
 			isa = PBXGroup;
 			children = (
 				E39DC4FE2809ED5A00BAE09D /* Motors_Boats_VC.swift */,
+				E39DC539280A2F5700BAE09D /* Motors_Boats_Details_VC.swift */,
 				E39DC5052809EEDB00BAE09D /* Data */,
 			);
 			path = Boats;
@@ -1400,6 +1405,7 @@
 			isa = PBXGroup;
 			children = (
 				E3A810FF28042DF7003A2CC0 /* Motors_Boats_Data.swift */,
+				E39DC53B280A2F9800BAE09D /* Motors_Boats_Details_Data.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -2911,6 +2917,7 @@
 				E3BB1EBD2804F47E00D65DA7 /* FormTextView.swift in Sources */,
 				F1AD891425E4FB1B00326065 /* MainCategoriesCollectionViewCell.swift in Sources */,
 				E3A810FC28036246003A2CC0 /* FormPhotoPicker.swift in Sources */,
+				E39DC53C280A2F9800BAE09D /* Motors_Boats_Details_Data.swift in Sources */,
 				E3FD214E27EA53E900FDA9DD /* BasicResponse.swift in Sources */,
 				F19CC1E8261C56FB002CDE4F /* SavedSearchesTableViewCell.swift in Sources */,
 				E39DC4FA2809C71B00BAE09D /* MapPickerViewController.swift in Sources */,
@@ -2923,6 +2930,7 @@
 				F1DC098926133EA5007BC57F /* ChangePasswordView.swift in Sources */,
 				E39DC538280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift in Sources */,
 				F1A82DF625D5651800EDF023 /* MotorsDetailsView.swift in Sources */,
+				E39DC53A280A2F5700BAE09D /* Motors_Boats_Details_VC.swift in Sources */,
 				F15BC4BE2615AB060094ACF0 /* UIView+Extensions.swift in Sources */,
 				F175E8FB25E693FF00873F20 /* MotorCardView.swift in Sources */,
 				CE8CC6F227E4E6E400DC0F85 /* SubBrandVc.swift in Sources */,

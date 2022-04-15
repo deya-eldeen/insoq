@@ -141,6 +141,8 @@ enum PickerID {
     case version
     case ram
     case storage
+    case length
+    
     case unknown
     case none
 }
