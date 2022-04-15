@@ -17,15 +17,15 @@ extension Motors_Used_VC {
         let startLabel = FormLabel()
         startLabel.text = "Let's start with the title"
         
+        let addSubLabel = FormSubLabel()
+        addSubLabel.text = "Try to have an information title that's to be point and not very long."
+        
         let titleField = FormField()
         titleField.placeholder = "Ad Title"
         
         let addLabel = FormLabel()
         addLabel.text = "Now let's add your car make and model"
     
-        let addSubLabel = FormSubLabel()
-        addSubLabel.text = "Try to have an information title that's to be point and not very long."
-        
         let brandPicker = FormPicker()
         brandPicker.setPlaceHolder("What brand is your car?")
         brandPicker.id = .carBrand
@@ -45,17 +45,20 @@ extension Motors_Used_VC {
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("Continue", for: .normal)
         
+        let adPreview = FormPreviewView().render()
+
         return [
             header,
             startLabel,
+            addSubLabel,
             titleField,
             addLabel,
-            addSubLabel,
             brandPicker,
             modelPicker,
             trimPicker,
             yearField,
-            formContinueButton
+            formContinueButton,
+            adPreview
         ]
         
     }

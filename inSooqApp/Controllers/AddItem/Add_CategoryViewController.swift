@@ -7,32 +7,7 @@
 
 import UIKit
 
-enum MotorGategorys: Int, CaseIterable {
-    
-    case usedCars = 2
-    case boats = 5
-    case machinery = 6
-    case parts = 7
-    case exportCar = 8
-    case bike = 9
-    
-    var id: Int {
-        switch self {
-        case .usedCars:
-            return 2
-        case .boats:
-            return 5
-        case .machinery:
-            return 6
-        case .parts:
-            return 7
-        case .exportCar:
-            return 8
-        case .bike:
-            return 9
-        }
-    }
-}
+
 
 class Add_CategoryViewController: UIViewController {
     
@@ -44,7 +19,7 @@ class Add_CategoryViewController: UIViewController {
     
     var modelOfCategory: CategoriesModel?
     var model = [Category]()
-    var selectedType: MotorGategorys?
+//    var selectedType: MotorGategorys?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,46 +60,82 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if let cell = tableView.cellForRow(at: indexPath) as? SubCategoriesTableViewCell {
             cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1)
             cell.subName.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
-        
-        selectedType = MotorGategorys.allCases.first{$0.rawValue == model[indexPath.row].id} ?? .usedCars
-   
-                
-        let controller: Motors_Used_VC = ViewControllersAssembly.forms.makeViewController()
-        navigationController?.pushViewController(controller, animated: true)
-        
-//        let controller = Assembly.Add_TitleViewController(type: selectedType ?? .usedCars, model: model[indexPath.row])
-//        navigationController?.pushViewController(controller, animated: true)
-        
-        return
-        
-//        navigationController?.pushViewController(controller, animated: true)
-//        
-//        if let catID = Int(modelOfCategory?.categoyID ?? "-1"){
-//            switch catID {
-//            case 1:
-//                break
-//            case 2:
-//                break
-//            default:
-//                break
-//            }
-//        }
-//        
-//        switch selectedType{
-//        case .boats:
-//            goToBoats(category: model[indexPath.row])
-//            return
-//  
-//        default:
-//            break
-//        }
-//        
+           
+        let id = model[indexPath.row].id
+        let typeID = model[indexPath.row].typeID
+        let catName = model[indexPath.row].enName
 
+        let adType = AdCategory(rawValue: id ?? 0)
         
+        print("DID_SELECT_ID_TypeID",id,typeID)
+        print("adType",adType)
+        print("catName",catName)
+
+        var targetController: UIViewController?
+        
+        switch adType {
+        case .usedCars:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_VC")
+        case .boats:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Boats_VC")
+        case .machinery:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Machinery_VC")
+        case .parts:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Parts_VC")
+        case .exportCar:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Export_VC")
+        case .bike:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Bike_VC")
+        case .jobWanted:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Job_Wanted_VC")
+        case .domestic:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .autoService:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .moversRemovals:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .webComputer:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .corporateServices:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .homeMaintenance:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .eventEntertainment:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .tutorsClasses:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .healthServices:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
+        case .serviceOthers:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_Others_VC")
+        case .platNumbers:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Plate_Numbers_VC")
+        case .mobileNumbers:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Mobile_Numbers_VC")
+        case .mobiles:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Mobiles_VC")
+        case .tablets:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Tablets_VC")
+        case .mobilesTabletsAccessories:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Mobiles_Tablets_Accessories_VC")
+        case .homeElectronics:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Home_Electronics_VC")
+        case .computersNetworking:
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Computers_Networking_VC")
+        case .none:
+            print("NONE")
+        }
+        
+        if let tc = targetController {
+            tc.title = catName
+            navigationController?.pushViewController(tc, animated: true)
+        }
+                
     }
     
     func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -170,3 +181,45 @@ extension Add_CategoryViewController {
     }
     
 }
+
+
+
+enum AdCategory: Int {
+
+    case usedCars = 2
+    case boats = 5
+    case machinery = 6
+    case parts = 7
+    case exportCar = 8
+    case bike = 9
+    
+    case jobWanted = 4
+    
+    case domestic = 21
+    case autoService = 24
+    case moversRemovals = 25
+    case webComputer = 26
+    case corporateServices = 27
+    case homeMaintenance = 28
+    case eventEntertainment = 29
+    case tutorsClasses = 30
+    case healthServices = 31
+    case serviceOthers = 32
+    
+    case platNumbers = 17
+    case mobileNumbers = 18
+    
+    case mobiles = 19
+    case tablets = 33
+    case mobilesTabletsAccessories = 35
+    case homeElectronics = 36
+    case computersNetworking = 37
+    
+//    case business = 1001
+//    case classified = 1000
+    
+    
+}
+
+
+

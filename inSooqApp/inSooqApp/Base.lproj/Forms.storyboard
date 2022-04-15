@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgf-CX-ufC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5414.4927536231889" y="-1258.2589285714284"/>
+            <point key="canvasLocation" x="4784" y="-611"/>
         </scene>
         <!--Motors UsedVC-->
         <scene sceneID="b29-bi-hWe">
@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOI-VL-4e5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4788" y="-1258"/>
+            <point key="canvasLocation" x="4157" y="-611"/>
         </scene>
         <!--Motors Used DetailsVC-->
         <scene sceneID="Zo1-WB-u72">
@@ -53,6 +53,231 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCy-aZ-WUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4157" y="-1258"/>
+        </scene>
+        <!--Motors BoatsVC-->
+        <scene sceneID="kpN-Ok-qIB">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Boats_VC" id="e77-rI-T7l" customClass="Motors_Boats_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nnz-K0-9Da">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gzo-sq-wVH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYF-KN-aWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5459" y="-611"/>
+        </scene>
+        <!--Motors MachineryVC-->
+        <scene sceneID="sHi-iU-Sqw">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Machinery_VC" id="JK8-07-nlX" customClass="Motors_Machinery_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MGT-QZ-6dS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ixn-2A-QHO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIO-53-Bdp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6387" y="-611"/>
+        </scene>
+        <!--Motors PartsVC-->
+        <scene sceneID="KuL-qz-tOx">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Parts_VC" id="anB-9w-6gt" customClass="Motors_Parts_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h0i-oy-ycv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nRa-LL-zV6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bY1-X6-16L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7114" y="-611"/>
+        </scene>
+        <!--Motors ExportVC-->
+        <scene sceneID="C1y-8X-fBU">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Export_VC" id="Zml-9J-oIh" customClass="Motors_Export_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dWq-Xa-mPk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nui-wf-j16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rm-M9-n0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7835" y="-611"/>
+        </scene>
+        <!--Motors BikeVC-->
+        <scene sceneID="eje-rb-mfE">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Bike_VC" id="HHs-3v-Pzc" customClass="Motors_Bike_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bJu-mm-hOk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TNO-MN-I8w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stw-vH-aE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8567" y="-611"/>
+        </scene>
+        <!--Job WantedVC-->
+        <scene sceneID="Ged-7u-LaM">
+            <objects>
+                <viewController storyboardIdentifier="Job_Wanted_VC" id="gkQ-sy-FjF" customClass="Job_Wanted_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yl5-Q5-Clj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pco-yX-Ni0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4f-XJ-MgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4157" y="55"/>
+        </scene>
+        <!--ServicesVC-->
+        <scene sceneID="Pev-38-dds">
+            <objects>
+                <viewController storyboardIdentifier="Services_VC" id="uJu-5a-JRQ" customClass="Services_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lDZ-y4-fN6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rKk-xW-YdF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXZ-eX-5c1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4157" y="733"/>
+        </scene>
+        <!--Services OthersVC-->
+        <scene sceneID="M9c-Wu-M5S">
+            <objects>
+                <viewController storyboardIdentifier="Services_Others_VC" id="rcl-L8-LpZ" customClass="Services_Others_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TzO-h5-nps">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cVN-fS-0vU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHi-Xp-Ych" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4783" y="733"/>
+        </scene>
+        <!--Plate NumbersVC-->
+        <scene sceneID="E8I-9s-QRs">
+            <objects>
+                <viewController storyboardIdentifier="Plate_Numbers_VC" id="9UH-zC-of8" customClass="Plate_Numbers_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bzy-iR-pSz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3MK-WK-PIu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DR5-ur-K0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4157" y="1403"/>
+        </scene>
+        <!--Mobile NumbersVC-->
+        <scene sceneID="NKW-gX-sdN">
+            <objects>
+                <viewController storyboardIdentifier="Mobile_Numbers_VC" id="pDp-4P-qHW" customClass="Mobile_Numbers_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wcs-Cm-yCU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sv7-Lj-dYU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ko-ep-53U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4783" y="1403"/>
+        </scene>
+        <!--MobilesVC-->
+        <scene sceneID="O2m-fi-nOn">
+            <objects>
+                <viewController storyboardIdentifier="Mobiles_VC" id="tVf-e4-SZH" customClass="Mobiles_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="66L-xw-I4x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bof-Y5-r2M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5P-qT-Bdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4157" y="2114"/>
+        </scene>
+        <!--TabletsVC-->
+        <scene sceneID="REh-Q6-q0a">
+            <objects>
+                <viewController storyboardIdentifier="Tablets_VC" id="AKg-d6-cfA" customClass="Tablets_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WPT-b3-YP5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fmw-bA-Nuc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMk-8l-JlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4783" y="2113"/>
+        </scene>
+        <!--Mobiles Tablets AccessoriesVC-->
+        <scene sceneID="d0s-Wq-Yt7">
+            <objects>
+                <viewController storyboardIdentifier="Mobiles_Tablets_Accessories_VC" id="bwM-Jr-yyO" customClass="Mobiles_Tablets_Accessories_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PZz-BL-59p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xnq-lb-HFw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNV-Xq-YRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5458" y="2113"/>
+        </scene>
+        <!--Home ElectronicsVC-->
+        <scene sceneID="dym-ao-ffJ">
+            <objects>
+                <viewController storyboardIdentifier="Home_Electronics_VC" id="cUY-bs-3S6" customClass="Home_Electronics_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="59Q-i8-EvY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I69-9e-fsD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R56-mC-Y6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6206" y="2113"/>
+        </scene>
+        <!--Computers NetworkingVC-->
+        <scene sceneID="fqd-qQ-deo">
+            <objects>
+                <viewController storyboardIdentifier="Computers_Networking_VC" id="AAR-h0-kGM" customClass="Computers_Networking_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Sb-ZT-ym0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gma-SP-lby"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkl-RI-Y0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7113" y="2113"/>
         </scene>
     </scenes>
     <resources>

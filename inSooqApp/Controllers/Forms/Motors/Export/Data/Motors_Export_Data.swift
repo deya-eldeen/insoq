@@ -1,13 +1,13 @@
 //
-//  Services_Data.swift
+//  Motors_Machinery_Export_Data.swift
 //  inSooqApp
 //
-//  Created by Deya on 09/04/2022.
+//  Created by Deya on 11/04/2022.
 //
 
 import UIKit
 
-extension Services_VC {
+extension Motors_Export_VC {
 
     func formElements() -> [UIView] {
 

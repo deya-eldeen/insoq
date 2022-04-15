@@ -25,12 +25,12 @@ extension ViewControllersAssembly {
         return controller.containedInNavigation()
     }
 
-    static func Add_TitleViewController(type: MotorGategorys, model: Category) -> UIViewController {
-        let controller: Add_TitleViewController = adding.makeViewController()
-        controller.type = type
-        controller.selectedCategory = model
-        return controller
-    }
+//    static func Add_TitleViewController(type: MotorGategorys, model: Category) -> UIViewController {
+//        let controller: Add_TitleViewController = adding.makeViewController()
+//        controller.type = type
+//        controller.selectedCategory = model
+//        return controller
+//    }
     
     static func add_CategoryViewController(model: CategoriesModel) -> UIViewController {
         let controller: Add_CategoryViewController = adding.makeViewController()

@@ -87,6 +87,29 @@
 		E39BAE2027FCDDF1001F5438 /* Motors_Used_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */; };
 		E39DC4FA2809C71B00BAE09D /* MapPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC4F92809C71B00BAE09D /* MapPickerViewController.swift */; };
 		E39DC4FD2809E54600BAE09D /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC4FC2809E54600BAE09D /* PricesViewController.swift */; };
+		E39DC4FF2809ED5A00BAE09D /* Motors_Boats_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC4FE2809ED5A00BAE09D /* Motors_Boats_VC.swift */; };
+		E39DC5012809EE0500BAE09D /* Motors_Machinery_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC5002809EE0500BAE09D /* Motors_Machinery_VC.swift */; };
+		E39DC5102809F01400BAE09D /* Motors_Machinery_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC50F2809F01400BAE09D /* Motors_Machinery_Details_VC.swift */; };
+		E39DC5122809F60E00BAE09D /* Motors_Parts_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC5112809F60E00BAE09D /* Motors_Parts_VC.swift */; };
+		E39DC5142809FC3F00BAE09D /* Motors_Parts_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC5132809FC3F00BAE09D /* Motors_Parts_Details_VC.swift */; };
+		E39DC516280A002100BAE09D /* Services_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC515280A002100BAE09D /* Services_VC.swift */; };
+		E39DC518280A007200BAE09D /* Services_Others_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC517280A007200BAE09D /* Services_Others_VC.swift */; };
+		E39DC51A280A009600BAE09D /* Motors_Bike_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC519280A009600BAE09D /* Motors_Bike_VC.swift */; };
+		E39DC51C280A00B400BAE09D /* Motors_Bike_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC51B280A00B400BAE09D /* Motors_Bike_Details_VC.swift */; };
+		E39DC51E280A00DC00BAE09D /* Motors_Export_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC51D280A00DC00BAE09D /* Motors_Export_VC.swift */; };
+		E39DC520280A010900BAE09D /* Motors_Export_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC51F280A010900BAE09D /* Motors_Export_Details_VC.swift */; };
+		E39DC522280A024200BAE09D /* Job_Wanted_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC521280A024200BAE09D /* Job_Wanted_VC.swift */; };
+		E39DC524280A024B00BAE09D /* Job_Wanted_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC523280A024B00BAE09D /* Job_Wanted_Details_VC.swift */; };
+		E39DC526280A02E100BAE09D /* Business_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC525280A02E100BAE09D /* Business_VC.swift */; };
+		E39DC528280A031D00BAE09D /* Classified_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC527280A031D00BAE09D /* Classified_VC.swift */; };
+		E39DC52A280A032800BAE09D /* Classified_Details_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC529280A032800BAE09D /* Classified_Details_VC.swift */; };
+		E39DC52C280A035D00BAE09D /* Mobiles_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC52B280A035D00BAE09D /* Mobiles_VC.swift */; };
+		E39DC52E280A036800BAE09D /* Tablets_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC52D280A036800BAE09D /* Tablets_VC.swift */; };
+		E39DC530280A037300BAE09D /* Home_Electronics_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC52F280A037300BAE09D /* Home_Electronics_VC.swift */; };
+		E39DC532280A038200BAE09D /* Computers_Networking_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC531280A038200BAE09D /* Computers_Networking_VC.swift */; };
+		E39DC534280A03EE00BAE09D /* Plate_Numbers_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC533280A03EE00BAE09D /* Plate_Numbers_VC.swift */; };
+		E39DC536280A03FC00BAE09D /* Mobile_Numbers_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC535280A03FC00BAE09D /* Mobile_Numbers_VC.swift */; };
+		E39DC538280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC537280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift */; };
 		E3A810F228035649003A2CC0 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F128035649003A2CC0 /* FormLabel.swift */; };
 		E3A810F428035669003A2CC0 /* FormSubLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F328035669003A2CC0 /* FormSubLabel.swift */; };
 		E3A810F628035706003A2CC0 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F528035706003A2CC0 /* FormField.swift */; };
@@ -97,12 +120,12 @@
 		E3A8110228042E34003A2CC0 /* Motors_Used_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */; };
 		E3A8110428042E51003A2CC0 /* Motors_Machinery_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110328042E51003A2CC0 /* Motors_Machinery_Data.swift */; };
 		E3A8110628042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110528042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift */; };
-		E3A8110828042F0A003A2CC0 /* Motors_Machinery_Parts_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110728042F0A003A2CC0 /* Motors_Machinery_Parts_Data.swift */; };
-		E3A8110A28042F18003A2CC0 /* Motors_Machinery_Parts_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110928042F18003A2CC0 /* Motors_Machinery_Parts_Details_Data.swift */; };
-		E3A8110C28042FC0003A2CC0 /* Motors_Machinery_Export_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110B28042FC0003A2CC0 /* Motors_Machinery_Export_Data.swift */; };
-		E3A8110E28042FCD003A2CC0 /* Motors_Machinery_Export_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110D28042FCD003A2CC0 /* Motors_Machinery_Export_Details_Data.swift */; };
-		E3A8111028042FE8003A2CC0 /* Motors_Machinery_Bike_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110F28042FE8003A2CC0 /* Motors_Machinery_Bike_Data.swift */; };
-		E3A8111228042FF5003A2CC0 /* Motors_Machinery_Bike_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8111128042FF5003A2CC0 /* Motors_Machinery_Bike_Details_Data.swift */; };
+		E3A8110828042F0A003A2CC0 /* Motors_Parts_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110728042F0A003A2CC0 /* Motors_Parts_Data.swift */; };
+		E3A8110A28042F18003A2CC0 /* Motors_Parts_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110928042F18003A2CC0 /* Motors_Parts_Details_Data.swift */; };
+		E3A8110C28042FC0003A2CC0 /* Motors_Export_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110B28042FC0003A2CC0 /* Motors_Export_Data.swift */; };
+		E3A8110E28042FCD003A2CC0 /* Motors_Export_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110D28042FCD003A2CC0 /* Motors_Export_Details_Data.swift */; };
+		E3A8111028042FE8003A2CC0 /* Motors_Bike_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8110F28042FE8003A2CC0 /* Motors_Bike_Data.swift */; };
+		E3A8111228042FF5003A2CC0 /* Motors_Bike_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8111128042FF5003A2CC0 /* Motors_Bike_Details_Data.swift */; };
 		E3A8111628043040003A2CC0 /* Jobs_Wanted_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8111528043040003A2CC0 /* Jobs_Wanted_Data.swift */; };
 		E3A811182804304C003A2CC0 /* Jobs_Wanted_Details_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A811172804304C003A2CC0 /* Jobs_Wanted_Details_Data.swift */; };
 		E3A8111A2804317C003A2CC0 /* Services_Others_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A811192804317C003A2CC0 /* Services_Others_Data.swift */; };
@@ -570,6 +593,29 @@
 		E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Used_VC.swift; sourceTree = "<group>"; };
 		E39DC4F92809C71B00BAE09D /* MapPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerViewController.swift; sourceTree = "<group>"; };
 		E39DC4FC2809E54600BAE09D /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
+		E39DC4FE2809ED5A00BAE09D /* Motors_Boats_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Boats_VC.swift; sourceTree = "<group>"; };
+		E39DC5002809EE0500BAE09D /* Motors_Machinery_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_VC.swift; sourceTree = "<group>"; };
+		E39DC50F2809F01400BAE09D /* Motors_Machinery_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Details_VC.swift; sourceTree = "<group>"; };
+		E39DC5112809F60E00BAE09D /* Motors_Parts_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Parts_VC.swift; sourceTree = "<group>"; };
+		E39DC5132809FC3F00BAE09D /* Motors_Parts_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Parts_Details_VC.swift; sourceTree = "<group>"; };
+		E39DC515280A002100BAE09D /* Services_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services_VC.swift; sourceTree = "<group>"; };
+		E39DC517280A007200BAE09D /* Services_Others_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services_Others_VC.swift; sourceTree = "<group>"; };
+		E39DC519280A009600BAE09D /* Motors_Bike_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Bike_VC.swift; sourceTree = "<group>"; };
+		E39DC51B280A00B400BAE09D /* Motors_Bike_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Bike_Details_VC.swift; sourceTree = "<group>"; };
+		E39DC51D280A00DC00BAE09D /* Motors_Export_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Export_VC.swift; sourceTree = "<group>"; };
+		E39DC51F280A010900BAE09D /* Motors_Export_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Export_Details_VC.swift; sourceTree = "<group>"; };
+		E39DC521280A024200BAE09D /* Job_Wanted_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job_Wanted_VC.swift; sourceTree = "<group>"; };
+		E39DC523280A024B00BAE09D /* Job_Wanted_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job_Wanted_Details_VC.swift; sourceTree = "<group>"; };
+		E39DC525280A02E100BAE09D /* Business_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business_VC.swift; sourceTree = "<group>"; };
+		E39DC527280A031D00BAE09D /* Classified_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classified_VC.swift; sourceTree = "<group>"; };
+		E39DC529280A032800BAE09D /* Classified_Details_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classified_Details_VC.swift; sourceTree = "<group>"; };
+		E39DC52B280A035D00BAE09D /* Mobiles_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobiles_VC.swift; sourceTree = "<group>"; };
+		E39DC52D280A036800BAE09D /* Tablets_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablets_VC.swift; sourceTree = "<group>"; };
+		E39DC52F280A037300BAE09D /* Home_Electronics_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Electronics_VC.swift; sourceTree = "<group>"; };
+		E39DC531280A038200BAE09D /* Computers_Networking_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Computers_Networking_VC.swift; sourceTree = "<group>"; };
+		E39DC533280A03EE00BAE09D /* Plate_Numbers_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plate_Numbers_VC.swift; sourceTree = "<group>"; };
+		E39DC535280A03FC00BAE09D /* Mobile_Numbers_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Numbers_VC.swift; sourceTree = "<group>"; };
+		E39DC537280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobiles_Tablets_Accessories_VC.swift; sourceTree = "<group>"; };
 		E3A810F128035649003A2CC0 /* FormLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabel.swift; sourceTree = "<group>"; };
 		E3A810F328035669003A2CC0 /* FormSubLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSubLabel.swift; sourceTree = "<group>"; };
 		E3A810F528035706003A2CC0 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
@@ -580,12 +626,12 @@
 		E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Used_Details_Data.swift; sourceTree = "<group>"; };
 		E3A8110328042E51003A2CC0 /* Motors_Machinery_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Data.swift; sourceTree = "<group>"; };
 		E3A8110528042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Details_Data.swift; sourceTree = "<group>"; };
-		E3A8110728042F0A003A2CC0 /* Motors_Machinery_Parts_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Parts_Data.swift; sourceTree = "<group>"; };
-		E3A8110928042F18003A2CC0 /* Motors_Machinery_Parts_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Parts_Details_Data.swift; sourceTree = "<group>"; };
-		E3A8110B28042FC0003A2CC0 /* Motors_Machinery_Export_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Export_Data.swift; sourceTree = "<group>"; };
-		E3A8110D28042FCD003A2CC0 /* Motors_Machinery_Export_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Export_Details_Data.swift; sourceTree = "<group>"; };
-		E3A8110F28042FE8003A2CC0 /* Motors_Machinery_Bike_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Bike_Data.swift; sourceTree = "<group>"; };
-		E3A8111128042FF5003A2CC0 /* Motors_Machinery_Bike_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Machinery_Bike_Details_Data.swift; sourceTree = "<group>"; };
+		E3A8110728042F0A003A2CC0 /* Motors_Parts_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Parts_Data.swift; sourceTree = "<group>"; };
+		E3A8110928042F18003A2CC0 /* Motors_Parts_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Parts_Details_Data.swift; sourceTree = "<group>"; };
+		E3A8110B28042FC0003A2CC0 /* Motors_Export_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Export_Data.swift; sourceTree = "<group>"; };
+		E3A8110D28042FCD003A2CC0 /* Motors_Export_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Export_Details_Data.swift; sourceTree = "<group>"; };
+		E3A8110F28042FE8003A2CC0 /* Motors_Bike_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Bike_Data.swift; sourceTree = "<group>"; };
+		E3A8111128042FF5003A2CC0 /* Motors_Bike_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motors_Bike_Details_Data.swift; sourceTree = "<group>"; };
 		E3A8111528043040003A2CC0 /* Jobs_Wanted_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs_Wanted_Data.swift; sourceTree = "<group>"; };
 		E3A811172804304C003A2CC0 /* Jobs_Wanted_Details_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs_Wanted_Details_Data.swift; sourceTree = "<group>"; };
 		E3A811192804317C003A2CC0 /* Services_Others_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services_Others_Data.swift; sourceTree = "<group>"; };
@@ -1296,9 +1342,12 @@
 		E39BAE1E27FCDDD4001F5438 /* Motors */ = {
 			isa = PBXGroup;
 			children = (
-				E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */,
-				E3BB1EBA2804F37C00D65DA7 /* Motors_Used_Details_VC.swift */,
-				E3F99BC62801A0770084E95C /* Data */,
+				E39DC5022809EE2400BAE09D /* Used */,
+				E39DC5032809EE8200BAE09D /* Boats */,
+				E39DC5062809EEE800BAE09D /* Machinery */,
+				E39DC5072809EF0100BAE09D /* Parts */,
+				E39DC5082809EF0C00BAE09D /* Export */,
+				E39DC5092809EF1800BAE09D /* Bike */,
 			);
 			path = Motors;
 			sourceTree = "<group>";
@@ -1319,9 +1368,123 @@
 			path = PricesViewController;
 			sourceTree = "<group>";
 		};
+		E39DC5022809EE2400BAE09D /* Used */ = {
+			isa = PBXGroup;
+			children = (
+				E3BB1EBA2804F37C00D65DA7 /* Motors_Used_Details_VC.swift */,
+				E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */,
+				E39DC5042809EEC800BAE09D /* Data */,
+			);
+			path = Used;
+			sourceTree = "<group>";
+		};
+		E39DC5032809EE8200BAE09D /* Boats */ = {
+			isa = PBXGroup;
+			children = (
+				E39DC4FE2809ED5A00BAE09D /* Motors_Boats_VC.swift */,
+				E39DC5052809EEDB00BAE09D /* Data */,
+			);
+			path = Boats;
+			sourceTree = "<group>";
+		};
+		E39DC5042809EEC800BAE09D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */,
+				E3D2FEB02801AA6000EECA95 /* Motors_Used_Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E39DC5052809EEDB00BAE09D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3A810FF28042DF7003A2CC0 /* Motors_Boats_Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E39DC5062809EEE800BAE09D /* Machinery */ = {
+			isa = PBXGroup;
+			children = (
+				E39DC5002809EE0500BAE09D /* Motors_Machinery_VC.swift */,
+				E39DC50F2809F01400BAE09D /* Motors_Machinery_Details_VC.swift */,
+				E39DC50B2809EF7300BAE09D /* Data */,
+			);
+			path = Machinery;
+			sourceTree = "<group>";
+		};
+		E39DC5072809EF0100BAE09D /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				E39DC5112809F60E00BAE09D /* Motors_Parts_VC.swift */,
+				E39DC5132809FC3F00BAE09D /* Motors_Parts_Details_VC.swift */,
+				E39DC50C2809EF8200BAE09D /* Data */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		E39DC5082809EF0C00BAE09D /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				E39DC51D280A00DC00BAE09D /* Motors_Export_VC.swift */,
+				E39DC51F280A010900BAE09D /* Motors_Export_Details_VC.swift */,
+				E39DC50D2809EF8D00BAE09D /* Data */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		E39DC5092809EF1800BAE09D /* Bike */ = {
+			isa = PBXGroup;
+			children = (
+				E39DC519280A009600BAE09D /* Motors_Bike_VC.swift */,
+				E39DC51B280A00B400BAE09D /* Motors_Bike_Details_VC.swift */,
+				E39DC50E2809EF9600BAE09D /* Data */,
+			);
+			path = Bike;
+			sourceTree = "<group>";
+		};
+		E39DC50B2809EF7300BAE09D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3A8110328042E51003A2CC0 /* Motors_Machinery_Data.swift */,
+				E3A8110528042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E39DC50C2809EF8200BAE09D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3A8110728042F0A003A2CC0 /* Motors_Parts_Data.swift */,
+				E3A8110928042F18003A2CC0 /* Motors_Parts_Details_Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E39DC50D2809EF8D00BAE09D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3A8110B28042FC0003A2CC0 /* Motors_Export_Data.swift */,
+				E3A8110D28042FCD003A2CC0 /* Motors_Export_Details_Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E39DC50E2809EF9600BAE09D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3A8110F28042FE8003A2CC0 /* Motors_Bike_Data.swift */,
+				E3A8111128042FF5003A2CC0 /* Motors_Bike_Details_Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		E3A8111328043004003A2CC0 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				E39DC521280A024200BAE09D /* Job_Wanted_VC.swift */,
+				E39DC523280A024B00BAE09D /* Job_Wanted_Details_VC.swift */,
 				E3A8111428043014003A2CC0 /* Data */,
 			);
 			path = Jobs;
@@ -1339,6 +1502,7 @@
 		E3A8111B2804318B003A2CC0 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				E39DC525280A02E100BAE09D /* Business_VC.swift */,
 				E3A8111C28043199003A2CC0 /* Data */,
 			);
 			path = Business;
@@ -1355,6 +1519,8 @@
 		E3A8111F280431C7003A2CC0 /* Classified */ = {
 			isa = PBXGroup;
 			children = (
+				E39DC527280A031D00BAE09D /* Classified_VC.swift */,
+				E39DC529280A032800BAE09D /* Classified_Details_VC.swift */,
 				E3A81120280431D1003A2CC0 /* Data */,
 			);
 			path = Classified;
@@ -1372,6 +1538,8 @@
 		E3A8112528043248003A2CC0 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				E39DC533280A03EE00BAE09D /* Plate_Numbers_VC.swift */,
+				E39DC535280A03FC00BAE09D /* Mobile_Numbers_VC.swift */,
 				E3A8112628043258003A2CC0 /* Data */,
 			);
 			path = Numbers;
@@ -1390,6 +1558,11 @@
 			isa = PBXGroup;
 			children = (
 				E3A8112C280435F7003A2CC0 /* Data */,
+				E39DC52B280A035D00BAE09D /* Mobiles_VC.swift */,
+				E39DC52D280A036800BAE09D /* Tablets_VC.swift */,
+				E39DC52F280A037300BAE09D /* Home_Electronics_VC.swift */,
+				E39DC531280A038200BAE09D /* Computers_Networking_VC.swift */,
+				E39DC537280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift */,
 			);
 			path = Electronics;
 			sourceTree = "<group>";
@@ -1437,6 +1610,8 @@
 		E3D2FEB22801AA6D00EECA95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E39DC515280A002100BAE09D /* Services_VC.swift */,
+				E39DC517280A007200BAE09D /* Services_Others_VC.swift */,
 				E3D2FEB32801AA7E00EECA95 /* Data */,
 			);
 			path = Services;
@@ -1477,24 +1652,6 @@
 				E3A810F928035AF4003A2CC0 /* FormContinueButton.swift */,
 			);
 			path = Elements;
-			sourceTree = "<group>";
-		};
-		E3F99BC62801A0770084E95C /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				E3D2FEB02801AA6000EECA95 /* Motors_Used_Data.swift */,
-				E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */,
-				E3A810FF28042DF7003A2CC0 /* Motors_Boats_Data.swift */,
-				E3A8110328042E51003A2CC0 /* Motors_Machinery_Data.swift */,
-				E3A8110528042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift */,
-				E3A8110728042F0A003A2CC0 /* Motors_Machinery_Parts_Data.swift */,
-				E3A8110928042F18003A2CC0 /* Motors_Machinery_Parts_Details_Data.swift */,
-				E3A8110B28042FC0003A2CC0 /* Motors_Machinery_Export_Data.swift */,
-				E3A8110D28042FCD003A2CC0 /* Motors_Machinery_Export_Details_Data.swift */,
-				E3A8110F28042FE8003A2CC0 /* Motors_Machinery_Bike_Data.swift */,
-				E3A8111128042FF5003A2CC0 /* Motors_Machinery_Bike_Details_Data.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		E3FD20F827EA508600FDA9DD /* API */ = {
@@ -2678,10 +2835,13 @@
 				E3C011F227EFB27A003126E9 /* NationalityModel.swift in Sources */,
 				F107A20925D0090F00FC6340 /* itemsDataCollectionViewCell.swift in Sources */,
 				F1CC833A26283EC100FE1241 /* CompanyProfileViewController.swift in Sources */,
+				E39DC51A280A009600BAE09D /* Motors_Bike_VC.swift in Sources */,
+				E39DC51C280A00B400BAE09D /* Motors_Bike_Details_VC.swift in Sources */,
 				F19A56822619A19B007D2ABC /* MainNavView.swift in Sources */,
 				E3A810F228035649003A2CC0 /* FormLabel.swift in Sources */,
 				E3A8111E280431AA003A2CC0 /* Business_Data.swift in Sources */,
 				F1E2CE4725D1772900F64F67 /* SubCategoryObject.swift in Sources */,
+				E39DC526280A02E100BAE09D /* Business_VC.swift in Sources */,
 				F1FE0105265511AD00A276D7 /* ChatsTableViewHeader.swift in Sources */,
 				E3A810FA28035AF4003A2CC0 /* FormContinueButton.swift in Sources */,
 				F135DCD425E15A5E00186FC5 /* MainTabBarViewController.swift in Sources */,
@@ -2689,6 +2849,7 @@
 				F17857D726302D6C00924DAB /* MotorsBrandsViewController.swift in Sources */,
 				F1BF3C7F266908D200DE6FCE /* AgencyViewController.swift in Sources */,
 				F1BA592E262ADAAD00B12D9C /* EditAdView.swift in Sources */,
+				E39DC5102809F01400BAE09D /* Motors_Machinery_Details_VC.swift in Sources */,
 				E3D2FEBB2801B61300EECA95 /* MotorMaker.swift in Sources */,
 				F107A21825D012CA00FC6340 /* GetDateFunctions.swift in Sources */,
 				F107A21C25D012D300FC6340 /* Extentions.swift in Sources */,
@@ -2696,6 +2857,7 @@
 				E3A81136280436A8003A2CC0 /* Computers_Networking_Data.swift in Sources */,
 				E3D9AFAC27F0E4C7005D68B9 /* ApiRequests+Notification.swift in Sources */,
 				F1D6793D2619B63C00170779 /* AccountViewController.swift in Sources */,
+				E39DC5142809FC3F00BAE09D /* Motors_Parts_Details_VC.swift in Sources */,
 				F1C049D925D297F300647170 /* BottomBar.swift in Sources */,
 				F11A4AFC261B379E003E70BD /* ChangeEmailView.swift in Sources */,
 				F12A2C7A25E3BCD20043E3DA /* locationCollectionViewCell.swift in Sources */,
@@ -2714,15 +2876,17 @@
 				2862BAEE277D2B46009F4B7E /* AlertControler.swift in Sources */,
 				F17857DA263034A900924DAB /* BrandsTableViewCell.swift in Sources */,
 				F1D8217F25DA8E870032A3E4 /* AppIcons.swift in Sources */,
+				E39DC5012809EE0500BAE09D /* Motors_Machinery_VC.swift in Sources */,
 				F1FE00802653C9D000A276D7 /* JobsGridCollectionViewCell.swift in Sources */,
 				F1BA5939262ADC2C00B12D9C /* EditMotorsAdView.swift in Sources */,
 				F1CBEC4E2627B2AA00DC7F05 /* OTPViewController.swift in Sources */,
+				E39DC52C280A035D00BAE09D /* Mobiles_VC.swift in Sources */,
 				F1B8B5B425D9645D00AB3E83 /* FloatRatingViewDelegate.swift in Sources */,
 				E3D2FEB52801AA8800EECA95 /* Services_Data.swift in Sources */,
 				6BAB585527839C760079406B /* PopupSearchViewController.swift in Sources */,
 				F1FE00442653A9C000A276D7 /* ItemsHeaderCollectionReusableView.swift in Sources */,
 				F175E8DD25E669C700873F20 /* AddViewController.swift in Sources */,
-				E3A8110E28042FCD003A2CC0 /* Motors_Machinery_Export_Details_Data.swift in Sources */,
+				E3A8110E28042FCD003A2CC0 /* Motors_Export_Details_Data.swift in Sources */,
 				F1DC09772612F73E007BC57F /* ChatItemView.swift in Sources */,
 				E3BB1EBB2804F37C00D65DA7 /* Motors_Used_Details_VC.swift in Sources */,
 				E3A8110628042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift in Sources */,
@@ -2732,11 +2896,12 @@
 				F107A22525D0135800FC6340 /* HomeItemsModel.swift in Sources */,
 				1EC5849D27CC071E002181DC /* BusinessModel.swift in Sources */,
 				CE8CC6F627E4F46800DC0F85 /* GetAllEmirateM.swift in Sources */,
+				E39DC534280A03EE00BAE09D /* Plate_Numbers_VC.swift in Sources */,
 				E380354227F6602700FF0212 /* LocationModel.swift in Sources */,
 				F192DFA8265A3CE300E122B0 /* ServiceGridCollectionViewCell.swift in Sources */,
 				F10D3E55261DA73B00AF1CAC /* ContactViewController.swift in Sources */,
-				E3A8110C28042FC0003A2CC0 /* Motors_Machinery_Export_Data.swift in Sources */,
-				E3A8111228042FF5003A2CC0 /* Motors_Machinery_Bike_Details_Data.swift in Sources */,
+				E3A8110C28042FC0003A2CC0 /* Motors_Export_Data.swift in Sources */,
+				E3A8111228042FF5003A2CC0 /* Motors_Bike_Details_Data.swift in Sources */,
 				1EC584A827D394B3002181DC /* AddBoatsVC.swift in Sources */,
 				CE8CC6FA27E4F48900DC0F85 /* GetAllOperatorM.swift in Sources */,
 				CEBFE10E27E735DB006B5D32 /* GetAllMotorMakerM.swift in Sources */,
@@ -2756,12 +2921,14 @@
 				E3FD214427EA524000FDA9DD /* BaseVC.swift in Sources */,
 				F1FFB7A9265A2E7800BCBBEB /* GridPlatesCollectionViewCell.swift in Sources */,
 				F1DC098926133EA5007BC57F /* ChangePasswordView.swift in Sources */,
+				E39DC538280A046E00BAE09D /* Mobiles_Tablets_Accessories_VC.swift in Sources */,
 				F1A82DF625D5651800EDF023 /* MotorsDetailsView.swift in Sources */,
 				F15BC4BE2615AB060094ACF0 /* UIView+Extensions.swift in Sources */,
 				F175E8FB25E693FF00873F20 /* MotorCardView.swift in Sources */,
 				CE8CC6F227E4E6E400DC0F85 /* SubBrandVc.swift in Sources */,
 				E39BAE1B27FC8E7F001F5438 /* FormViewController.swift in Sources */,
 				F1AD892925E531F500326065 /* GetMoreViewsViewController.swift in Sources */,
+				E39DC532280A038200BAE09D /* Computers_Networking_VC.swift in Sources */,
 				F107A21925D012CA00FC6340 /* Utilities.swift in Sources */,
 				E3FD213A27EA524000FDA9DD /* CardView.swift in Sources */,
 				F1790E3625D3E9BF008E4D2C /* JobsTableViewCell.swift in Sources */,
@@ -2777,9 +2944,10 @@
 				E3A810F828035737003A2CC0 /* FormPicker.swift in Sources */,
 				E3FD211127EA51FA00FDA9DD /* Extensions2.swift in Sources */,
 				F1D8219225DAA9920032A3E4 /* BusinessDetailsView.swift in Sources */,
-				E3A8110828042F0A003A2CC0 /* Motors_Machinery_Parts_Data.swift in Sources */,
-				E3A8111028042FE8003A2CC0 /* Motors_Machinery_Bike_Data.swift in Sources */,
-				E3A8110A28042F18003A2CC0 /* Motors_Machinery_Parts_Details_Data.swift in Sources */,
+				E39DC536280A03FC00BAE09D /* Mobile_Numbers_VC.swift in Sources */,
+				E3A8110828042F0A003A2CC0 /* Motors_Parts_Data.swift in Sources */,
+				E3A8111028042FE8003A2CC0 /* Motors_Bike_Data.swift in Sources */,
+				E3A8110A28042F18003A2CC0 /* Motors_Parts_Details_Data.swift in Sources */,
 				E3FD214C27EA524000FDA9DD /* AppleAuth.swift in Sources */,
 				F175E8EB25E6761500873F20 /* Add_CategoryViewController.swift in Sources */,
 				17AA1C1B2788CDFE008B5409 /* CellPopupListItme.swift in Sources */,
@@ -2805,6 +2973,7 @@
 				1782F6A92797331700D880B8 /* RowCollecctionUsedCarCell.swift in Sources */,
 				E3FD213E27EA524000FDA9DD /* CustomNavigation.swift in Sources */,
 				F1EDDDE726790ABA00A3641E /* SeaveSearchsView.swift in Sources */,
+				E39DC530280A037300BAE09D /* Home_Electronics_VC.swift in Sources */,
 				F1730F0A262C84A200882749 /* LanguageView.swift in Sources */,
 				E3A8112828043268003A2CC0 /* Plate_Numbers_Data.swift in Sources */,
 				E3A810F428035669003A2CC0 /* FormSubLabel.swift in Sources */,
@@ -2828,12 +2997,15 @@
 				F1790E4525D3F1EC008E4D2C /* SilderImagesCollectionViewCell.swift in Sources */,
 				F107A1FE25CFECBA00FC6340 /* AdsCollectionViewCell.swift in Sources */,
 				F107A1C225CFCC9F00FC6340 /* SceneDelegate.swift in Sources */,
+				E39DC516280A002100BAE09D /* Services_VC.swift in Sources */,
 				F15B7C93261B053F00CAE6AE /* MyProfileViewController.swift in Sources */,
 				1ECB3B8127C1B43A004F3C91 /* ItemsCategoryVC.swift in Sources */,
 				CE8CC6EA27E3EDFB00DC0F85 /* BrandVc.swift in Sources */,
 				E39BAE2027FCDDF1001F5438 /* Motors_Used_VC.swift in Sources */,
 				F13E6FF925ECDCB800A26E2D /* Add_BrandViewController.swift in Sources */,
 				F15BC4B82615A3210094ACF0 /* SignInViewController.swift in Sources */,
+				E39DC520280A010900BAE09D /* Motors_Export_Details_VC.swift in Sources */,
+				E39DC518280A007200BAE09D /* Services_Others_VC.swift in Sources */,
 				2862BB02277E6D67009F4B7E /* GetAllCategoriesModel.swift in Sources */,
 				F1FFB7AE265A302300BCBBEB /* WantedJobRowCollectionViewCell.swift in Sources */,
 				1EC5849F27CD8BFB002181DC /* SubCategoriesModel.swift in Sources */,
@@ -2847,6 +3019,7 @@
 				E3D2FEBF2801B6A500EECA95 /* MotorTrim.swift in Sources */,
 				F1DC294226474F340064A018 /* PropertiresTableViewCell.swift in Sources */,
 				F13FEEA22626571B003AB5A2 /* SegmentsCollectionViewCell.swift in Sources */,
+				E39DC52A280A032800BAE09D /* Classified_Details_VC.swift in Sources */,
 				F1E8825F262DB20D00B35540 /* BrandsViewController.swift in Sources */,
 				F1D8218225DAA4B00032A3E4 /* PlateDetailsView.swift in Sources */,
 				F135DCD125E1506200186FC5 /* CustomizedCenterTabBar.swift in Sources */,
@@ -2859,6 +3032,7 @@
 				E3BB1EB82804EE3300D65DA7 /* CustomListView.swift in Sources */,
 				E3FD213327EA524000FDA9DD /* Constants.swift in Sources */,
 				F150F81625D40DDF0077C970 /* PlatesCollectionViewCell.swift in Sources */,
+				E39DC524280A024B00BAE09D /* Job_Wanted_Details_VC.swift in Sources */,
 				1EC584A127CD8F4A002181DC /* SubTypesModel.swift in Sources */,
 				1ECB3B8327C1B47C004F3C91 /* ItemsSubCategoryVC.swift in Sources */,
 				CE8CC6EC27E3FF2800DC0F85 /* Constant.swift in Sources */,
@@ -2923,12 +3097,14 @@
 				F1ED49D525E24D1D0088E390 /* MyFavoritesViewController.swift in Sources */,
 				F1B8B5A425D95CF300AB3E83 /* PropertyDetailsView.swift in Sources */,
 				2862BAE7277D2A1A009F4B7E /* registerRespone.swift in Sources */,
+				E39DC52E280A036800BAE09D /* Tablets_VC.swift in Sources */,
 				F1FE00862653CEF900A276D7 /* PropertiesRowCollectionViewCell.swift in Sources */,
 				F1E5B4622652831200FB8900 /* GridCollectionViewCell.swift in Sources */,
 				F13B5199267883DE0093BBBF /* ContactView.swift in Sources */,
 				F1730EFF262C57BC00882749 /* ReportAdView.swift in Sources */,
 				F1E2CE1625D1492600F64F67 /* DropDownTableViewCell.swift in Sources */,
 				F1E2CE4E25D17E5C00F64F67 /* TopNavigationbar.swift in Sources */,
+				E39DC51E280A00DC00BAE09D /* Motors_Export_VC.swift in Sources */,
 				F175E8D125E64BB200873F20 /* ServicesFillter.swift in Sources */,
 				F1C049E425D2B60B00647170 /* MotorsView.swift in Sources */,
 				E380354627F660F800FF0212 /* CareerLevelModel.swift in Sources */,
@@ -2943,12 +3119,15 @@
 				E3FD214A27EA524000FDA9DD /* SocialAuth+Functions.swift in Sources */,
 				F12A2C8225E3CA710043E3DA /* AddLocationCollectionViewCell.swift in Sources */,
 				F1DB1BF9262CF3DD00A0E93A /* ItemImagesCollectionViewCell.swift in Sources */,
+				E39DC528280A031D00BAE09D /* Classified_VC.swift in Sources */,
 				E3A811382804A922003A2CC0 /* Listable.swift in Sources */,
 				F12269D625E63B4500E30E30 /* PropertyFillterView.swift in Sources */,
 				F1784D6A2622F17600FC9ABF /* WantedJobDetailsView.swift in Sources */,
 				F107A22225D0131000FC6340 /* PushNotification.swift in Sources */,
 				F1F352DA2647E05A001A065B /* SellerInfoView.swift in Sources */,
+				E39DC5122809F60E00BAE09D /* Motors_Parts_VC.swift in Sources */,
 				F1B8B5A725D95F5F00AB3E83 /* JobDetailsView.swift in Sources */,
+				E39DC522280A024200BAE09D /* Job_Wanted_VC.swift in Sources */,
 				E3A8110028042DF7003A2CC0 /* Motors_Boats_Data.swift in Sources */,
 				F150F81B25D415A90077C970 /* JobsCollectionViewCell.swift in Sources */,
 				F107A1E625CFD8EB00FC6340 /* HeaderCollectionReusableView.swift in Sources */,
@@ -2957,6 +3136,7 @@
 				E3A8112E28043609003A2CC0 /* Mobiles_Data.swift in Sources */,
 				2862BAF0277D2B75009F4B7E /* AlertType.swift in Sources */,
 				F107A1E325CFD76300FC6340 /* CategoriesCollectionViewCell.swift in Sources */,
+				E39DC4FF2809ED5A00BAE09D /* Motors_Boats_VC.swift in Sources */,
 				F1E5B45D265282FF00FB8900 /* RowCollectionViewCell.swift in Sources */,
 				F15BC4BD2615AB060094ACF0 /* UIBarButtonItem+Extensions.swift in Sources */,
 				E3FD214727EA524000FDA9DD /* SwiftLoader.swift in Sources */,

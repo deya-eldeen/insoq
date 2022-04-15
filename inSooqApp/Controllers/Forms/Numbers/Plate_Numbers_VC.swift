@@ -1,14 +1,13 @@
 //
-//  Motors_Used_Details_VC.swift
+//  Plate_Numbers_VC.swift
 //  inSooqApp
 //
-//  Created by Deya on 12/04/2022.
+//  Created by Deya on 15/04/2022.
 //
 
 import UIKit
-import Foundation
 
-class Motors_Used_Details_VC: FormViewController {
+class Plate_Numbers_VC: FormViewController {
     
     var dataMakers = [MotorMaker]()
     var dataMotorModels = [MotorModel]()

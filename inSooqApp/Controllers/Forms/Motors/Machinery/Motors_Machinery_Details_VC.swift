@@ -1,14 +1,13 @@
 //
-//  UsedCars.swift
+//  Motors_Machinery_Details_VC.swift
 //  inSooqApp
 //
-//  Created by Deya on 05/04/2022.
+//  Created by Deya on 15/04/2022.
 //
 
 import UIKit
-import Foundation
 
-class Motors_Used_VC: FormViewController {
+class Motors_Machinery_Details_VC: FormViewController {
     
     var dataMakers = [MotorMaker]()
     var dataMotorModels = [MotorModel]()
@@ -83,3 +82,4 @@ class Motors_Used_VC: FormViewController {
     }
 
 }
+

@@ -60,7 +60,7 @@ class Add_TitleViewController: UIViewController {
 
     
     // MARK: Properties
-    var type: MotorGategorys = .usedCars
+//    var type: MotorGategorys = .usedCars
     var selectedCategory: Category?
     var param: [String: Any] = [:]
     
@@ -332,26 +332,26 @@ extension Add_TitleViewController {
         boatTypeBtn.setTitle("", for: .normal)
         boatSubCatBtn.setTitle("", for: .normal)
         
-        switch type {
-        case .usedCars:
-            usedCarStackView.isHidden = false
-            usedCarsSetupAdapter()
-        case .boats:
-            boaltsStackView.isHidden = false
-            boatSetupAdapter()
-        case .machinery:
-            machineStackView.isHidden = false
-            machineSetupAdapter()
-        case .parts:
-            partsStackView.isHidden = false
-            partsSetupAdapter()
-        case .exportCar:
-            usedCarStackView.isHidden = false
-            usedCarsSetupAdapter()
-        case .bike:
-            bikesStackView.isHidden = false
-            bikesSetupAdapter()
-        }
+//        switch type {
+//        case .usedCars:
+//            usedCarStackView.isHidden = false
+//            usedCarsSetupAdapter()
+//        case .boats:
+//            boaltsStackView.isHidden = false
+//            boatSetupAdapter()
+//        case .machinery:
+//            machineStackView.isHidden = false
+//            machineSetupAdapter()
+//        case .parts:
+//            partsStackView.isHidden = false
+//            partsSetupAdapter()
+//        case .exportCar:
+//            usedCarStackView.isHidden = false
+//            usedCarsSetupAdapter()
+//        case .bike:
+//            bikesStackView.isHidden = false
+//            bikesSetupAdapter()
+//        }
     }
     
     func usedCarsSetupAdapter() {
@@ -413,8 +413,8 @@ extension Add_TitleViewController {
 extension Add_TitleViewController {
     
     @IBAction func nextButtonDidTabbed(_ sender: Any) {
-        switch type {
-        case .usedCars, .exportCar:
+//        switch type {
+//        case .usedCars, .exportCar:
             self.param = [
                 "title": titleTextField.text ?? "",
                 "categoryId": selectedCategory?.id ?? "",
@@ -448,7 +448,7 @@ extension Add_TitleViewController {
 
             requestApis()
 
-        default:
+//        default:
             self.param = [
                 "title" : titleTextField.text ?? "",
                 "categoryId": selectedCategory?.id ?? "",
@@ -458,7 +458,7 @@ extension Add_TitleViewController {
                 "otherSubType" : "",
                 "year" : boatManufactureTextFiled.text ?? ""
             ]
-        }
+        //}
         
     }
     

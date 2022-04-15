@@ -17,6 +17,9 @@ extension Motors_Used_Details_VC {
         let looksGoodLabel = FormLabel()
         looksGoodLabel.text = "Looks good, now please add more details ..."
         
+        let photosLabel = FormLabel()
+        photosLabel.text = "Pictures Of your Ad"
+        
         let photoPicker = FormPhotoPicker().render()
         
         let listingPriceField = FormField()
@@ -27,8 +30,10 @@ extension Motors_Used_Details_VC {
         phoneNumberField.placeholder = "Phone Number"
         phoneNumberField.keyboardType = .phonePad
         
-        let description = FormTextView().render(placeholder: "Description")
-        //description.setPlaceHolder("Description")
+        let descriptionLabel = FormLabel()
+        descriptionLabel.text = "Add a short description (Optional)"
+        
+        let description = FormTextView().render(placeholder: "Description (Optional)")
 
         let specificationsLabel = FormLabel()
         specificationsLabel.text = "Specifications"
@@ -50,31 +55,31 @@ extension Motors_Used_Details_VC {
         numberOfDoorsPicker.id = .numberOfDoors
         
         let warrantyPicker = FormPicker()
-        warrantyPicker.setPlaceHolder("Number Of Doors")
+        warrantyPicker.setPlaceHolder("Under Warranty")
         warrantyPicker.id = .numberOfDoors
         
         let transmissionPicker = FormPicker()
-        transmissionPicker.setPlaceHolder("Transmission")
+        transmissionPicker.setPlaceHolder("Please Select Transmission")
         transmissionPicker.id = .transmission
         
         let bodyTypePicker = FormPicker()
-        bodyTypePicker.setPlaceHolder("Body Type")
+        bodyTypePicker.setPlaceHolder("Please Select Body Type")
         bodyTypePicker.id = .bodyType
         
         let fuelTypePicker = FormPicker()
-        fuelTypePicker.setPlaceHolder("Fuel Type")
+        fuelTypePicker.setPlaceHolder("Please Select Fuel Type")
         fuelTypePicker.id = .transmission
         
         let cylindersPicker = FormPicker()
-        cylindersPicker.setPlaceHolder("Cylinders Type")
+        cylindersPicker.setPlaceHolder("Please Select Cylinders Type")
         cylindersPicker.id = .cylinders
         
         let steeringSidePicker = FormPicker()
-        steeringSidePicker.setPlaceHolder("Steering Side")
+        steeringSidePicker.setPlaceHolder("Please Select Steering Side")
         steeringSidePicker.id = .steeringSide
         
         let horsePowerPicker = FormPicker()
-        horsePowerPicker.setPlaceHolder("Horse Power")
+        horsePowerPicker.setPlaceHolder("Please Select Horse-Power")
         horsePowerPicker.id = .horsePower
         
         let locationPicker = FormPicker()
@@ -83,20 +88,21 @@ extension Motors_Used_Details_VC {
         
         let locationView = FormLocationView().render()
         
+        let acceptView = FormAcceptView().render()
+
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("Continue", for: .normal)
         
-        let acceptView = FormAcceptView().render()
-        
         let adPreview = FormPreviewView().render()
 
-        
         return [
             header,
             looksGoodLabel,
+            photosLabel,
             photoPicker,
             listingPriceField,
             phoneNumberField,
+            descriptionLabel,
             description,
             specificationsLabel,
             milageField,
