@@ -95,26 +95,21 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Bike_VC")
         case .jobWanted:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Job_Wanted_VC")
-        case .domestic:
+            
+        case .services_domestic,.services_autoservices,.services_moversRemovals,.services_webComputer,.services_corporateServices,.services_homeMaintenance,.services_eventEntertainment,.services_tutorsClasses,.services_others,.services_healthServices:
+            
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .autoService:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .moversRemovals:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .webComputer:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .corporateServices:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .homeMaintenance:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .eventEntertainment:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .tutorsClasses:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .healthServices:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-        case .serviceOthers:
-            targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_Others_VC")
+
+        case
+            .business_businessesforsale,.business_tradeLicenseforsale,.business_buildingmaterialsforsale,.business_food_beverageforsale,.business_generalItemsforsale,.business_shopsrestaurantsforsale,.business_scrapmaterials:
+            
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Business_VC")
+            
+        case
+            .classified_furnitureHomeAndGarden,.classified_homeAppliances,.classified_jewelryAndWatches,.classified_sportsEquipment,.classified_musicalInstruments,.classified_gaming,.classified_camerasAndImaging,.classified_babyItems,.classified_toys,.classified_ticketsAndVouchers,.classified_collectibles,.classified_music,.classified_freeStuff,.classified_pets,.classified_petAccessories:
+
+            targetController = ViewControllersAssembly.forms.makeViewController(with: "Classified_VC")
+
         case .platNumbers:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Plate_Numbers_VC")
         case .mobileNumbers:
@@ -129,12 +124,8 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Home_Electronics_VC")
         case .computersNetworking:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Computers_Networking_VC")
-        case .none:
+        case .none, .jobOpenning:
             print("NONE")
-        case .business:
-            print("business")
-        case .classified:
-            print("classified")
         }
         
         if let tc = targetController {
@@ -192,36 +183,65 @@ extension Add_CategoryViewController {
 
 enum AdCategory: Int {
 
+    // Motors
     case usedCars = 2
     case boats = 5
     case machinery = 6
     case parts = 7
     case exportCar = 8
     case bike = 9
-    
+
+    // Jobs
+    case jobOpenning = 3
     case jobWanted = 4
     
-    case domestic = 21
-    case autoService = 24
-    case moversRemovals = 25
-    case webComputer = 26
-    case corporateServices = 27
-    case homeMaintenance = 28
-    case eventEntertainment = 29
-    case tutorsClasses = 30
-    case healthServices = 31
-    case serviceOthers = 32
-    
+    // Numbers
     case platNumbers = 17
     case mobileNumbers = 18
     
+    // Electronics
     case mobiles = 19
     case tablets = 33
     case mobilesTabletsAccessories = 35
     case homeElectronics = 36
     case computersNetworking = 37
     
-    case business = 1001
-    case classified = 1000
+    // Classified
+    case classified_furnitureHomeAndGarden = 39
+    case classified_homeAppliances = 40
+    case classified_jewelryAndWatches = 41
+    case classified_sportsEquipment = 42
+    case classified_musicalInstruments = 43
+    case classified_gaming = 44
+    case classified_camerasAndImaging = 45
+    case classified_babyItems = 46
+    case classified_toys = 47
+    case classified_ticketsAndVouchers = 48
+    case classified_collectibles = 49
+    case classified_music = 51
+    case classified_freeStuff = 52
+    case classified_pets = 53
+    case classified_petAccessories = 54
+
+    // Services
+    case services_domestic = 21
+    case services_autoservices = 24
+    case services_moversRemovals = 25
+    case services_webComputer = 26
+    case services_corporateServices = 27
+    case services_homeMaintenance = 28
+    case services_eventEntertainment = 29
+    case services_tutorsClasses = 30
+    case services_others = 31
+    case services_healthServices = 32
+    
+    // Business
+    case business_businessesforsale = 23
+    case business_tradeLicenseforsale = 56
+    case business_buildingmaterialsforsale = 57
+    case business_food_beverageforsale = 58
+    case business_generalItemsforsale = 59
+    case business_shopsrestaurantsforsale = 60
+    case business_scrapmaterials = 61
     
 }

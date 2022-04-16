@@ -14,13 +14,100 @@ extension Motors_Parts_Details_VC {
         let header = UIView()
         header.frame.size = .init(width: 0, height: 40)
         
-        let adPreview = FormPreviewView().render()
+        let looksGoodLabel = FormLabel()
+        looksGoodLabel.text = "Looks good, now please add more details ..."
+        
+        let photosLabel = FormLabel()
+        photosLabel.text = "Pictures Of your Ad"
+        
+        let photoPicker = FormPhotoPicker().render()
+        
+        let listingPriceField = FormField()
+        listingPriceField.id = .price
+        listingPriceField.placeholder = "Listing Price"
+        listingPriceField.keyboardType = .numberPad
 
+        let phoneNumberField = FormField()
+        phoneNumberField.id = .phoneNumber
+        phoneNumberField.placeholder = "Phone Number"
+        phoneNumberField.keyboardType = .phonePad
+        
+        let descriptionLabel = FormLabel()
+        descriptionLabel.text = "Add a short description (Optional)"
+        
+        let description = FormTextView().render(placeholder: "Description (Optional)")
+
+        let specificationsLabel = FormLabel()
+        specificationsLabel.text = "Specifications"
+        
+        let partName = FormField()
+        partName.placeholder = "Name of part"
+        partName.keyboardType = .asciiCapable
+        
+        let agePicker = FormPicker()
+        agePicker.setPlaceHolder("Please Select Machinery")
+        agePicker.id = .age
+        
+        let conditionPicker = FormPicker()
+        conditionPicker.setPlaceHolder("Please Select Machinery")
+        conditionPicker.id = .condition
+        
+        let locationPicker = FormPicker()
+        locationPicker.setPlaceHolder("Location")
+        locationPicker.id = .location
+        
+        let locationView = FormLocationView().render()
+        
+        let acceptView = FormAcceptView().render()
+
+        let formContinueButton = FormContinueButton()
+        formContinueButton.setTitle("Continue", for: .normal)
+        
         return [
             header,
-            adPreview
+            looksGoodLabel,
+            photosLabel,
+            photoPicker,
+            listingPriceField,
+            phoneNumberField,
+            descriptionLabel,
+            description,
+            specificationsLabel,
+            
+            partName,
+            agePicker,
+            conditionPicker,
+
+            locationPicker,
+            locationView,
+            acceptView,
+            formContinueButton
         ]
         
     }
     
 }
+
+//Label: Looks good, now please add more details...
+//Label Pictures of your ad
+//View: Photo Upload View 10 pictures vertically
+//Label: Listing Price
+//Field: 0.00
+//Label: Phone Number
+//Field: Phone Number
+//Label: Add a shot description (Optional)
+//Field: Write more about your ad...
+//Label: Specifications
+
+//Field: Name of part
+//Picker: Age
+//Picker: Condition
+//Picker: Please select location
+
+//Label: Your Location
+//Location View: Location >> on click opens map
+//Check box: By submitting this ad, I agree on {terms & conditions} and {Privacy
+//Policy}
+//Label: Once you submit the ad, we will review before publishing. You will be
+//notified once approved
+//Button: Continue

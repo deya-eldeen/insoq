@@ -43,19 +43,7 @@ extension Motors_Boats_Details_VC {
         let milageField = FormField()
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
-        
-        let regionalSpecPicker = FormPicker()
-        regionalSpecPicker.setPlaceHolder("Regional Specs")
-        regionalSpecPicker.id = .regional_specs
 
-        let colorPicker = FormPicker()
-        colorPicker.setPlaceHolder("Color")
-        colorPicker.id = .color
-        
-        let numberOfDoorsPicker = FormPicker()
-        numberOfDoorsPicker.setPlaceHolder("Number Of Doors")
-        numberOfDoorsPicker.id = .numberOfDoors
-        
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
         warrantyPicker.id = .numberOfDoors

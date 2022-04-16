@@ -15,7 +15,7 @@ class Classified_VC: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Classified_Details_VC")
     }
     
     override func feedStackView() {

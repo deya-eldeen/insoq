@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIO-53-Bdp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6387" y="-611"/>
+            <point key="canvasLocation" x="5458" y="55"/>
         </scene>
         <!--Motors PartsVC-->
         <scene sceneID="KuL-qz-tOx">
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bY1-X6-16L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7114" y="-611"/>
+            <point key="canvasLocation" x="5458" y="1403"/>
         </scene>
         <!--Motors ExportVC-->
         <scene sceneID="C1y-8X-fBU">
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rm-M9-n0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7835" y="-611"/>
+            <point key="canvasLocation" x="4157" y="2835"/>
         </scene>
         <!--Motors BikeVC-->
         <scene sceneID="eje-rb-mfE">
@@ -127,12 +127,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stw-vH-aE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8567" y="-611"/>
+            <point key="canvasLocation" x="4783" y="2835"/>
         </scene>
-        <!--Job WantedVC-->
+        <!--ClassifiedVC-->
         <scene sceneID="Ged-7u-LaM">
             <objects>
-                <viewController storyboardIdentifier="Job_Wanted_VC" id="gkQ-sy-FjF" customClass="Job_Wanted_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Classified_VC" id="gkQ-sy-FjF" customClass="Classified_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yl5-Q5-Clj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4f-XJ-MgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4157" y="55"/>
+            <point key="canvasLocation" x="2867" y="75"/>
         </scene>
         <!--ServicesVC-->
         <scene sceneID="Pev-38-dds">
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R56-mC-Y6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6206" y="2113"/>
+            <point key="canvasLocation" x="4157" y="3573"/>
         </scene>
         <!--Computers NetworkingVC-->
         <scene sceneID="fqd-qQ-deo">
@@ -277,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkl-RI-Y0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7113" y="2113"/>
+            <point key="canvasLocation" x="4783" y="3573"/>
         </scene>
         <!--Motors Boats DetailsVC-->
         <scene sceneID="sQl-GM-fKP">
@@ -292,7 +292,112 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXn-yt-wYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5797" y="-662"/>
+            <point key="canvasLocation" x="4783" y="55"/>
+        </scene>
+        <!--Motors Machinery DetailsVC-->
+        <scene sceneID="A2h-bu-PxQ">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Machinery_Details_VC" id="avR-MO-ao2" customClass="Motors_Machinery_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MIU-i4-xSc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7Ix-3p-ts0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2E-SM-2ni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5458" y="733"/>
+        </scene>
+        <!--Motors Bike DetailsVC-->
+        <scene sceneID="Y7v-LJ-HMq">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Bike_Details_VC" id="9et-Hp-SNa" customClass="Motors_Bike_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXx-2P-u24">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C5D-yS-9OU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhw-PX-DUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5458" y="2835"/>
+        </scene>
+        <!--Job WantedVC-->
+        <scene sceneID="odK-SC-fP7">
+            <objects>
+                <viewController storyboardIdentifier="Job_Wanted_VC" id="ASd-km-00p" customClass="Job_Wanted_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOh-st-BNV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sjJ-ae-jvP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ff5-lU-V7k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4167" y="65"/>
+        </scene>
+        <!--Job Wanted DetailsVC-->
+        <scene sceneID="xKt-4q-7Hj">
+            <objects>
+                <viewController storyboardIdentifier="Job_Wanted_Details_VC" id="Vjv-w2-K2d" customClass="Job_Wanted_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xxt-Ty-neB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bik-Lr-uo5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHF-K2-7pG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3526" y="75"/>
+        </scene>
+        <!--Classified DetailsVC-->
+        <scene sceneID="G81-Xx-Bh3">
+            <objects>
+                <viewController storyboardIdentifier="Classified_Details_VC" id="Vpp-oA-1CH" customClass="Classified_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0t7-ga-cjO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="shm-J7-A1a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7f-5s-KtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2155" y="75"/>
+        </scene>
+        <!--Motors Parts DetailsVC-->
+        <scene sceneID="qZh-mV-t1E">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Parts_Details_VC" id="mF3-Qd-anT" customClass="Motors_Parts_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Slg-Sj-fsU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x9O-gB-73B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDN-8V-m0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2867" y="733"/>
+        </scene>
+        <!--Motors Export DetailsVC-->
+        <scene sceneID="X2S-bb-mOh">
+            <objects>
+                <viewController storyboardIdentifier="Motors_Export_Details_VC" id="iGI-vQ-R1E" customClass="Motors_Export_Details_VC" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOb-c2-Qp1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qC0-55-M7R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="og4-iJ-OzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2154" y="733"/>
         </scene>
     </scenes>
     <resources>

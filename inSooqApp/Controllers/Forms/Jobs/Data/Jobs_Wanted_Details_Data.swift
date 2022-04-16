@@ -24,3 +24,28 @@ extension Job_Wanted_Details_VC {
     }
 
 }
+
+//Label: Add a shot description (Optional)
+//Field: Write more about your ad...
+//Upload: Add your cv
+//Picker: Gender
+//Picker: Nationality
+//Picker: Current Location
+//Picker: Education Level
+//Filed: Current Position
+//
+//Picker: Work Experience
+//Picker: Commitment
+//Picker: Notice Period
+//Picker: Visa Status
+//Picker: Professional Level
+//Picker: Expected Monthly Salary
+//Label: Your Location
+//Location View: Location >> on click opens map
+//Check box: By submitting this ad, I agree on {terms & conditions} and {Privacy
+//Policy}
+//Label: Once you submit the ad, we will review before publishing. You will be
+//notified once approved
+//Button: Continue
+//View: Ad Preview
+

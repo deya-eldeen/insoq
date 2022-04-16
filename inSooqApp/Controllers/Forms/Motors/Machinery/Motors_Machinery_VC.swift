@@ -36,7 +36,7 @@ class Motors_Machinery_VC: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_Details_VC")
+        self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Machinery_Details_VC")
         
         self.requestTrims()
         self.requestMakers()
