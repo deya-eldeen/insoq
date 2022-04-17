@@ -164,10 +164,7 @@ extension Classified_Details_VC {
 //View: Ad Preview
 //}
 
-
-
-
-
+//
 
 //category id: 46, 47, 48, 49, 51, 52 {
 //Label: Looks good, now please add more details ...
@@ -194,10 +191,7 @@ extension Classified_Details_VC {
 //View: Ad Preview
 //}
 
-
-
-
-
+//
 
 //category id: 53, 54, 55 {
 //Label: Looks good, now please add more details ...
@@ -219,7 +213,3 @@ extension Classified_Details_VC {
 //Button: Continue
 //View: Ad Preview
 //}
-
-
-
-

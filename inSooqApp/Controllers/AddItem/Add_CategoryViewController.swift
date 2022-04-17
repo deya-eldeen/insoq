@@ -106,7 +106,7 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Business_VC")
             
         case
-            .classified_furnitureHomeAndGarden,.classified_homeAppliances,.classified_jewelryAndWatches,.classified_sportsEquipment,.classified_musicalInstruments,.classified_gaming,.classified_camerasAndImaging,.classified_babyItems,.classified_toys,.classified_ticketsAndVouchers,.classified_collectibles,.classified_music,.classified_freeStuff,.classified_pets,.classified_petAccessories:
+                .classified_furnitureHomeAndGarden,.classified_homeAppliances,.classified_jewelryAndWatches,.classified_sportsEquipment,.classified_musicalInstruments,.classified_gaming,.classified_camerasAndImaging,.classified_babyItems,.classified_toys,.classified_ticketsAndVouchers,.classified_collectibles,.classified_music,.classified_freeStuff,.classified_pets,.classified_petAccessories,.classified_books:
 
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Classified_VC")
 
@@ -229,6 +229,7 @@ enum AdCategory: Int {
     
     case classified_pets = 53
     case classified_petAccessories = 54
+    case classified_books = 55
 
     // Services
     case services_domestic = 21

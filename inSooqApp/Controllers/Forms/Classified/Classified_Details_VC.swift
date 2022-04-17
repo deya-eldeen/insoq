@@ -30,17 +30,11 @@ class Classified_Details_VC: FormViewController {
         
         switch cat {
         case .classified_furnitureHomeAndGarden,.classified_homeAppliances,.classified_jewelryAndWatches,.classified_sportsEquipment,.classified_musicalInstruments,.classified_gaming,.classified_camerasAndImaging:
-            
             self.classType = .personal
-            
         case .classified_babyItems,.classified_toys,.classified_ticketsAndVouchers,.classified_collectibles,.classified_music,.classified_freeStuff:
-            
             self.classType = .collectables
-            
-        case .classified_pets,.classified_petAccessories:
-            
+        case .classified_pets,.classified_petAccessories,.classified_books:
             self.classType = .pets
-            
         default:
             self.classType = .none
         }
@@ -49,7 +43,6 @@ class Classified_Details_VC: FormViewController {
         
         super.viewDidLoad()
 
-        
     }
     
     override func feedStackView() {
