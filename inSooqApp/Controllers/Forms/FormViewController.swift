@@ -25,11 +25,13 @@ class FormViewController: UIViewController {
     
     var images = [UIImage]()
     
-    static var selectedCatID = 0
+    static var selectedCat = AdCategory.none
     
     var adTitle = ""
     var adLocation = ""
 
+    var selectedCat = AdCategory.none
+    
     // MARK: DropDowns
     var customeListView: CustomListView = .fromNib()
 

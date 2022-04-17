@@ -7,15 +7,49 @@
 
 import UIKit
 
+enum ClassTypes {
+    case personal
+    case collectables
+    case pets
+    case none
+}
+
 class Classified_Details_VC: FormViewController {
     
     var dataMakers = [MotorMaker]()
     var dataMotorModels = [MotorModel]()
     var dataMotorTrim = [MotorTrim]()
     
+    var classType = ClassTypes.none
+
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
+        let cat = FormViewController.selectedCat
+        
+        print("cat________",cat)
+        
+        switch cat {
+        case .classified_furnitureHomeAndGarden,.classified_homeAppliances,.classified_jewelryAndWatches,.classified_sportsEquipment,.classified_musicalInstruments,.classified_gaming,.classified_camerasAndImaging:
+            
+            self.classType = .personal
+            
+        case .classified_babyItems,.classified_toys,.classified_ticketsAndVouchers,.classified_collectibles,.classified_music,.classified_freeStuff:
+            
+            self.classType = .collectables
+            
+        case .classified_pets,.classified_petAccessories:
+            
+            self.classType = .pets
+            
+        default:
+            self.classType = .none
+        }
+        
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        
+        super.viewDidLoad()
+
+        
     }
     
     override func feedStackView() {

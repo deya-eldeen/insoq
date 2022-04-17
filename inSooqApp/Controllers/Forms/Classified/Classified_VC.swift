@@ -13,6 +13,8 @@ class Classified_VC: FormViewController {
     var dataMotorModels = [MotorModel]()
     var dataMotorTrim = [MotorTrim]()
     
+    var classType = ClassTypes.none
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Classified_Details_VC")

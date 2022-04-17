@@ -70,7 +70,7 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         let typeID = model[indexPath.row].typeID
         let catName = model[indexPath.row].enName
 
-        let adType = AdCategory(rawValue: id ?? 0)
+        let adType = AdCategory(rawValue: id ?? 0) ?? .none
         
         print("DID_SELECT_ID_TypeID",id,typeID)
         print("adType",adType)
@@ -78,7 +78,7 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
 
         var targetController: UIViewController?
         
-        FormViewController.selectedCatID = id ?? 0
+        FormViewController.selectedCat = adType
         
         switch adType {
         case .usedCars:
@@ -206,6 +206,11 @@ enum AdCategory: Int {
     case homeElectronics = 36
     case computersNetworking = 37
     
+    //ClassifiedDetails 39 40 41 42 43 44 45
+    //ClassifiedDetails 46 47 48 49 51 52
+    //ClassifiedDetails 53 54 55
+
+    
     // Classified
     case classified_furnitureHomeAndGarden = 39
     case classified_homeAppliances = 40
@@ -214,12 +219,14 @@ enum AdCategory: Int {
     case classified_musicalInstruments = 43
     case classified_gaming = 44
     case classified_camerasAndImaging = 45
+    
     case classified_babyItems = 46
     case classified_toys = 47
     case classified_ticketsAndVouchers = 48
     case classified_collectibles = 49
     case classified_music = 51
     case classified_freeStuff = 52
+    
     case classified_pets = 53
     case classified_petAccessories = 54
 
@@ -243,5 +250,7 @@ enum AdCategory: Int {
     case business_generalItemsforsale = 59
     case business_shopsrestaurantsforsale = 60
     case business_scrapmaterials = 61
+    
+    case none = 0
     
 }
