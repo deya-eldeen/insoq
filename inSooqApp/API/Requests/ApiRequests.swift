@@ -15,6 +15,8 @@ class ApiRequests {
     typealias BoolCompletionHandler = (DataResponse<BasicResponse<Bool>,AFError>)
     typealias SimpleompletionHandler = (DataResponse<SimpleResponse,AFError>)
 
+    typealias ListableCompletionHandler = (DataResponse<[ListItem],AFError>)
+    
 }
 
 extension ApiRequests {
