@@ -71,7 +71,7 @@ extension Home_Electronics_VC {
         
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
-        warrantyPicker.id = .numberOfDoors
+        warrantyPicker.id = .warranty
         //
         
         let locationPicker = FormPicker()

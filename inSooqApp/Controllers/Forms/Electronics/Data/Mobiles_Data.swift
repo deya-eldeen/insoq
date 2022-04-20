@@ -84,7 +84,7 @@ extension Mobiles_VC {
         
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
-        warrantyPicker.id = .numberOfDoors
+        warrantyPicker.id = .warranty
         //
         
     

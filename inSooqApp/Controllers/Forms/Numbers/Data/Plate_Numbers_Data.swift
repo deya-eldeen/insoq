@@ -80,19 +80,19 @@ extension Plate_Numbers_VC {
 
         //
         let emiratePicker = FormPicker()
-        emiratePicker.id = .none
+        emiratePicker.id = .emirate
         emiratePicker.setPlaceHolder("Please select an emirate")
         
         let typePicker = FormPicker()
-        typePicker.id = .none
+        typePicker.id = .plateType
         typePicker.setPlaceHolder("Please select a plate type")
         
         let codePicker = FormPicker()
-        codePicker.id = .none
+        codePicker.id = .plateCode
         codePicker.setPlaceHolder("Please select a plate code")
         
         let plateNumberField = FormField()
-        plateNumberField.id = .none
+        plateNumberField.id = .plateNumber
         plateNumberField.placeholder = "Plate Number 000000"
         //
         

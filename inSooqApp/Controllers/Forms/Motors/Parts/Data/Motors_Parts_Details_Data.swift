@@ -42,14 +42,13 @@ extension Motors_Parts_Details_VC {
         
         let partName = FormField()
         partName.placeholder = "Name of part"
-        partName.keyboardType = .asciiCapable
         
         let agePicker = FormPicker()
-        agePicker.setPlaceHolder("Please Select Machinery")
+        agePicker.setPlaceHolder("Please Select Age")
         agePicker.id = .age
         
         let conditionPicker = FormPicker()
-        conditionPicker.setPlaceHolder("Please Select Machinery")
+        conditionPicker.setPlaceHolder("Please Select Condition")
         conditionPicker.id = .condition
         
         let locationPicker = FormPicker()

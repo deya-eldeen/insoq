@@ -37,5 +37,7 @@ enum FieldID {
     case price
     case phoneNumber
     case jobTitle
+    case plateNumber
+    case position
     case none
 }

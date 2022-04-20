@@ -46,7 +46,7 @@ extension Motors_Machinery_Details_VC {
 
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
-        warrantyPicker.id = .numberOfDoors
+        warrantyPicker.id = .warranty
 
         // pickers
         let fuelTypePicker = FormPicker()

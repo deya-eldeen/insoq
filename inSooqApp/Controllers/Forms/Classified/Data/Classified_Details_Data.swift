@@ -40,20 +40,20 @@ extension Classified_Details_VC {
         
         //
         let agePicker = FormPicker()
-        agePicker.id = .brand
-        agePicker.setPlaceHolder("Please select brand")
+        agePicker.id = .age
+        agePicker.setPlaceHolder("Please select age")
         
         let usagePicker = FormPicker()
-        usagePicker.id = .model
-        usagePicker.setPlaceHolder("Please select model")
+        usagePicker.id = .usage
+        usagePicker.setPlaceHolder("Please select usage")
         
         let conditionPicker = FormPicker()
-        conditionPicker.id = .model
-        conditionPicker.setPlaceHolder("Please select model")
+        conditionPicker.id = .condition
+        conditionPicker.setPlaceHolder("Please select condition")
         
         let brandPicker = FormPicker()
-        brandPicker.id = .model
-        brandPicker.setPlaceHolder("Please select model")
+        brandPicker.id = .brand
+        brandPicker.setPlaceHolder("Please select brand")
         //
         
         let locationPicker = FormPicker()

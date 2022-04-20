@@ -40,12 +40,12 @@ extension Classified_VC {
         
         //
         let categoryPicker = FormPicker()
-        categoryPicker.id = .brand
-        categoryPicker.setPlaceHolder("Please select brand")
+        categoryPicker.id = .category
+        categoryPicker.setPlaceHolder("Please select category")
         
         let subcategoryPicker = FormPicker()
-        subcategoryPicker.id = .brand
-        subcategoryPicker.setPlaceHolder("Please select brand")
+        subcategoryPicker.id = .subcategory
+        subcategoryPicker.setPlaceHolder("Please select subcategory")
         //
 
         let formContinueButton = FormContinueButton()

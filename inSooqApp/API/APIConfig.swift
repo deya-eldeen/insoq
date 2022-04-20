@@ -403,6 +403,61 @@ struct APIUrls {
         return "DropDowns/GetAllUsageByTypeId?typeId=\(typeId)".fullUrl()
     }
     
+    //Used Cars
+    //Boats
+    //Machinery
+    //Parts
+    //ExportCar
+    //Bike
+    static func submitMotorInitial() -> String {
+        return "MotorAds/AddInitialMotor".fullUrl()
+    }
+    static func submitMotorFull() -> String {
+        return "MotorAds/AddFullMotor".fullUrl()
+    }
+    
+    //Job Wanted
+    static func submitJobInitial() -> String {
+        return "JobAds/AddInitialJobWanted".fullUrl()
+    }
+    
+    static func submitJobFull() -> String {
+        return "JobAds/AddFullJobWanted".fullUrl()
+    }
+    
+    //Plate Numbers
+    //Mobile Numbers
+    static func submitNumbers() -> String {
+        return "NumberAds/Add".fullUrl()
+    }
+    
+    //Mobiles
+    //Tablets
+    //Accessories
+    //Electronics
+    //Networking
+    static func submitElectronics() -> String {
+        return "ElectronicAds/Add".fullUrl()
+    }
+    
+    //Classified
+    static func submitClassifiedInitial() -> String {
+        return "ClassifiedAds/AddInitialClassified".fullUrl()
+    }
+    static func submitClassifiedFull() -> String {
+        return "ClassifiedAds/AddFullClassified".fullUrl()
+    }
+    
+    //Services
+    static func submitService() -> String {
+        return "ServiceAds/Add".fullUrl()
+    }
+  
+    //Business
+    static func submitBusiness() -> String {
+        return "BussinesAds/Add".fullUrl()
+    }
+    
 }
 
 extension String {

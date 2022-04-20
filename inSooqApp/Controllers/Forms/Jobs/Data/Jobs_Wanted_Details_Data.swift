@@ -38,32 +38,31 @@ extension Job_Wanted_Details_VC {
         educationPicker.setPlaceHolder("Education Level")
         
         let positionField = FormField()
-        positionField.id = .none
+        positionField.id = .position
         positionField.placeholder = "Current Position"
         
-        
         let workPicker = FormPicker()
-        workPicker.id = .gender
+        workPicker.id = .workExperience
         workPicker.setPlaceHolder("Work Experience")
         
         let commitmentPicker = FormPicker()
-        commitmentPicker.id = .gender
+        commitmentPicker.id = .commitment
         commitmentPicker.setPlaceHolder("Commitment")
         
         let noticePicker = FormPicker()
-        noticePicker.id = .gender
+        noticePicker.id = .noticePeriod
         noticePicker.setPlaceHolder("Notice Period")
         
         let visaPicker = FormPicker()
-        visaPicker.id = .gender
+        visaPicker.id = .visaStatus
         visaPicker.setPlaceHolder("Visa Status")
         
         let professionalPicker = FormPicker()
-        professionalPicker.id = .gender
+        professionalPicker.id = .professionalLevel
         professionalPicker.setPlaceHolder("Professional Level")
         
         let expectedSalaryPicker = FormPicker()
-        expectedSalaryPicker.id = .gender
+        expectedSalaryPicker.id = .expectedMonthlySalary
         expectedSalaryPicker.setPlaceHolder("Expected Monthly Salary")
         
         //

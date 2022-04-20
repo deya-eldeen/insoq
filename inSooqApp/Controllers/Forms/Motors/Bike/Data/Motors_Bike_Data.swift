@@ -29,11 +29,11 @@ extension Motors_Bike_VC {
     
         let categoryPicker = FormPicker()
         categoryPicker.setPlaceHolder("What is your bike category?")
-        categoryPicker.id = .carBrand
+        categoryPicker.id = .bikeCategory
         
         let subcategoryPicker = FormPicker()
         subcategoryPicker.setPlaceHolder("What is your bike subcategory?")
-        subcategoryPicker.id = .model
+        subcategoryPicker.id = .bikeSubcategory
         
         let yearField = FormField()
         yearField.id = .year

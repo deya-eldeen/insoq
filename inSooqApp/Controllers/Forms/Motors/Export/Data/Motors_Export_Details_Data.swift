@@ -58,7 +58,7 @@ extension Motors_Export_Details_VC {
         
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
-        warrantyPicker.id = .numberOfDoors
+        warrantyPicker.id = .warranty
         
         let transmissionPicker = FormPicker()
         transmissionPicker.setPlaceHolder("Please Select Transmission")
@@ -70,7 +70,7 @@ extension Motors_Export_Details_VC {
         
         let fuelTypePicker = FormPicker()
         fuelTypePicker.setPlaceHolder("Please Select Fuel Type")
-        fuelTypePicker.id = .transmission
+        fuelTypePicker.id = .fuelType
         
         let cylindersPicker = FormPicker()
         cylindersPicker.setPlaceHolder("Please Select Cylinders Type")

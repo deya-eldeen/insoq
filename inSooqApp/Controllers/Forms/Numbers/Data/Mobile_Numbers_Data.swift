@@ -52,19 +52,19 @@ extension Mobile_Numbers_VC {
         //
 
         let operatorPicker = FormPicker()
-        operatorPicker.id = .none
+        operatorPicker.id = .operator
         operatorPicker.setPlaceHolder("Please select an operator")
         
         let codePicker = FormPicker()
-        codePicker.id = .none
+        codePicker.id = .code
         codePicker.setPlaceHolder("Please select a code")
         
         let plateNumberField = FormField()
-        plateNumberField.id = .none
+        plateNumberField.id = .plateNumber
         plateNumberField.placeholder = "000000"
         
         let planePicker = FormPicker()
-        planePicker.id = .none
+        planePicker.id = .mobilePlan
         planePicker.setPlaceHolder("Please select mobile plan")
         
         //

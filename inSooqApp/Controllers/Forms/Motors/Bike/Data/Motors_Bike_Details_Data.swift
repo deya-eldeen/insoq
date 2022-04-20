@@ -41,8 +41,6 @@ extension Motors_Bike_Details_VC {
         specificationsLabel.text = "Specifications"
         
         
-        
-        
         let milageField = FormField()
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
