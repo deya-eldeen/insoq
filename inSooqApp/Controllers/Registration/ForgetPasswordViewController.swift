@@ -36,7 +36,7 @@ class ForgetPasswordViewController: UIViewController {
             }
         func requistForgotPasswordUrl(_ parameters: Dictionary<String , String>, callBack:@escaping (Bool) -> Void) {
     
-            let url = "https://newapis.insouq.com/api/Accounts/ForgotPassword"
+            let url = "http://apinew.insouq.com/api/Accounts/ForgotPassword"
     
     
             AF.request(url, method: .post, parameters: parameters, headers: ["Content-Type": "application/json"]).responseJSON { (response:DataResponse) in

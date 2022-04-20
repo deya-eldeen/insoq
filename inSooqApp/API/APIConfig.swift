@@ -5,8 +5,8 @@ import Alamofire
 
 class APIConfig {
 
-    static let baseImageURL = "https://newapis.insouq.com"
-    static let baseURL = "https://newapis.insouq.com/api/"
+    static let baseImageURL = "http://apinew.insouq.com"
+    static let baseURL = "http://apinew.insouq.com/api/"
 
     static let encoding = JSONEncoding.default
     static let stringencoding = JSONEncoding.default

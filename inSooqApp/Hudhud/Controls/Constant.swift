@@ -7,7 +7,7 @@
 
 import Foundation
 
-let Connection = "https://newapis.insouq.com/api/"
+let Connection = "http://apinew.insouq.com/api/" //http://apinew.insouq.com
 let ConnectionDropDowns = Connection + "DropDowns/"
 
 // Job Category

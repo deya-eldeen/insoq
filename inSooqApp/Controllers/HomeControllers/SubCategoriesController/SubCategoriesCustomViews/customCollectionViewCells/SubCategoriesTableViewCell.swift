@@ -35,7 +35,7 @@ class SubCategoriesTableViewCell: UITableViewCell {
     func setSubCategoryDataModel(model: Category){
         self.numberOfItems.text = "Ads \(model.numberOfAds?.description ?? "")"
         subImage.kf.setImage(
-            with: URL(string: "https://newapis.insouq.com\(model.firstImage?.replacingOccurrences(of: "\\", with: "/", options: .literal, range: nil) ?? "")" ),
+            with: URL(string: "http://apinew.insouq.com\(model.firstImage?.replacingOccurrences(of: "\\", with: "/", options: .literal, range: nil) ?? "")" ),
             options: [
                 .transition(ImageTransition.fade(0.1))
             ])

@@ -14,12 +14,12 @@ struct ListItem: Codable, Listable {
     let ar_Text:  String?
     let en_Text:  String?
     
-    let typeId: Int?
-    let categoryId: Int?
-    let emirateId: Int?
-    let operatorId: Int?
+    var typeId: Int?
+    var categoryId: Int?
+    var emirateId: Int?
+    var operatorId: Int?
     
-    let value:  String?
+    var value:  String?
 
 }
 

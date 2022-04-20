@@ -45,7 +45,7 @@ enum EndPoint {
 extension EndPoint {
     
     var path: String {
-        let baseURL = "https://newapis.insouq.com/api/"
+        let baseURL = "http://apinew.insouq.com/api/"
         switch self {
         case .CategoriesAdsGetByTypeId(let id):  return "\(baseURL)Ads/GetLatestAds?typeId=\(id)"
         case .Register: return "\(baseURL)Users/Add"

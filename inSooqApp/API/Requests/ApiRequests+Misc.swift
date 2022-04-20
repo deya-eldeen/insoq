@@ -14,9 +14,9 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.motorRegionalSpecs(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func locations(completion:@escaping (ListableCompletionHandler) -> Void) {
-        NetworkService().simpleRequest(url: APIUrls.locations(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
-    }
+//    static func locations(completion:@escaping (ListableCompletionHandler) -> Void) {
+//        NetworkService().simpleRequest(url: APIUrls.locations(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+//    }
     
     static func colors(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.colors(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
@@ -104,9 +104,9 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.monthlySalary(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func careerLevels(completion:@escaping (ListableCompletionHandler) -> Void) {
-        NetworkService().simpleRequest(url: APIUrls.careerLevels(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
-    }
+//    static func careerLevels(completion:@escaping (ListableCompletionHandler) -> Void) {
+//        NetworkService().simpleRequest(url: APIUrls.careerLevels(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+//    }
     
     static func visaStatuses(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.visaStatuses(), method: .get) { (response: ListableCompletionHandler) in completion(response) }

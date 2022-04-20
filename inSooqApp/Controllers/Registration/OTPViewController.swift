@@ -139,7 +139,7 @@ class OTPViewController: UIViewController,OTPFieldViewDelegate {
             }
     func requistAddUser(_ parameters: Dictionary<String , String>, callBack:@escaping (Bool) -> Void) {
 
-        let url = "https://newapis.insouq.com/api/Users/Add"
+        let url = "http://apinew.insouq.com/api/Users/Add"
 
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
