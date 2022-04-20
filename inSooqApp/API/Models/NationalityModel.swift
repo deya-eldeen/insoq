@@ -13,4 +13,6 @@ struct NationalityModel: Codable, Listable {
     var ar_Text:  String?
     var en_Text:  String?
     
+    var ar_Name: String?
+    var en_Name: String?
 }

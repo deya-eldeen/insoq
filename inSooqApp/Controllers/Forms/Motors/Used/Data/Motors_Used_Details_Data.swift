@@ -40,6 +40,7 @@ extension Motors_Used_Details_VC {
         let specificationsLabel = FormLabel()
         specificationsLabel.text = "Specifications"
         
+        //
         let milageField = FormField()
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
@@ -89,6 +90,7 @@ extension Motors_Used_Details_VC {
         locationPicker.id = .location
         
         let locationView = FormLocationView().render()
+        //
         
         let acceptView = FormAcceptView().render()
 

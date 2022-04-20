@@ -8,7 +8,13 @@
 import Foundation
 
 protocol Listable: Codable {
+    
     var id: Int? { get }
+    
     var ar_Text: String? { get }
     var en_Text: String? { get }
+    
+    var ar_Name: String? { get }
+    var en_Name: String? { get }
+
 }

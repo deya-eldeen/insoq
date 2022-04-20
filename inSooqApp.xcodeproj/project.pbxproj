@@ -1383,8 +1383,8 @@
 		E39DC5022809EE2400BAE09D /* Used */ = {
 			isa = PBXGroup;
 			children = (
-				E3BB1EBA2804F37C00D65DA7 /* Motors_Used_Details_VC.swift */,
 				E39BAE1F27FCDDF1001F5438 /* Motors_Used_VC.swift */,
+				E3BB1EBA2804F37C00D65DA7 /* Motors_Used_Details_VC.swift */,
 				E39DC5042809EEC800BAE09D /* Data */,
 			);
 			path = Used;
@@ -1403,8 +1403,8 @@
 		E39DC5042809EEC800BAE09D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */,
 				E3D2FEB02801AA6000EECA95 /* Motors_Used_Data.swift */,
+				E3A8110128042E34003A2CC0 /* Motors_Used_Details_Data.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";

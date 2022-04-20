@@ -14,4 +14,6 @@ struct MotorTrim: Codable, Listable {
     var en_Text:  String?
     var modelId: Int?
     
+    var ar_Name: String?
+    var en_Name: String?
 }

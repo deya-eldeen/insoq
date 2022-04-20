@@ -27,6 +27,7 @@ extension Motors_Used_VC {
         let addLabel = FormLabel()
         addLabel.text = "Now let's add your car make and model"
     
+        //
         let brandPicker = FormPicker()
         brandPicker.setPlaceHolder("What brand is your car?")
         brandPicker.id = .carBrand
@@ -43,6 +44,7 @@ extension Motors_Used_VC {
         yearField.id = .year
         yearField.placeholder = "Year"
         yearField.keyboardType = .numberPad
+        //
         
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("Continue", for: .normal)

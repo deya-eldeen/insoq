@@ -13,4 +13,6 @@ struct LocationModel: Codable, Listable {
     let ar_Text:  String?
     let en_Text:  String?
     
+    var ar_Name: String?
+    var en_Name: String?
 }

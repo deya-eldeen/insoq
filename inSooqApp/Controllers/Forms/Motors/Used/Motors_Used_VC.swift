@@ -9,10 +9,12 @@ import UIKit
 
 class Motors_Used_VC: FormViewController {
     
+    // Data
     var dataMakers = [MotorMaker]()
     var dataMotorModels = [MotorModel]()
     var dataMotorTrim = [MotorTrim]()
     
+    // Params
     var selectedMakerID = 0
     var selectedModelNameEn = ""
     var selectedModelNameAr = ""
@@ -38,6 +40,7 @@ class Motors_Used_VC: FormViewController {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_Details_VC")
         
+        // Calls
         self.requestTrims()
         self.requestMakers()
         self.requestModels()

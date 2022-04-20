@@ -32,6 +32,8 @@ class FormViewController: UIViewController {
 
     var selectedCat = AdCategory.none
     
+    var dataWarranty = [ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes"), ListItem.init(id: 2, ar_Text: "No", en_Text: "No")]
+    
     // MARK: DropDowns
     var customeListView: CustomListView = .fromNib()
 
@@ -147,7 +149,7 @@ class FormViewController: UIViewController {
             if type(of: element) == FormPicker.self {
                 let picker = (element as! FormPicker)
                 if picker.id == id {
-                    picker.textfield.text = value.en_Text
+                    picker.textfield.text = value.en_Text ?? value.en_Name
                 }
             }
         }

@@ -44,11 +44,11 @@ extension Motors_Boats_Details_VC {
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
 
+        // pickers
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
         warrantyPicker.id = .warranty
 
-        // pickers
         let horsePowerPicker = FormPicker()
         horsePowerPicker.setPlaceHolder("Please Select Horse Power")
         horsePowerPicker.id = .horsePower
