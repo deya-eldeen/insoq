@@ -26,21 +26,19 @@ extension Motors_Parts_VC {
         let addLabel = FormLabel()
         addLabel.text = "Now let's add your machinery make and model"
 
+        //
         let categoryPicker = FormPicker()
         categoryPicker.setPlaceHolder("What is your part category?")
-        categoryPicker.id = .boatCategory
+        categoryPicker.id = .category
         
         let subcategoryPicker = FormPicker()
         subcategoryPicker.setPlaceHolder("What is your part subcategory?")
-        subcategoryPicker.id = .boatSubcategory
-        
-        let makePicker = FormPicker()
-        makePicker.setPlaceHolder("What is your part make?")
-        makePicker.id = .make
+        subcategoryPicker.id = .subcategory
         
         let namePicker = FormPicker()
         namePicker.setPlaceHolder("Name of the part")
         namePicker.id = .partName
+        //
         
         let yearField = FormField()
         yearField.id = .year
@@ -58,7 +56,6 @@ extension Motors_Parts_VC {
             addLabel,
             categoryPicker,
             subcategoryPicker,
-            makePicker,
             namePicker,
             yearField,
             formContinueButton

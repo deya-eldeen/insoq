@@ -26,13 +26,15 @@ extension Motors_Machinery_VC {
         let addLabel = FormLabel()
         addLabel.text = "Now let's add your machinery make and model"
 
+        //
         let categoryPicker = FormPicker()
         categoryPicker.setPlaceHolder("What is your machinery category?")
-        categoryPicker.id = .boatCategory
+        categoryPicker.id = .category
         
         let subcategoryPicker = FormPicker()
         subcategoryPicker.setPlaceHolder("What is your machinery subcategory?")
-        subcategoryPicker.id = .boatSubcategory
+        subcategoryPicker.id = .subcategory
+        //
         
         let yearField = FormField()
         yearField.id = .year

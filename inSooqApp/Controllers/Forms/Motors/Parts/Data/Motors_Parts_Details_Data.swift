@@ -43,6 +43,7 @@ extension Motors_Parts_Details_VC {
         let partName = FormField()
         partName.placeholder = "Name of part"
         
+        //
         let agePicker = FormPicker()
         agePicker.setPlaceHolder("Please Select Age")
         agePicker.id = .age
@@ -54,6 +55,7 @@ extension Motors_Parts_Details_VC {
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        //
         
         let locationView = FormLocationView().render()
         

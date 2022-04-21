@@ -44,11 +44,11 @@ extension Motors_Machinery_Details_VC {
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
 
+        //
         let warrantyPicker = FormPicker()
         warrantyPicker.setPlaceHolder("Under Warranty")
         warrantyPicker.id = .warranty
 
-        // pickers
         let fuelTypePicker = FormPicker()
         fuelTypePicker.setPlaceHolder("Please Select Fuel Type")
         fuelTypePicker.id = .fuelType
@@ -76,6 +76,7 @@ extension Motors_Machinery_Details_VC {
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        //
         
         let locationView = FormLocationView().render()
         

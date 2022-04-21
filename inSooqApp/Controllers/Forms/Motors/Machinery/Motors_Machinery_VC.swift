@@ -9,38 +9,34 @@ import UIKit
 
 class Motors_Machinery_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var dataSubcategories = [ListItem]()
+    var dataSubtypes = [ListItem]()
     
-    var selectedMakerID = 0
-    var selectedModelNameEn = ""
-    var selectedModelNameAr = ""
-
+    // Params
+    var categoryId = 0
+    var subCategoryId = 0
+    
     // Requests
-    func requestMakers() {
-        ApiRequests.motorMakers { response in
-            self.dataMakers = response.value ?? []
+    func requestSubcategories() {
+        ApiRequests.subcategories(categoryId: categoryId) { response in
+            self.dataSubcategories = response.value ?? []
         }
     }
-    func requestModels() {
-        ApiRequests.motorModels(makerId: selectedMakerID) { response in
-            self.dataMotorModels = response.value ?? []
-        }
-    }
-    func requestTrims() {
-        ApiRequests.motorTrims(modelNameAr: selectedModelNameAr, modelNameEn: selectedModelNameEn) { response in
-            self.dataMotorTrim = response.value ?? []
+    func requestSubtypes() {
+        ApiRequests.subtypes(subCategoryId: subCategoryId) { response in
+            self.dataSubtypes = response.value ?? []
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Machinery_Details_VC")
-        
-        self.requestTrims()
-        self.requestMakers()
-        self.requestModels()
+        self.categoryId = FormViewController.selectedCat.rawValue
+
+        // Calls
+        self.requestSubcategories()
+        self.requestSubtypes()
     }
     
     override func feedStackView() {
@@ -53,12 +49,10 @@ class Motors_Machinery_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            case .category:
+            customeListView.setData(vc:self,list: self.dataSubcategories)
+            case .subcategory:
+            customeListView.setData(vc:self,list: self.dataSubtypes)
             default: break
         }
         
@@ -66,18 +60,14 @@ class Motors_Machinery_VC: FormViewController {
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {
-            case .carBrand:
-                self.selectedMakerID = item.id ?? 0
-                self.requestModels()
-            case .model:
-                self.selectedModelNameEn = item.en_Text ?? ""
-                self.selectedModelNameAr = item.ar_Text ?? ""
-                self.requestTrims()
+            case .category:
+                self.subCategoryId = item.id ?? 0
+                self.requestSubtypes()
             default: break
             }
             
         }
-        
+                
         self.customeListView.showListing(vc: self)
     }
 

@@ -9,38 +9,46 @@ import UIKit
 
 class Motors_Parts_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var data_category = [ListItem]()
+    var data_subcategory = [ListItem]()
+    var data_make = [ListItem]()
+    var data_partName = [ListItem]()
     
-    var selectedMakerID = 0
-    var selectedModelNameEn = ""
-    var selectedModelNameAr = ""
-
+    // Params
+    var categoryId = 0
+    var subCategoryId = 0
+    var subTypeId = 0
+    
     // Requests
-    func requestMakers() {
-        ApiRequests.motorMakers { response in
-            self.dataMakers = response.value ?? []
+    func requestCategories() {
+        ApiRequests.subcategories(categoryId: categoryId) { response in
+            self.data_category = response.value ?? []
         }
     }
-    func requestModels() {
-        ApiRequests.motorModels(makerId: selectedMakerID) { response in
-            self.dataMotorModels = response.value ?? []
+    func requestSubcategories() {
+        ApiRequests.subtypes(subCategoryId: subCategoryId) { response in
+            self.data_subcategory = response.value ?? []
         }
     }
-    func requestTrims() {
-        ApiRequests.motorTrims(modelNameAr: selectedModelNameAr, modelNameEn: selectedModelNameEn) { response in
-            self.dataMotorTrim = response.value ?? []
+    func requestMake() {
+        //??????
+    }
+    func requestPartName() {
+        ApiRequests.parts(subTypeId: subTypeId) { response in
+            self.data_partName = response.value ?? []
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Parts_Details_VC")
-        
-        self.requestTrims()
-        self.requestMakers()
-        self.requestModels()
+        self.categoryId = FormViewController.selectedCat.rawValue
+
+        self.requestCategories()
+        self.requestSubcategories()
+        self.requestMake()
+        self.requestPartName()
     }
     
     override func feedStackView() {
@@ -53,12 +61,12 @@ class Motors_Parts_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            case .category:
+            customeListView.setData(vc:self,list: self.data_category)
+            case .subcategory:
+            customeListView.setData(vc:self,list: self.data_subcategory)
+            case .partName:
+            customeListView.setData(vc:self,list: self.data_partName)
             default: break
         }
         
@@ -66,13 +74,12 @@ class Motors_Parts_VC: FormViewController {
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {
-            case .carBrand:
-                self.selectedMakerID = item.id ?? 0
-                self.requestModels()
-            case .model:
-                self.selectedModelNameEn = item.en_Text ?? ""
-                self.selectedModelNameAr = item.ar_Text ?? ""
-                self.requestTrims()
+            case .category:
+                self.subCategoryId = item.id ?? 0
+                self.requestSubcategories()
+            case .subcategory:
+                self.subTypeId = item.id ?? 0
+                self.requestPartName()
             default: break
             }
             
