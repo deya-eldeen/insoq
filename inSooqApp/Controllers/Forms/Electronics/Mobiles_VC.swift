@@ -8,14 +8,93 @@
 import UIKit
 
 class Mobiles_VC: FormViewController {
+        
+    // Data
+    var data_brand = [ListItem]()
+    var data_model = [ListItem]()
+    var data_version = [ListItem]()
+    var data_ram = [ListItem]()
+    var data_storage = [ListItem]()
+    var data_age = [ListItem]()
+    var data_usage = [ListItem]()
+    var data_color = [ListItem]()
+//    var data_warranty = [ListItem]()
+    var data_location = [LocationModel]()
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Params
+    var categoryId = 0
+    var typeId = 0
+    var subCategoryId = 0
+    
+    // Request
+    func request_brand() {
+        ApiRequests.subcategories(categoryId: categoryId) { response in
+            self.data_brand = response.value ?? []
+        }
+    }
+    func request_model() {
+        ApiRequests.subtypes(subCategoryId: subCategoryId) { response in
+            self.data_model = response.value ?? []
+        }
+    }
+    func request_version() {
+        ApiRequests.mobileVersions { response in
+            self.data_version = response.value ?? []
+        }
+    }
+    func request_ram() {
+        ApiRequests.ram { response in
+            self.data_ram = response.value ?? []
+        }
+    }
+    func request_storage() {
+        ApiRequests.storage { response in
+            self.data_storage = response.value ?? []
+        }
+    }
+    func request_age() {
+        ApiRequests.age(typeId: typeId) { response in
+            self.data_age = response.value ?? []
+        }
+    }
+    func request_usage() {
+        ApiRequests.usage(typeId: typeId) { response in
+            self.data_usage = response.value ?? []
+        }
+    }
+    func request_color() {
+        ApiRequests.colors { response in
+            self.data_color = response.value ?? []
+        }
+    }
+    func request_warranty() {
+        //
+    }
+    func request_location() {
+        ApiRequests.locations { response in
+            self.data_location = response.value ?? []
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.categoryId = FormViewController.selectedCat.rawValue
+        self.typeId = FormViewController.selectedTypeID
+        
+        print("self.categoryId",self.categoryId)
+        
+        request_brand()
+        request_model()
+        request_version()
+        request_ram()
+        request_storage()
+        request_age()
+        request_usage()
+        request_color()
+        request_warranty()
+        request_location()
+        
     }
     
     override func feedStackView() {
@@ -29,23 +108,40 @@ class Mobiles_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
+            
+            case .brand:
+            customeListView.setData(vc:self,list: self.data_brand)
             case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            customeListView.setData(vc:self,list: self.data_model)
+            case .version:
+            customeListView.setData(vc:self,list: self.data_version)
+            case .ram:
+            customeListView.setData(vc:self,list: self.data_ram)
+            case .storage:
+            customeListView.setData(vc:self,list: self.data_storage)
+            case .age:
+            customeListView.setData(vc:self,list: self.data_age)
+            case .usage:
+            customeListView.setData(vc:self,list: self.data_usage)
+            case .color:
+            customeListView.setData(vc:self,list: self.data_color)
+            case .warranty:
+            customeListView.setData(vc:self,list: self.dataWarranty)
+            case .location:
+            customeListView.setData(vc:self, list: self.data_location)
+            
             default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
             
-//            switch picker.id {
-//            case .carBrand:
-//            case .model:
-//            default: break
-//            }
+            switch picker.id {
+            case .brand:
+                self.subCategoryId = item.id ?? 0
+                self.request_model()
+            default: break
+            }
             
         }
         

@@ -79,6 +79,7 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         var targetController: UIViewController?
         
         FormViewController.selectedCat = adType
+        FormViewController.selectedTypeID = typeID ?? 0
         
         switch adType {
         case .usedCars:

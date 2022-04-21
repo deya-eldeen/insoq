@@ -80,7 +80,7 @@ class Plate_Numbers_VC: FormViewController {
             
             switch picker.id {
             case .emirate:
-                self.emirate = "\(item.en_Name ?? item.en_Text ?? "")-\(item.en_Name ?? item.en_Text ?? "")" ?? ""
+                self.emirate = "\(item.en_Name ?? item.en_Text ?? "")-\(item.en_Name ?? item.en_Text ?? "")"
                 self.request_plateType()
             default: break
             }

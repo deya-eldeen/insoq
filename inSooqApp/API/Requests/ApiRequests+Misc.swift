@@ -151,23 +151,23 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.numberCodes(operatorName: operatorName), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func numberPlans(emirate: String, completion:@escaping (ListableCompletionHandler) -> Void) {
+    static func numberPlans(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.numberPlans(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func operators(emirate: String, completion:@escaping (ListableCompletionHandler) -> Void) {
+    static func operators(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.operators(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func mobileVersions(emirate: String, completion:@escaping (ListableCompletionHandler) -> Void) {
+    static func mobileVersions(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.mobileVersions(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
 
-    static func ram(emirate: String, completion:@escaping (ListableCompletionHandler) -> Void) {
+    static func ram(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.ram(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func storage(emirate: String, completion:@escaping (ListableCompletionHandler) -> Void) {
+    static func storage(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.storage(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     

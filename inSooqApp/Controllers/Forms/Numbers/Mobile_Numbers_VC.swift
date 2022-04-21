@@ -21,7 +21,7 @@ class Mobile_Numbers_VC: FormViewController {
 
     // Requests
     func request_operator () {
-        ApiRequests.operators(emirate: emirate) { response in
+        ApiRequests.operators { response in
             self.data_operator = response.value ?? []
         }
     }
@@ -31,7 +31,7 @@ class Mobile_Numbers_VC: FormViewController {
         }
     }
     func request_mobilePlan () {
-        ApiRequests.numberPlans(emirate: emirate) { response in
+        ApiRequests.numberPlans { response in
             self.data_mobilePlan = response.value ?? []
         }
     }

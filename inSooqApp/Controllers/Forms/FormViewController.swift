@@ -26,7 +26,8 @@ class FormViewController: UIViewController {
     var images = [UIImage]()
     
     static var selectedCat = AdCategory.none
-    
+    static var selectedTypeID = 0
+
     var adTitle = ""
     var adLocation = ""
 
