@@ -44,6 +44,7 @@ extension Motors_Export_Details_VC {
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
         
+        //
         let regionalSpecPicker = FormPicker()
         regionalSpecPicker.setPlaceHolder("Regional Specs")
         regionalSpecPicker.id = .regional_specs
@@ -87,6 +88,7 @@ extension Motors_Export_Details_VC {
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        //
         
         let locationView = FormLocationView().render()
         

@@ -27,6 +27,7 @@ extension Motors_Export_VC {
         let addLabel = FormLabel()
         addLabel.text = "Now let's add your car make and model"
     
+        //
         let brandPicker = FormPicker()
         brandPicker.setPlaceHolder("What brand is your car?")
         brandPicker.id = .carBrand
@@ -38,6 +39,7 @@ extension Motors_Export_VC {
         let trimPicker = FormPicker()
         trimPicker.setPlaceHolder("What is the trim?")
         trimPicker.id = .trim
+        //
         
         let yearField = FormField()
         yearField.id = .year

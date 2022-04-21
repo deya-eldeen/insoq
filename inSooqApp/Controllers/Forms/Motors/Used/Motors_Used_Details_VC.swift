@@ -41,9 +41,6 @@ class Motors_Used_Details_VC: FormViewController {
             self.data_numberOfDoors = response.value ?? []
         }
     }
-    func request_warranty() {
-        //self.data_warranty = self.dataWarranty
-    }
     func request_transmission() {
         ApiRequests.transmissions { response in
             self.data_transmission = response.value ?? []
@@ -89,7 +86,7 @@ class Motors_Used_Details_VC: FormViewController {
         self.request_regionalSpec()
         self.request_color()
         self.request_numberOfDoors()
-        self.request_warranty()
+//        self.request_warranty()
         self.request_transmission()
         self.request_bodyType()
         self.request_fuelType()

@@ -302,6 +302,18 @@ struct APIUrls {
         return "DropDowns/GetAllParts?subTypeId=\(subTypeId)".fullUrl()
     }
         
+    static func engineSize() -> String {
+        return "DropDowns/GetAllEngineSize".fullUrl()
+    }
+    
+    static func wheels() -> String {
+        return "DropDowns/GetAllWheels".fullUrl()
+    }
+    
+    static func driveSystem() -> String {
+        return "DropDowns/GetAllFinalDriveSystem".fullUrl()
+    }
+    
     //job_type
     static func jobTypes() -> String {
         return "DropDowns/GetAllJobType".fullUrl()

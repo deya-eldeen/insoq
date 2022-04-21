@@ -90,11 +90,17 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.parts(subTypeId: subTypeId), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
+    static func engineSize(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.engineSize(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
     
+    static func wheels(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.wheels(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
     
-    
-    
-    
+    static func driveSystem(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.driveSystem(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
     
     static func jobTypes(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.jobTypes(), method: .get) { (response: ListableCompletionHandler) in completion(response) }

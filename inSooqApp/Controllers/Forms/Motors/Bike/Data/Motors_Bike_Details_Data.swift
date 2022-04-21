@@ -40,11 +40,11 @@ extension Motors_Bike_Details_VC {
         let specificationsLabel = FormLabel()
         specificationsLabel.text = "Specifications"
         
-        
         let milageField = FormField()
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
         
+        //
         let engineSizePicker = FormPicker()
         engineSizePicker.setPlaceHolder("Engine Size")
         engineSizePicker.id = .engineSize
@@ -81,10 +81,10 @@ extension Motors_Bike_Details_VC {
         drivePicker.setPlaceHolder("Please select final drive system")
         drivePicker.id = .finalDriveSystem
         
-        
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        //
         
         let locationView = FormLocationView().render()
         

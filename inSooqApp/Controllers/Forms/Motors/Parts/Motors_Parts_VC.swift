@@ -18,7 +18,6 @@ class Motors_Parts_VC: FormViewController {
     // Params
     var categoryId = 0
     var subCategoryId = 0
-    var subTypeId = 0
     
     // Requests
     func requestCategories() {
@@ -31,14 +30,6 @@ class Motors_Parts_VC: FormViewController {
             self.data_subcategory = response.value ?? []
         }
     }
-    func requestMake() {
-        //??????
-    }
-    func requestPartName() {
-        ApiRequests.parts(subTypeId: subTypeId) { response in
-            self.data_partName = response.value ?? []
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +38,6 @@ class Motors_Parts_VC: FormViewController {
 
         self.requestCategories()
         self.requestSubcategories()
-        self.requestMake()
-        self.requestPartName()
     }
     
     override func feedStackView() {
@@ -77,9 +66,6 @@ class Motors_Parts_VC: FormViewController {
             case .category:
                 self.subCategoryId = item.id ?? 0
                 self.requestSubcategories()
-            case .subcategory:
-                self.subTypeId = item.id ?? 0
-                self.requestPartName()
             default: break
             }
             

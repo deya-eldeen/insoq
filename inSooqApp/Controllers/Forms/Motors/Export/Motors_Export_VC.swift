@@ -9,10 +9,12 @@ import UIKit
 
 class Motors_Export_VC: FormViewController {
     
+    // Data
     var dataMakers = [MotorMaker]()
     var dataMotorModels = [MotorModel]()
     var dataMotorTrim = [MotorTrim]()
     
+    // Params
     var selectedMakerID = 0
     var selectedModelNameEn = ""
     var selectedModelNameAr = ""

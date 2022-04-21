@@ -27,6 +27,7 @@ extension Motors_Bike_VC {
         let addLabel = FormLabel()
         addLabel.text = "Now let's add your bike make and model"
     
+        //
         let categoryPicker = FormPicker()
         categoryPicker.setPlaceHolder("What is your bike category?")
         categoryPicker.id = .bikeCategory
@@ -34,6 +35,7 @@ extension Motors_Bike_VC {
         let subcategoryPicker = FormPicker()
         subcategoryPicker.setPlaceHolder("What is your bike subcategory?")
         subcategoryPicker.id = .bikeSubcategory
+        //
         
         let yearField = FormField()
         yearField.id = .year
