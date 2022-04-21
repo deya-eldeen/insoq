@@ -9,13 +9,47 @@ import UIKit
 
 class Mobile_Numbers_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var data_operator = [ListItem]()
+    var data_code = [ListItem]()
+    var data_mobilePlan = [ListItem]()
+    var data_locations = [LocationModel]()
+
+    // Params
+    var emirate = ""
+    var operatorName = ""
+
+    // Requests
+    func request_operator () {
+        ApiRequests.operators(emirate: emirate) { response in
+            self.data_operator = response.value ?? []
+        }
+    }
+    func request_code () {
+        ApiRequests.numberCodes(operatorName: operatorName) { response in
+            self.data_code = response.value ?? []
+        }
+    }
+    func request_mobilePlan () {
+        ApiRequests.numberPlans(emirate: emirate) { response in
+            self.data_mobilePlan = response.value ?? []
+        }
+    }
+    func request_locations () {
+        ApiRequests.locations { response in
+            self.data_locations = response.value ?? []
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        
+        self.request_operator()
+        self.request_code()
+        self.request_mobilePlan()
+        self.request_locations()
+        
     }
     
     override func feedStackView() {
@@ -29,24 +63,19 @@ class Mobile_Numbers_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            case .operator:
+            customeListView.setData(vc:self,list: self.data_operator)
+            case .code:
+            customeListView.setData(vc:self,list: self.data_code)
+            case .mobilePlan:
+            customeListView.setData(vc:self,list: self.data_mobilePlan)
+            case .location:
+            customeListView.setData(vc:self,list: self.data_locations)
             default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
-            
-//            switch picker.id {
-//            case .carBrand:
-//            case .model:
-//            default: break
-//            }
-            
         }
         
         self.customeListView.showListing(vc: self)

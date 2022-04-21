@@ -26,9 +26,11 @@ extension Job_Wanted_VC {
         let addLabel = FormLabel()
         addLabel.text = "Looks good, now please add more details..."
 
+        //
         let typePicker = FormPicker()
         typePicker.setPlaceHolder("Job type")
         typePicker.id = .jobType
+        //
         
         let phoneField = FormField()
         phoneField.id = .phoneNumber

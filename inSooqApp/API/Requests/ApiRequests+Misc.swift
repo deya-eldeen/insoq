@@ -137,7 +137,7 @@ extension ApiRequests {
     }
     
     static func plateCodes(completion:@escaping (ListableCompletionHandler) -> Void) {
-        NetworkService().simpleRequest(url: APIUrls.plateCodes(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+        NetworkService().simpleRequest(url: APIUrls.plateCodes(), method: .post) { (response: ListableCompletionHandler) in completion(response) }
     }
     
     static func plateTypes(emirate: String, completion:@escaping (ListableCompletionHandler) -> Void) {

@@ -21,9 +21,9 @@ class ApiRequests {
 
 extension ApiRequests {
     
-    typealias NationalitiesCompletionHandler = (DataResponse<[NationalityModel],AFError>)
-    static func nationalities(completion:@escaping (NationalitiesCompletionHandler) -> Void) {
-        NetworkService.shared.simpleRequest(url: APIUrls.nationalities(), method: .get) { (response: NationalitiesCompletionHandler) in completion(response) }
+    //typealias NationalitiesCompletionHandler = (DataResponse<[NationalityModel],AFError>)
+    static func nationalities(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService.shared.simpleRequest(url: APIUrls.nationalities(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
     typealias LocationsCompletionHandler = (DataResponse<[LocationModel],AFError>)
@@ -31,14 +31,14 @@ extension ApiRequests {
         NetworkService.shared.simpleRequest(url: APIUrls.locations(), method: .get) { (response: LocationsCompletionHandler) in completion(response) }
     }
     
-    typealias EducationLevelsCompletionHandler = (DataResponse<[EducationLevelModel],AFError>)
-    static func educationLevels(completion:@escaping (EducationLevelsCompletionHandler) -> Void) {
-        NetworkService.shared.simpleRequest(url: APIUrls.educationLevels(), method: .get) { (response: EducationLevelsCompletionHandler) in completion(response) }
+    //typealias EducationLevelsCompletionHandler = (DataResponse<[EducationLevelModel],AFError>)
+    static func educationLevels(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService.shared.simpleRequest(url: APIUrls.educationLevels(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    typealias CareerLevelsCompletionHandler = (DataResponse<[CareerLevelModel],AFError>)
-    static func careerLevels(completion:@escaping (CareerLevelsCompletionHandler) -> Void) {
-        NetworkService.shared.simpleRequest(url: APIUrls.careerLevels(), method: .get) { (response: CareerLevelsCompletionHandler) in completion(response) }
+    //typealias CareerLevelsCompletionHandler = (DataResponse<[CareerLevelModel],AFError>)
+    static func careerLevels(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService.shared.simpleRequest(url: APIUrls.careerLevels(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
 }

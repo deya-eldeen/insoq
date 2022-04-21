@@ -94,12 +94,11 @@ extension Plate_Numbers_VC {
         let plateNumberField = FormField()
         plateNumberField.id = .plateNumber
         plateNumberField.placeholder = "Plate Number 000000"
-        //
         
-    
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        //
         
         let locationView = FormLocationView().render()
         

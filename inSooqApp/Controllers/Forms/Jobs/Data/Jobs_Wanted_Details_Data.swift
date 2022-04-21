@@ -21,6 +21,7 @@ extension Job_Wanted_Details_VC {
     
         let fileView = FormFile().render()
         
+        //
         let genderPicker = FormPicker()
         genderPicker.id = .gender
         genderPicker.setPlaceHolder("Gender")
@@ -64,7 +65,6 @@ extension Job_Wanted_Details_VC {
         let expectedSalaryPicker = FormPicker()
         expectedSalaryPicker.id = .expectedMonthlySalary
         expectedSalaryPicker.setPlaceHolder("Expected Monthly Salary")
-        
         //
 
         let locationView = FormLocationView().render()

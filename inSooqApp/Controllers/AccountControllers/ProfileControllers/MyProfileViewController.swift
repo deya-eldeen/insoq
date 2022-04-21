@@ -95,10 +95,10 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     private var _isAdsChecked:Bool=true
     private var _hideData:Bool=true
     
-    var nationalitiesData = [NationalityModel]()
+    var nationalitiesData = [ListItem]()
     var locationsData = [LocationModel]()
-    var educationLevelsData = [EducationLevelModel]()
-    var careerLevelsData = [CareerLevelModel]()
+    var educationLevelsData = [ListItem]()
+    var careerLevelsData = [ListItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

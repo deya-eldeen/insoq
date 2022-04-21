@@ -59,20 +59,21 @@ extension Mobile_Numbers_VC {
         codePicker.id = .code
         codePicker.setPlaceHolder("Please select a code")
         
-        let plateNumberField = FormField()
-        plateNumberField.id = .plateNumber
-        plateNumberField.placeholder = "000000"
+        let mobileNumberField = FormField()
+        mobileNumberField.id = .plateNumber
+        mobileNumberField.placeholder = "000000"
         
-        let planePicker = FormPicker()
-        planePicker.id = .mobilePlan
-        planePicker.setPlaceHolder("Please select mobile plan")
+        let planPicker = FormPicker()
+        planPicker.id = .mobilePlan
+        planPicker.setPlaceHolder("Please select mobile plan")
         
-        //
-        
-    
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        
+        //
+        
+
         
         let locationView = FormLocationView().render()
         
@@ -97,8 +98,8 @@ extension Mobile_Numbers_VC {
             
             operatorPicker,
             codePicker,
-            plateNumberField,
-            planePicker,
+            mobileNumberField,
+            planPicker,
             
             locationPicker,
             locationView,

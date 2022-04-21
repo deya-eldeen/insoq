@@ -9,13 +9,22 @@ import UIKit
 
 class Job_Wanted_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var dataTypes = [ListItem]()
+
+    // Requests
+    func requestTypes() {
+        ApiRequests.jobTypes { response in
+            self.dataTypes = response.value ?? []
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Job_Wanted_Details_VC")
+        
+        // Calls
+        requestTypes()
     }
     
     override func feedStackView() {
@@ -29,24 +38,13 @@ class Job_Wanted_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            case .jobType:
+            customeListView.setData(vc:self,list: self.dataTypes)
             default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
-            
-//            switch picker.id {
-//            case .carBrand:
-//            case .model:
-//            default: break
-//            }
-            
         }
         
         self.customeListView.showListing(vc: self)

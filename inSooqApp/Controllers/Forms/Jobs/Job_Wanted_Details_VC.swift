@@ -9,13 +9,83 @@ import UIKit
 
 class Job_Wanted_Details_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var data_gender = [ListItem]()
+    var data_nationality = [ListItem]()
+    var data_location = [LocationModel]()
+    var data_educationLevel = [ListItem]()
+    var data_workExperience = [ListItem]()
+    var data_commitment = [ListItem]()
+    var data_noticePeriod = [ListItem]()
+    var data_visaStatus = [ListItem]()
+    var data_professionalLevel = [ListItem]()
+    var data_expectedMonthlySalary = [ListItem]()
+    
+    // Requests
+    func request_gender() {
+        //
+    }
+    func request_nationality() {
+        ApiRequests.nationalities { response in
+            self.data_nationality = response.value ?? []
+        }
+    }
+    func request_location() {
+        ApiRequests.locations { response in
+            self.data_location = response.value ?? []
+        }
+    }
+    func request_educationLevel() {
+        ApiRequests.educationLevels { response in
+            self.data_educationLevel = response.value ?? []
+        }
+    }
+    func request_workExperience() {
+        ApiRequests.workExperiences { response in
+            self.data_workExperience = response.value ?? []
+        }
+    }
+    func request_commitment() {
+        ApiRequests.commitments { response in
+            self.data_commitment = response.value ?? []
+        }
+    }
+    func request_noticePeriod() {
+        ApiRequests.noticePeriods { response in
+            self.data_noticePeriod = response.value ?? []
+        }
+    }
+    func request_visaStatus() {
+        ApiRequests.visaStatuses { response in
+            self.data_visaStatus = response.value ?? []
+        }
+    }
+    func request_professionalLevel() {
+        ApiRequests.careerLevels { response in
+            self.data_professionalLevel = response.value ?? []
+        }
+    }
+    func request_expectedMonthlySalary() {
+        ApiRequests.monthlySalary { response in
+            self.data_expectedMonthlySalary = response.value ?? []
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        
+        request_gender()
+        request_nationality()
+        request_location()
+        request_educationLevel()
+        request_workExperience()
+        request_commitment()
+        request_noticePeriod()
+        request_visaStatus()
+        request_professionalLevel()
+        request_expectedMonthlySalary()
+        
     }
     
     override func feedStackView() {
@@ -29,23 +99,33 @@ class Job_Wanted_Details_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            
+            case .gender:
+            customeListView.setData(vc:self,list: self.dataGender)
+            case .nationality:
+            customeListView.setData(vc:self,list: self.data_nationality)
+            case .location:
+            customeListView.setData(vc:self,list: self.data_location)
+            case .educationLevel:
+            customeListView.setData(vc:self,list: self.data_educationLevel)
+            case .workExperience:
+            customeListView.setData(vc:self,list: self.data_workExperience)
+            case .commitment:
+            customeListView.setData(vc:self,list: self.data_commitment)
+            case .noticePeriod:
+            customeListView.setData(vc:self,list: self.data_noticePeriod)
+            case .visaStatus:
+            customeListView.setData(vc:self,list: self.data_visaStatus)
+            case .professionalLevel:
+            customeListView.setData(vc:self,list: self.data_professionalLevel)
+            case .expectedMonthlySalary:
+            customeListView.setData(vc:self,list: self.data_expectedMonthlySalary)
+            
             default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
-            
-//            switch picker.id {
-//            case .carBrand:
-//            case .model:
-//            default: break
-//            }
             
         }
         

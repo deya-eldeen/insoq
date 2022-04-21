@@ -33,7 +33,8 @@ class FormViewController: UIViewController {
     var selectedCat = AdCategory.none
     
     var dataWarranty = [ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes"), ListItem.init(id: 2, ar_Text: "No", en_Text: "No")]
-    
+    var dataGender = [ListItem.init(id: 1, ar_Text: "Male", en_Text: "Male"), ListItem.init(id: 2, ar_Text: "Female", en_Text: "Female")]
+
     // MARK: DropDowns
     var customeListView: CustomListView = .fromNib()
 
