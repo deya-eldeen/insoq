@@ -76,6 +76,8 @@ class Classified_Details_VC: FormViewController {
         }
         
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.leadsToPrices = true
+        
         self.categoryId = FormViewController.selectedCat.rawValue
         self.typeId = FormViewController.selectedTypeID
         

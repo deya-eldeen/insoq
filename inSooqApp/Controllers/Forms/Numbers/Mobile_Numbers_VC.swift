@@ -44,6 +44,7 @@ class Mobile_Numbers_VC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.leadsToPrices = true
         
         self.request_operator()
         self.request_code()

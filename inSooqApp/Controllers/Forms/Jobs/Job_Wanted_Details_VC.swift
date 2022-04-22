@@ -74,6 +74,7 @@ class Job_Wanted_Details_VC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.leadsToPrices = true
         
         request_gender()
         request_nationality()

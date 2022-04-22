@@ -80,6 +80,7 @@ class Motors_Used_Details_VC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.leadsToPrices = true
         self.categoryId = FormViewController.selectedCat.rawValue
         
         // Calls

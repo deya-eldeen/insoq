@@ -61,6 +61,8 @@ class Mobiles_Tablets_Accessories_VC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.leadsToPrices = true
+        
         self.categoryId = FormViewController.selectedCat.rawValue
         self.typeId = FormViewController.selectedTypeID
         

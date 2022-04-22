@@ -43,6 +43,7 @@ class Plate_Numbers_VC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.leadsToPrices = true
         
         request_emirate()
         request_plateType()

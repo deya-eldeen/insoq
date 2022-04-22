@@ -9,8 +9,14 @@ import UIKit
 
 class PricesViewController: UIViewController {
     
+    var previousVC: UIViewController?
+    
     @IBAction func didTapContinue() {
-        self.navigationController?.popToRootViewController(animated: true)
+        
+        self.dismiss(animated: true) {
+            self.previousVC?.navigationController?.popToRootViewController(animated: true)
+        }
+        
     }
     
 }

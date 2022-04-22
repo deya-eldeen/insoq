@@ -37,6 +37,7 @@ class Services_Others_VC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.leadsToPrices = true
         
         self.requestTrims()
         self.requestMakers()

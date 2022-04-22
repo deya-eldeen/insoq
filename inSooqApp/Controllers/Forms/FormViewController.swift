@@ -36,6 +36,8 @@ class FormViewController: UIViewController {
 
     var selectedCat = AdCategory.none
     
+    var leadsToPrices = false
+    
     var dataWarranty = [
         ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes"),
         ListItem.init(id: 2, ar_Text: "No", en_Text: "No")
@@ -73,7 +75,18 @@ class FormViewController: UIViewController {
         let validationData = self.isValid()
         
         if(validationData.0 == true) {
-            navigationController?.pushViewController(self.nextViewController, animated: true)
+
+            if ( self.leadsToPrices == true ) {
+                let nextVC = (self.nextViewController as! PricesViewController)
+                
+                nextVC.modalPresentationStyle = .overCurrentContext
+                nextVC.modalTransitionStyle = .crossDissolve
+                nextVC.previousVC = self
+                navigationController?.present(nextVC, animated: true)
+            } else {
+                 navigationController?.pushViewController(self.nextViewController, animated: true)
+            }
+            
         } else {
             self.showAlert(title: "", body: validationData.1.rawValue)
         }
