@@ -9,15 +9,36 @@ import UIKit
 
 class Classified_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var dataCategory = [ListItem]()
+    var dataSubcategory = [ListItem]()
     
+    // Meta
     var classType = ClassTypes.none
+    
+    // Params
+    var categoryId = 0
+    var subCategoryId = 0
+    
+    // Requests
+    func request_category() {
+        ApiRequests.subcategories(categoryId: categoryId) { response in
+            self.dataCategory = response.value ?? []
+        }
+    }
+    func request_subcategories() {
+        ApiRequests.subtypes(subCategoryId: subCategoryId) { response in
+            self.dataSubcategory = response.value ?? []
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Classified_Details_VC")
+        self.categoryId = FormViewController.selectedCat.rawValue
+        
+        request_category()
+        request_subcategories()
     }
     
     override func feedStackView() {
@@ -31,23 +52,22 @@ class Classified_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            case .category:
+            customeListView.setData(vc:self,list: self.dataCategory)
+            case .subcategory:
+            customeListView.setData(vc:self,list: self.dataSubcategory)
             default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
             
-//            switch picker.id {
-//            case .carBrand:
-//            case .model:
-//            default: break
-//            }
+            switch picker.id {
+            case .category:
+                self.subCategoryId = item.id ?? 0
+                self.request_subcategories()
+            default: break
+            }
             
         }
         

@@ -54,11 +54,11 @@ extension Classified_Details_VC {
         let brandPicker = FormPicker()
         brandPicker.id = .brand
         brandPicker.setPlaceHolder("Please select brand")
-        //
         
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        //
         
         let locationView = FormLocationView().render()
         

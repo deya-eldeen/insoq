@@ -16,12 +16,48 @@ enum ClassTypes {
 
 class Classified_Details_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var dataAge = [ListItem]()
+    var dataUsage = [ListItem]()
+    var dataCondition = [ListItem]()
+    var dataBrand = [ListItem]()
+    var dataLocation = [LocationModel]()
     
+    // META
     var classType = ClassTypes.none
 
+    // Params
+    var categoryId = 0
+    var typeId = 0
+    var subCategoryId = 0
+    
+    // Requests
+    func requestAge() {
+        ApiRequests.age(typeId: typeId) { response in
+            self.dataAge = response.value ?? []
+        }
+    }
+    func requestUsage() {
+        ApiRequests.usage(typeId: typeId) { response in
+            self.dataUsage = response.value ?? []
+        }
+    }
+    func requestCondition() {
+        ApiRequests.conditions(categoryId: categoryId) { response in
+            self.dataCondition = response.value ?? []
+        }
+    }
+    func requestBrand() {
+//        ApiRequests.conditions(categoryId: categoryId) { response in
+//            self.dataCondition = response.value ?? []
+//        }
+    }
+    func requestLocation() {
+        ApiRequests.locations { response in
+            self.dataLocation = response.value ?? []
+        }
+    }
+    
     override func viewDidLoad() {
         
         let cat = FormViewController.selectedCat
@@ -40,7 +76,15 @@ class Classified_Details_VC: FormViewController {
         }
         
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        self.categoryId = FormViewController.selectedCat.rawValue
+        self.typeId = FormViewController.selectedTypeID
         
+        requestAge()
+        requestUsage()
+        requestCondition()
+        requestBrand()
+        requestLocation()
+            
         super.viewDidLoad()
 
     }
@@ -56,24 +100,22 @@ class Classified_Details_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            case .age:
+            customeListView.setData(vc:self,list: self.dataAge)
+            case .usage:
+            customeListView.setData(vc:self,list: self.dataUsage)
+            case .condition:
+            customeListView.setData(vc:self,list: self.dataCondition)
+            case .brand:
+            customeListView.setData(vc:self,list: self.dataBrand)
+            case .location:
+            customeListView.setData(vc:self,list: self.dataLocation)
+
             default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
-            
-//            switch picker.id {
-//            case .carBrand:
-//            case .model:
-//            default: break
-//            }
-            
         }
         
         self.customeListView.showListing(vc: self)

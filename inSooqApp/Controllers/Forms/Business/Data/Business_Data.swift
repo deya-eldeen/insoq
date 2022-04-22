@@ -59,11 +59,11 @@ extension Business_VC {
         let subcategoryPicker = FormPicker()
         subcategoryPicker.id = .subcategory
         subcategoryPicker.setPlaceHolder("Please select subcategory")
-        //
         
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
         locationPicker.id = .location
+        //
         
         let locationView = FormLocationView().render()
         

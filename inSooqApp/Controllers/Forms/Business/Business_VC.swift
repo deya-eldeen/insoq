@@ -9,13 +9,42 @@ import UIKit
 
 class Business_VC: FormViewController {
     
-    var dataMakers = [MotorMaker]()
-    var dataMotorModels = [MotorModel]()
-    var dataMotorTrim = [MotorTrim]()
+    // Data
+    var dataCategory = [ListItem]()
+    var dataSubcategory = [ListItem]()
+    var dataLocation = [LocationModel]()
+    
+    // Params
+    var categoryId = 0
+    var subCategoryId = 0
+    
+    // Requests
+    func requestCategory() {
+        ApiRequests.subcategories(categoryId: categoryId) { response in
+            self.dataCategory = response.value ?? []
+        }
+    }
+    func requestSubcategory() {
+        ApiRequests.subtypes(subCategoryId: subCategoryId) { response in
+            self.dataSubcategory = response.value ?? []
+        }
+    }
+    func requestLocation() {
+        ApiRequests.locations { response in
+            self.dataLocation = response.value ?? []
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
+        
+        self.categoryId = FormViewController.selectedCat.rawValue
+        
+        requestCategory()
+        requestSubcategory()
+        requestLocation()
+        
     }
     
     override func feedStackView() {
@@ -29,23 +58,24 @@ class Business_VC: FormViewController {
         customeListView.pickerID = picker.id
         
         switch picker.id {
-            case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
-            case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
-            case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            case .category:
+            customeListView.setData(vc:self,list: self.dataCategory)
+            case .subcategory:
+            customeListView.setData(vc:self,list: self.dataSubcategory)
+            case .location:
+            customeListView.setData(vc:self,list: self.dataLocation)
             default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
             
-//            switch picker.id {
-//            case .carBrand:
-//            case .model:
-//            default: break
-//            }
+            switch picker.id {
+            case .category:
+                self.subCategoryId = item.id ?? 0
+                self.requestSubcategory()
+            default: break
+            }
             
         }
         
