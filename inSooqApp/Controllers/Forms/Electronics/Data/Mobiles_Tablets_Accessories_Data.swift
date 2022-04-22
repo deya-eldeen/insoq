@@ -90,6 +90,8 @@ extension Mobiles_Tablets_Accessories_VC {
         let adPreview = FormPreviewView().render()
 
         return [
+            header,
+
             startLabel,
             tipLabel,
             titleField,

@@ -75,6 +75,8 @@ extension Business_VC {
         let adPreview = FormPreviewView().render()
 
         return [
+            header,
+
             startLabel,
             tipLabel,
             titleField,

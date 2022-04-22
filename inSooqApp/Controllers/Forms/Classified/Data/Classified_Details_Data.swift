@@ -72,6 +72,8 @@ extension Classified_Details_VC {
         switch self.classType {
         case .personal:
             return [
+                header,
+
                 looksGoodLabel,
                 photosLabel,
                 photoPicker,
@@ -93,6 +95,8 @@ extension Classified_Details_VC {
             ]
         case .collectables:
             return [
+                header,
+
                 looksGoodLabel,
                 photosLabel,
                 photoPicker,
@@ -113,6 +117,8 @@ extension Classified_Details_VC {
             ]
         case .pets:
             return [
+                header,
+
                 looksGoodLabel,
                 photosLabel,
                 photoPicker,

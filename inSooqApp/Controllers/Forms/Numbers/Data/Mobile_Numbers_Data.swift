@@ -80,6 +80,8 @@ extension Mobile_Numbers_VC {
         let adPreview = FormPreviewView().render()
 
         return [
+            header,
+
             startLabel,
             tipLabel,
             titleField,
