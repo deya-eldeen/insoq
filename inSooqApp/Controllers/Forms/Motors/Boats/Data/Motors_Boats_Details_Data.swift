@@ -107,7 +107,7 @@ extension Motors_Boats_Details_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

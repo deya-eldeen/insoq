@@ -111,7 +111,7 @@ extension Motors_Machinery_Details_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

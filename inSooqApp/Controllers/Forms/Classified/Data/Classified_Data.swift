@@ -66,7 +66,7 @@ extension Classified_VC {
             subcategoryPicker,
             
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

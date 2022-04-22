@@ -52,7 +52,7 @@ extension Motors_Boats_VC {
             categoryPicker,
             subcategoryPicker,
             yearField,
-            formContinueButton
+            formContinueButton,header,
         ]
     }
 

@@ -31,17 +31,29 @@ class FormViewController: UIViewController {
     static var selectedCat = AdCategory.none
     static var selectedTypeID = 0
 
-    var adTitle = ""
-    var adLocation = ""
+    static var adTitle = ""
+    static var adLocation = ""
 
     var selectedCat = AdCategory.none
     
-    var dataWarranty = [ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes"), ListItem.init(id: 2, ar_Text: "No", en_Text: "No")]
-    var dataGender = [ListItem.init(id: 1, ar_Text: "Male", en_Text: "Male"), ListItem.init(id: 2, ar_Text: "Female", en_Text: "Female")]
+    var dataWarranty = [
+        ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes"),
+        ListItem.init(id: 2, ar_Text: "No", en_Text: "No")
+    ]
+    
+    var dataGender = [
+        ListItem.init(id: 1, ar_Text: "Male", en_Text: "Male"),
+        ListItem.init(id: 2, ar_Text: "Female", en_Text: "Female")
+    ]
 
     // MARK: DropDowns
     var customeListView: CustomListView = .fromNib()
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updatePreview()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemGray5
@@ -60,7 +72,7 @@ class FormViewController: UIViewController {
         
         let validationData = self.isValid()
         
-        if(validationData.0 == true) {            
+        if(validationData.0 == true) {
             navigationController?.pushViewController(self.nextViewController, animated: true)
         } else {
             self.showAlert(title: "", body: validationData.1.rawValue)
@@ -186,32 +198,34 @@ class FormViewController: UIViewController {
     
     func isValid() -> (Bool,FormValidationError) {
         
-//        for element in formElements {
-//
-//            if type(of: element) == FormAcceptView.self {
-//                let acceptView = (element as! FormAcceptView)
-//                if (acceptView.isChecked == false) {
-//                    return (false,.userShouldAgreeError)
-//                }
-//            }
-//
-//            if type(of: element) == FormPicker.self {
-//                let picker = (element as! FormPicker)
-//                let text = picker.textfield.text ?? ""
-//                if (text == "") {
-//                    return (false,.shouldFillForm)
-//                }
-//            }
-//
-//            if type(of: element) == FormField.self {
-//                let field = (element as! FormField)
-//                let text = field.text ?? ""
-//                if (text == "") {
-//                    return (false,.shouldFillForm)
-//                }
-//            }
-//
-//        }
+        return (true, .none)
+        
+        for element in formElements {
+
+            if type(of: element) == FormAcceptView.self {
+                let acceptView = (element as! FormAcceptView)
+                if (acceptView.isChecked == false) {
+                    return (false,.userShouldAgreeError)
+                }
+            }
+
+            if type(of: element) == FormPicker.self {
+                let picker = (element as! FormPicker)
+                let text = picker.textfield.text ?? ""
+                if (text == "") {
+                    return (false,.shouldFillForm)
+                }
+            }
+
+            if type(of: element) == FormField.self {
+                let field = (element as! FormField)
+                let text = field.text ?? ""
+                if (text == "") {
+                    return (false,.shouldFillForm)
+                }
+            }
+
+        }
         
         return (true, .none)
     }
@@ -223,21 +237,21 @@ class FormViewController: UIViewController {
             if type(of: element) == FormField.self {
                 let field = (element as! FormField)
                 if field.id == .title {
-                    adTitle = field.text ?? ""
+                    FormViewController.adTitle = field.text ?? ""
                 }
             }
             
             if type(of: element) == FormPicker.self {
                 let picker = (element as! FormPicker)
                 if picker.id == .location {
-                    adLocation = picker.textfield.text ?? ""
+                    FormViewController.adLocation = picker.textfield.text ?? ""
                 }
             }
             
             
             if type(of: element) == FormPreviewView.self {
-                (element as! FormPreviewView).adTitleLabel.text = adTitle
-                (element as! FormPreviewView).adLocationLabel.text = adLocation
+                (element as! FormPreviewView).adTitleLabel.text = FormViewController.adTitle
+                (element as! FormPreviewView).adLocationLabel.text = FormViewController.adLocation
             }
             
         }

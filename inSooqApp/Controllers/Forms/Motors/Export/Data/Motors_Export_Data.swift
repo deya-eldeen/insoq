@@ -63,7 +63,7 @@ extension Motors_Export_VC {
             trimPicker,
             yearField,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

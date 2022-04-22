@@ -59,7 +59,7 @@ extension Motors_Parts_VC {
             subcategoryPicker,
             namePicker,
             yearField,
-            formContinueButton
+            formContinueButton,header,
         ]
     }
 

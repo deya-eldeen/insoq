@@ -115,7 +115,7 @@ extension Mobiles_Tablets_Accessories_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

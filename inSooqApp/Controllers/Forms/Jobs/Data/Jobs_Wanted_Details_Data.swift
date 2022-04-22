@@ -94,7 +94,7 @@ extension Job_Wanted_Details_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview,
+            adPreview,header,
         ]
         
     }

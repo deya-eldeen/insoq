@@ -69,7 +69,7 @@ extension Services_Others_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

@@ -54,7 +54,7 @@ extension Job_Wanted_VC {
             typePicker,
             phoneField,
             jobTitleField,
-            formContinueButton
+            formContinueButton,header,
         ]
         
     }

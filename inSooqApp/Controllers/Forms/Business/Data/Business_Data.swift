@@ -96,7 +96,7 @@ extension Business_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

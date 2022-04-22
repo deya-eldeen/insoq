@@ -58,7 +58,7 @@ extension Motors_Bike_VC {
             subcategoryPicker,
             yearField,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

@@ -54,7 +54,7 @@ extension Motors_Machinery_VC {
             categoryPicker,
             subcategoryPicker,
             yearField,
-            formContinueButton
+            formContinueButton,header,
         ]
     }
 

@@ -96,7 +96,7 @@ extension Plate_Numbers_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

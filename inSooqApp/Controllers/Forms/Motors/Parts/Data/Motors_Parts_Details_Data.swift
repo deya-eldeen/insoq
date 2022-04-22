@@ -82,7 +82,7 @@ extension Motors_Parts_Details_VC {
             locationPicker,
             locationView,
             acceptView,
-            formContinueButton
+            formContinueButton,header,
         ]
         
     }

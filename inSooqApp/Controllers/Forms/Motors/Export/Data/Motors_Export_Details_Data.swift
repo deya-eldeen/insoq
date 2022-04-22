@@ -124,7 +124,7 @@ extension Motors_Export_Details_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview
+            adPreview,header,
         ]
         
     }

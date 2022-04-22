@@ -92,7 +92,7 @@ extension Classified_Details_VC {
                 locationView,
                 acceptView,
                 formContinueButton,
-                adPreview
+                adPreview,header,
             ]
         case .collectables:
             return [
@@ -114,7 +114,7 @@ extension Classified_Details_VC {
                 locationView,
                 acceptView,
                 formContinueButton,
-                adPreview
+                adPreview,header,
             ]
         case .pets:
             return [
@@ -132,7 +132,7 @@ extension Classified_Details_VC {
                 locationView,
                 acceptView,
                 formContinueButton,
-                adPreview
+                adPreview,header,
             ]
         case .none:
             return []
