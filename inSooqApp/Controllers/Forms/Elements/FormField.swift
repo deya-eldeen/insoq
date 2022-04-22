@@ -22,6 +22,7 @@ class FormField: UITextField, FormElement {
     }
     
     func commonInit() {
+        self.font = .boldSystemFont(ofSize: 14)
         self.borderStyle = .roundedRect
         self.textColor = .gray
         self.backgroundColor = .white

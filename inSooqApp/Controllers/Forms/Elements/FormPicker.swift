@@ -22,8 +22,8 @@ class FormPicker: UIView, FormElement {
     let button = PickerButton()
     let textfield = UITextField()
     
-    let pickerImage = UIImage(systemName: "chevron.down")
-    let pickerImageView = UIImageView(frame: .init(x: 0, y: 0, width: 20, height: 20))
+    let pickerImage = UIImage(named: "tri")?.withTintColor(.darkGray)
+    let pickerImageView = UIImageView(frame: .init(x: 0, y: 0, width: 16, height: 16))
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -43,6 +43,8 @@ class FormPicker: UIView, FormElement {
         
         textfield.borderStyle = .roundedRect
         textfield.textColor = .gray
+        textfield.font = .boldSystemFont(ofSize: 14)
+        
         textfield.backgroundColor = .white
 //        textfield.tintColor = .darkGray
         textfield.isUserInteractionEnabled = false
@@ -58,7 +60,7 @@ class FormPicker: UIView, FormElement {
         self.addSubview(pickerImageView)
         pickerImageView.translatesAutoresizingMaskIntoConstraints = false
         pickerImageView.image = pickerImage
-        pickerImageView.tintColor = .orange
+        pickerImageView.tintColor = .gray
         
         pickerImageView.centerYAnchor.constraint(equalTo: self.textfield.centerYAnchor).isActive = true
         pickerImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -12).isActive = true

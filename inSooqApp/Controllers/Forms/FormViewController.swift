@@ -20,6 +20,9 @@ class FormViewController: UIViewController {
     var stackView = UIStackView()
     var scrollView = UIScrollView()
 
+    var formDarkGray = UIColor.darkGray
+    var formLightGray = UIColor.lightGray
+
     var offset: CGFloat = 8
     var formElements = [UIView]()
     

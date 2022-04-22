@@ -14,9 +14,10 @@ extension Classified_Details_VC {
         let header = UIView()
         header.frame.size = .init(width: 0, height: 40)
         
-        let looksGoodLabel = FormLabel()
+        let looksGoodLabel = FormSubLabel()
         looksGoodLabel.text = "Looks good, now please add more details..."
-        
+        looksGoodLabel.textColor = self.formDarkGray
+
         let photosLabel = FormLabel()
         photosLabel.text = "Pictures Of your Ad"
         

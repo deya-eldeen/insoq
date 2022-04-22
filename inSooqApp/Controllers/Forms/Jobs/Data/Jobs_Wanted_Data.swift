@@ -18,6 +18,7 @@ extension Job_Wanted_VC {
         
         let addSubLabel = FormSubLabel()
         addSubLabel.text = "Try to have an information title that's to be point and not very long."
+        addSubLabel.textColor = self.formDarkGray
         
         let titleField = FormField()
         titleField.id = .title

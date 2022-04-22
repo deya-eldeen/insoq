@@ -17,9 +17,9 @@ extension Plate_Numbers_VC {
         let startLabel = FormLabel()
         startLabel.text = "Let's start with the title"
         
-        let tipLabel = FormLabel()
+        let tipLabel = FormSubLabel()
         tipLabel.text = "Try to have an informative title that’s to be point and not very long."
-        tipLabel.textColor = .darkGray
+        tipLabel.textColor = self.formDarkGray
         
         let titleField = FormField()
         titleField.id = .title
