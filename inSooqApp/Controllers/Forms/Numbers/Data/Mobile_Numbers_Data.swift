@@ -27,11 +27,6 @@ extension Mobile_Numbers_VC {
         let looksGoodLabel = FormLabel()
         looksGoodLabel.text = "Looks good, now please add more details..."
         
-        let photosLabel = FormLabel()
-        photosLabel.text = "Pictures Of your Ad"
-        
-        let photoPicker = FormPhotoPicker().render()
-        
         let listingPriceField = FormField()
         listingPriceField.id = .price
         listingPriceField.placeholder = "Listing Price"
@@ -89,8 +84,6 @@ extension Mobile_Numbers_VC {
             tipLabel,
             titleField,
             looksGoodLabel,
-            photosLabel,
-            photoPicker,
             listingPriceField,
             phoneNumberField,
             descriptionLabel,

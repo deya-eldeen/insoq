@@ -9,35 +9,6 @@ import UIKit
 
 extension Plate_Numbers_VC {
 
-    //Label: Let's start with the title
-    //Label: Try to have an informative title that’s to be point and not very long.
-    //Field: Ad Title
-    //Label: Looks good, now please add more details...
-    //Label Pictures of your ad
-    //View: Photo Upload View 10 pictures vertically
-    //Label: Listing Price
-    //Field: 0.00
-    //Label: Phone Number
-    //Field: Phone Number
-    //Label: Add a shot description (Optional)
-    
-    //Field: Write more about your ad...
-    //Label: Specifications
-    //Picker: Please select an emirate
-    //Picker: Please select a plate type
-    //Picker: Please select a plate code
-    //Field: Plate Number 000000
-    
-    //Picker: Please select your location
-    //Label: Your Location
-    //Location View: Location >> on click opens map
-    //Check box: By submitting this ad, I agree on {terms & conditions} and {Privacy Policy}
-    //Label: Once you submit the ad, we will review before publishing. You will be notified once approved
-    //Button: Continue
-    //View: Ad Preview
-    //
-
-    
     func formElements() -> [UIView] {
         
         let header = UIView()
@@ -48,6 +19,7 @@ extension Plate_Numbers_VC {
         
         let tipLabel = FormLabel()
         tipLabel.text = "Try to have an informative title that’s to be point and not very long."
+        tipLabel.textColor = .darkGray
         
         let titleField = FormField()
         titleField.id = .title
@@ -55,11 +27,6 @@ extension Plate_Numbers_VC {
 
         let looksGoodLabel = FormLabel()
         looksGoodLabel.text = "Looks good, now please add more details..."
-        
-        let photosLabel = FormLabel()
-        photosLabel.text = "Pictures Of your Ad"
-        
-        let photoPicker = FormPhotoPicker().render()
         
         let listingPriceField = FormField()
         listingPriceField.id = .price
@@ -110,12 +77,11 @@ extension Plate_Numbers_VC {
         let adPreview = FormPreviewView().render()
 
         return [
+            header,
             startLabel,
             tipLabel,
             titleField,
             looksGoodLabel,
-            photosLabel,
-            photoPicker,
             listingPriceField,
             phoneNumberField,
             descriptionLabel,
