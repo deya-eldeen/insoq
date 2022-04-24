@@ -1555,6 +1555,20 @@
 			path = Classified;
 			sourceTree = "<group>";
 		};
+		E3A0E89F2815C6650084D11D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E380354727F8513D00FF0212 /* Misc.storyboard */,
+				E3D2FEB62801ABB800EECA95 /* Forms.storyboard */,
+				E380353C27F653E500FF0212 /* Adding.storyboard */,
+				E380353F27F657E500FF0212 /* Items.storyboard */,
+				E380353A27F6506E00FF0212 /* Account.storyboard */,
+				E380353427F64AB400FF0212 /* Meta.storyboard */,
+				E380353727F64CE000FF0212 /* User.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		E3A8111328043004003A2CC0 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1845,6 +1859,7 @@
 		F107A1BE25CFCC9F00FC6340 /* inSooqApp */ = {
 			isa = PBXGroup;
 			children = (
+				E3A0E89F2815C6650084D11D /* Storyboards */,
 				CED301FB27E3DB2B0095B4AB /* Hudhud */,
 				17AA1C0E2788B66F008B5409 /* Custom UI */,
 				F1F941832633977B00862E98 /* GoogleService-Info.plist */,
@@ -1852,13 +1867,6 @@
 				F107A1C825CFCCA100FC6340 /* Assets.xcassets */,
 				F107A1C125CFCC9F00FC6340 /* SceneDelegate.swift */,
 				F107A1C525CFCC9F00FC6340 /* Main.storyboard */,
-				E380354727F8513D00FF0212 /* Misc.storyboard */,
-				E3D2FEB62801ABB800EECA95 /* Forms.storyboard */,
-				E380353C27F653E500FF0212 /* Adding.storyboard */,
-				E380353F27F657E500FF0212 /* Items.storyboard */,
-				E380353A27F6506E00FF0212 /* Account.storyboard */,
-				E380353427F64AB400FF0212 /* Meta.storyboard */,
-				E380353727F64CE000FF0212 /* User.storyboard */,
 				F107A1CA25CFCCA100FC6340 /* LaunchScreen.storyboard */,
 				2862BAF1277D2C55009F4B7E /* Assemblies */,
 				2862BAE8277D2B46009F4B7E /* Alerts */,

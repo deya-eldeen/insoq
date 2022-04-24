@@ -10,16 +10,16 @@ import Alamofire
 import Defaults
 
 struct Endpoint {
+    
     var url: String = ""
     var method: HTTPMethod = .get
+    
 }
-
 
 class NetworkService {
     
     static let shared = NetworkService()
 
-    
     func showError(error:String){
         DispatchQueue.main.async {
             UIViewController().showAlert(title: "error", body: error)
@@ -136,7 +136,6 @@ class NetworkService {
                 if(response.error != nil){completion(response)}
 
                 print("submitForm",response.data)
-
                 print("🛠\n",response.request?.cURL() ?? "","\n")
                 
                 if let statusCode = response.response?.statusCode {
@@ -186,9 +185,7 @@ class NetworkService {
                 print("X1",response.error,response.error?.errorDescription,response.error?.localizedDescription)
                 self.showError(error: response.error?.errorDescription ?? "")
             }
-            
-            
-            
+
         }
         
     }
