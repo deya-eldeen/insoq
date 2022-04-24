@@ -11,6 +11,8 @@ class FormPreviewView: UIView, FormElement {
     
     @IBOutlet weak var adTitleLabel: UILabel!
     @IBOutlet weak var adLocationLabel: UILabel!
+    
+    @IBOutlet weak var adImage: UIImageView!
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!

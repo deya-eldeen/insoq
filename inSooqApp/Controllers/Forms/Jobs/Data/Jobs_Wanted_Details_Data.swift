@@ -74,7 +74,7 @@ extension Job_Wanted_Details_VC {
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("Continue", for: .normal)
         
-        let adPreview = FormPreviewView().render()
+//        let adPreview = FormPreviewView().render()
 
         return [
             header,
@@ -94,7 +94,8 @@ extension Job_Wanted_Details_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview,header,
+            //adPreview,
+            header,
         ]
         
     }

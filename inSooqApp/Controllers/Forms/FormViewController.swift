@@ -48,9 +48,14 @@ class FormViewController: UIViewController {
         ListItem.init(id: 2, ar_Text: "Female", en_Text: "Female")
     ]
 
+    // MARK:
+    var imagePicker: ImagePicker!
+
     // MARK: DropDowns
     var customeListView: CustomListView = .fromNib()
 
+    var selectedPhotoTag = 0
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updatePreview()
@@ -62,6 +67,9 @@ class FormViewController: UIViewController {
         prepareStackView()
         feedStackView()
         addSearchView()
+        
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        
     }
     
     func addSearchView() {
@@ -78,7 +86,6 @@ class FormViewController: UIViewController {
 
             if ( self.leadsToPrices == true ) {
                 let nextVC = (self.nextViewController as! PricesViewController)
-                
                 nextVC.modalPresentationStyle = .overCurrentContext
                 nextVC.modalTransitionStyle = .crossDissolve
                 nextVC.previousVC = self
@@ -103,6 +110,12 @@ class FormViewController: UIViewController {
         let mapPickerVC = ViewControllersAssembly.misc.makeViewController(with: "MapPickerViewController")
         self.navigationController?.pushViewController(mapPickerVC, animated: true)
 
+    }
+    
+    @objc func didTapPhoto(button: UIButton) {
+        selectedPhotoTag = button.tag
+        print("selectedPhotoTag",selectedPhotoTag)
+        imagePicker.present(from: button)
     }
     
     var nextViewController: UIViewController!
@@ -131,6 +144,17 @@ class FormViewController: UIViewController {
                 let locationView = (element as! FormLocationView)
                 locationView.button.addTarget(self, action: #selector(self.didTapLocationPicker), for: .touchUpInside)
             }
+            if type(of: element) == FormPhotoPicker.self {
+                let ppv = (element as! FormPhotoPicker)
+                for button in [ppv.button1, ppv.button2, ppv.button3, ppv.button4, ppv.button5, ppv.button6] {
+                    button?.addTarget(self, action: #selector(self.didTapPhoto(button:)), for: .touchUpInside)
+                }
+            }
+            if type(of: element) == FormFile.self {
+                let ff = (element as! FormFile)
+                ff.uploadButton?.addTarget(self, action: #selector(self.setFileName(sender:)), for: .touchUpInside)
+            }
+            
         }
     }
     
@@ -261,10 +285,39 @@ class FormViewController: UIViewController {
                 }
             }
             
-            
             if type(of: element) == FormPreviewView.self {
                 (element as! FormPreviewView).adTitleLabel.text = FormViewController.adTitle
                 (element as! FormPreviewView).adLocationLabel.text = FormViewController.adLocation
+            }
+            
+        }
+
+    }
+    
+    @objc func setFileName(sender: UIButton) {
+        print("setFileName")
+    }
+    
+    func setPhoto(tag: Int, image: UIImage) {
+        
+        for element in formElements {
+            
+            if type(of: element) == FormPhotoPicker.self {
+                
+                let ppv = (element as! FormPhotoPicker)
+                
+                let index = tag - 1
+                let images = [ppv.photo1,ppv.photo2,ppv.photo3,ppv.photo4,ppv.photo5,ppv.photo6]
+
+                images[index]?.image = image
+                
+            }
+            
+            if type(of: element) == FormPreviewView.self {
+                
+                let fpp = (element as! FormPreviewView)
+                fpp.adImage.image = image
+                
             }
             
         }
@@ -291,3 +344,15 @@ extension FormViewController: UIScrollViewDelegate {
 //    }
 //
 //}
+
+extension FormViewController: ImagePickerDelegate {
+
+    func didSelect(image: UIImage?) {
+        
+        if let image = image {
+            setPhoto(tag: self.selectedPhotoTag, image: image)
+        }
+        
+    }
+    
+}

@@ -61,6 +61,7 @@
 		CEBFE10E27E735DB006B5D32 /* GetAllMotorMakerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */; };
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
+		E310171128137E7000B01C84 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E310171028137E6F00B01C84 /* ImagePicker.swift */; };
 		E31E6EA128073F36001A4E9A /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E6EA028073F36001A4E9A /* ListItem.swift */; };
 		E31E6EA328074A4B001A4E9A /* FormPhotoPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EA228074A4B001A4E9A /* FormPhotoPicker.xib */; };
 		E31E6EA528075679001A4E9A /* FormAcceptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EA428075679001A4E9A /* FormAcceptView.xib */; };
@@ -573,6 +574,7 @@
 		CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorMakerM.swift; sourceTree = "<group>"; };
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		E310171028137E6F00B01C84 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E31E6EA028073F36001A4E9A /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		E31E6EA228074A4B001A4E9A /* FormPhotoPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormPhotoPicker.xib; sourceTree = "<group>"; };
 		E31E6EA428075679001A4E9A /* FormAcceptView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormAcceptView.xib; sourceTree = "<group>"; };
@@ -1289,6 +1291,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E310170F28137E5700B01C84 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E310171028137E6F00B01C84 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		E31E6EA828075AB2001A4E9A /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1871,6 +1881,7 @@
 		F107A1D525CFCD4100FC6340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E310170F28137E5700B01C84 /* ImagePicker */,
 				E39DC4FB2809E52400BAE09D /* PricesViewController */,
 				E39DC4F82809C6E100BAE09D /* MapPickerViewController */,
 				E39BAE1927FC8E52001F5438 /* Forms */,
@@ -3018,6 +3029,7 @@
 				2862BAF4277D2C65009F4B7E /* ViewControllersAssembly.swift in Sources */,
 				F1CBEC432627A79600DC7F05 /* HowItWorksViewController.swift in Sources */,
 				F107A21725D012CA00FC6340 /* NetworkMonitor.swift in Sources */,
+				E310171128137E7000B01C84 /* ImagePicker.swift in Sources */,
 				E3A811322804362B003A2CC0 /* Mobiles_Tablets_Accessories_Data.swift in Sources */,
 				E3A810F828035737003A2CC0 /* FormPicker.swift in Sources */,
 				E3FD211127EA51FA00FDA9DD /* Extensions2.swift in Sources */,

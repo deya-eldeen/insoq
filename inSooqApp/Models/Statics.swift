@@ -43,6 +43,14 @@ class Statics{
         ,RowDataModel(icon: #imageLiteral(resourceName: "plus_button"), title: "Milage", data: "4029999 Km")
     ]
     
+//    new in motors
+//    new in numbers
+//    new in classifieds
+//    new in electronics
+//    new in jobs
+//    new in business
+//    new in services
+    
     static var categoyModel:[CategoriesModel]=[
         CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))
 //        , CategoriesModel(categoryName: "Property", categoyID: "2", categoyColor: #colorLiteral(red: 1, green: 0.5411764706, blue: 0.01568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "property_icon") )
@@ -73,9 +81,10 @@ class Statics{
     ]
 
     static  var tesColors:[UIColor]=[#colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1),#colorLiteral(red: 1, green: 0.5411764706, blue: 0.01568627451, alpha: 1),#colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1),#colorLiteral(red: 0, green: 0.831372549, blue: 0.9764705882, alpha: 1),#colorLiteral(red: 0.4274509804, green: 0.831372549, blue: 0, alpha: 1),#colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1),#colorLiteral(red: 0.4470588235, green: 0.3333333333, blue: 0.9450980392, alpha: 1),#colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1)]
-    static var testNames:[String] = ["Motors",
-//                                     "Property",
-                                     "Jobs","Services","Business","Classifieds","Numbers","Electronics"]
+    //static var testNames:[String] = ["New in Motors",
+    //                                 //"Property",
+    //                                 "Jobs","Services","Business","Classifieds","Numbers","Electronics"]
+    
     static var testCollectionNames:[String] = ["BMW i8 2018","Lamborghini Aventador 2015","Bose Quiet Comfort III, Brand New","5 BR Villa with Pool in Arabian Ranches","3 BR Luxurious Villa in heart of Dubai","2017 Macbook Air 13 inch","Lamborghini","Royal blue sofa set (3+1+1) includes 2 …"]
     static var testCollectionPrices:[String] = ["AED 18,000","AED 120,000","AED 20,000","AED 2000,000,000","AED 9000,000,000  ","AED 10,700","AED 30,000","AED 200"]
     static var titelsTest=["Item1","Item2","Item3","Item4","Item5","Item6","Item7","Item8","Item9"]

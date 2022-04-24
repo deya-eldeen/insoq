@@ -9,6 +9,20 @@ import UIKit
 
 class FormPhotoPicker: UIView, FormElement {
     
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button6: UIButton!
+    
+    @IBOutlet weak var photo1: UIImageView!
+    @IBOutlet weak var photo2: UIImageView!
+    @IBOutlet weak var photo3: UIImageView!
+    @IBOutlet weak var photo4: UIImageView!
+    @IBOutlet weak var photo5: UIImageView!
+    @IBOutlet weak var photo6: UIImageView!
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
@@ -18,7 +32,16 @@ class FormPhotoPicker: UIView, FormElement {
     }
     
     func commonInit() {
+        
         self.backgroundColor = .darkGray
+        
+        self.photo1.contentMode = .scaleAspectFill
+        self.photo2.contentMode = .scaleAspectFill
+        self.photo3.contentMode = .scaleAspectFill
+        self.photo4.contentMode = .scaleAspectFill
+        self.photo5.contentMode = .scaleAspectFill
+        self.photo6.contentMode = .scaleAspectFill
+
     }
     
     func render() -> UIView {

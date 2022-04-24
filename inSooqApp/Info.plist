@@ -64,6 +64,10 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Application need to access camera to take service photo</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Application need to access gallery when taking a service photo</string>
+    
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>The app will use the location data</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

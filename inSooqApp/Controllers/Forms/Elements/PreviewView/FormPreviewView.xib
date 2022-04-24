@@ -144,6 +144,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="adImage" destination="XFH-wW-PCc" id="rL8-2Q-Lza"/>
                 <outlet property="adLocationLabel" destination="ieI-xU-AKm" id="lcg-Zr-ppd"/>
                 <outlet property="adTitleLabel" destination="jtV-MK-Rwe" id="10Q-Na-Ea8"/>
             </connections>

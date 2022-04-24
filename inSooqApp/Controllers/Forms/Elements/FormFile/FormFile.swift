@@ -9,8 +9,8 @@ import UIKit
 
 class FormFile: UIView, FormElement {
     
-    @IBOutlet weak var adTitleLabel: UILabel!
-    @IBOutlet weak var adLocationLabel: UILabel!
+    @IBOutlet weak var fileNameLabel: UILabel!
+    @IBOutlet weak var uploadButton: UIButton!
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
