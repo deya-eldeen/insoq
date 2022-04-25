@@ -117,6 +117,14 @@
 		E39DC57D280C5E0700BAE09D /* FormFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = E39DC57C280C5E0700BAE09D /* FormFile.xib */; };
 		E39DC587280E1FB800BAE09D /* ApiRequests+Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC586280E1FB800BAE09D /* ApiRequests+Misc.swift */; };
 		E39DC589280F126A00BAE09D /* ApiRequests+Form_Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39DC588280F126A00BAE09D /* ApiRequests+Form_Submission.swift */; };
+		E3A0E8A22815CAF20084D11D /* MotorSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8A12815CAF20084D11D /* MotorSubmission.swift */; };
+		E3A0E8A52815CB170084D11D /* JobSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8A42815CB170084D11D /* JobSubmission.swift */; };
+		E3A0E8A72815CB240084D11D /* NumbersSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8A62815CB240084D11D /* NumbersSubmission.swift */; };
+		E3A0E8A92815CB310084D11D /* ElectronicsSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8A82815CB310084D11D /* ElectronicsSubmission.swift */; };
+		E3A0E8AB2815CB4D0084D11D /* ClassifiedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8AA2815CB4D0084D11D /* ClassifiedSubmission.swift */; };
+		E3A0E8AD2815CB860084D11D /* ServicesSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8AC2815CB860084D11D /* ServicesSubmission.swift */; };
+		E3A0E8AF2815CB950084D11D /* BusinessSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8AE2815CB950084D11D /* BusinessSubmission.swift */; };
+		E3A0E8B12815ED540084D11D /* Struct+Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0E8B02815ED540084D11D /* Struct+Dict.swift */; };
 		E3A810F228035649003A2CC0 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F128035649003A2CC0 /* FormLabel.swift */; };
 		E3A810F428035669003A2CC0 /* FormSubLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F328035669003A2CC0 /* FormSubLabel.swift */; };
 		E3A810F628035706003A2CC0 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A810F528035706003A2CC0 /* FormField.swift */; };
@@ -630,6 +638,14 @@
 		E39DC57C280C5E0700BAE09D /* FormFile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormFile.xib; sourceTree = "<group>"; };
 		E39DC586280E1FB800BAE09D /* ApiRequests+Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Misc.swift"; sourceTree = "<group>"; };
 		E39DC588280F126A00BAE09D /* ApiRequests+Form_Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Form_Submission.swift"; sourceTree = "<group>"; };
+		E3A0E8A12815CAF20084D11D /* MotorSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorSubmission.swift; sourceTree = "<group>"; };
+		E3A0E8A42815CB170084D11D /* JobSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSubmission.swift; sourceTree = "<group>"; };
+		E3A0E8A62815CB240084D11D /* NumbersSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersSubmission.swift; sourceTree = "<group>"; };
+		E3A0E8A82815CB310084D11D /* ElectronicsSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronicsSubmission.swift; sourceTree = "<group>"; };
+		E3A0E8AA2815CB4D0084D11D /* ClassifiedSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedSubmission.swift; sourceTree = "<group>"; };
+		E3A0E8AC2815CB860084D11D /* ServicesSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSubmission.swift; sourceTree = "<group>"; };
+		E3A0E8AE2815CB950084D11D /* BusinessSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSubmission.swift; sourceTree = "<group>"; };
+		E3A0E8B02815ED540084D11D /* Struct+Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Struct+Dict.swift"; sourceTree = "<group>"; };
 		E3A810F128035649003A2CC0 /* FormLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabel.swift; sourceTree = "<group>"; };
 		E3A810F328035669003A2CC0 /* FormSubLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSubLabel.swift; sourceTree = "<group>"; };
 		E3A810F528035706003A2CC0 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
@@ -1569,6 +1585,20 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		E3A0E8A02815CAE10084D11D /* Submission */ = {
+			isa = PBXGroup;
+			children = (
+				E3A0E8A12815CAF20084D11D /* MotorSubmission.swift */,
+				E3A0E8A42815CB170084D11D /* JobSubmission.swift */,
+				E3A0E8A62815CB240084D11D /* NumbersSubmission.swift */,
+				E3A0E8A82815CB310084D11D /* ElectronicsSubmission.swift */,
+				E3A0E8AA2815CB4D0084D11D /* ClassifiedSubmission.swift */,
+				E3A0E8AC2815CB860084D11D /* ServicesSubmission.swift */,
+				E3A0E8AE2815CB950084D11D /* BusinessSubmission.swift */,
+			);
+			path = Submission;
+			sourceTree = "<group>";
+		};
 		E3A8111328043004003A2CC0 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1680,6 +1710,8 @@
 		E3C011EC27EF2892003126E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E3A0E8B02815ED540084D11D /* Struct+Dict.swift */,
+				E3A0E8A02815CAE10084D11D /* Submission */,
 				E3A811372804A922003A2CC0 /* Listable.swift */,
 				E31E6EA028073F36001A4E9A /* ListItem.swift */,
 				E3D2FEB92801B60B00EECA95 /* Motors */,
@@ -2939,6 +2971,7 @@
 				F1FE0105265511AD00A276D7 /* ChatsTableViewHeader.swift in Sources */,
 				E3A810FA28035AF4003A2CC0 /* FormContinueButton.swift in Sources */,
 				F135DCD425E15A5E00186FC5 /* MainTabBarViewController.swift in Sources */,
+				E3A0E8A72815CB240084D11D /* NumbersSubmission.swift in Sources */,
 				F10348FC25E7905300785B07 /* BusinessMobilesFillter.swift in Sources */,
 				F17857D726302D6C00924DAB /* MotorsBrandsViewController.swift in Sources */,
 				F1BF3C7F266908D200DE6FCE /* AgencyViewController.swift in Sources */,
@@ -2980,11 +3013,13 @@
 				E3D2FEB52801AA8800EECA95 /* Services_Data.swift in Sources */,
 				6BAB585527839C760079406B /* PopupSearchViewController.swift in Sources */,
 				F1FE00442653A9C000A276D7 /* ItemsHeaderCollectionReusableView.swift in Sources */,
+				E3A0E8AB2815CB4D0084D11D /* ClassifiedSubmission.swift in Sources */,
 				F175E8DD25E669C700873F20 /* AddViewController.swift in Sources */,
 				E3A8110E28042FCD003A2CC0 /* Motors_Export_Details_Data.swift in Sources */,
 				F1DC09772612F73E007BC57F /* ChatItemView.swift in Sources */,
 				E3BB1EBB2804F37C00D65DA7 /* Motors_Used_Details_VC.swift in Sources */,
 				E3A8110628042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift in Sources */,
+				E3A0E8A52815CB170084D11D /* JobSubmission.swift in Sources */,
 				F192DFA3265A3B9E00E122B0 /* ServiceRowCollectionViewCell.swift in Sources */,
 				E3A81124280431FA003A2CC0 /* Classified_Details_Data.swift in Sources */,
 				E3FD210527EA508600FDA9DD /* ApiRequests.swift in Sources */,
@@ -3000,6 +3035,8 @@
 				1EC584A827D394B3002181DC /* AddBoatsVC.swift in Sources */,
 				CE8CC6FA27E4F48900DC0F85 /* GetAllOperatorM.swift in Sources */,
 				CEBFE10E27E735DB006B5D32 /* GetAllMotorMakerM.swift in Sources */,
+				E3A0E8AF2815CB950084D11D /* BusinessSubmission.swift in Sources */,
+				E3A0E8AD2815CB860084D11D /* ServicesSubmission.swift in Sources */,
 				F1CCE02F266F9F9100490501 /* ItemDetailsCollectionViewCell.swift in Sources */,
 				F1CBEC4B2627AE8200DC7F05 /* ForgetPasswordViewController.swift in Sources */,
 				2862BAE4277D2918009F4B7E /* WebService.swift in Sources */,
@@ -3157,6 +3194,7 @@
 				F1708F11262F1A6500A298BE /* ApplayForJobViewController.swift in Sources */,
 				F1C04A0425D2C08A00647170 /* AllItemsTableViewCell.swift in Sources */,
 				F1FFB7B3265A323B00BCBBEB /* WantedJobGridCollectionViewCell.swift in Sources */,
+				E3A0E8A92815CB310084D11D /* ElectronicsSubmission.swift in Sources */,
 				F12093CA25D13C4B004D5205 /* CountryModel.swift in Sources */,
 				F1730ED8262C38A400882749 /* MyAdsMotorsTableViewCell.swift in Sources */,
 				F1B5E53525E3B41600F19163 /* NiceButton.swift in Sources */,
@@ -3193,6 +3231,7 @@
 				F1C049DC25D2A30300647170 /* FillterCollectionViewCell.swift in Sources */,
 				E31E6EA128073F36001A4E9A /* ListItem.swift in Sources */,
 				E3A8111A2804317C003A2CC0 /* Services_Others_Data.swift in Sources */,
+				E3A0E8A22815CAF20084D11D /* MotorSubmission.swift in Sources */,
 				F1ED49D525E24D1D0088E390 /* MyFavoritesViewController.swift in Sources */,
 				F1B8B5A425D95CF300AB3E83 /* PropertyDetailsView.swift in Sources */,
 				2862BAE7277D2A1A009F4B7E /* registerRespone.swift in Sources */,
@@ -3203,6 +3242,7 @@
 				F1730EFF262C57BC00882749 /* ReportAdView.swift in Sources */,
 				F1E2CE1625D1492600F64F67 /* DropDownTableViewCell.swift in Sources */,
 				F1E2CE4E25D17E5C00F64F67 /* TopNavigationbar.swift in Sources */,
+				E3A0E8B12815ED540084D11D /* Struct+Dict.swift in Sources */,
 				E39DC51E280A00DC00BAE09D /* Motors_Export_VC.swift in Sources */,
 				F175E8D125E64BB200873F20 /* ServicesFillter.swift in Sources */,
 				F1C049E425D2B60B00647170 /* MotorsView.swift in Sources */,
