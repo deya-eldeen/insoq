@@ -523,14 +523,18 @@ class DetailsViewController: UIViewController {
             }()
             
             speceView.addSubview(motorsDetailsView)
-            motorsDetailsView.setVC(viewController: self , data: data as! AdsOfCategoryModel)
-            motorsDetailsView.makeOfferButton.addTarget(self, action: #selector(showCardView), for: .touchUpInside)
-            motorsDetailsView.toAgencyButton.addTarget(self, action: #selector(toAgencyAction), for: .touchUpInside)
-            motorsDetailsView.reportAddButton.addTarget(self, action: #selector(registerReportView), for: .touchUpInside)
-            objectCornerRadius(object: motorsDetailsView.makeOfferButton, cornerRadius: offerView_SendOfferButton.height/2)
+            
+            if data != nil  {
+                motorsDetailsView.setVC(viewController: self , data: data as! AdsOfCategoryModel)
+                motorsDetailsView.makeOfferButton.addTarget(self, action: #selector(showCardView), for: .touchUpInside)
+                motorsDetailsView.toAgencyButton.addTarget(self, action: #selector(toAgencyAction), for: .touchUpInside)
+                motorsDetailsView.reportAddButton.addTarget(self, action: #selector(registerReportView), for: .touchUpInside)
+                objectCornerRadius(object: motorsDetailsView.makeOfferButton, cornerRadius: offerView_SendOfferButton.height/2)
+                motorsDetailsView.widthAnchor.constraint(equalTo: speceView.widthAnchor, multiplier: 1).isActive = true
+                motorsDetailsView.heightAnchor.constraint(equalTo: speceView.heightAnchor, multiplier: 1).isActive = true
+                
+            }
 
-            motorsDetailsView.widthAnchor.constraint(equalTo: speceView.widthAnchor, multiplier: 1).isActive=true
-            motorsDetailsView.heightAnchor.constraint(equalTo: speceView.heightAnchor, multiplier: 1).isActive=true
             break
         }
     }

@@ -45,7 +45,6 @@
 		2862BAFF277E5761009F4B7E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2862BAFE277E5761009F4B7E /* Main.swift */; };
 		2862BB02277E6D67009F4B7E /* GetAllCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2862BB01277E6D67009F4B7E /* GetAllCategoriesModel.swift */; };
 		6BAB585527839C760079406B /* PopupSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB585427839C760079406B /* PopupSearchViewController.swift */; };
-		816D0ABCC61FCB46FCCA87D6 /* Pods_inSooqApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; };
 		CE8CC6E827E3ED9000DC0F85 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8CC6E727E3ED9000DC0F85 /* Main2.storyboard */; };
 		CE8CC6EA27E3EDFB00DC0F85 /* BrandVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CC6E927E3EDFB00DC0F85 /* BrandVc.swift */; };
 		CE8CC6EC27E3FF2800DC0F85 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CC6EB27E3FF2800DC0F85 /* Constant.swift */; };
@@ -71,6 +70,9 @@
 		E31E6EB4280798AC001A4E9A /* FormPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E6EB2280798AC001A4E9A /* FormPreviewView.swift */; };
 		E31E6EB5280798AC001A4E9A /* FormPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */; };
 		E327E5D5280633BA000968C0 /* FormAcceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327E5D4280633BA000968C0 /* FormAcceptView.swift */; };
+		E34D94C52818ACB000912AF7 /* ApiRequests+Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */; };
+		E34D94C62818B64500912AF7 /* Pods_inSooqApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; };
+		E34D94C72818B64500912AF7 /* Pods_inSooqApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
 		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
 		E380353B27F6506E00FF0212 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353A27F6506E00FF0212 /* Account.storyboard */; };
@@ -526,6 +528,20 @@
 		F1FFB7B4265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1FFB7B2265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E34D94C82818B64500912AF7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E34D94C72818B64500912AF7 /* Pods_inSooqApp.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		16592BD11DA92A4ED661AA79 /* Pods-inSooqApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inSooqApp.debug.xcconfig"; path = "Target Support Files/Pods-inSooqApp/Pods-inSooqApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1729F8B22793233500F957A1 /* AdsOfCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsOfCategoryModel.swift; sourceTree = "<group>"; };
@@ -592,6 +608,7 @@
 		E31E6EB2280798AC001A4E9A /* FormPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormPreviewView.swift; sourceTree = "<group>"; };
 		E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormPreviewView.xib; sourceTree = "<group>"; };
 		E327E5D4280633BA000968C0 /* FormAcceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAcceptView.swift; sourceTree = "<group>"; };
+		E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Submission.swift"; sourceTree = "<group>"; };
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
 		E380353827F64CE000FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		E380353A27F6506E00FF0212 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
@@ -1058,7 +1075,7 @@
 			files = (
 				F1DC098226133153007BC57F /* LocalAuthentication.framework in Frameworks */,
 				176AB975277A512100276B84 /* NetworkExtension.framework in Frameworks */,
-				816D0ABCC61FCB46FCCA87D6 /* Pods_inSooqApp.framework in Frameworks */,
+				E34D94C62818B64500912AF7 /* Pods_inSooqApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1805,6 +1822,7 @@
 				E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */,
 				E380354A27F85ED600FF0212 /* ApiRequests+Advertisting.swift */,
 				E39DC586280E1FB800BAE09D /* ApiRequests+Misc.swift */,
+				E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -2677,6 +2695,7 @@
 				F107A1B925CFCC9F00FC6340 /* Frameworks */,
 				F107A1BA25CFCC9F00FC6340 /* Resources */,
 				06FBB889B14FFE6D83197E4D /* [CP] Embed Pods Frameworks */,
+				E34D94C82818B64500912AF7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3019,6 +3038,7 @@
 				F1DC09772612F73E007BC57F /* ChatItemView.swift in Sources */,
 				E3BB1EBB2804F37C00D65DA7 /* Motors_Used_Details_VC.swift in Sources */,
 				E3A8110628042E5D003A2CC0 /* Motors_Machinery_Details_Data.swift in Sources */,
+				E34D94C52818ACB000912AF7 /* ApiRequests+Submission.swift in Sources */,
 				E3A0E8A52815CB170084D11D /* JobSubmission.swift in Sources */,
 				F192DFA3265A3B9E00E122B0 /* ServiceRowCollectionViewCell.swift in Sources */,
 				E3A81124280431FA003A2CC0 /* Classified_Details_Data.swift in Sources */,

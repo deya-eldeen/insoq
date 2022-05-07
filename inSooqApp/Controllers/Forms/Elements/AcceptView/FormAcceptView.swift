@@ -11,6 +11,14 @@ class FormAcceptView: UIView, FormElement {
     
     var isChecked = false
     
+    @IBOutlet weak var checkButton: UIButton!
+    
+    @IBAction func didTapCheck() {
+        self.isChecked.toggle()
+        let image = (self.isChecked) ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square")
+        checkButton.setImage(image, for: .normal)
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }

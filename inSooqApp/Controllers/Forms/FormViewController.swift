@@ -8,10 +8,25 @@
 import Foundation
 import DropDown
 import PhotosUI
+import UniformTypeIdentifiers
 
 enum FormValidationError: String {
     case userShouldAgreeError = "User Should Agree"
     case shouldFillForm = "Should Fill Form"
+    case shouldPickLocation = "Should Pick Location"
+    case shouldSelectPhoto = "Should Select a photo"
+    case shouldSelectFile = "Should Select a file"
+    case none
+}
+
+enum AdMainType {
+    case motor
+    case job
+    case numbers
+    case electronics
+    case classified
+    case services
+    case business
     case none
 }
 
@@ -28,6 +43,9 @@ class FormViewController: UIViewController {
     
     var images = [UIImage]()
     
+    var locationLatitude: Double?
+    var locationLongitude: Double?
+    
     static var selectedCat = AdCategory.none
     static var selectedTypeID = 0
 
@@ -37,6 +55,37 @@ class FormViewController: UIViewController {
     var selectedCat = AdCategory.none
     
     var leadsToPrices = false
+    
+    static var adMainType = AdMainType.none
+    
+    // document picker
+    var documentPicker: UIDocumentPickerViewController? //(forOpeningContentTypes: [UTType.item], asCopy: false)
+    var documentName: String?
+    
+    
+    //Motors
+    static var motorInitialSubmission: MotorInitialSubmission?
+    static var motorFullSubmission: MotorFullSubmission?
+
+    //Jobs
+    static var jobInitialSubmission: JobInitialSubmission?
+    static var jobFullSubmission: JobFullSubmission?
+    
+    //Numbers
+    static var numbersSubmission: NumbersSubmission?
+    
+    //Electronics
+    static var electronicsSubmission: ElectronicsSubmission?
+    
+    //Classified
+    static var classifiedInitialSubmission: ClassifiedInitialSubmission?
+    static var classifiedFullSubmission: ClassifiedFullSubmission?
+
+    //Services
+    static var servicesSubmission: ServicesSubmission?
+    
+    //Business
+    static var businessSubmission: BusinessSubmission?
     
     var dataWarranty = [
         ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes"),
@@ -70,7 +119,25 @@ class FormViewController: UIViewController {
         
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
+        if #available(iOS 14.0, *) {
+            self.documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.item], asCopy: false)
+        } else {
+            // Fallback on earlier versions
+        }
+
+        documentPicker?.delegate = self
+        documentPicker?.modalPresentationStyle = .formSheet
+        
     }
+    
+    @objc func didTapPickDocument() {
+        
+        if let docPicker = self.documentPicker {
+            self.present(docPicker, animated: true, completion: nil)
+        }
+        
+    }
+    
     
     func addSearchView() {
         customeListView.frame = self.view.bounds
@@ -146,13 +213,11 @@ class FormViewController: UIViewController {
             }
             if type(of: element) == FormPhotoPicker.self {
                 let ppv = (element as! FormPhotoPicker)
-                for button in [ppv.button1, ppv.button2, ppv.button3, ppv.button4, ppv.button5, ppv.button6] {
-                    button?.addTarget(self, action: #selector(self.didTapPhoto(button:)), for: .touchUpInside)
-                }
+                ppv.buttonAdd?.addTarget(self, action: #selector(self.didTapPhoto(button:)), for: .touchUpInside)
             }
             if type(of: element) == FormFile.self {
                 let ff = (element as! FormFile)
-                ff.uploadButton?.addTarget(self, action: #selector(self.setFileName(sender:)), for: .touchUpInside)
+                ff.uploadButton?.addTarget(self, action: #selector(self.didTapPickDocument), for: .touchUpInside)
             }
             
         }
@@ -235,17 +300,20 @@ class FormViewController: UIViewController {
     
     func isValid() -> (Bool,FormValidationError) {
         
-        return (true, .none)
+        //return (true, .none)
         
         for element in formElements {
 
-            if type(of: element) == FormAcceptView.self {
-                let acceptView = (element as! FormAcceptView)
-                if (acceptView.isChecked == false) {
-                    return (false,.userShouldAgreeError)
+            // field
+            if type(of: element) == FormField.self {
+                let field = (element as! FormField)
+                let text = field.text ?? ""
+                if (text == "") {
+                    return (false,.shouldFillForm)
                 }
             }
-
+            
+            // picker
             if type(of: element) == FormPicker.self {
                 let picker = (element as! FormPicker)
                 let text = picker.textfield.text ?? ""
@@ -254,14 +322,36 @@ class FormViewController: UIViewController {
                 }
             }
 
-            if type(of: element) == FormField.self {
-                let field = (element as! FormField)
-                let text = field.text ?? ""
-                if (text == "") {
-                    return (false,.shouldFillForm)
+            // file
+            if type(of: element) == FormFile.self {
+                if(documentName == nil) {
+                    return (false,.shouldSelectFile)
                 }
             }
-
+            
+            // photos
+            if type(of: element) == FormPhotoPicker.self {
+                let photoPicker = (element as! FormPhotoPicker)
+                if (photoPicker.images.count == 0) {
+                    return (false,.shouldSelectPhoto)
+                }
+            }
+            
+            // location picker
+            if type(of: element) == FormLocationView.self {
+                if(self.locationLatitude == nil || self.locationLongitude == nil) {
+                    return (false,.shouldPickLocation)
+                }
+            }
+            
+            // acceptance
+            if type(of: element) == FormAcceptView.self {
+                let acceptView = (element as! FormAcceptView)
+                if (acceptView.isChecked == false) {
+                    return (false,.userShouldAgreeError)
+                }
+            }
+            
         }
         
         return (true, .none)
@@ -294,10 +384,6 @@ class FormViewController: UIViewController {
 
     }
     
-    @objc func setFileName(sender: UIButton) {
-        print("setFileName")
-    }
-    
     func setPhoto(tag: Int, image: UIImage) {
         
         for element in formElements {
@@ -305,11 +391,7 @@ class FormViewController: UIViewController {
             if type(of: element) == FormPhotoPicker.self {
                 
                 let ppv = (element as! FormPhotoPicker)
-                
-                let index = tag - 1
-                let images = [ppv.photo1,ppv.photo2,ppv.photo3,ppv.photo4,ppv.photo5,ppv.photo6]
-
-                images[index]?.image = image
+                ppv.appendImage(image: image)
                 
             }
             
@@ -324,6 +406,22 @@ class FormViewController: UIViewController {
 
     }
     
+    func setDocumentName() {
+        
+        for element in formElements {
+            
+            if type(of: element) == FormFile.self {
+                
+                let formFileView = (element as! FormFile)
+                formFileView.fileNameLabel.text = self.documentName
+                
+            }
+            
+        }
+
+    }
+    
+    
 }
 
 extension FormViewController: UIScrollViewDelegate {
@@ -336,15 +434,6 @@ extension FormViewController: UIScrollViewDelegate {
     
 }
 
-//extension FormViewController: UITextFieldDelegate {
-//
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        print("textFieldDidBeginEditing",textField)
-//        self.updatePreview()
-//    }
-//
-//}
-
 extension FormViewController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
@@ -352,6 +441,20 @@ extension FormViewController: ImagePickerDelegate {
         if let image = image {
             setPhoto(tag: self.selectedPhotoTag, image: image)
         }
+        
+    }
+    
+}
+
+extension FormViewController: UIDocumentPickerDelegate {
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        
+        self.documentName = urls.first?.absoluteString.components(separatedBy: "/").last
+        print("documentName",documentName)
+        
+        self.setDocumentName()
+        
         
     }
     

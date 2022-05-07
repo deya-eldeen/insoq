@@ -84,47 +84,57 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         switch adType {
         case .usedCars:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_VC")
+            FormViewController.adMainType = .motor
         case .boats:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Boats_VC")
+            FormViewController.adMainType = .motor
         case .machinery:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Machinery_VC")
+            FormViewController.adMainType = .motor
         case .parts:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Parts_VC")
+            FormViewController.adMainType = .motor
         case .exportCar:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Export_VC")
+            FormViewController.adMainType = .motor
         case .bike:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Bike_VC")
+            FormViewController.adMainType = .motor
         case .jobWanted:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Job_Wanted_VC")
-            
+            FormViewController.adMainType = .job
         case .services_domestic,.services_autoservices,.services_moversRemovals,.services_webComputer,.services_corporateServices,.services_homeMaintenance,.services_eventEntertainment,.services_tutorsClasses,.services_others,.services_healthServices:
-            
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Services_VC")
-
+            FormViewController.adMainType = .services
         case
             .business_businessesforsale,.business_tradeLicenseforsale,.business_buildingmaterialsforsale,.business_food_beverageforsale,.business_generalItemsforsale,.business_shopsrestaurantsforsale,.business_scrapmaterials:
-            
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Business_VC")
-            
+            FormViewController.adMainType = .business
         case
                 .classified_furnitureHomeAndGarden,.classified_homeAppliances,.classified_jewelryAndWatches,.classified_sportsEquipment,.classified_musicalInstruments,.classified_gaming,.classified_camerasAndImaging,.classified_babyItems,.classified_toys,.classified_ticketsAndVouchers,.classified_collectibles,.classified_music,.classified_freeStuff,.classified_pets,.classified_petAccessories,.classified_books:
-
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Classified_VC")
-
+            FormViewController.adMainType = .classified
         case .platNumbers:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Plate_Numbers_VC")
+            FormViewController.adMainType = .numbers
         case .mobileNumbers:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Mobile_Numbers_VC")
+            FormViewController.adMainType = .numbers
         case .mobiles:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Mobiles_VC")
+            FormViewController.adMainType = .electronics
         case .tablets:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Tablets_VC")
+            FormViewController.adMainType = .electronics
         case .mobilesTabletsAccessories:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Mobiles_Tablets_Accessories_VC")
+            FormViewController.adMainType = .electronics
         case .homeElectronics:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Home_Electronics_VC")
+            FormViewController.adMainType = .electronics
         case .computersNetworking:
             targetController = ViewControllersAssembly.forms.makeViewController(with: "Computers_Networking_VC")
+            FormViewController.adMainType = .electronics
         case .none, .jobOpenning:
             print("NONE")
         }

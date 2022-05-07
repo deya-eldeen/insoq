@@ -21,13 +21,17 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uDq-bn-hnO">
                             <rect key="frame" x="4" y="4" width="398" height="44"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy7-Lm-pbz">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy7-Lm-pbz">
                                     <rect key="frame" x="0.0" y="0.0" width="64" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="64" id="E0S-N7-VOc"/>
                                     </constraints>
+                                    <color key="tintColor" systemColor="systemPurpleColor"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="checked_checkbox" title=" "/>
+                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" "/>
+                                    <connections>
+                                        <action selector="didTapCheck" destination="iN0-l3-epB" eventType="touchUpInside" id="85K-9o-hAK"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Submitting this ad, I agree on (terms and conditions) and (Privacy Policy)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6s-V3-1Sf">
                                     <rect key="frame" x="68" y="0.0" width="330" height="44"/>
@@ -56,13 +60,19 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ka2-F1-Ggj" secondAttribute="bottom" constant="4" id="yhC-lf-idq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkButton" destination="qy7-Lm-pbz" id="UtW-Xw-A7A"/>
+            </connections>
             <point key="canvasLocation" x="139" y="101"/>
         </view>
     </objects>
     <resources>
-        <image name="checked_checkbox" width="23.5" height="23.5"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
