@@ -28,11 +28,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="HomeViewController" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrg-hU-YC1">
-                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="1722"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgN-UF-jta">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="995"/>
@@ -229,8 +229,8 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="428" height="1.1920928955078125e-07"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
-                                                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GrK-rw-2Su">
-                                                                                    <rect key="frame" x="4" y="16" width="420" height="207"/>
+                                                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GrK-rw-2Su">
+                                                                                    <rect key="frame" x="4" y="16" width="420" height="0.0"/>
                                                                                     <color key="backgroundColor" name="AppBackground"/>
                                                                                     <viewLayoutGuide key="contentLayoutGuide" id="cDD-UP-3ZS"/>
                                                                                     <viewLayoutGuide key="frameLayoutGuide" id="pz3-sr-dnM"/>
@@ -242,17 +242,16 @@
                                                                                     </collectionViewFlowLayout>
                                                                                     <cells>
                                                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemsDataCollectionViewCell" id="z4B-MR-Hnp" customClass="itemsDataCollectionViewCell" customModule="inSooqApp" customModuleProvider="target">
-                                                                                            <rect key="frame" x="8" y="-1" width="184" height="209"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ajz-by-tzg">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="184" height="209"/>
+                                                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Ajz-by-tzg">
                                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                                 <subviews>
-                                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-WJ-8HC">
+                                                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-WJ-8HC">
                                                                                                         <rect key="frame" x="5" y="4.9999999999999929" width="174" height="125.33333333333331"/>
                                                                                                         <subviews>
-                                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eFl-wU-2bD">
+                                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFl-wU-2bD">
                                                                                                                 <rect key="frame" x="0.0" y="0.0" width="174" height="125.33333333333333"/>
+                                                                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                                                             </imageView>
                                                                                                         </subviews>
                                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -268,19 +267,19 @@
                                                                                                             </userDefinedRuntimeAttribute>
                                                                                                         </userDefinedRuntimeAttributes>
                                                                                                     </view>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item NameItem NameItem NameItem NameItem Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM0-LO-SD2">
-                                                                                                        <rect key="frame" x="8" y="135.33333333333334" width="182.33333333333334" height="36"/>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Item NameItem NameItem NameItem NameItem Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="HM0-LO-SD2">
+                                                                                                        <rect key="frame" x="8" y="135.33333333333334" width="166.33333333333334" height="31.333333333333343"/>
+                                                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                                        <nil key="textColor"/>
+                                                                                                        <nil key="highlightedColor"/>
+                                                                                                    </label>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="eVl-HT-Gs6">
+                                                                                                        <rect key="frame" x="8" y="174.66666666666666" width="0.0" height="0.0"/>
                                                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                                         <nil key="textColor"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVl-HT-Gs6">
-                                                                                                        <rect key="frame" x="8" y="179.33333333333334" width="0.0" height="0.0"/>
-                                                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                                                        <nil key="textColor"/>
-                                                                                                        <nil key="highlightedColor"/>
-                                                                                                    </label>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED 18,000 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIv-nT-gIA">
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="AED 18,000 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="BIv-nT-gIA">
                                                                                                         <rect key="frame" x="8" y="188" width="89.666666666666671" height="18"/>
                                                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                                                         <color key="textColor" name="labelOrange"/>
@@ -323,6 +322,7 @@
                                                                                 <constraint firstAttribute="trailingMargin" secondItem="GrK-rw-2Su" secondAttribute="trailing" constant="-16" id="6Ea-ER-NG1"/>
                                                                                 <constraint firstItem="GrK-rw-2Su" firstAttribute="leading" secondItem="gEx-Qx-Bqf" secondAttribute="leadingMargin" constant="-16" id="C4s-tj-axo"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="GrK-rw-2Su" secondAttribute="bottom" constant="5" id="DCh-ck-gdp"/>
+                                                                                <constraint firstItem="GrK-rw-2Su" firstAttribute="top" secondItem="gEx-Qx-Bqf" secondAttribute="topMargin" constant="5" id="i9A-bI-fcS"/>
                                                                             </constraints>
                                                                         </tableViewCellContentView>
                                                                         <color key="backgroundColor" name="AppBackground"/>
@@ -465,17 +465,17 @@
                                 <state key="normal" backgroundImage="plus_button"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtV-IX-9aA" customClass="BottomView" customModule="inSooqApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="812" width="428" height="80"/>
+                                <rect key="frame" x="0.0" y="1686" width="428" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="mI0-br-xM0"/>
                                 </constraints>
                             </view>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dG2-AJ-aEb">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="1800"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rFH-9X-AKF">
-                                <rect key="frame" x="21.333333333333343" y="313" width="385.33333333333326" height="300"/>
+                                <rect key="frame" x="21.333333333333343" y="750" width="385.33333333333326" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="GVR-HG-34w"/>
@@ -555,6 +555,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="BKT-u1-ddS"/>
+                    <size key="freeformSize" width="428" height="1800"/>
                     <connections>
                         <outlet property="adsCollectionView" destination="u4J-sZ-l1f" id="dZI-7D-RsE"/>
                         <outlet property="adspageController" destination="D0b-uK-u3a" id="hDi-Ol-Nd1"/>

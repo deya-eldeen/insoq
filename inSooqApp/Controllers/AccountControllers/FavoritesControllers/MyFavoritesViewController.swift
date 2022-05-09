@@ -8,35 +8,52 @@
 import UIKit
 
 class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
     @IBOutlet weak var bottomBar: BottomBar!
     @IBOutlet weak var topBar: TopNavigationbar!
     @IBOutlet weak var ItemsDataTableView: UITableView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    
     //How to show All types of Cells in this tableview
-    var index:Int=0
+    var index: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomBar.setVC(viewController: self)
         topBar.setVC(viewController: self)
+        
+        ApiRequests.favoriteAdsCount { response in
+            print("R")
+        }
+        
+        ApiRequests.favoriteAds(typeId: 0) { response in
+            print("F")
+        }
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         setupDelegates()
         registerXib()
-        }
-    //MARK:-Private Functions-
-    private func setupDelegates(){
-        categoriesCollectionView.delegate=self
-        categoriesCollectionView.dataSource=self
-        ItemsDataTableView.delegate=self
-        ItemsDataTableView.dataSource=self
-
     }
+    
+    //MARK:-Private Functions-
+    private func setupDelegates() {
+        
+        categoriesCollectionView.delegate = self
+        categoriesCollectionView.dataSource = self
+        ItemsDataTableView.delegate = self
+        ItemsDataTableView.dataSource = self
+        
+    }
+    
     @IBAction func back_Pressed(_ sender: Any) {
+        
         dismiss(animated: true) {
             clearViewData(controller: self)
         }
+        
     }
-    
     
     private func registerXib(){
 
@@ -48,8 +65,8 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
         let NumbersNib = UINib(nibName: "PlatesTableViewCell", bundle: nil)
         ItemsDataTableView.register(NumbersNib, forCellReuseIdentifier: "PlatesTableViewCell")
         
-        
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Statics.adsArray.count
     }
@@ -122,18 +139,18 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
             }
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[indexPath.row].categoryName
         debugPrint("subCategoriesTableView-vcTitle",Statics.categoyModel[indexPath.row].categoryName)
-    forcePresentViewController(viewController: self, storyBoardId: "DetailsViewController")
-        
-
+        forcePresentViewController(viewController: self, storyBoardId: "DetailsViewController")
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         switch index {
         case 2:
             return 150
-            
         case 6:
             return 150
         default:
@@ -145,19 +162,22 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
 
             }
         }
+        
     }
 
 }
-extension MyFavoritesViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
+
+extension MyFavoritesViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Statics.favoModel.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
         cell.setCategoriesData(data: Statics.favoModel[indexPath.row])
-       // cell.contentView.layer.cornerRadius=cell.contentView.frame.height/2
+        // cell.contentView.layer.cornerRadius=cell.contentView.frame.height/2
         if indexPath.row==0{
             cell.coloredView.backgroundColor=#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
             cell.coloredView.layer.cornerRadius=cell.coloredView.frame.height/2
@@ -165,19 +185,20 @@ extension MyFavoritesViewController: UICollectionViewDelegateFlowLayout,UICollec
         }
         return cell
         
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         debugPrint("Selected indexPath = ", indexPath.item)
         debugPrint("Property selected")
         //fitch This data from Selecteed Object
-         index=indexPath.row
+        index=indexPath.row
         ItemsDataTableView.reloadData()
-        
-            //Reload Table View Data
-           /// didselect index == 0  : reload uitableVie wwith All cells Type else reload depending on Category...
+        // Reload Table View Data
+        // didselect index == 0  : reload uitableVie wwith All cells Type else reload depending on Category...
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let layout = self.categoriesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -187,9 +208,10 @@ extension MyFavoritesViewController: UICollectionViewDelegateFlowLayout,UICollec
         debugPrint("MyFavoCells:=",layout.itemSize.height,layout.itemSize.width)
         return layout.itemSize
         
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
+    
 }

@@ -9,6 +9,7 @@ import UIKit
 import IQKeyboardManagerSwift
 
 class HomeViewController: UIViewController {
+
     @IBOutlet weak var mainNavBar: MainNavView!
     private var lastContentOffset: CGFloat = 0
     @IBOutlet weak var tabbarBottomConstraint: NSLayoutConstraint!
@@ -18,8 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrollViewBottonConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollViewLeftConstraint: NSLayoutConstraint!
-   
-    
+       
     private var duration:TimeInterval=6.0
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -37,24 +37,30 @@ class HomeViewController: UIViewController {
     lazy var heightOFAdsCategorye:CGFloat = {
         return  270 //self.view.bounds.height  / 4
     }()
- //Categories Test Data
+    
+    //Categories Test Data
+    
     var counter:Int = 0
     var timer = Timer()
     var indexPath:Int = 0
+    
     //MARK: - dropDown Variables
     let dropDown = MakeDropDown()
     var cityModelArr: [CountryModel] = [CountryModel]()
     var dropDownRowHeight: CGFloat = 50
-    //MARK:-  subcategory pop up
+    
+    //MARK: -  subcategory pop up
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var subCategoriesTableView: UITableView!
     @IBOutlet weak var subCategoriesTableViewHeightConstraint: NSLayoutConstraint!
+    
     //subCategoriesVariables
     var headerObject=SubCategoryObject(viewColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), name: "", icon: #imageLiteral(resourceName: "sms_icon"), index: 0, subItemIndex: 0)
-    
-    
+
     override func viewDidLoad() {
+
         super.viewDidLoad()
+
         print(Shared.shared.getUserId())
         let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
         let statusBarColor = #colorLiteral(red: 0.3411764706, green: 0.2745098039, blue: 0.9882352941, alpha: 0.4523653575)
@@ -73,8 +79,8 @@ class HomeViewController: UIViewController {
     @objc func addPressed(){
         let controller = Assembly.addViewController
         present(controller, animated: true)
-
     }
+
     override func viewWillAppear(_ animated: Bool) {
        // tabBarView.setVC(viewController: self)
         hideSubCategoryView()
@@ -100,9 +106,8 @@ class HomeViewController: UIViewController {
         debugPrint("setupAlert_Pressed")
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-        if self.isKind(of: HomeViewController.self){
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.isKind(of: HomeViewController.self) {
             let touch = touches.first
             if touch?.view?.tag != 2 {
                 debugPrint("touchesBegan,subCategoriesTableView")
@@ -115,7 +120,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func registerXib(){
+    private func registerXib() {
 
         let nib = UINib(nibName: "CustomSectionHeader", bundle: nil)
         itemTableView.register(nib, forHeaderFooterViewReuseIdentifier: "customSectionHeader")
@@ -129,11 +134,13 @@ class HomeViewController: UIViewController {
         subCategoriesTableView.estimatedSectionHeaderHeight=25
 
     }
-    @objc private func hideSubCategoryView(){
+    
+    @objc private func hideSubCategoryView( ){
         backgroundView.isHidden=true
         subCategoriesTableView.isHidden=true
     }
-    @objc func showSubCategoryView(image:UIImage ,name:String ,index:Int){
+    
+    @objc func showSubCategoryView(image:UIImage ,name:String ,index:Int) {
 
         headerObject.icon=image
         headerObject.name=name
@@ -168,7 +175,7 @@ class HomeViewController: UIViewController {
 //        subCategoriesTableView.reloadData()
     }
     
-    private func setDesign(){
+    private func setDesign() {
         subCategoriesTableView.layer.cornerRadius=10
         setupAlertButton.layer.cornerRadius=setupAlertButton.frame.height/2
         self.adspageController.numberOfPages = Statics.adsArray.count
@@ -179,7 +186,8 @@ class HomeViewController: UIViewController {
         }
 
     }
-    private func setupDelegates(){
+    
+    private func setupDelegates() {
         scrollView.delegate=self
       //  searchTextField.delegate = self
         categoriesCollectionView.delegate=self
@@ -221,7 +229,8 @@ class HomeViewController: UIViewController {
                 }
             }
         }
-    @objc func testLabelTapped(){
+    
+    @objc func testLabelTapped() {
         // Give height to drop down according to requirement
         // In this it will show 5 rows in dropdown as per calculations
         self.dropDown.showDropDown(height: self.dropDownRowHeight * 5)
@@ -231,6 +240,7 @@ class HomeViewController: UIViewController {
     @objc func explor_Pressed(sender:UIButton){
         debugPrint("sender",sender.tag)
     }
+    
     //Auto scroll collectionview
     @objc func changeImage() {
         
@@ -395,7 +405,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if tableView==subCategoriesTableView{
+        
+        if tableView==subCategoriesTableView {
+            
             let subCategoryHeader = self.subCategoriesTableView.dequeueReusableHeaderFooterView(withIdentifier: "subCategoryHeader") as! SubCategoryHeader
             subCategoryHeader.cancelButton.tag=section
             subCategoryHeader.categoryImage.image=headerObject.icon
@@ -469,27 +481,31 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView==subCategoriesTableView{
+        
+        if (tableView == subCategoriesTableView) {
+            
             let subCategoryData:SubCategoriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SubCategoriesTableViewCell", for: indexPath) as! SubCategoriesTableViewCell
                 let model = listOfSubCategories[indexPath.row]
                 subCategoryData.setSubCategoryDataModel(model: model)
             
             return subCategoryData
 
-        }else{
+        } else {
             let itemsData:ItemsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ItemsTableViewCell", for: indexPath) as! ItemsTableViewCell
-            
             
             var keys:[String] = Array(listOfAdsCategories.keys)  ?? []
             keys = keys.sorted()
             let key:String = keys[indexPath.section]
             debugPrint("key:\(key) indexPath.row:\(indexPath.section)")
-//            let keyIndex:Int =  Int(key) ?? 0
-            if let list = listOfAdsCategories[key]{
-            itemsData.setCollectionViewDataByModel(list: list,categoryId: key)
-//            itemsData.setCollectionViewData(images: Statics.adsArray, names: Statics.testCollectionNames, prices: Statics.testCollectionPrices)
+            
+            //let keyIndex:Int =  Int(key) ?? 0
+            
+            if let list = listOfAdsCategories[key] {
+                itemsData.setCollectionViewDataByModel(list: list,categoryId: key)
+                //itemsData.setCollectionViewData(images: Statics.adsArray, names: Statics.testCollectionNames, prices: Statics.testCollectionPrices)
             }
-            itemsData.vc=self
+            
+            itemsData.vc = self
             itemsData.reloadCollectionView()
             
             return itemsData
@@ -498,7 +514,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         if tableView==subCategoriesTableView{
+         
+        if (tableView == subCategoriesTableView) {
+             
              print(headerObject.index)
              print(indexPath.row)
 //             print(Statics.jobsSubCategories[indexPath.row].categoryId)

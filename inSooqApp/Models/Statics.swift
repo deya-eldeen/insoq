@@ -51,7 +51,7 @@ class Statics{
 //    new in business
 //    new in services
     
-    static var categoyModel:[CategoriesModel]=[
+    static var categoyModel:[CategoriesModel] = [
         CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))
 //        , CategoriesModel(categoryName: "Property", categoyID: "2", categoyColor: #colorLiteral(red: 1, green: 0.5411764706, blue: 0.01568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "property_icon") )
         , CategoriesModel(categoryName: "Jobs", categoyID: "3", categoyColor: #colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "jobs_icon"))
@@ -60,6 +60,8 @@ class Statics{
         , CategoriesModel(categoryName: "Classifieds", categoyID: "6", categoyColor: #colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1), categoryImage: #imageLiteral(resourceName: "classified_icon"))
         ,CategoriesModel(categoryName: "Numbers", categoyID: "7", categoyColor: #colorLiteral(red: 0.4470588235, green: 0.3333333333, blue: 0.9450980392, alpha: 1), categoryImage: #imageLiteral(resourceName: "plate_icon")),CategoriesModel(categoryName: "Electronics", categoyID: "8", categoyColor: #colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "mobile_icon"))
     ]
+    
+    
     static var favoModel:[CategoriesModel]=[
         CategoriesModel(categoryName: "All", categoyID: "0", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: UIImage(named: "favo")!)
         , CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))

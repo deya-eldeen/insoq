@@ -179,6 +179,15 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.usage(typeId: typeId), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
+    static func favoriteAds(typeId: Int, completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: typeId), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
+    
+    typealias FavoriteAdsCountCompletionHandler = (DataResponse<[FavAdsCount],AFError>)
+    static func favoriteAdsCount(completion:@escaping (FavoriteAdsCountCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAdsCount(), method: .get) { (response: FavoriteAdsCountCompletionHandler) in completion(response) }
+    }
+    
 }
 
 //return "DropDowns/GetAllMotorRegionalSpecs".fullUrl()

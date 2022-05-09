@@ -461,3 +461,17 @@ func performUtilityThread(closure: @escaping (() -> Void), after delayInterval: 
 }
 
 
+extension Double {
+    
+    func formattedPrice() -> String {
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.locale = Locale(identifier: "en_US")
+        formatter.groupingSeparator = ","
+        let formatted = formatter.string(from: self as NSNumber) ?? ""
+        
+        return ("AED " + formatted)
+    }
+
+}

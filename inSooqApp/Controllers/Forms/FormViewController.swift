@@ -19,15 +19,15 @@ enum FormValidationError: String {
     case none
 }
 
-enum AdMainType {
-    case motor
-    case job
-    case numbers
-    case electronics
-    case classified
-    case services
-    case business
-    case none
+enum AdMainType: Int {
+    case motor = 1
+    case job = 3
+    case numbers = 7
+    case electronics = 8
+    case classified = 6
+    case services = 4
+    case business = 5
+    case none = 0
 }
 
 class FormViewController: UIViewController {

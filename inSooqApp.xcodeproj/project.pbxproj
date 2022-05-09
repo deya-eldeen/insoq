@@ -60,6 +60,7 @@
 		CEBFE10E27E735DB006B5D32 /* GetAllMotorMakerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */; };
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
+		E3030B17282902D4004D9179 /* FavAdsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3030B16282902D4004D9179 /* FavAdsCount.swift */; };
 		E310171128137E7000B01C84 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E310171028137E6F00B01C84 /* ImagePicker.swift */; };
 		E31E6EA128073F36001A4E9A /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E6EA028073F36001A4E9A /* ListItem.swift */; };
 		E31E6EA328074A4B001A4E9A /* FormPhotoPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EA228074A4B001A4E9A /* FormPhotoPicker.xib */; };
@@ -598,6 +599,7 @@
 		CEBFE10D27E735DB006B5D32 /* GetAllMotorMakerM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorMakerM.swift; sourceTree = "<group>"; };
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		E3030B16282902D4004D9179 /* FavAdsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAdsCount.swift; sourceTree = "<group>"; };
 		E310171028137E6F00B01C84 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E31E6EA028073F36001A4E9A /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		E31E6EA228074A4B001A4E9A /* FormPhotoPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormPhotoPicker.xib; sourceTree = "<group>"; };
@@ -1731,6 +1733,7 @@
 				E3A0E8A02815CAE10084D11D /* Submission */,
 				E3A811372804A922003A2CC0 /* Listable.swift */,
 				E31E6EA028073F36001A4E9A /* ListItem.swift */,
+				E3030B16282902D4004D9179 /* FavAdsCount.swift */,
 				E3D2FEB92801B60B00EECA95 /* Motors */,
 				E39DC585280DCD7400BAE09D /* Classified */,
 				E39DC584280DCD6B00BAE09D /* Business */,
@@ -3309,6 +3312,7 @@
 				F1D8219625DAC9A40032A3E4 /* AmentiesTableViewCell.swift in Sources */,
 				1EC584A327CD91DB002181DC /* ClassifiedModel.swift in Sources */,
 				F103490925E7A6AE00785B07 /* OrderSummaryTableViewCell.swift in Sources */,
+				E3030B17282902D4004D9179 /* FavAdsCount.swift in Sources */,
 				E3A8113028043612003A2CC0 /* Tablets_Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

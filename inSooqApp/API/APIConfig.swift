@@ -470,6 +470,17 @@ struct APIUrls {
         return "BussinesAds/Add".fullUrl()
     }
     
+    //Favorite
+    static func favoriteAds(typeId: Int) -> String {
+        return "Ads/GetMyFavoriteAds?typeId=\(typeId)".fullUrl()
+    }
+    
+    //Favorites Count
+    static func favoriteAdsCount() -> String {
+        return "Ads/GetMyFavoriteAdsCount".fullUrl()
+    }
+    
+    
 }
 
 extension String {
