@@ -480,6 +480,64 @@ struct APIUrls {
         return "Ads/GetMyFavoriteAdsCount".fullUrl()
     }
     
+    //Add to favorite
+    static func addToFavorite() -> String {
+        return "Ads/AddToFavorite".fullUrl()
+    }
+    
+    //Remove from favorite
+    static func removeFromFavorite() -> String {
+        return "Ads/RemoveFromFavorite".fullUrl()
+    }
+    
+    //My Ads
+    static func myAds(typeId: Int) -> String {
+        return "Ads/GetMyAds?typeId=\(typeId)".fullUrl()
+    }
+    
+    //Packages
+    static func packages(CategoryId: Int) -> String {
+        return "Payment/GetPackages?CategoryId=\(CategoryId)".fullUrl()
+    }
+    
+    //Saved Searches
+    static func savedSearches(typeId: Int) -> String {
+        return "Ads/GetSavedSearchesList?typeId=\(typeId)".fullUrl()
+    }
+    
+    //Saved Searches Count
+    static func savedSearchesCount() -> String {
+        return "Ads/GetSavedSearchCount".fullUrl()
+    }
+    
+    //Delete Ad
+    static func deleteSavedSearch() -> String {
+        return "Ads/DeleteSavedSearch".fullUrl()
+    }
+    
+    // Filters
+    static func filterBusiness() -> String {
+        return "BussinesAds/FilterBusiness".fullUrl()
+    }
+    static func filterClassified() -> String {
+        return "ClassifiedAds/FilterClassifieds".fullUrl()
+    }
+    static func filterElectronics() -> String {
+        return "ElectronicAds/FilterElectronics".fullUrl()
+    }
+    static func filterJobs() -> String {
+        return "JobAds/FilterJobs".fullUrl()
+    }
+    static func filterMotors() -> String {
+        return "MotorAds/FilterMotors".fullUrl()
+    }
+    static func filterNumbers() -> String {
+        return "NumberAds/FilterNumbers".fullUrl()
+    }
+    static func filterServices() -> String {
+        return "ServiceAds/FilterServices".fullUrl()
+    }
+    
     
 }
 

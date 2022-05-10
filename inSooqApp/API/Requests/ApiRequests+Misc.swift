@@ -188,6 +188,19 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.favoriteAdsCount(), method: .get) { (response: FavoriteAdsCountCompletionHandler) in completion(response) }
     }
     
+    static func addFavorite(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.addToFavorite(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
+    }
+    
+    static func removeFavorite(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.removeFromFavorite(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
+    }
+    
+    typealias PackagesCompletionHandler = (DataResponse<[PackageModel],AFError>)
+    static func packages(CategoryId: Int, completion:@escaping (PackagesCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.packages(CategoryId: CategoryId), method: .get) { (response: PackagesCompletionHandler) in completion(response) }
+    }
+    
 }
 
 //return "DropDowns/GetAllMotorRegionalSpecs".fullUrl()
