@@ -28,8 +28,8 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJo-Il-2LL">
-                            <rect key="frame" x="0.0" y="21" width="93" height="51"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJo-Il-2LL">
+                            <rect key="frame" x="0.0" y="21" width="388" height="51"/>
                             <color key="tintColor" name="labelOrange"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="LOCATION"/>
@@ -47,6 +47,7 @@
                     <constraints>
                         <constraint firstItem="8fz-AJ-7go" firstAttribute="top" secondItem="Ixq-bu-JOc" secondAttribute="top" id="1ev-v8-1Vh"/>
                         <constraint firstItem="8fz-AJ-7go" firstAttribute="leading" secondItem="Ixq-bu-JOc" secondAttribute="leading" id="25B-xb-3kZ"/>
+                        <constraint firstItem="i3w-cW-qrR" firstAttribute="leading" secondItem="MJo-Il-2LL" secondAttribute="trailing" id="XPI-zi-rQA"/>
                         <constraint firstItem="i3w-cW-qrR" firstAttribute="centerY" secondItem="MJo-Il-2LL" secondAttribute="centerY" id="Y0u-ZY-Iqc"/>
                         <constraint firstAttribute="bottom" secondItem="MJo-Il-2LL" secondAttribute="bottom" id="jEe-jv-4fl"/>
                         <constraint firstAttribute="trailing" secondItem="i3w-cW-qrR" secondAttribute="trailing" id="qkD-aR-v1l"/>

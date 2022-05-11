@@ -615,9 +615,55 @@
                     <view key="view" contentMode="scaleToFill" id="j6s-cp-sYs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-Sg-Shw" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="435-xp-JPg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.50955270931420737" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5NL-bB-vc7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YsT-Uw-XKb">
+                                <rect key="frame" x="187" y="432.5" width="40" height="40"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Sj2-1D-2Kh"/>
+                                    <constraint firstAttribute="height" constant="40" id="VmO-Ao-doY"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Npd-x0-FLg">
+                                <rect key="frame" x="188.5" y="374.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LBA-Kv-ces"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="435-xp-JPg" firstAttribute="leading" secondItem="LBA-Kv-ces" secondAttribute="leading" id="8gt-4N-AcT"/>
+                            <constraint firstItem="LBA-Kv-ces" firstAttribute="trailing" secondItem="435-xp-JPg" secondAttribute="trailing" id="Dso-OM-Z6y"/>
+                            <constraint firstItem="C4q-Sg-Shw" firstAttribute="top" secondItem="j6s-cp-sYs" secondAttribute="top" id="EVy-x2-eOC"/>
+                            <constraint firstItem="435-xp-JPg" firstAttribute="top" secondItem="LBA-Kv-ces" secondAttribute="top" id="ObM-MS-iDB"/>
+                            <constraint firstItem="C4q-Sg-Shw" firstAttribute="leading" secondItem="LBA-Kv-ces" secondAttribute="leading" id="Oce-uQ-rta"/>
+                            <constraint firstItem="YsT-Uw-XKb" firstAttribute="centerY" secondItem="LBA-Kv-ces" secondAttribute="centerY" id="SFA-Oi-0NS"/>
+                            <constraint firstItem="YsT-Uw-XKb" firstAttribute="centerX" secondItem="LBA-Kv-ces" secondAttribute="centerX" id="ZZr-Jh-XN4"/>
+                            <constraint firstItem="Npd-x0-FLg" firstAttribute="centerX" secondItem="LBA-Kv-ces" secondAttribute="centerX" id="h8c-kP-UjW"/>
+                            <constraint firstItem="Npd-x0-FLg" firstAttribute="centerY" secondItem="LBA-Kv-ces" secondAttribute="centerY" constant="-60" id="ly0-zU-9AV"/>
+                            <constraint firstAttribute="bottom" secondItem="C4q-Sg-Shw" secondAttribute="bottom" id="tO4-P6-Mf9"/>
+                            <constraint firstItem="LBA-Kv-ces" firstAttribute="trailing" secondItem="C4q-Sg-Shw" secondAttribute="trailing" id="u3s-z8-afo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="Npd-x0-FLg" id="YDn-6v-jEw"/>
+                        <outlet property="addressLabel" destination="435-xp-JPg" id="d4n-yp-87S"/>
+                        <outlet property="mapView" destination="C4q-Sg-Shw" id="9Ah-bv-vkw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMB-cU-EEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -984,6 +1030,7 @@
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="package_icon" width="151.5" height="117.5"/>
@@ -999,6 +1046,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

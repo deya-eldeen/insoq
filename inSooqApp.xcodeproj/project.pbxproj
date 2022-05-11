@@ -71,6 +71,7 @@
 		E31E6EB4280798AC001A4E9A /* FormPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E6EB2280798AC001A4E9A /* FormPreviewView.swift */; };
 		E31E6EB5280798AC001A4E9A /* FormPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */; };
 		E327E5D5280633BA000968C0 /* FormAcceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327E5D4280633BA000968C0 /* FormAcceptView.swift */; };
+		E3488EBE282C060400D8E5F2 /* AdModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3488EBD282C060400D8E5F2 /* AdModels.swift */; };
 		E34D94C52818ACB000912AF7 /* ApiRequests+Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */; };
 		E34D94C62818B64500912AF7 /* Pods_inSooqApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; };
 		E34D94C72818B64500912AF7 /* Pods_inSooqApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -612,6 +613,7 @@
 		E31E6EB2280798AC001A4E9A /* FormPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormPreviewView.swift; sourceTree = "<group>"; };
 		E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormPreviewView.xib; sourceTree = "<group>"; };
 		E327E5D4280633BA000968C0 /* FormAcceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAcceptView.swift; sourceTree = "<group>"; };
+		E3488EBD282C060400D8E5F2 /* AdModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdModels.swift; sourceTree = "<group>"; };
 		E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Submission.swift"; sourceTree = "<group>"; };
 		E37E908F282A90050070C351 /* ApiRequests+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Filtering.swift"; sourceTree = "<group>"; };
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
@@ -1755,6 +1757,7 @@
 				E380354527F660F800FF0212 /* CareerLevelModel.swift */,
 				E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */,
 				E380354E27F85F7E00FF0212 /* AdvertisingModel.swift */,
+				E3488EBD282C060400D8E5F2 /* AdModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2705,6 +2708,7 @@
 				F107A1BA25CFCC9F00FC6340 /* Resources */,
 				06FBB889B14FFE6D83197E4D /* [CP] Embed Pods Frameworks */,
 				E34D94C82818B64500912AF7 /* Embed Frameworks */,
+				9A5FADC59048E93AFD173623 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2951,6 +2955,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-inSooqApp/Pods-inSooqApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9A5FADC59048E93AFD173623 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inSooqApp/Pods-inSooqApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inSooqApp/Pods-inSooqApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-inSooqApp/Pods-inSooqApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9FE193CF408DBA1BF12DE6FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3054,6 +3075,7 @@
 				E3A81124280431FA003A2CC0 /* Classified_Details_Data.swift in Sources */,
 				E3FD210527EA508600FDA9DD /* ApiRequests.swift in Sources */,
 				F107A22525D0135800FC6340 /* HomeItemsModel.swift in Sources */,
+				E3488EBE282C060400D8E5F2 /* AdModels.swift in Sources */,
 				1EC5849D27CC071E002181DC /* BusinessModel.swift in Sources */,
 				CE8CC6F627E4F46800DC0F85 /* GetAllEmirateM.swift in Sources */,
 				E39DC534280A03EE00BAE09D /* Plate_Numbers_VC.swift in Sources */,

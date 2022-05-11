@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseMessaging
 import AlamofireNetworkActivityLogger
+import GoogleMaps
 
 import IQKeyboardManagerSwift
 @main
@@ -21,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         debugPrint("appe is in forground")
+        
+        GMSServices.provideAPIKey("AIzaSyAu-Ffw2Upr-EncJHdUqgNtR-O5FUKHcgI")
+        
         setupLogging()
         setupNavigation()
         Messaging.messaging().delegate = self

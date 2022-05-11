@@ -8,7 +8,7 @@
 import UIKit
 import GoogleMaps
 
-class MapPickerViewController: BaseVC {
+class MapPickerViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
@@ -28,7 +28,7 @@ class MapPickerViewController: BaseVC {
         locationManager.delegate = self
         mapView.isHidden = true
         addressLabel.isHidden = true
-        LocationVC.addressDetails = ""
+        MapPickerViewController.addressDetails = ""
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestLocation()
@@ -37,10 +37,6 @@ class MapPickerViewController: BaseVC {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         
     }
     
@@ -57,7 +53,7 @@ class MapPickerViewController: BaseVC {
             }
             
             self.addressLabel.text = lines.joined(separator: "\n")
-            LocationVC.addressDetails = lines.joined(separator: "\n")
+            MapPickerViewController.addressDetails = lines.joined(separator: "\n")
             
             UIView.animate(withDuration: 0.25) {
                 self.view.layoutIfNeeded()

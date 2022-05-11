@@ -108,6 +108,11 @@ class FormViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updatePreview()
+        renderLocation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        renderLocation()
     }
     
     override func viewDidLoad() {
@@ -421,10 +426,24 @@ class FormViewController: UIViewController {
 
     }
     
+    func renderLocation() {
+        
+        for element in formElements {
+            if type(of: element) == FormLocationView.self {
+                let lv = (element as! FormLocationView)
+                if MapPickerViewController.addressDetails.isEmpty == false {
+                    lv.button.setTitle(MapPickerViewController.addressDetails, for: .normal)
+                }
+            }
+        }
+
+    }
+    
     
 }
 
 extension FormViewController: UIScrollViewDelegate {
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x != 0 {

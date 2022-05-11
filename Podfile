@@ -47,4 +47,6 @@ pod 'AlamofireNetworkActivityLogger', '~> 3.4'
 pod 'Defaults'
 pod 'CodableCache'
 
+pod 'GoogleMaps'
+
 end

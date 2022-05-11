@@ -179,9 +179,39 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.usage(typeId: typeId), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func favoriteAds(typeId: Int, completion:@escaping (ListableCompletionHandler) -> Void) {
-        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: typeId), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    //
+    static func favoriteMotorAds(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.motor.rawValue), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
+    
+    static func favoriteJobAds(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.job.rawValue), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
+    
+    static func favoriteNumberAds(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.numbers.rawValue), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
+    
+    static func favoriteElectronicsAds(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.electronics.rawValue), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
+    
+    static func favoriteClassifiedAds(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.classified.rawValue), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
+    
+    static func favoriteServicesAds(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.services.rawValue), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
+    
+    static func favoriteBusinessAds(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.business.rawValue), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
+    
+    
+    
+    
+    
     
     typealias FavoriteAdsCountCompletionHandler = (DataResponse<[FavAdsCount],AFError>)
     static func favoriteAdsCount(completion:@escaping (FavoriteAdsCountCompletionHandler) -> Void) {
