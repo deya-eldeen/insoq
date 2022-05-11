@@ -14,22 +14,23 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
     @IBOutlet weak var ItemsDataTableView: UITableView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
+    var motors_data = [MotorAdModel]()
+    var jobs_data = [JobAdModel]()
+    var numbers_data = [NumberAdModel]()
+    var electronics_data = [ElectronicsAdModel]()
+    var classified_data = [ClassifiedAdModel]()
+    var services_data = [ServiceAdModel]()
+    var business_data = [BusinessAdModel]()
+    
     //How to show All types of Cells in this tableview
     var index: Int = 0
+    
+    var adTypeIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomBar.setVC(viewController: self)
         topBar.setVC(viewController: self)
-        
-        ApiRequests.favoriteAdsCount { response in
-            print("R")
-        }
-        
-        ApiRequests.favoriteAds(typeId: 0) { response in
-            print("F")
-        }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +56,7 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
         
     }
     
-    private func registerXib(){
+    private func registerXib() {
 
         let JobsNib = UINib(nibName: "JobsTableViewCell", bundle: nil)
         ItemsDataTableView.register(JobsNib, forCellReuseIdentifier: "JobsTableViewCell")
@@ -68,7 +69,28 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Statics.adsArray.count
+        
+        let adType = AdMainType.init(rawValue: adTypeIndex) ?? AdMainType.none
+        
+        switch adType {
+        case .motor:
+            return self.motors_data.count
+        case .job:
+            return self.jobs_data.count
+        case .numbers:
+            return self.numbers_data.count
+        case .electronics:
+            return self.electronics_data.count
+        case .classified:
+            return self.classified_data.count
+        case .services:
+            return self.services_data.count
+        case .business:
+            return self.business_data.count
+        case .none:
+            return 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -164,6 +186,52 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
         }
         
     }
+    
+    func fetchData(adType: AdMainType) {
+        
+        print("adType",adType)
+        
+        switch adType {
+        case .motor:
+            ApiRequests.favoriteMotorAds { r in
+                self.motors_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .job:
+            ApiRequests.favoriteJobAds { r in
+                self.jobs_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .numbers:
+            ApiRequests.favoriteNumberAds { r in
+                self.numbers_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .electronics:
+            ApiRequests.favoriteElectronicsAds { r in
+                self.electronics_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .classified:
+            ApiRequests.favoriteClassifiedAds { r in
+                self.classified_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .services:
+            ApiRequests.favoriteServicesAds { r in
+                self.services_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .business:
+            ApiRequests.favoriteBusinessAds { r in
+                self.business_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .none:
+            break
+        }
+        
+    }
 
 }
 
@@ -178,16 +246,23 @@ extension MyFavoritesViewController: UICollectionViewDelegateFlowLayout,UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
         cell.setCategoriesData(data: Statics.favoModel[indexPath.row])
         // cell.contentView.layer.cornerRadius=cell.contentView.frame.height/2
-        if indexPath.row==0{
+        if indexPath.row == 0 {
             cell.coloredView.backgroundColor=#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
             cell.coloredView.layer.cornerRadius=cell.coloredView.frame.height/2
-
         }
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let targetID = Int(Statics.favoModel[indexPath.row].categoyID) ?? 0
+        self.adTypeIndex = targetID
+        
+        print("targetID",targetID)
+        print("adTypeIndex",adTypeIndex)
+        
+        fetchData(adType: AdMainType.init(rawValue: targetID) ?? AdMainType.none)
         
         debugPrint("Selected indexPath = ", indexPath.item)
         debugPrint("Property selected")
@@ -215,3 +290,5 @@ extension MyFavoritesViewController: UICollectionViewDelegateFlowLayout,UICollec
     }
     
 }
+
+

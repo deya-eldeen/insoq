@@ -1482,6 +1482,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                 <constraints>
                                                     <constraint firstItem="I1m-OO-Np4" firstAttribute="height" secondItem="LD8-2R-VdB" secondAttribute="height" id="0l4-2B-dix"/>
                                                     <constraint firstItem="NxK-2U-9a5" firstAttribute="width" relation="lessThanOrEqual" secondItem="rUR-Xj-mz0" secondAttribute="width" multiplier="0.7" id="1EN-vW-an6"/>
