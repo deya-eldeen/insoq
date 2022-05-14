@@ -117,7 +117,7 @@ class FormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemGray5
+        self.view.backgroundColor = UIColor.init(hex: 0xF6F6F9)
         prepareStackView()
         feedStackView()
         addSearchView()
@@ -381,8 +381,8 @@ class FormViewController: UIViewController {
             }
             
             if type(of: element) == FormPreviewView.self {
-                (element as! FormPreviewView).adTitleLabel.text = FormViewController.adTitle
-                (element as! FormPreviewView).adLocationLabel.text = FormViewController.adLocation
+                (element as! FormPreviewView).adTitleLabel.text = (FormViewController.adTitle == "") ? ("Ad Title") : (FormViewController.adTitle)
+                (element as! FormPreviewView).adLocationLabel.text = (FormViewController.adLocation == "") ? ("Location") : FormViewController.adLocation
             }
             
         }

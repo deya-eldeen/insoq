@@ -143,7 +143,7 @@
                                                         <rect key="frame" x="0.0" y="360" width="428" height="220"/>
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u4J-sZ-l1f">
-                                                                <rect key="frame" x="30" y="0.0" width="368" height="220"/>
+                                                                <rect key="frame" x="8" y="0.0" width="412" height="220"/>
                                                                 <color key="backgroundColor" name="AppBackground"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IfJ-sY-bmX">
                                                                     <size key="itemSize" width="311" height="182"/>
@@ -160,7 +160,7 @@
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOV-zr-3hT">
-                                                                                    <rect key="frame" x="5" y="5" width="301" height="172"/>
+                                                                                    <rect key="frame" x="2" y="5" width="307" height="172"/>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State of the art showroom" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmX-lD-glL">
                                                                                     <rect key="frame" x="175.66666666666666" y="19.999999999999996" width="112.99999999999997" height="40.666666666666657"/>
@@ -180,14 +180,14 @@
                                                                             </subviews>
                                                                             <constraints>
                                                                                 <constraint firstItem="YmX-lD-glL" firstAttribute="width" relation="lessThanOrEqual" secondItem="WOV-zr-3hT" secondAttribute="width" multiplier="0.4" id="6mB-9m-OcP"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="WOV-zr-3hT" secondAttribute="trailing" constant="5" id="9Ib-O5-4IA"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="WOV-zr-3hT" secondAttribute="trailing" constant="2" id="9Ib-O5-4IA"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="WOV-zr-3hT" secondAttribute="bottom" constant="5" id="Bt4-qm-oOY"/>
                                                                                 <constraint firstItem="WOV-zr-3hT" firstAttribute="top" secondItem="LLu-5n-npZ" secondAttribute="top" constant="5" id="JV4-Wb-Caq"/>
                                                                                 <constraint firstItem="YmX-lD-glL" firstAttribute="top" secondItem="LLu-5n-npZ" secondAttribute="top" constant="20" id="NIG-f5-Myn"/>
                                                                                 <constraint firstItem="ZKG-zm-Uza" firstAttribute="centerY" secondItem="WOV-zr-3hT" secondAttribute="centerY" constant="20" id="SEY-Qu-jFl"/>
                                                                                 <constraint firstItem="ZKG-zm-Uza" firstAttribute="centerX" secondItem="WOV-zr-3hT" secondAttribute="centerX" constant="70" id="mBn-rF-16U"/>
                                                                                 <constraint firstItem="YmX-lD-glL" firstAttribute="leading" secondItem="ZKG-zm-Uza" secondAttribute="leading" id="nXA-I7-QT3"/>
-                                                                                <constraint firstItem="WOV-zr-3hT" firstAttribute="leading" secondItem="LLu-5n-npZ" secondAttribute="leading" constant="5" id="nvy-HB-gPB"/>
+                                                                                <constraint firstItem="WOV-zr-3hT" firstAttribute="leading" secondItem="LLu-5n-npZ" secondAttribute="leading" constant="2" id="nvy-HB-gPB"/>
                                                                             </constraints>
                                                                         </collectionViewCellContentView>
                                                                         <size key="customSize" width="311" height="182"/>
@@ -205,13 +205,13 @@
                                                         </subviews>
                                                         <color key="backgroundColor" name="AppBackground"/>
                                                         <constraints>
-                                                            <constraint firstItem="u4J-sZ-l1f" firstAttribute="leading" secondItem="K1A-cF-TcU" secondAttribute="leading" constant="30" id="FfA-z1-E0M"/>
+                                                            <constraint firstItem="u4J-sZ-l1f" firstAttribute="leading" secondItem="K1A-cF-TcU" secondAttribute="leading" constant="8" id="FfA-z1-E0M"/>
                                                             <constraint firstItem="D0b-uK-u3a" firstAttribute="bottom" secondItem="u4J-sZ-l1f" secondAttribute="bottom" constant="-30" id="TLP-y6-ARa"/>
                                                             <constraint firstItem="D0b-uK-u3a" firstAttribute="width" relation="lessThanOrEqual" secondItem="u4J-sZ-l1f" secondAttribute="width" multiplier="0.7" id="XKo-ft-ygo"/>
                                                             <constraint firstItem="D0b-uK-u3a" firstAttribute="centerX" secondItem="u4J-sZ-l1f" secondAttribute="centerX" constant="50" id="hIc-KF-WJi"/>
                                                             <constraint firstAttribute="height" constant="220" id="hNd-nG-nf3"/>
                                                             <constraint firstItem="u4J-sZ-l1f" firstAttribute="top" secondItem="K1A-cF-TcU" secondAttribute="top" id="jiw-eI-dKh"/>
-                                                            <constraint firstAttribute="trailing" secondItem="u4J-sZ-l1f" secondAttribute="trailing" constant="30" id="tAX-X0-tyz"/>
+                                                            <constraint firstAttribute="trailing" secondItem="u4J-sZ-l1f" secondAttribute="trailing" constant="8" id="tAX-X0-tyz"/>
                                                             <constraint firstAttribute="bottom" secondItem="u4J-sZ-l1f" secondAttribute="bottom" id="xnB-Gc-EOG"/>
                                                         </constraints>
                                                     </view>
@@ -235,7 +235,7 @@
                                                                                     <viewLayoutGuide key="contentLayoutGuide" id="cDD-UP-3ZS"/>
                                                                                     <viewLayoutGuide key="frameLayoutGuide" id="pz3-sr-dnM"/>
                                                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="6Au-po-7ud">
-                                                                                        <size key="itemSize" width="0.0" height="0.0"/>
+                                                                                        <size key="itemSize" width="194" height="0.0"/>
                                                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -249,7 +249,7 @@
                                                                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-WJ-8HC">
                                                                                                         <rect key="frame" x="5" y="4.9999999999999929" width="174" height="125.33333333333331"/>
                                                                                                         <subviews>
-                                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFl-wU-2bD">
+                                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFl-wU-2bD">
                                                                                                                 <rect key="frame" x="0.0" y="0.0" width="174" height="125.33333333333333"/>
                                                                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                                                             </imageView>

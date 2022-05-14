@@ -179,6 +179,9 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.usage(typeId: typeId), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
+    
+    
+    // Favorites
     typealias FavMotorCompletitionHandler = (DataResponse<[MotorAdModel],AFError>)
     static func favoriteMotorAds(completion:@escaping (FavMotorCompletitionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.motor.rawValue), method: .get) { (response: FavMotorCompletitionHandler) in completion(response) }
@@ -214,7 +217,52 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.favoriteAds(typeId: AdMainType.business.rawValue), method: .get) { (response: FavBusinessCompletitionHandler) in completion(response) }
     }
     
+    // My Ads
+    typealias MyMotorCompletitionHandler = (DataResponse<[MotorAdModel],AFError>)
+    static func myMotorAds(completion:@escaping (MyMotorCompletitionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.myAds(typeId: AdMainType.motor.rawValue), method: .get) { (response: MyMotorCompletitionHandler) in completion(response) }
+    }
     
+    typealias MyJobCompletitionHandler = (DataResponse<[JobAdModel],AFError>)
+    static func myJobAds(completion:@escaping (MyJobCompletitionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.myAds(typeId: AdMainType.job.rawValue), method: .get) { (response: MyJobCompletitionHandler) in completion(response) }
+    }
+    
+    typealias MyNumberCompletitionHandler = (DataResponse<[NumberAdModel],AFError>)
+    static func myNumberAds(completion:@escaping (MyNumberCompletitionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.myAds(typeId: AdMainType.numbers.rawValue), method: .get) { (response: MyNumberCompletitionHandler) in completion(response) }
+    }
+    
+    typealias MyElectronicsCompletitionHandler = (DataResponse<[ElectronicsAdModel],AFError>)
+    static func myElectronicsAds(completion:@escaping (MyElectronicsCompletitionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.myAds(typeId: AdMainType.electronics.rawValue), method: .get) { (response: MyElectronicsCompletitionHandler) in completion(response) }
+    }
+    
+    typealias MyClassifiedCompletitionHandler = (DataResponse<[ClassifiedAdModel],AFError>)
+    static func myClassifiedAds(completion:@escaping (MyClassifiedCompletitionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.myAds(typeId: AdMainType.classified.rawValue), method: .get) { (response: MyClassifiedCompletitionHandler) in completion(response) }
+    }
+    
+    typealias MyServicesCompletitionHandler = (DataResponse<[ServiceAdModel],AFError>)
+    static func myServicesAds(completion:@escaping (MyServicesCompletitionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.myAds(typeId: AdMainType.services.rawValue), method: .get) { (response: MyServicesCompletitionHandler) in completion(response) }
+    }
+    
+    typealias MyBusinessCompletitionHandler = (DataResponse<[BusinessAdModel],AFError>)
+    static func myBusinessAds(completion:@escaping (MyBusinessCompletitionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.myAds(typeId: AdMainType.business.rawValue), method: .get) { (response: MyBusinessCompletitionHandler) in completion(response) }
+    }
+    
+    // Delete
+    static func delteAd(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.deleteAd(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
+    }
+    static func deleteSavedSearch(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.deleteSavedSearch(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
+    }
+    
+    
+    //
     typealias FavoriteAdsCountCompletionHandler = (DataResponse<[FavAdsCount],AFError>)
     static func favoriteAdsCount(completion:@escaping (FavoriteAdsCountCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.favoriteAdsCount(), method: .get) { (response: FavoriteAdsCountCompletionHandler) in completion(response) }

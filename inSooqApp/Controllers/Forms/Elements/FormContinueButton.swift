@@ -20,9 +20,10 @@ class FormContinueButton: UIButton, FormElement {
     }
     
     func commonInit() {
-        self.backgroundColor = .orange
+        self.backgroundColor = UIColor.init(hex: 0xFFB01C)
         
-        self.layer.cornerRadius = 8
+        print("BUTTON_HEIGHT",self.frame.height)
+        self.layer.cornerRadius = 18.0
         self.layer.masksToBounds = true
         
         self.setTitleColor(.white, for: .normal)

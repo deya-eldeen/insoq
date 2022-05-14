@@ -7,25 +7,84 @@
 
 import UIKit
 
-class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate {
+class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var ItemsDataTableView: UITableView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var topBar: TopNavigationbar!
     @IBOutlet weak var bottomView: BottomBar!
     
+    var motors_data = [MotorAdModel]()
+    var jobs_data = [JobAdModel]()
+    var numbers_data = [NumberAdModel]()
+    var electronics_data = [ElectronicsAdModel]()
+    var classified_data = [ClassifiedAdModel]()
+    var services_data = [ServiceAdModel]()
+    var business_data = [BusinessAdModel]()
+    
     //How to show All types of Cells in this tableview
-    var index:Int=0
+    var index : Int = 0
     var icon = FontAwesomeIcons()
+    
+    var adTypeIndex = 0
+
+    func fetchData(adType: AdMainType) {
+        
+        print("adType",adType)
+        
+        switch adType {
+        case .motor:
+            ApiRequests.myMotorAds { r in
+                self.motors_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .job:
+            ApiRequests.myJobAds { r in
+                self.jobs_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .numbers:
+            ApiRequests.myNumberAds { r in
+                self.numbers_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .electronics:
+            ApiRequests.myElectronicsAds { r in
+                self.electronics_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .classified:
+            ApiRequests.myClassifiedAds { r in
+                self.classified_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .services:
+            ApiRequests.myServicesAds { r in
+                self.services_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .business:
+            ApiRequests.myBusinessAds { r in
+                self.business_data = r.value ?? []
+                self.ItemsDataTableView.reloadData()
+            }
+        case .none:
+            break
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomView.setVC(viewController: self)
         topBar.setVC(viewController: self)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         setupDelegates()
         registerXib()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         //MARK:- animate Swipe Hint -
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
@@ -36,8 +95,8 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDe
             }
         }
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.isKind(of: MyAdsViewController.self){
             let touch = touches.first
             if touch?.view?.tag != 100{
@@ -46,27 +105,25 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDe
         }
     }
     
-    
     //MARK:-Private Functions-
     private func setupDelegates(){
         categoriesCollectionView.delegate=self
         categoriesCollectionView.dataSource=self
         ItemsDataTableView.delegate=self
         ItemsDataTableView.dataSource=self
-        
     }
     
-    @objc func deleteAction(){
-        for v in self.view.subviews{
+    @objc func deleteAction() {
+        for v in self.view.subviews {
             debugPrint("name..",v)
             if v.tag == 101 || v.tag == 100 {
                 v.removeFromSuperview()
                 debugPrint("Found Back View")
             }
-            
         }
     }
-    private func registerXib(){
+    
+    private func registerXib() {
         
         let motorsNib = UINib(nibName: "MyAdsMotorsTableViewCell", bundle: nil)
         ItemsDataTableView.register(motorsNib, forCellReuseIdentifier: "MyAdsMotorsTableViewCell")
@@ -79,14 +136,14 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDe
         //        let NumbersNib = UINib(nibName: "PlatesTableViewCell", bundle: nil)
         //        ItemsDataTableView.register(NumbersNib, forCellReuseIdentifier: "PlatesTableViewCell")
         
-        
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Statics.adsArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let itemsData:MyAdsMotorsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MyAdsMotorsTableViewCell", for: indexPath) as! MyAdsMotorsTableViewCell
         itemsData.images=Statics.adsArray
         //itemsData.mainView.addShadowToView(shadowRadius: 5)
@@ -94,6 +151,7 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDe
         return itemsData
         
     }
+    
     // {
     //        switch self.index {
     //        case 2:
@@ -153,32 +211,31 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDe
     //            }
     //        }
     //    }
-    @objc func goGetMoreViews(){
+    
+    @objc func goGetMoreViews() {
         self.performSegue(withIdentifier: "EditAdsSegue", sender: nil)            // Your swipe action code!
-        
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[indexPath.row].categoryName
         debugPrint("subCategoriesTableView-vcTitle",Statics.categoyModel[indexPath.row].categoryName)
         forcePresentViewController(viewController: self, storyBoardId: "SubCategoriesViewController")
-        
     }
+    
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         return UISwipeActionsConfiguration(actions: [
             makeDeleteContextualAction(forRowAt: indexPath)
         ])
-        
     }
     
-    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
         let statistics = UIContextualAction(style: .normal, title: "Statistics") { action, view, completion in
             debugPrint("statistics Action")
             // Your swipe action code!
-            
-            forcePresentViewController(viewController: self,storyBoardId: "StatisticsViewController") 
-            
+            forcePresentViewController(viewController: self,storyBoardId: "StatisticsViewController")
         }
+        
         statistics.backgroundColor=#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
         let statisticsLabel = UILabel()
         statisticsLabel.text = icon.statistics_icon//// Your swipe action text!
@@ -191,8 +248,8 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDe
             debugPrint("Edit Action")
             // iPresentViewController(viewController: self, storyBoardId: "GetMoreViewsViewController")
             forcePresentViewController(viewController: self, storyBoardId: "EditAdViewController")
-            
         }
+        
         edit.backgroundColor=#colorLiteral(red: 0.3411764706, green: 0.2745098039, blue: 0.9882352941, alpha: 1)
         let editLabel = UILabel()
         editLabel.text = icon.edit_icon //// Your swipe action text!
@@ -212,6 +269,7 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource,UITableViewDe
             completion(true)
         }
     }
+    
     @objc func jumpToEditVC(){
         //Preform segue
     }
@@ -276,6 +334,15 @@ extension MyAdsViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         debugPrint("Selected indexPath = ", indexPath.item)
         debugPrint("Property selected")
+        
+        let targetID = Int(Statics.favoModel[indexPath.row].categoyID) ?? 0
+        self.adTypeIndex = targetID
+        
+        print("targetID",targetID)
+        print("adTypeIndex",adTypeIndex)
+        
+        fetchData(adType: AdMainType.init(rawValue: targetID) ?? AdMainType.none)
+        
         //fitch This data from Selecteed Object
         //categoriesCollectionView.cellForItemAt(indexPath.row)
         index=indexPath.row

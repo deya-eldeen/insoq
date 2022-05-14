@@ -11,6 +11,8 @@ class PricesViewController: UIViewController {
     
     var previousVC: UIViewController?
     
+    var packages = [PackageModel]()
+    
     func dismissThenPopToRoot() {
     
         self.dismiss(animated: true) {
@@ -101,6 +103,10 @@ class PricesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        ApiRequests.packages(CategoryId: FormViewController.adMainType.rawValue) { response in
+            self.packages = response.value ?? []
+        }
         
     }
     

@@ -304,14 +304,13 @@ extension HomeViewController: MakeDropDownDataSourceProtocol{
 }
 
 //MARK:-CollectionView Controllers-
-extension HomeViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
+extension HomeViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == adsCollectionView{
-            return Statics.categoyModel.count
-            
+        if collectionView == adsCollectionView {
+            return Statics.categoyModelTop.count
         }else {
-            return Statics.categoyModel.count
-            
+            return Statics.categoyModelTop.count
         }
         
     }
@@ -319,15 +318,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == categoriesCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
-            cell.setCategoriesData(data: Statics.categoyModel[indexPath.row])
+            cell.setCategoriesData(data: Statics.categoyModelTop[indexPath.row])
             return cell
-            
         }
         else {
-            
             let adsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdsCollectionViewCell", for: indexPath) as! AdsCollectionViewCell
-            adsCell.backgroundColor  = .red
-
+            //adsCell.backgroundColor  = .red
             adsCell.setAdsData(image: Statics.adsArray[indexPath.row])
             adsCell.explorButton.tag=indexPath.row
             adsCell.explorButton.addTarget(self, action: #selector(explor_Pressed(sender:)), for: .touchUpInside)
@@ -347,7 +343,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout,UICollectionVie
         let index=indexPath.row
         if collectionView==categoriesCollectionView{
             SubCategoriesViewController.subCategoryObject.index = indexPath.row
-            showSubCategoryView(image: Statics.categoyModel[index].categoryImage, name: Statics.categoyModel[index].categoryName, index: index)
+            showSubCategoryView(image: Statics.categoyModelTop[index].categoryImage, name: Statics.categoyModelTop[index].categoryName, index: index)
 
             
 
@@ -458,7 +454,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if tableView==subCategoriesTableView{
+        if tableView==subCategoriesTableView {
             return  1
         }else{
             return  listOfAdsCategories.keys.count
@@ -659,21 +655,21 @@ extension HomeViewController{
             self.subCategoriesTableView.isHidden=false
         }
     }
-    func getAllAdsData(index:Int = 0){
+    
+    func getAllAdsData(index:Int = 0) {
         
-//        view.showLoading()
-let ignoreIds = ["2"]
-        if index < Statics.categoyModel.count{
+        //        view.showLoading()
+        let ignoreIds = ["2"]
         
-            if ignoreIds.contains(Statics.categoyModel[index].categoyID){
+        if index < Statics.categoyModel.count {
+            
+            if ignoreIds.contains(Statics.categoyModel[index].categoyID) {
                 goNext()
-
-            } else{
-            getAdsOfCategory(model: Statics.categoyModel[index], completeParsing: {
-                goNext()
-            })
+            } else {
+                getAdsOfCategory(model: Statics.categoyModel[index], completeParsing: { goNext() } )
             }
-        }else{
+            
+        } else {
             self.view.hideLoading()
             let count:CGFloat = CGFloat(listOfAdsCategories.keys.count )
             debugPrint("FINISHLOADING ,\(count)")
@@ -681,17 +677,17 @@ let ignoreIds = ["2"]
             DispatchQueue.main.async {
                 let heightRow = self.heightOFAdsCategorye
                 self.bottomViewHeightConstraint.constant=CGFloat((count*35)+( count * heightRow )+100)
-//                self.bottomViewHeightConstraint.constant=CGFloat(2246 * 2)
                 debugPrint("FINISHLOADING bottomViewHeightConstraint,\(self.bottomViewHeightConstraint.constant)")
-
                 self.itemTableView.reloadData()
-             }
+            }
+            
         }
         
-        func goNext(){
+        func goNext() {
             let nextIndex = index + 1
             self.getAllAdsData(index: nextIndex)
         }
+        
         func getAdsOfCategory(model:CategoriesModel,completeParsing:@escaping(()->Void)) {
             
             WebService.shared.CategoriesADSGetByTypeId(id: model.categoyID) { [weak self] response, error in
@@ -710,7 +706,9 @@ let ignoreIds = ["2"]
                 
             }
         }
+        
     }
+    
 //    GetLatestAds
     
 }

@@ -72,6 +72,10 @@
 		E31E6EB5280798AC001A4E9A /* FormPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */; };
 		E327E5D5280633BA000968C0 /* FormAcceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327E5D4280633BA000968C0 /* FormAcceptView.swift */; };
 		E3488EBE282C060400D8E5F2 /* AdModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3488EBD282C060400D8E5F2 /* AdModels.swift */; };
+		E3488EC3282C656E00D8E5F2 /* SimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3488EC1282C656E00D8E5F2 /* SimView.swift */; };
+		E3488EC4282C656E00D8E5F2 /* SimView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3488EC2282C656E00D8E5F2 /* SimView.xib */; };
+		E3488EC7282C657800D8E5F2 /* PlateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3488EC5282C657800D8E5F2 /* PlateView.xib */; };
+		E3488EC8282C657800D8E5F2 /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3488EC6282C657800D8E5F2 /* PlateView.swift */; };
 		E34D94C52818ACB000912AF7 /* ApiRequests+Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */; };
 		E34D94C62818B64500912AF7 /* Pods_inSooqApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; };
 		E34D94C72818B64500912AF7 /* Pods_inSooqApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -614,6 +618,10 @@
 		E31E6EB3280798AC001A4E9A /* FormPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormPreviewView.xib; sourceTree = "<group>"; };
 		E327E5D4280633BA000968C0 /* FormAcceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAcceptView.swift; sourceTree = "<group>"; };
 		E3488EBD282C060400D8E5F2 /* AdModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdModels.swift; sourceTree = "<group>"; };
+		E3488EC1282C656E00D8E5F2 /* SimView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimView.swift; sourceTree = "<group>"; };
+		E3488EC2282C656E00D8E5F2 /* SimView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimView.xib; sourceTree = "<group>"; };
+		E3488EC5282C657800D8E5F2 /* PlateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateView.xib; sourceTree = "<group>"; };
+		E3488EC6282C657800D8E5F2 /* PlateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateView.swift; sourceTree = "<group>"; };
 		E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Submission.swift"; sourceTree = "<group>"; };
 		E37E908F282A90050070C351 /* ApiRequests+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Filtering.swift"; sourceTree = "<group>"; };
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
@@ -1385,6 +1393,24 @@
 			path = PreviewView;
 			sourceTree = "<group>";
 		};
+		E3488EBF282C64A300D8E5F2 /* PlateView */ = {
+			isa = PBXGroup;
+			children = (
+				E3488EC6282C657800D8E5F2 /* PlateView.swift */,
+				E3488EC5282C657800D8E5F2 /* PlateView.xib */,
+			);
+			path = PlateView;
+			sourceTree = "<group>";
+		};
+		E3488EC0282C64AD00D8E5F2 /* SimView */ = {
+			isa = PBXGroup;
+			children = (
+				E3488EC1282C656E00D8E5F2 /* SimView.swift */,
+				E3488EC2282C656E00D8E5F2 /* SimView.xib */,
+			);
+			path = SimView;
+			sourceTree = "<group>";
+		};
 		E39BAE1927FC8E52001F5438 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1794,6 +1820,8 @@
 		E3F99BC5280194FA0084E95C /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				E3488EC0282C64AD00D8E5F2 /* SimView */,
+				E3488EBF282C64A300D8E5F2 /* PlateView */,
 				E39DC579280C5A4F00BAE09D /* FormFile */,
 				E39BAE1C27FC9AE1001F5438 /* FormElement.swift */,
 				E31E6EB1280797EB001A4E9A /* PreviewView */,
@@ -2826,8 +2854,10 @@
 				F1790E3725D3E9C0008E4D2C /* JobsTableViewCell.xib in Resources */,
 				F12A2C8325E3CA710043E3DA /* AddLocationCollectionViewCell.xib in Resources */,
 				F103490325E7958F00785B07 /* PlatesFillter.xib in Resources */,
+				E3488EC4282C656E00D8E5F2 /* SimView.xib in Resources */,
 				F1CBEC472627A82F00DC7F05 /* Mask-1.png in Resources */,
 				F1F352F82647EDE3001A065B /* spa.png in Resources */,
+				E3488EC7282C657800D8E5F2 /* PlateView.xib in Resources */,
 				F1FE01022654F7EC00A276D7 /* person_unselect.png in Resources */,
 				F1BA592B262ADA9E00B12D9C /* EditAdView.xib in Resources */,
 				2862BAED277D2B46009F4B7E /* Alerts.storyboard in Resources */,
@@ -3015,6 +3045,7 @@
 				F19A56822619A19B007D2ABC /* MainNavView.swift in Sources */,
 				E3A810F228035649003A2CC0 /* FormLabel.swift in Sources */,
 				E3A8111E280431AA003A2CC0 /* Business_Data.swift in Sources */,
+				E3488EC8282C657800D8E5F2 /* PlateView.swift in Sources */,
 				F1E2CE4725D1772900F64F67 /* SubCategoryObject.swift in Sources */,
 				E39DC526280A02E100BAE09D /* Business_VC.swift in Sources */,
 				F1FE0105265511AD00A276D7 /* ChatsTableViewHeader.swift in Sources */,
@@ -3101,6 +3132,7 @@
 				E39DC4FA2809C71B00BAE09D /* MapPickerViewController.swift in Sources */,
 				E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */,
 				F1CC83462628495700FE1241 /* SliderCollectionViewCell.swift in Sources */,
+				E3488EC3282C656E00D8E5F2 /* SimView.swift in Sources */,
 				E3FD210F27EA508600FDA9DD /* APIConfig.swift in Sources */,
 				F107A22125D0131000FC6340 /* Statics.swift in Sources */,
 				E3FD214427EA524000FDA9DD /* BaseVC.swift in Sources */,

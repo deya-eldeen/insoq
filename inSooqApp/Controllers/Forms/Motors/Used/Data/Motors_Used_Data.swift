@@ -11,8 +11,7 @@ extension Motors_Used_VC {
     
     func formElements() -> [UIView] {
         
-        let header = UIView()
-        header.frame.size = .init(width: 0, height: 40)
+        let header = UIView.init(frame: .init(x: 0, y: 0, width: 400, height: 40) )
         
         let startLabel = FormLabel()
         startLabel.text = "Let's start with the title"
@@ -48,7 +47,7 @@ extension Motors_Used_VC {
         //
         
         let formContinueButton = FormContinueButton()
-        formContinueButton.setTitle("Continue", for: .normal)
+        formContinueButton.setTitle("CONTINUE", for: .normal)
         
         let adPreview = FormPreviewView().render()
 

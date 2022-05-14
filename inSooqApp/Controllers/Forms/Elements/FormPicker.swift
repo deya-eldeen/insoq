@@ -20,7 +20,7 @@ class FormPicker: UIView, FormElement {
     }
     
     let button = PickerButton()
-    let textfield = UITextField()
+    let textfield = FormField()
     
     let pickerImage = UIImage(named: "tri")?.withTintColor(.darkGray)
     let pickerImageView = UIImageView(frame: .init(x: 0, y: 0, width: 16, height: 16))
@@ -35,13 +35,26 @@ class FormPicker: UIView, FormElement {
         self.commonInit()
     }
     
+    var textPadding = UIEdgeInsets(
+        top: 10,
+        left: 20,
+        bottom: 10,
+        right: 20
+    )
+
+//    override func textRect(forBounds bounds: CGRect) -> CGRect {
+//        let rect = super.textRect(forBounds: bounds)
+//        return rect.inset(by: textPadding)
+//    }
+    
     func commonInit() {
         
+//        self.textfield.alignmentRectInsets = self.textPadding
         // Textfield
         self.addSubview(textfield)
         textfield.translatesAutoresizingMaskIntoConstraints = false
         
-        textfield.borderStyle = .roundedRect
+        textfield.borderStyle = .none
         textfield.textColor = .gray
         textfield.font = .boldSystemFont(ofSize: 14)
         

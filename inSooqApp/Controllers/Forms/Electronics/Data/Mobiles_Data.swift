@@ -100,7 +100,7 @@ extension Mobiles_VC {
         let acceptView = FormAcceptView().render()
 
         let formContinueButton = FormContinueButton()
-        formContinueButton.setTitle("Continue", for: .normal)
+        formContinueButton.setTitle("CONTINUE", for: .normal)
         
         let adPreview = FormPreviewView().render()
 

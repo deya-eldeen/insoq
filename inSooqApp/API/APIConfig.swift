@@ -514,6 +514,9 @@ struct APIUrls {
     static func deleteSavedSearch() -> String {
         return "Ads/DeleteSavedSearch".fullUrl()
     }
+    static func deleteAd() -> String {
+        return "Ads/DeleteAd".fullUrl()
+    }
     
     // Filters
     static func filterBusiness() -> String {
@@ -538,6 +541,28 @@ struct APIUrls {
         return "ServiceAds/FilterServices".fullUrl()
     }
     
+    // ad details
+    static func getBusinessAd(adId: Int) -> String {
+        return "Ads/GetAd?adId=\(adId)&typeId=\(AdMainType.business.rawValue)".fullUrl()
+    }
+    static func getClassifiedAd(adId: Int) -> String {
+        return "Ads/GetAd?adId=\(adId)&typeId=\(AdMainType.classified.rawValue)".fullUrl()
+    }
+    static func getElectronicsAd(adId: Int) -> String {
+        return "Ads/GetAd?adId=\(adId)&typeId=\(AdMainType.electronics.rawValue)".fullUrl()
+    }
+    static func getJobsAd(adId: Int) -> String {
+        return "Ads/GetAd?adId=\(adId)&typeId=\(AdMainType.job.rawValue)".fullUrl()
+    }
+    static func getMotorsAd(adId: Int) -> String {
+        return "Ads/GetAd?adId=\(adId)&typeId=\(AdMainType.motor.rawValue)".fullUrl()
+    }
+    static func getNumberAd(adId: Int) -> String {
+        return "Ads/GetAd?adId=\(adId)&typeId=\(AdMainType.numbers.rawValue)".fullUrl()
+    }
+    static func getServicesAd(adId: Int) -> String {
+        return "Ads/GetAd?adId=\(adId)&typeId=\(AdMainType.services.rawValue)".fullUrl()
+    }
     
 }
 

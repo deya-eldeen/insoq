@@ -43,7 +43,7 @@ extension Job_Wanted_VC {
         jobTitleField.placeholder = "Job Title"
         
         let formContinueButton = FormContinueButton()
-        formContinueButton.setTitle("Continue", for: .normal)
+        formContinueButton.setTitle("CONTINUE", for: .normal)
         
         return [
             header,

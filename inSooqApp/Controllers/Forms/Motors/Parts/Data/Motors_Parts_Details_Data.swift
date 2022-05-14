@@ -62,7 +62,7 @@ extension Motors_Parts_Details_VC {
         let acceptView = FormAcceptView().render()
 
         let formContinueButton = FormContinueButton()
-        formContinueButton.setTitle("Continue", for: .normal)
+        formContinueButton.setTitle("CONTINUE", for: .normal)
         
         return [
             header,

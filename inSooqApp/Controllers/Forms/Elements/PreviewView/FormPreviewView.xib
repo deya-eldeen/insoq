@@ -40,16 +40,16 @@
                                             <rect key="frame" x="0.0" y="1.5" width="0.0" height="25"/>
                                             <color key="tintColor" systemColor="systemGrayColor"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtV-MK-Rwe" userLabel="titleLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Ad Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtV-MK-Rwe" userLabel="titleLabel">
                                             <rect key="frame" x="0.0" y="0.0" width="228.5" height="27.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PbU-n0-saV">
                                             <rect key="frame" x="232.5" y="1.5" width="27.5" height="25"/>
-                                            <color key="tintColor" systemColor="systemGrayColor"/>
+                                            <color key="tintColor" systemColor="systemGray2Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="PbU-n0-saV" secondAttribute="height" multiplier="1:1" id="Eal-FR-nTq"/>
                                             </constraints>
@@ -61,7 +61,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9rX-9k-dqZ">
                                             <rect key="frame" x="0.0" y="1" width="27.5" height="26"/>
-                                            <color key="tintColor" systemColor="systemGrayColor"/>
+                                            <color key="tintColor" systemColor="systemGray2Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="9rX-9k-dqZ" secondAttribute="height" multiplier="1:1" id="HdQ-Fz-cxx"/>
                                             </constraints>
@@ -70,7 +70,7 @@
                                             <rect key="frame" x="31.5" y="0.0" width="228.5" height="27.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -155,6 +155,9 @@
         <image name="doc" catalog="system" width="115" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="location" catalog="system" width="128" height="118"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

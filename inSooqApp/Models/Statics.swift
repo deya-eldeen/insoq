@@ -51,14 +51,25 @@ class Statics{
 //    new in business
 //    new in services
     
-    static var categoyModel:[CategoriesModel] = [
+    static var categoyModelTop:[CategoriesModel] = [
         CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))
-//        , CategoriesModel(categoryName: "Property", categoyID: "2", categoyColor: #colorLiteral(red: 1, green: 0.5411764706, blue: 0.01568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "property_icon") )
         , CategoriesModel(categoryName: "Jobs", categoyID: "3", categoyColor: #colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "jobs_icon"))
         , CategoriesModel(categoryName: "Services", categoyID: "4", categoyColor: #colorLiteral(red: 0, green: 0.831372549, blue: 0.9764705882, alpha: 1), categoryImage: #imageLiteral(resourceName: "services_icon"))
         , CategoriesModel(categoryName: "Business", categoyID: "5", categoyColor: #colorLiteral(red: 0.4274509804, green: 0.831372549, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "buissness_icon"))
         , CategoriesModel(categoryName: "Classifieds", categoyID: "6", categoyColor: #colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1), categoryImage: #imageLiteral(resourceName: "classified_icon"))
-        ,CategoriesModel(categoryName: "Numbers", categoyID: "7", categoyColor: #colorLiteral(red: 0.4470588235, green: 0.3333333333, blue: 0.9450980392, alpha: 1), categoryImage: #imageLiteral(resourceName: "plate_icon")),CategoriesModel(categoryName: "Electronics", categoyID: "8", categoyColor: #colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "mobile_icon"))
+        , CategoriesModel(categoryName: "Numbers", categoyID: "7", categoyColor: #colorLiteral(red: 0.4470588235, green: 0.3333333333, blue: 0.9450980392, alpha: 1), categoryImage: #imageLiteral(resourceName: "plate_icon"))
+        , CategoriesModel(categoryName: "Electronics", categoyID: "8", categoyColor: #colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "mobile_icon"))
+    ]
+    
+    static var categoyModel:[CategoriesModel] = [
+        CategoriesModel(categoryName: "New in Motors", categoyID: "1", categoyColor: #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))
+        , CategoriesModel(categoryName: "New in Property", categoyID: "2", categoyColor: #colorLiteral(red: 1, green: 0.5411764706, blue: 0.01568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "property_icon") )
+        , CategoriesModel(categoryName: "New in Jobs", categoyID: "3", categoyColor: #colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "jobs_icon"))
+        , CategoriesModel(categoryName: "New in Services", categoyID: "4", categoyColor: #colorLiteral(red: 0, green: 0.831372549, blue: 0.9764705882, alpha: 1), categoryImage: #imageLiteral(resourceName: "services_icon"))
+        , CategoriesModel(categoryName: "New in Business", categoyID: "5", categoyColor: #colorLiteral(red: 0.4274509804, green: 0.831372549, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "buissness_icon"))
+        , CategoriesModel(categoryName: "New in Classifieds", categoyID: "6", categoyColor: #colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1), categoryImage: #imageLiteral(resourceName: "classified_icon"))
+        , CategoriesModel(categoryName: "New in Numbers", categoyID: "7", categoyColor: #colorLiteral(red: 0.4470588235, green: 0.3333333333, blue: 0.9450980392, alpha: 1), categoryImage: #imageLiteral(resourceName: "plate_icon"))
+        , CategoriesModel(categoryName: "New in Electronics", categoyID: "8", categoyColor: #colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "mobile_icon"))
     ]
     
     

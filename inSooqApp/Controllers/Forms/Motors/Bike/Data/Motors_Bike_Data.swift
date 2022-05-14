@@ -44,7 +44,7 @@ extension Motors_Bike_VC {
         yearField.keyboardType = .numberPad
         
         let formContinueButton = FormContinueButton()
-        formContinueButton.setTitle("Continue", for: .normal)
+        formContinueButton.setTitle("CONTINUE", for: .normal)
         
         let adPreview = FormPreviewView().render()
 
