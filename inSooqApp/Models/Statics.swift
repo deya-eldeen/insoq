@@ -8,7 +8,16 @@
 import Foundation
 import UIKit
 //import JGProgressHUD
-class Statics{
+
+class Statics {
+    
+    static let preview_business = UIImage(named: "preview_business")
+    static let preview_classified = UIImage(named: "preview_classified")
+    static let preview_electronics = UIImage(named: "preview_electronics")
+    static let preview_jobs = UIImage(named: "preview_jobs")
+    static let preview_motors = UIImage(named: "preview_motors")
+    static let preview_services = UIImage(named: "preview_services")
+    
     static var _FirstTime=false
     static var languageCode = Locale.current.languageCode
     // static var spinner = JGProgressHUD(style: .extraLight)

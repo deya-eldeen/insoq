@@ -384,6 +384,43 @@ class FormViewController: UIViewController {
             if type(of: element) == FormPreviewView.self {
                 (element as! FormPreviewView).adTitleLabel.text = (FormViewController.adTitle == "") ? ("Ad Title") : (FormViewController.adTitle)
                 (element as! FormPreviewView).adLocationLabel.text = (FormViewController.adLocation == "") ? ("Location") : FormViewController.adLocation
+                
+                let adImage = (element as! FormPreviewView).adImage.image
+                
+                if(adImage == nil) {
+                    
+                    let preview_business = Statics.preview_business
+                    let preview_classified = Statics.preview_classified
+                    let preview_electronics = Statics.preview_electronics
+                    let preview_jobs = Statics.preview_jobs
+                    let preview_motors = Statics.preview_motors
+                    let preview_services = Statics.preview_services
+                    
+                    let fpp = (element as! FormPreviewView)
+                    
+                    switch FormViewController.adMainType {
+                        
+                    case .motor:
+                        fpp.adImage.image = preview_motors
+                    case .job:
+                        fpp.adImage.image = preview_jobs
+                    case .numbers:
+                        fpp.adImage.image = preview_jobs
+                    case .electronics:
+                        fpp.adImage.image = preview_electronics
+                    case .classified:
+                        fpp.adImage.image = preview_classified
+                    case .services:
+                        fpp.adImage.image = preview_services
+                    case .business:
+                        fpp.adImage.image = preview_business
+                    case .none:
+                        fpp.adImage.image = nil
+
+                    }
+                    
+                }
+
             }
             
         }

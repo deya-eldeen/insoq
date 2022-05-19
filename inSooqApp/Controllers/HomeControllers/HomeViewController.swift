@@ -146,34 +146,9 @@ class HomeViewController: UIViewController {
         headerObject.icon=image
         headerObject.name=name
         headerObject.index=index
-        switch index {
-        case 1:
-            headerObject.viewColor=#colorLiteral(red: 1, green: 0.5411764706, blue: 0.01568627451, alpha: 1)
-            break
-        case 2:
-            headerObject.viewColor=#colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1)
-            break
-        case 3:
-            headerObject.viewColor=#colorLiteral(red: 0, green: 0.831372549, blue: 0.9764705882, alpha: 1)
-            break
-        case 4:
-            headerObject.viewColor=#colorLiteral(red: 0.4274509804, green: 0.831372549, blue: 0, alpha: 1)
-            break
-        case 5:
-            headerObject.viewColor=#colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1)
-            break
-        case 6:
-            headerObject.viewColor=#colorLiteral(red: 0.4470588235, green: 0.3333333333, blue: 0.9450980392, alpha: 1)
-            break
-        case 7:
-            headerObject.viewColor=#colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1)
-            break
-        default:
-            headerObject.viewColor=#colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1)
-        }
-        
+        headerObject.viewColor = Statics.categoyModel[index].categoyColor
         getSubCategory(id: Statics.categoyModel[index].categoyID)
-//        subCategoriesTableView.reloadData()
+        
     }
     
     private func setDesign() {

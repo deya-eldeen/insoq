@@ -9,10 +9,10 @@ import UIKit
 import Kingfisher
 
 class SubCategoriesTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var subImage: UIImageView!
     @IBOutlet weak var subName: UILabel!
     @IBOutlet weak var numberOfItems: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,10 +32,15 @@ class SubCategoriesTableViewCell: UITableViewCell {
     
 
     
-    func setSubCategoryDataModel(model: Category){
+    func setSubCategoryDataModel(model: Category) {
+        
         self.numberOfItems.text = "Ads \(model.numberOfAds?.description ?? "")"
+        
+        let urlString = "\(model.firstImage?.replacingOccurrences(of: "\\", with: "/", options: .literal, range: nil) ?? "")"
+        print("urlString__",urlString)
+        
         subImage.kf.setImage(
-            with: URL(string: "http://apinew.insouq.com\(model.firstImage?.replacingOccurrences(of: "\\", with: "/", options: .literal, range: nil) ?? "")" ),
+            with: URL(string: urlString ),
             options: [
                 .transition(ImageTransition.fade(0.1))
             ])
