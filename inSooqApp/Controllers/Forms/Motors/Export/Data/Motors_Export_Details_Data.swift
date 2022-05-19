@@ -11,8 +11,7 @@ extension Motors_Export_Details_VC {
 
     func formElements() -> [UIView] {
         
-        let header = UIView()
-        header.frame.size = .init(width: 0, height: 40)
+        let header = SpacerView().render()
         
         let looksGoodLabel = FormLabel()
         looksGoodLabel.text = "Looks good, now please add more details ..."
@@ -124,7 +123,7 @@ extension Motors_Export_Details_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview,header,
+            adPreview,
         ]
         
     }

@@ -29,6 +29,15 @@ class Add_CategoryViewController: UIViewController {
         setDelegate()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        FormViewController.adLocation = ""
+        MapPickerViewController.addressDetails = ""
+    }
+    
     //MARK: - Functions
     private func setDesign() {
         title = modelOfCategory?.categoryName

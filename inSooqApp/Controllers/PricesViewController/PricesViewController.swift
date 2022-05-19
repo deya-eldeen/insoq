@@ -33,6 +33,7 @@ class PricesViewController: UIViewController {
                     let url = APIUrls.submitMotorFull()
                     if let fullParams = fullParams {
                         ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                            print("submitMotor",formResponse)
                             self.dismissThenPopToRoot()
                         }
                     }
@@ -46,6 +47,7 @@ class PricesViewController: UIViewController {
                     let url = APIUrls.submitJobFull()
                     if let fullParams = fullParams {
                         ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                            print("submitMotor",formResponse)
                             self.dismissThenPopToRoot()
                         }
                     }
@@ -56,6 +58,7 @@ class PricesViewController: UIViewController {
             let url = APIUrls.submitNumbers()
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                    print("submitMotor",formResponse)
                     self.dismissThenPopToRoot()
                 }
             }
@@ -64,6 +67,7 @@ class PricesViewController: UIViewController {
             let url = APIUrls.submitElectronics()
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                    print("submitMotor",formResponse)
                     self.dismissThenPopToRoot()
                 }
             }
@@ -75,6 +79,7 @@ class PricesViewController: UIViewController {
                     let url = APIUrls.submitClassifiedFull()
                     if let fullParams = fullParams {
                         ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                            print("submitMotor",formResponse)
                             self.dismissThenPopToRoot()
                         }
                     }
@@ -85,6 +90,7 @@ class PricesViewController: UIViewController {
             let url = APIUrls.submitService()
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                    print("submitMotor",formResponse)
                     self.dismissThenPopToRoot()
                 }
             }
@@ -93,6 +99,7 @@ class PricesViewController: UIViewController {
             let url = APIUrls.submitBusiness()
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                    print("submitMotor",formResponse)
                     self.dismissThenPopToRoot()
                 }
             }

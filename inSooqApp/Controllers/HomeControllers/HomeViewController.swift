@@ -20,7 +20,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrollViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollViewLeftConstraint: NSLayoutConstraint!
        
-    private var duration:TimeInterval=6.0
+    private var duration: TimeInterval = 6.0
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var adsCollectionView: UICollectionView!
@@ -176,8 +177,8 @@ class HomeViewController: UIViewController {
     }
     
     private func setDesign() {
-        subCategoriesTableView.layer.cornerRadius=10
-        setupAlertButton.layer.cornerRadius=setupAlertButton.frame.height/2
+        subCategoriesTableView.layer.cornerRadius = 10
+        setupAlertButton.layer.cornerRadius=setupAlertButton.frame.height / 2
         self.adspageController.numberOfPages = Statics.adsArray.count
         DispatchQueue.main.async {
             //  if !Statics.adsArray.isEmpty{
@@ -378,31 +379,28 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout,UICollectionVie
     
 }
 //MARK:-TableView Controllers-
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate
-{
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         if tableView==subCategoriesTableView{
             return  70
         }else{
             return heightOFAdsCategorye
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if tableView==subCategoriesTableView{
+        if tableView==subCategoriesTableView {
             return 70
         }
-        else
-        {
+        else {
             return 25
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if tableView==subCategoriesTableView {
+        if tableView == subCategoriesTableView {
             
             let subCategoryHeader = self.subCategoriesTableView.dequeueReusableHeaderFooterView(withIdentifier: "subCategoryHeader") as! SubCategoryHeader
             subCategoryHeader.cancelButton.tag=section
@@ -410,36 +408,20 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
             subCategoryHeader.categoryname.text=headerObject.name
             subCategoryHeader.viewToColor.backgroundColor=headerObject.viewColor
             subCategoryHeader.cancelButton.addTarget(self, action: #selector(hideSubCategoryView), for: .touchUpInside)
-            
             return subCategoryHeader
 
-        }else{
-            
+        } else {
             
             let header = self.itemTableView.dequeueReusableHeaderFooterView(withIdentifier: "customSectionHeader") as! CustomSectionHeader
+            let keyIndex = section
             
-            
-            var keys:[String] = Array(listOfAdsCategories.keys)  ?? []
-            keys = keys.sorted()
-
-            
-            let key:String = keys[section]
-            print("key",key)
-            
-            let keyIndex:Int =  (Int(key) ?? 0 ) - 1
-            print("keyIndex",keyIndex)
-
             if(Statics.categoyModel.count >= (keyIndex + 1)) {
-                let image =  Statics.categoyModel[keyIndex].categoryImage //Statics.adsArray[keyIndex]
-                print("key",key)
+                let image =  Statics.categoyModel[keyIndex].categoryImage
                 let categoryModel =  Statics.categoyModel[keyIndex]
-                debugPrint("imageimage:\(image)")
-                //header.setCustomHeaders(image: image, title: categoryModel.categoryName)
                 header.itemImage.image = image.withRenderingMode(.alwaysTemplate)
                 header.itemImage.tintColor = Statics.categoyModel[keyIndex].categoyColor
                 header.titleLabel.text = categoryModel.categoryName
             }
-            
             
             header.viewAllButton.tag = keyIndex
             header.viewAllButton.setTitleColor(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), for: .normal)
@@ -448,29 +430,25 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
             header.viewAllButton.addTarget(self, action: #selector(viewAll_Pressed(sender:)), for: .touchUpInside)
             
             return header
-
             
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if tableView==subCategoriesTableView {
+
+        if tableView == subCategoriesTableView {
             return  1
-        }else{
+        } else {
             return  listOfAdsCategories.keys.count
         }
+
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView==itemTableView{
-            
-           
-                return 1
 
-        
-            
-        }else{
-            
+        if tableView==itemTableView{
+            return 1
+        } else {
             return  listOfSubCategories.count
         }
         
@@ -489,16 +467,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
         } else {
             let itemsData:ItemsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ItemsTableViewCell", for: indexPath) as! ItemsTableViewCell
             
-            var keys:[String] = Array(listOfAdsCategories.keys)  ?? []
-            keys = keys.sorted()
-            let key:String = keys[indexPath.section]
-            debugPrint("key:\(key) indexPath.row:\(indexPath.section)")
-            
-            //let keyIndex:Int =  Int(key) ?? 0
+            let key = Statics.categoyModel[indexPath.section].categoyID
             
             if let list = listOfAdsCategories[key] {
                 itemsData.setCollectionViewDataByModel(list: list,categoryId: key)
-                //itemsData.setCollectionViewData(images: Statics.adsArray, names: Statics.testCollectionNames, prices: Statics.testCollectionPrices)
             }
             
             itemsData.vc = self
@@ -515,7 +487,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
              
              print(headerObject.index)
              print(indexPath.row)
-//             print(Statics.jobsSubCategories[indexPath.row].categoryId)
              print(listOfSubCategories[indexPath.row].id!)
 
              Shared.shared.categoryId = listOfSubCategories[indexPath.row].id!
@@ -534,95 +505,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate
                  let vc = mainStoryboard.instantiateViewController(identifier: "SubCategoriesViewController") as! SubCategoriesViewController
                  vc.modalPresentationStyle = .fullScreen
                  vc.catID = listOfSubCategories[indexPath.row].id!
-                 //                vc.subCatID = listOfSubCategories[indexPath.row].id!
                  self.present(vc, animated: false)
              }
 
 
-//            MotorsBrandsViewController.isUsed = false
-//            switch headerObject.index {
-//            case 0:
-//                debugPrint("Motors is Selected")
-//                var keys:[String] = Array(listOfAdsCategories.keys)  ?? []
-//                keys = keys.sorted()
-//                let key:String = keys[indexPath.section]
-//
-//                var isUsedCar = false
-//                if key == "3" && indexPath.row  == 0{
-//                    isUsedCar = true
-//                }
-//                MotorsBrandsViewController.markerSelect = nil
-//                MotorsBrandsViewController.isUsed = isUsedCar
-//                forcePresentViewController(viewController: self, storyBoardId: "MotorsBrandsViewController" )
-//                break
-//            case 2:
-////                SubCategoriesViewController.subCategoryObject.name = Statics.jobsSubCategories [indexPath.row].categoryName
-////                debugPrint("subCategoriesTableView-vcTitle",Statics.jobsSubCategories [indexPath.row].categoryId)
-////                debugPrint("subCategoriesTableView-vcTitle",Statics.jobsSubCategories [indexPath.row].categoryName)
-////                debugPrint("subCategoriesTableView-vcTitle",Statics.jobsSubCategories [indexPath.row].subCategoryList.count)
-////
-////                var keys:[String] = Array(listOfAdsCategories.keys)  ?? []
-////                keys = keys.sorted()
-////                let key:String = keys[indexPath.section]
-//                SubCategoriesViewController.subCategoryObject.subItemIndex = headerObject.index
-//                SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[headerObject.index].categoryName
-//                presentCategoryVC(viewController: self, endPoint: EndPoint.GetAllCareerLevel.path)
-//                break
-//
-//            case 3:
-//                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                SubCategoriesViewController.subCategoryObject.subItemIndex = headerObject.index
-//                SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[headerObject.index].categoryName
-//                let vc = mainStoryboard.instantiateViewController(identifier: "SubCategoriesViewController") as! SubCategoriesViewController
-//                vc.modalPresentationStyle = .fullScreen
-//                vc.catID = listOfSubCategories[indexPath.row].id!
-////                vc.subCatID = listOfSubCategories[indexPath.row].id!
-//                self.present(vc, animated: false)
-//
-//                break
-//            case 4: //
-//                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                SubCategoriesViewController.subCategoryObject.subItemIndex = headerObject.index
-//                SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[headerObject.index].categoryName
-//                let vc = mainStoryboard.instantiateViewController(identifier: "SubCategoriesViewController") as! SubCategoriesViewController
-//                vc.modalPresentationStyle = .fullScreen
-//                vc.catID = listOfSubCategories[indexPath.row].id!
-////                vc.subCatID = listOfSubCategories[indexPath.row].id!
-//                self.present(vc, animated: false)
-//                break
-//            case 5: // Classified
-//                SubCategoriesViewController.subCategoryObject.subItemIndex = headerObject.index
-//                SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[headerObject.index].categoryName
-//                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//                let vc = mainStoryboard.instantiateViewController(identifier: "ItemsCategoryVC") as! ItemsCategoryVC
-//                vc.modalPresentationStyle = .fullScreen
-//                let catID = "\(listOfSubCategories[indexPath.row].id!)"
-//                vc.endPoint = EndPoint.GetSubCatByCatID(id: catID).path
-//                vc.who = 1
-//
-//                self.present(vc, animated: false)
-//                break
-//            default: // 4 businesses
-//                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                SubCategoriesViewController.subCategoryObject.subItemIndex = headerObject.index
-//                SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[headerObject.index].categoryName
-//                let vc = mainStoryboard.instantiateViewController(identifier: "SubCategoriesViewController") as! SubCategoriesViewController
-//                vc.modalPresentationStyle = .fullScreen
-//                vc.catID = listOfSubCategories[indexPath.row].id!
-////                vc.subCatID = listOfSubCategories[indexPath.row].id!
-//                self.present(vc, animated: false)
-//
-////                SubCategoriesViewController.subCategoryObject.subItemIndex = headerObject.index
-////                SubCategoriesViewController.subCategoryObject.name = Statics.categoyModel[headerObject.index].categoryName
-////                debugPrint("subCategoriesTableView-vcTitle",Statics.categoyModel[indexPath.row].categoryName)
-////                forcePresentViewController(viewController: self, storyBoardId: "SubCategoriesViewController")
-//                break
-//            }
-            
-          //  pushtoViewController(viewController: self, storyBoardId: "SubCategoriesViewController", animate: true)
-
-        }else if tableView==itemTableView {
+        } else if tableView==itemTableView {
             debugPrint("-indexPath",indexPath)
             
         }
@@ -636,6 +523,8 @@ extension HomeViewController{
 
     func getSubCategory(id:String) {
         
+        print("getSubCategory_",id)
+        
         view.showLoading()
         WebService.shared.CategoriesGetByTypeId(id: id) { [weak self] response, error in
             guard let self = self else { return }
@@ -646,6 +535,8 @@ extension HomeViewController{
                 return
             }
 
+            print("getSubCategory_response",response)
+            
             self.listOfSubCategories = response
                 
             self.calculateTableViewheight()
@@ -658,17 +549,10 @@ extension HomeViewController{
     
     func getAllAdsData(index:Int = 0) {
         
-        //        view.showLoading()
-        let ignoreIds = ["2"]
+        print("getAllAdsData", index)
         
         if index < Statics.categoyModel.count {
-            
-            if ignoreIds.contains(Statics.categoyModel[index].categoyID) {
-                goNext()
-            } else {
-                getAdsOfCategory(model: Statics.categoyModel[index], completeParsing: { goNext() } )
-            }
-            
+            getAdsOfCategory(model: Statics.categoyModel[index], completeParsing: { goNext() } )
         } else {
             self.view.hideLoading()
             let count:CGFloat = CGFloat(listOfAdsCategories.keys.count )
@@ -692,7 +576,6 @@ extension HomeViewController{
             
             WebService.shared.CategoriesADSGetByTypeId(id: model.categoyID) { [weak self] response, error in
                 guard let self = self else { return }
-//                debugPrint("\(model.categoyID) model.categoyID")
                 guard let response = response, error == nil else {
                     debugPrint("\(model.categoyID) model.categoyID error:\(error)")
 
@@ -708,86 +591,5 @@ extension HomeViewController{
         }
         
     }
-    
-//    GetLatestAds
-    
+        
 }
-//MARK: ScrollView Delegate:-OnScroll-HideTabBar
-//extension HomeViewController: UIScrollViewDelegate
-//{
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if (self.lastContentOffset > scrollView.contentOffset.y) {
-//            // move up
-//            debugPrint("Scorlling up")
-//
-//            changeTabBarHeight(height: 0, hidden: false)
-//            self.showAddButton(alpha: 0, hidden: true)
-//
-//        }
-//        else if (self.lastContentOffset < scrollView.contentOffset.y) {
-//            // move down
-//            debugPrint("Scorlling down-scrollViewDidScroll")
-//            changeTabBarHeight(height: -80, hidden: true)
-//            self.showAddButton(alpha: 1, hidden: false)
-//
-//        }
-//
-//        // update the new position acquired
-//        self.lastContentOffset = scrollView.contentOffset.y
-//    }
-//    private func changeTabBarHeight(height:CGFloat,hidden:Bool){
-//        UIView.animate(withDuration: duration) {
-//            self.tabbarBottomConstraint.constant=height
-//            self.tabBarView.isHidden=hidden
-//        } completion: { (true) in
-//           // self.tabBarView.isHidden=hidden
-//        debugPrint("Done")
-//        }
-//  }
-//private func showAddButton(alpha:CGFloat,hidden:Bool){
-//    hiddenButton.alpha=alpha
-//    hiddenButton.isEnabled = !hidden
-//    hiddenButton.isHidden=hidden
-//    }
-//
-//}
-
-
-//func hideSideMenu(controller:UIViewController
-//                  ,sideMenuView:UIView
-//                  ,scrollView:UIScrollView
-//                  ,scrollViewBottonConstraint:NSLayoutConstraint
-//                  ,scrollViewTopConstraint:NSLayoutConstraint
-//                  ,scrollViewLeftConstraint:NSLayoutConstraint
-//                  ,sideMenueLeftConstraint:NSLayoutConstraint)
-//{
-//    scrollView.animateViewHeight(controller: controller, height: 0, heightConstraint: scrollViewBottonConstraint)
-//    scrollView.animateViewHeight(controller: controller, height: 0, heightConstraint: scrollViewTopConstraint)
-//    scrollView.animateViewHeight(controller: controller, height: 0, heightConstraint: scrollViewLeftConstraint)
-//    sideMenuView.animateViewHeight(controller: controller, height: ((sideMenuView.frame.width + 100) * -1), heightConstraint: sideMenueLeftConstraint)
-//    scrollView.layer.cornerRadius=0
-//    scrollView.isUserInteractionEnabled=true
-//    sideMenuView.isUserInteractionEnabled=false
-//
-//}
-//func showSideMenu(controller:UIViewController
-//                  ,sideMenuView:UIView
-//                  ,scrollView:UIScrollView
-//                  ,scrollViewBottonConstraint:NSLayoutConstraint
-//                  ,scrollViewTopConstraint:NSLayoutConstraint
-//                  ,scrollViewLeftConstraint:NSLayoutConstraint
-//                  ,sideMenueLeftConstraint:NSLayoutConstraint)
-//{
-//    let TBConstraint = CGFloat(controller.view.frame.height/2)-(controller.view.frame.height/3)
-//    let leftConstraint = CGFloat(controller.view.frame.width/2)+(controller.view.frame.width/4)
-//    debugPrint("TBConstraint",TBConstraint)
-//    debugPrint("leftConstraint",leftConstraint)
-//    scrollView.animateViewHeight(controller: controller, height: TBConstraint, heightConstraint: scrollViewBottonConstraint)
-//    scrollView.animateViewHeight(controller: controller, height: TBConstraint, heightConstraint: scrollViewTopConstraint)
-//    scrollView.animateViewHeight(controller: controller, height: leftConstraint, heightConstraint: scrollViewLeftConstraint)
-//    sideMenuView.animateViewHeight(controller: controller, height: 0, heightConstraint: sideMenueLeftConstraint)
-//    scrollView.layer.cornerRadius=10
-//    scrollView.isUserInteractionEnabled=false
-//    sideMenuView.isUserInteractionEnabled=true
-//}
-

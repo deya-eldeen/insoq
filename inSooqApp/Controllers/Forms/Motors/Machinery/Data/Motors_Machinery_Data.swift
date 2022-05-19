@@ -10,8 +10,7 @@ import UIKit
 extension Motors_Machinery_VC {
     
     func formElements() -> [UIView] {
-        let header = UIView()
-        header.frame.size = .init(width: 0, height: 40)
+        let header = SpacerView().render()
         
         let startLabel = FormLabel()
         startLabel.text = "Let's start with the title"
@@ -54,7 +53,7 @@ extension Motors_Machinery_VC {
             categoryPicker,
             subcategoryPicker,
             yearField,
-            formContinueButton,header,
+            formContinueButton,
         ]
     }
 

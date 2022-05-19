@@ -11,8 +11,7 @@ extension Job_Wanted_Details_VC {
 
     func formElements() -> [UIView] {
         
-        let header = UIView()
-        header.frame.size = .init(width: 0, height: 40)
+        let header = SpacerView().render()
         
         let descriptionLabel = FormLabel()
         descriptionLabel.text = "Add a short description (Optional)"
@@ -94,8 +93,6 @@ extension Job_Wanted_Details_VC {
             locationView,
             acceptView,
             formContinueButton,
-            //adPreview,
-            header,
         ]
         
     }

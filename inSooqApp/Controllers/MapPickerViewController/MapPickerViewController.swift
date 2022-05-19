@@ -8,6 +8,10 @@
 import UIKit
 import GoogleMaps
 
+protocol MapPickerViewControllerDelegate {
+    func didChangeLocation(lat: Double, lon: Double)
+}
+
 class MapPickerViewController: UIViewController {
     
     let locationManager = CLLocationManager()
@@ -17,6 +21,8 @@ class MapPickerViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
     static var addressDetails = ""
+    
+    var delegate: MapPickerViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +89,8 @@ extension MapPickerViewController: CLLocationManagerDelegate {
         guard let location = locations.first else {
             return
         }
+        
+        self.delegate?.didChangeLocation(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
         
         mapView.isHidden = false
         addressLabel.isHidden = false

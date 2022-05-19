@@ -179,7 +179,8 @@ class FormViewController: UIViewController {
     // Location Selection Logic
     @objc func didTapLocationPicker() {
         
-        let mapPickerVC = ViewControllersAssembly.misc.makeViewController(with: "MapPickerViewController")
+        let mapPickerVC = ViewControllersAssembly.misc.makeViewController(with: "MapPickerViewController") as! MapPickerViewController
+        mapPickerVC.delegate = self
         self.navigationController?.pushViewController(mapPickerVC, animated: true)
 
     }
@@ -475,6 +476,16 @@ extension FormViewController: UIDocumentPickerDelegate {
         self.setDocumentName()
         
         
+    }
+    
+}
+
+extension FormViewController: MapPickerViewControllerDelegate {
+    
+    func didChangeLocation(lat: Double, lon: Double) {
+        print("didChangeLocation", lat, lon)
+        self.locationLatitude = lat
+        self.locationLongitude = lon
     }
     
 }

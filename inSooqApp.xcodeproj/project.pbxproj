@@ -180,6 +180,8 @@
 		E3D2FEC12801B7C200EECA95 /* ApiRequests+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2FEC02801B7C200EECA95 /* ApiRequests+Models.swift */; };
 		E3D9AFAA27F0E079005D68B9 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */; };
 		E3D9AFAC27F0E4C7005D68B9 /* ApiRequests+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */; };
+		E3DB7DDE2835706B0061D213 /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB7DDC2835706B0061D213 /* SpacerView.swift */; };
+		E3DB7DDF2835706B0061D213 /* SpacerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3DB7DDD2835706B0061D213 /* SpacerView.xib */; };
 		E3F24CA52829423200A8D36A /* PackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F24CA42829423200A8D36A /* PackageModel.swift */; };
 		E3FD210527EA508600FDA9DD /* ApiRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD20F927EA508600FDA9DD /* ApiRequests.swift */; };
 		E3FD210627EA508600FDA9DD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD20FA27EA508600FDA9DD /* NetworkService.swift */; };
@@ -724,6 +726,8 @@
 		E3D2FEC02801B7C200EECA95 /* ApiRequests+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Models.swift"; sourceTree = "<group>"; };
 		E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Notification.swift"; sourceTree = "<group>"; };
+		E3DB7DDC2835706B0061D213 /* SpacerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
+		E3DB7DDD2835706B0061D213 /* SpacerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpacerView.xib; sourceTree = "<group>"; };
 		E3F24CA42829423200A8D36A /* PackageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageModel.swift; sourceTree = "<group>"; };
 		E3FD20F927EA508600FDA9DD /* ApiRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequests.swift; sourceTree = "<group>"; };
 		E3FD20FA27EA508600FDA9DD /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -1817,13 +1821,23 @@
 			path = Motors;
 			sourceTree = "<group>";
 		};
+		E3DB7DDB2835706B0061D213 /* SpacerView */ = {
+			isa = PBXGroup;
+			children = (
+				E3DB7DDC2835706B0061D213 /* SpacerView.swift */,
+				E3DB7DDD2835706B0061D213 /* SpacerView.xib */,
+			);
+			path = SpacerView;
+			sourceTree = "<group>";
+		};
 		E3F99BC5280194FA0084E95C /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				E39BAE1C27FC9AE1001F5438 /* FormElement.swift */,
 				E3488EC0282C64AD00D8E5F2 /* SimView */,
+				E3DB7DDB2835706B0061D213 /* SpacerView */,
 				E3488EBF282C64A300D8E5F2 /* PlateView */,
 				E39DC579280C5A4F00BAE09D /* FormFile */,
-				E39BAE1C27FC9AE1001F5438 /* FormElement.swift */,
 				E31E6EB1280797EB001A4E9A /* PreviewView */,
 				E31E6EAE28076A0F001A4E9A /* FormTextView */,
 				E31E6EAA28075B06001A4E9A /* LocationView */,
@@ -2828,6 +2842,7 @@
 				F150F81C25D415A90077C970 /* JobsCollectionViewCell.xib in Resources */,
 				F103490C25E7A79700785B07 /* PaymentMethodView.xib in Resources */,
 				F1F7AF4B261F1337008E527B /* WantedJobDetailsView.xib in Resources */,
+				E3DB7DDF2835706B0061D213 /* SpacerView.xib in Resources */,
 				F1FFB7B4265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib in Resources */,
 				E380354927F8513D00FF0212 /* Misc.storyboard in Resources */,
 				F1F352F12647EDE3001A065B /* playground.png in Resources */,
@@ -3203,6 +3218,7 @@
 				F13A150B26709BCC000C7C94 /* ItemDataModel.swift in Sources */,
 				F1CCE029266F977500490501 /* SortView.swift in Sources */,
 				17AA1C152788C7A1008B5409 /* ViewPopupListOfItems.swift in Sources */,
+				E3DB7DDE2835706B0061D213 /* SpacerView.swift in Sources */,
 				2862BAFF277E5761009F4B7E /* Main.swift in Sources */,
 				F14A2698261EF5C30041FBB4 /* WantedJobsCollectionViewCell.swift in Sources */,
 				E3D2FEC12801B7C200EECA95 /* ApiRequests+Models.swift in Sources */,
