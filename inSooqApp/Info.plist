@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>In Sooq</string>
+	<string>Insouq</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -64,16 +64,14 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Application need to access camera to take service photo</string>
-    
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>Application need to access gallery when taking a service photo</string>
-    
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>The app will use the location data</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>The app will use the location data</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Our application needs permission to write photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Application need to access gallery when taking a service photo</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Font Awesome 5 Brands-Regular-400.otf</string>
@@ -103,7 +101,9 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>
-	<array/>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Main</string>
 	<key>UIMainStoryboardFile</key>

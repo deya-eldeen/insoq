@@ -12,10 +12,16 @@ import UniformTypeIdentifiers
 
 enum FormValidationError: String {
     case userShouldAgreeError = "User Should Agree"
-    case shouldFillForm = "Should Fill Form"
-    case shouldPickLocation = "Should Pick Location"
-    case shouldSelectPhoto = "Should Select a photo"
-    case shouldSelectFile = "Should Select a file"
+    case shouldFillForm = "Please fill all the fields"
+    case shouldPickLocation = "Please pick a location"
+    case shouldSelectPhoto = "Please select at least a one photo"
+    case shouldSelectFile = "Please select file"
+    case incorrectYear = "Year is not valid"
+    
+    case incorrectPrice = "Price is not valid (max is 10,000,000)"
+    case incorrectMilage = "Milage is not valid (max is 99,999)"
+    case incorrectPhone = "Phone is not valid"
+    
     case none
 }
 
@@ -204,6 +210,7 @@ class FormViewController: UIViewController {
             if type(of: element) == FormField.self {
                 let field = (element as! FormField)
                 field.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+                field.delegate = self
             }
             if type(of: element) == FormPicker.self {
                 let picker = (element as! FormPicker)
@@ -317,6 +324,14 @@ class FormViewController: UIViewController {
                 if (text == "") {
                     return (false,.shouldFillForm)
                 }
+                
+                if (field.id == .year) {
+                    let valueInt = Int(field.text ?? "") ?? 0
+                    if (valueInt < 1900) {
+                        return (false,.incorrectYear)
+                    }
+                }
+                
             }
             
             // picker
@@ -328,6 +343,42 @@ class FormViewController: UIViewController {
                 }
             }
 
+            // field types
+            if type(of: element) == FormField.self {
+                let field = (element as! FormField)
+                let text = field.text ?? ""
+                
+                if (field.id == .year) {
+                    let valueInt = Int(text) ?? 0
+                    if (valueInt < 1_900) {
+                        return (false,.incorrectYear)
+                    }
+                }
+                
+//                if (field.id == .price) {
+//                    let valueInt = Int(text) ?? 0
+//                    if (valueInt > 100_000_000) {
+//                        return (false,.incorrectPrice)
+//                    }
+//                }
+                
+//                if (field.id == .milage) {
+//                    let valueInt = Int(text) ?? 0
+//                    if (valueInt > 99_999) {
+//                        return (false,.incorrectMilage)
+//                    }
+//                }
+                
+                if (field.id == .phoneNumber) {
+                    let isValidPhone = text.isValidPhone()
+                    if (isValidPhone == false) {
+                        return (false,.incorrectPhone)
+                    }
+                }
+                
+            }
+            
+            
             // file
             if type(of: element) == FormFile.self {
                 if(documentName == nil) {
@@ -476,12 +527,48 @@ class FormViewController: UIViewController {
         }
 
     }
+        
+}
+
+extension FormViewController: UITextFieldDelegate {
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let formField = textField as? FormField {
+            if (formField.id == .price) {
+                let valueInt = Int(textField.text ?? "") ?? 0
+                if (valueInt > 100_000_000) {
+                    return false
+                }
+            }
+        }
+        
+        if let formField = textField as? FormField {
+            if (formField.id == .milage) {
+                let valueInt = Int(textField.text ?? "") ?? 0
+                if (valueInt > 99_999) {
+                    return false
+                }
+            }
+        }
+        
+//        if let formField = textField as? FormField {
+//            if (formField.id == .phoneNumber) {
+//                if ((textField.text ?? "").isNumeric == false) {
+//                    return false
+//                }
+//            }
+//        }
+        
+        return true
+
+    }
     
 }
 
+
+
 extension FormViewController: UIScrollViewDelegate {
-    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x != 0 {
@@ -508,10 +595,7 @@ extension FormViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         
         self.documentName = urls.first?.absoluteString.components(separatedBy: "/").last
-        print("documentName",documentName)
-        
         self.setDocumentName()
-        
         
     }
     

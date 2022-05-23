@@ -310,6 +310,7 @@ extension UICollectionView {
 }
 
 extension UITableView {
+    
     func register(id : String){
         self.register(UINib(nibName: id, bundle:nil), forCellReuseIdentifier: id)
     }
@@ -319,6 +320,19 @@ extension UITableView {
             self.register(UINib(nibName: id, bundle:nil), forCellReuseIdentifier: id)
         }
     }
+    
+    func prepareTableView(vc: UIViewController, withCellsIDs: [String]){
+        for cellID in withCellsIDs {
+            self.register(id: cellID)
+        }
+        self.tableFooterView = UIView()
+        self.flashScrollIndicators()
+        self.keyboardDismissMode = .onDrag
+        self.delegate = vc as? UITableViewDelegate
+        self.dataSource = vc as? UITableViewDataSource
+    }
+    
+    
 }
 
 
@@ -475,3 +489,20 @@ extension Double {
     }
 
 }
+
+extension String {
+    
+    func isValidPhone() -> Bool {
+        let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return phoneTest.evaluate(with: self)
+    }
+    
+}
+
+extension String {
+   var isNumeric: Bool {
+     return !(self.isEmpty) && self.allSatisfy { $0.isNumber }
+   }
+}
+

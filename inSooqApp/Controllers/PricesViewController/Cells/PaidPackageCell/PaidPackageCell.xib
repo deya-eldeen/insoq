@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="KGk-i7-Jjw" customClass="PaidPackageCell" customModule="inSooqApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gt-Dx-YIT">
+                        <rect key="frame" x="4" y="4" width="312" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep your ad free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uth-3f-lau">
+                                <rect key="frame" x="36" y="22" width="107.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked_checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="J1A-u6-m3w">
+                                <rect key="frame" x="8" y="18" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="278-BR-4Qt"/>
+                                    <constraint firstAttribute="width" constant="24" id="icS-aJ-2kb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.0 AED" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OC-zx-5qb">
+                                <rect key="frame" x="247" y="22" width="57" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.30588235289999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="package_elite" translatesAutoresizingMaskIntoConstraints="NO" id="aTh-vI-a2g">
+                                <rect key="frame" x="189" y="14" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5ZA-FU-P9u"/>
+                                    <constraint firstAttribute="height" constant="32" id="83o-hv-SM1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aTh-vI-a2g" firstAttribute="centerY" secondItem="6OC-zx-5qb" secondAttribute="centerY" id="Lem-sP-5ua"/>
+                            <constraint firstItem="uth-3f-lau" firstAttribute="leading" secondItem="J1A-u6-m3w" secondAttribute="trailing" constant="4" id="MKv-4Z-0uv"/>
+                            <constraint firstItem="J1A-u6-m3w" firstAttribute="leading" secondItem="4gt-Dx-YIT" secondAttribute="leading" constant="8" id="Qe6-HE-tFr"/>
+                            <constraint firstAttribute="height" constant="60" id="R2f-8o-WUl"/>
+                            <constraint firstItem="uth-3f-lau" firstAttribute="centerY" secondItem="J1A-u6-m3w" secondAttribute="centerY" id="REV-XW-dzU"/>
+                            <constraint firstItem="6OC-zx-5qb" firstAttribute="centerY" secondItem="4gt-Dx-YIT" secondAttribute="centerY" id="Wul-cO-AW9"/>
+                            <constraint firstAttribute="trailing" secondItem="6OC-zx-5qb" secondAttribute="trailing" constant="8" id="iCe-nk-Z5x"/>
+                            <constraint firstItem="6OC-zx-5qb" firstAttribute="leading" secondItem="aTh-vI-a2g" secondAttribute="trailing" constant="8" id="ljW-q8-RQO"/>
+                            <constraint firstItem="J1A-u6-m3w" firstAttribute="centerY" secondItem="4gt-Dx-YIT" secondAttribute="centerY" id="tYl-Mq-Gpw"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="4gt-Dx-YIT" secondAttribute="trailing" constant="4" id="WXq-y3-6rH"/>
+                    <constraint firstItem="4gt-Dx-YIT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="eDF-zm-XGf"/>
+                    <constraint firstItem="4gt-Dx-YIT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="fZA-Rd-VE6"/>
+                    <constraint firstAttribute="bottom" secondItem="4gt-Dx-YIT" secondAttribute="bottom" constant="4" id="nlo-L0-l5g"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="packageNameLabel" destination="uth-3f-lau" id="kNt-1F-k0A"/>
+                <outlet property="packagePriceLabel" destination="6OC-zx-5qb" id="H0U-nb-f5W"/>
+                <outlet property="planIconView" destination="aTh-vI-a2g" id="BoI-jb-0UN"/>
+                <outlet property="statusImageView" destination="J1A-u6-m3w" id="0tg-CR-10X"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="145.3125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checked_checkbox" width="23.5" height="23.5"/>
+        <image name="package_elite" width="82" height="38"/>
+    </resources>
+</document>

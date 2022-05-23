@@ -16,4 +16,6 @@ struct PackageModel: Codable {
     var categoryId: Int?
     var packColor: String?
     
+    var isSelected: Bool? = false
+    
 }

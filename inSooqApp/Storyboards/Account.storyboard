@@ -1002,7 +1002,7 @@ protect You.</string>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cVv-3n-D7G">
-                                <rect key="frame" x="0.0" y="161" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="134" width="414" height="100"/>
                                 <color key="backgroundColor" name="AppBackground"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0Gm-Or-L1B"/>
@@ -1064,23 +1064,8 @@ protect You.</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="I'm looking for...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOd-lZ-gQg">
-                                <rect key="frame" x="20.5" y="106" width="373" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Yae-3c-5JX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WSc-tu-fnD">
-                                <rect key="frame" x="358.5" y="111" width="25" height="34.5"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="fqs-Jp-pgQ"/>
-                                </constraints>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="188" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nlJ-eR-C0R">
-                                <rect key="frame" x="0.0" y="271" width="414" height="560"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="587"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllItemsTableViewCell" rowHeight="188" id="o3u-gZ-ehN" customClass="AllItemsTableViewCell" customModule="inSooqApp" customModuleProvider="target">
@@ -1172,25 +1157,19 @@ protect You.</string>
                         <viewLayoutGuide key="safeArea" id="Raw-Pu-a7s"/>
                         <color key="backgroundColor" name="AppBackground"/>
                         <constraints>
-                            <constraint firstItem="WSc-tu-fnD" firstAttribute="trailing" secondItem="UOd-lZ-gQg" secondAttribute="trailing" constant="-10" id="2e5-15-2yy"/>
-                            <constraint firstItem="UOd-lZ-gQg" firstAttribute="top" secondItem="mUG-ew-I3M" secondAttribute="bottom" constant="-18" id="9LG-Ok-fvy"/>
                             <constraint firstAttribute="bottom" secondItem="0ed-PQ-Ncy" secondAttribute="bottom" id="Cf5-DI-Iwc"/>
                             <constraint firstItem="0ed-PQ-Ncy" firstAttribute="top" secondItem="nlJ-eR-C0R" secondAttribute="bottom" constant="-5" id="DxA-ML-qZe"/>
-                            <constraint firstItem="UOd-lZ-gQg" firstAttribute="width" secondItem="mUG-ew-I3M" secondAttribute="width" multiplier="0.900312" id="Jkc-1R-DTP"/>
                             <constraint firstItem="mUG-ew-I3M" firstAttribute="top" secondItem="Raw-Pu-a7s" secondAttribute="top" id="JmH-EE-E7J"/>
                             <constraint firstItem="0ed-PQ-Ncy" firstAttribute="leading" secondItem="Raw-Pu-a7s" secondAttribute="leading" id="Lrp-Zw-M8a"/>
-                            <constraint firstItem="cVv-3n-D7G" firstAttribute="top" secondItem="UOd-lZ-gQg" secondAttribute="bottom" constant="10" id="MPj-Nc-sSa"/>
-                            <constraint firstItem="WSc-tu-fnD" firstAttribute="centerY" secondItem="UOd-lZ-gQg" secondAttribute="centerY" id="O3d-uS-Dqx"/>
                             <constraint firstItem="cVv-3n-D7G" firstAttribute="leading" secondItem="Raw-Pu-a7s" secondAttribute="leading" id="O5m-ZV-JeM"/>
                             <constraint firstItem="Raw-Pu-a7s" firstAttribute="trailing" secondItem="cVv-3n-D7G" secondAttribute="trailing" id="RzW-8c-QEA"/>
                             <constraint firstItem="mUG-ew-I3M" firstAttribute="leading" secondItem="Raw-Pu-a7s" secondAttribute="leading" id="YPr-GB-63d"/>
-                            <constraint firstItem="UOd-lZ-gQg" firstAttribute="centerX" secondItem="mUG-ew-I3M" secondAttribute="centerX" id="Yml-pH-JLS"/>
                             <constraint firstItem="nlJ-eR-C0R" firstAttribute="top" secondItem="cVv-3n-D7G" secondAttribute="bottom" constant="10" id="eTz-md-TGR"/>
                             <constraint firstItem="Raw-Pu-a7s" firstAttribute="trailing" secondItem="nlJ-eR-C0R" secondAttribute="trailing" id="f3e-9Y-Xnj"/>
+                            <constraint firstItem="cVv-3n-D7G" firstAttribute="top" secondItem="Raw-Pu-a7s" secondAttribute="top" constant="90" id="h34-73-09h"/>
                             <constraint firstItem="mUG-ew-I3M" firstAttribute="trailing" secondItem="Raw-Pu-a7s" secondAttribute="trailing" id="j5b-ai-zs0"/>
                             <constraint firstItem="nlJ-eR-C0R" firstAttribute="leading" secondItem="Raw-Pu-a7s" secondAttribute="leading" id="nCw-RD-vdH"/>
                             <constraint firstItem="0ed-PQ-Ncy" firstAttribute="trailing" secondItem="Raw-Pu-a7s" secondAttribute="trailing" id="tzQ-KC-65z"/>
-                            <constraint firstItem="WSc-tu-fnD" firstAttribute="height" secondItem="UOd-lZ-gQg" secondAttribute="height" multiplier="0.8" id="uFv-Ud-mlV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" selectedImage="heart.fill" id="hZt-Lx-8vZ"/>
@@ -2329,7 +2308,7 @@ protect You.</string>
                                                     <constraint firstItem="e6G-xF-jd3" firstAttribute="centerX" secondItem="eyt-6c-nCD" secondAttribute="centerX" id="v8U-0r-Nm7"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hre-7P-RXg">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hre-7P-RXg">
                                                 <rect key="frame" x="144" y="100" width="140" height="140"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
@@ -3058,8 +3037,8 @@ protect You.</string>
                                     <constraint firstAttribute="height" constant="70" id="5Zs-bs-Jh6"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9q-f7-jyG">
-                                <rect key="frame" x="0.0" y="-235" width="428" height="2880"/>
+                            <view alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9q-f7-jyG">
+                                <rect key="frame" x="1" y="-235" width="428" height="2880"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGm-zs-d7m" userLabel="CountryPicker">
@@ -3149,11 +3128,11 @@ protect You.</string>
             <objects>
                 <viewController storyboardIdentifier="AccountViewController" id="IGA-Pr-Bl7" customClass="AccountViewController" customModule="inSooqApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZWF-Cw-VFD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swc-b7-Her">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4b-az-BhB">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1064"/>
@@ -3626,7 +3605,7 @@ protect You.</string>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNJ-OJ-Vgz" customClass="BottomView" customModule="inSooqApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="1386" width="414" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="6eP-3F-fBH"/>
                                 </constraints>
@@ -3646,6 +3625,7 @@ protect You.</string>
                             <constraint firstItem="rZC-xR-oYe" firstAttribute="bottom" secondItem="kNJ-OJ-Vgz" secondAttribute="bottom" id="nfO-fZ-hh8"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="adsIcon" destination="xWM-9l-D55" id="N5a-Fq-Ceu"/>
                         <outlet property="advertisingIcon" destination="zfe-U7-Gph" id="qcS-Qe-56N"/>
@@ -3696,7 +3676,6 @@ protect You.</string>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="main_photo_icon" width="59" height="59"/>
         <image name="power_off.png" width="40" height="40"/>
         <image name="resume_cv.png" width="85" height="111"/>

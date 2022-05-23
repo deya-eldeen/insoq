@@ -268,9 +268,9 @@ public func presentDetailsVC(viewController: UIViewController, catIndex: Int , s
         
     let vc = mainStoryboard.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
     vc.modalPresentationStyle = .fullScreen
-    vc.data = data
-    vc.selectedCategory = catIndex
-    vc.jobSubCategoryIndex = subCatIndex
+//    vc.data = data
+//    vc.selectedCategory = catIndex
+//    vc.jobSubCategoryIndex = subCatIndex
     viewController.present(vc, animated: false)
 }
 //HomeViewController

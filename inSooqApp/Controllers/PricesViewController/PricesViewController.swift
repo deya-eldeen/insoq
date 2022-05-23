@@ -9,8 +9,13 @@ import UIKit
 
 class PricesViewController: UIViewController {
     
-    var previousVC: UIViewController?
+    @IBOutlet weak var tableView: UITableView!
+
+    @IBAction func didTapDismiss() {
+        self.dismiss(animated: true)
+    }
     
+    var previousVC: UIViewController?
     var packages = [PackageModel]()
     
     func dismissThenPopToRoot() {
@@ -21,8 +26,33 @@ class PricesViewController: UIViewController {
     
     }
     
+    var isUpgrading = false
+    
+    override func viewDidLoad() {
+        
+        self.tableView.prepareTableView(vc: self, withCellsIDs: [PaidPackageCell.id, FreePackageCell.id])
+        
+        ApiRequests.packages(CategoryId: FormViewController.adMainType.rawValue) { response in
+            self.packages = response.value ?? []
+            if (self.isUpgrading == true) {
+                self.packages.removeAll(where: { $0.price == 0.0 } )
+            }
+            self.tableView.reloadData()
+        }
+        
+    }
+    
     @IBAction func didTapContinue() {
         
+        proceed()
+        
+    }
+    
+}
+
+extension PricesViewController {
+    
+    func proceed() {
         switch FormViewController.adMainType {
         
         case .motor:
@@ -109,13 +139,28 @@ class PricesViewController: UIViewController {
                 
     }
     
-    override func viewDidLoad() {
+}
+
+extension PricesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.packages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        ApiRequests.packages(CategoryId: FormViewController.adMainType.rawValue) { response in
-            self.packages = response.value ?? []
+        let package = self.packages[indexPath.row]
+        
+        switch package.price {
+        case 0.0:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: FreePackageCell.id) as! FreePackageCell
+            return cell
+        default:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: PaidPackageCell.id) as! PaidPackageCell
+            cell.renderCell(name: "N/A", price: package.price ?? 0.0)
+            return cell
         }
-        
+
     }
     
 }
-

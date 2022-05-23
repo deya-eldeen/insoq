@@ -40,6 +40,7 @@ extension Motors_Export_Details_VC {
         specificationsLabel.text = "Specifications"
         
         let milageField = FormField()
+        milageField.id = .milage
         milageField.placeholder = "Milage (Km)"
         milageField.keyboardType = .numberPad
         

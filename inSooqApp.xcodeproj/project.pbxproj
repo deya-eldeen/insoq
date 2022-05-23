@@ -61,6 +61,30 @@
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
 		E3030B17282902D4004D9179 /* FavAdsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3030B16282902D4004D9179 /* FavAdsCount.swift */; };
+		E30659D128380BF80011C1B9 /* AdDetailsGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659CF28380BF80011C1B9 /* AdDetailsGalleryCell.swift */; };
+		E30659D228380BF80011C1B9 /* AdDetailsGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659D028380BF80011C1B9 /* AdDetailsGalleryCell.xib */; };
+		E30659D528380C060011C1B9 /* AdTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659D328380C060011C1B9 /* AdTitleCell.swift */; };
+		E30659D628380C060011C1B9 /* AdTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659D428380C060011C1B9 /* AdTitleCell.xib */; };
+		E30659D928380C130011C1B9 /* AdLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659D728380C130011C1B9 /* AdLocationCell.swift */; };
+		E30659DA28380C130011C1B9 /* AdLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659D828380C130011C1B9 /* AdLocationCell.xib */; };
+		E30659DD28380C220011C1B9 /* AdDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659DB28380C220011C1B9 /* AdDetailsCell.swift */; };
+		E30659DE28380C220011C1B9 /* AdDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659DC28380C220011C1B9 /* AdDetailsCell.xib */; };
+		E30659E128380C380011C1B9 /* AdSpecificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659DF28380C380011C1B9 /* AdSpecificationCell.swift */; };
+		E30659E228380C380011C1B9 /* AdSpecificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659E028380C380011C1B9 /* AdSpecificationCell.xib */; };
+		E30659E528380C440011C1B9 /* AdDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659E328380C440011C1B9 /* AdDescriptionCell.swift */; };
+		E30659E628380C440011C1B9 /* AdDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659E428380C440011C1B9 /* AdDescriptionCell.xib */; };
+		E30659E928380C510011C1B9 /* AdLocationMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659E728380C510011C1B9 /* AdLocationMapCell.swift */; };
+		E30659EA28380C510011C1B9 /* AdLocationMapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659E828380C510011C1B9 /* AdLocationMapCell.xib */; };
+		E30659ED28380C5D0011C1B9 /* AdMetaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659EB28380C5D0011C1B9 /* AdMetaCell.swift */; };
+		E30659EE28380C5D0011C1B9 /* AdMetaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659EC28380C5D0011C1B9 /* AdMetaCell.xib */; };
+		E30659F328380CDE0011C1B9 /* MobileNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659F128380CDE0011C1B9 /* MobileNumberCell.swift */; };
+		E30659F428380CDE0011C1B9 /* MobileNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659F228380CDE0011C1B9 /* MobileNumberCell.xib */; };
+		E30659F728380CEB0011C1B9 /* VehicleNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659F528380CEB0011C1B9 /* VehicleNumberCell.swift */; };
+		E30659F828380CEB0011C1B9 /* VehicleNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659F628380CEB0011C1B9 /* VehicleNumberCell.xib */; };
+		E30659FF283911BA0011C1B9 /* PaidPackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659FD283911BA0011C1B9 /* PaidPackageCell.swift */; };
+		E3065A00283911BA0011C1B9 /* PaidPackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659FE283911BA0011C1B9 /* PaidPackageCell.xib */; };
+		E3065A03283911CB0011C1B9 /* FreePackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3065A01283911CB0011C1B9 /* FreePackageCell.swift */; };
+		E3065A04283911CB0011C1B9 /* FreePackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3065A02283911CB0011C1B9 /* FreePackageCell.xib */; };
 		E310171128137E7000B01C84 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E310171028137E6F00B01C84 /* ImagePicker.swift */; };
 		E31E6EA128073F36001A4E9A /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E6EA028073F36001A4E9A /* ListItem.swift */; };
 		E31E6EA328074A4B001A4E9A /* FormPhotoPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31E6EA228074A4B001A4E9A /* FormPhotoPicker.xib */; };
@@ -78,7 +102,6 @@
 		E3488EC8282C657800D8E5F2 /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3488EC6282C657800D8E5F2 /* PlateView.swift */; };
 		E34D94C52818ACB000912AF7 /* ApiRequests+Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */; };
 		E34D94C62818B64500912AF7 /* Pods_inSooqApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; };
-		E34D94C72818B64500912AF7 /* Pods_inSooqApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E37E9090282A90050070C351 /* ApiRequests+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E908F282A90050070C351 /* ApiRequests+Filtering.swift */; };
 		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
 		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
@@ -538,20 +561,6 @@
 		F1FFB7B4265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1FFB7B2265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		E34D94C82818B64500912AF7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E34D94C72818B64500912AF7 /* Pods_inSooqApp.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		16592BD11DA92A4ED661AA79 /* Pods-inSooqApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inSooqApp.debug.xcconfig"; path = "Target Support Files/Pods-inSooqApp/Pods-inSooqApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1729F8B22793233500F957A1 /* AdsOfCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsOfCategoryModel.swift; sourceTree = "<group>"; };
@@ -609,6 +618,30 @@
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		E3030B16282902D4004D9179 /* FavAdsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAdsCount.swift; sourceTree = "<group>"; };
+		E30659CF28380BF80011C1B9 /* AdDetailsGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailsGalleryCell.swift; sourceTree = "<group>"; };
+		E30659D028380BF80011C1B9 /* AdDetailsGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdDetailsGalleryCell.xib; sourceTree = "<group>"; };
+		E30659D328380C060011C1B9 /* AdTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTitleCell.swift; sourceTree = "<group>"; };
+		E30659D428380C060011C1B9 /* AdTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTitleCell.xib; sourceTree = "<group>"; };
+		E30659D728380C130011C1B9 /* AdLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdLocationCell.swift; sourceTree = "<group>"; };
+		E30659D828380C130011C1B9 /* AdLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdLocationCell.xib; sourceTree = "<group>"; };
+		E30659DB28380C220011C1B9 /* AdDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailsCell.swift; sourceTree = "<group>"; };
+		E30659DC28380C220011C1B9 /* AdDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdDetailsCell.xib; sourceTree = "<group>"; };
+		E30659DF28380C380011C1B9 /* AdSpecificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSpecificationCell.swift; sourceTree = "<group>"; };
+		E30659E028380C380011C1B9 /* AdSpecificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdSpecificationCell.xib; sourceTree = "<group>"; };
+		E30659E328380C440011C1B9 /* AdDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDescriptionCell.swift; sourceTree = "<group>"; };
+		E30659E428380C440011C1B9 /* AdDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdDescriptionCell.xib; sourceTree = "<group>"; };
+		E30659E728380C510011C1B9 /* AdLocationMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdLocationMapCell.swift; sourceTree = "<group>"; };
+		E30659E828380C510011C1B9 /* AdLocationMapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdLocationMapCell.xib; sourceTree = "<group>"; };
+		E30659EB28380C5D0011C1B9 /* AdMetaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMetaCell.swift; sourceTree = "<group>"; };
+		E30659EC28380C5D0011C1B9 /* AdMetaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdMetaCell.xib; sourceTree = "<group>"; };
+		E30659F128380CDE0011C1B9 /* MobileNumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberCell.swift; sourceTree = "<group>"; };
+		E30659F228380CDE0011C1B9 /* MobileNumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileNumberCell.xib; sourceTree = "<group>"; };
+		E30659F528380CEB0011C1B9 /* VehicleNumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleNumberCell.swift; sourceTree = "<group>"; };
+		E30659F628380CEB0011C1B9 /* VehicleNumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleNumberCell.xib; sourceTree = "<group>"; };
+		E30659FD283911BA0011C1B9 /* PaidPackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidPackageCell.swift; sourceTree = "<group>"; };
+		E30659FE283911BA0011C1B9 /* PaidPackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidPackageCell.xib; sourceTree = "<group>"; };
+		E3065A01283911CB0011C1B9 /* FreePackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreePackageCell.swift; sourceTree = "<group>"; };
+		E3065A02283911CB0011C1B9 /* FreePackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreePackageCell.xib; sourceTree = "<group>"; };
 		E310171028137E6F00B01C84 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E31E6EA028073F36001A4E9A /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		E31E6EA228074A4B001A4E9A /* FormPhotoPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormPhotoPicker.xib; sourceTree = "<group>"; };
@@ -1344,6 +1377,147 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E30659C628380BA50011C1B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E30659F028380CD10011C1B9 /* VehicleNumberCell */,
+				E30659EF28380CC90011C1B9 /* MobileNumberCell */,
+				E30659CE28380BD70011C1B9 /* AdMetaCell */,
+				E30659CD28380BD10011C1B9 /* AdLocationMapCell */,
+				E30659CC28380BCB0011C1B9 /* AdDescriptionCell */,
+				E30659CB28380BC60011C1B9 /* AdSpecificationCell */,
+				E30659CA28380BC00011C1B9 /* AdDetailsCell */,
+				E30659C928380BBB0011C1B9 /* AdLocationCell */,
+				E30659C828380BB60011C1B9 /* AdTitleCell */,
+				E30659C728380BB00011C1B9 /* AdDetailsGalleryCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E30659C728380BB00011C1B9 /* AdDetailsGalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659CF28380BF80011C1B9 /* AdDetailsGalleryCell.swift */,
+				E30659D028380BF80011C1B9 /* AdDetailsGalleryCell.xib */,
+			);
+			path = AdDetailsGalleryCell;
+			sourceTree = "<group>";
+		};
+		E30659C828380BB60011C1B9 /* AdTitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659D328380C060011C1B9 /* AdTitleCell.swift */,
+				E30659D428380C060011C1B9 /* AdTitleCell.xib */,
+			);
+			path = AdTitleCell;
+			sourceTree = "<group>";
+		};
+		E30659C928380BBB0011C1B9 /* AdLocationCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659D728380C130011C1B9 /* AdLocationCell.swift */,
+				E30659D828380C130011C1B9 /* AdLocationCell.xib */,
+			);
+			path = AdLocationCell;
+			sourceTree = "<group>";
+		};
+		E30659CA28380BC00011C1B9 /* AdDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659DB28380C220011C1B9 /* AdDetailsCell.swift */,
+				E30659DC28380C220011C1B9 /* AdDetailsCell.xib */,
+			);
+			path = AdDetailsCell;
+			sourceTree = "<group>";
+		};
+		E30659CB28380BC60011C1B9 /* AdSpecificationCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659DF28380C380011C1B9 /* AdSpecificationCell.swift */,
+				E30659E028380C380011C1B9 /* AdSpecificationCell.xib */,
+			);
+			path = AdSpecificationCell;
+			sourceTree = "<group>";
+		};
+		E30659CC28380BCB0011C1B9 /* AdDescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659E328380C440011C1B9 /* AdDescriptionCell.swift */,
+				E30659E428380C440011C1B9 /* AdDescriptionCell.xib */,
+			);
+			path = AdDescriptionCell;
+			sourceTree = "<group>";
+		};
+		E30659CD28380BD10011C1B9 /* AdLocationMapCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659E728380C510011C1B9 /* AdLocationMapCell.swift */,
+				E30659E828380C510011C1B9 /* AdLocationMapCell.xib */,
+			);
+			path = AdLocationMapCell;
+			sourceTree = "<group>";
+		};
+		E30659CE28380BD70011C1B9 /* AdMetaCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659EB28380C5D0011C1B9 /* AdMetaCell.swift */,
+				E30659EC28380C5D0011C1B9 /* AdMetaCell.xib */,
+			);
+			path = AdMetaCell;
+			sourceTree = "<group>";
+		};
+		E30659EF28380CC90011C1B9 /* MobileNumberCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659F128380CDE0011C1B9 /* MobileNumberCell.swift */,
+				E30659F228380CDE0011C1B9 /* MobileNumberCell.xib */,
+			);
+			path = MobileNumberCell;
+			sourceTree = "<group>";
+		};
+		E30659F028380CD10011C1B9 /* VehicleNumberCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659F528380CEB0011C1B9 /* VehicleNumberCell.swift */,
+				E30659F628380CEB0011C1B9 /* VehicleNumberCell.xib */,
+			);
+			path = VehicleNumberCell;
+			sourceTree = "<group>";
+		};
+		E30659F92838F8400011C1B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E30659FC28390D990011C1B9 /* PaidPackageCell */,
+				E30659FB28390D920011C1B9 /* FreePackageCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E30659FA283908160011C1B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E30659FB28390D920011C1B9 /* FreePackageCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3065A01283911CB0011C1B9 /* FreePackageCell.swift */,
+				E3065A02283911CB0011C1B9 /* FreePackageCell.xib */,
+			);
+			path = FreePackageCell;
+			sourceTree = "<group>";
+		};
+		E30659FC28390D990011C1B9 /* PaidPackageCell */ = {
+			isa = PBXGroup;
+			children = (
+				E30659FD283911BA0011C1B9 /* PaidPackageCell.swift */,
+				E30659FE283911BA0011C1B9 /* PaidPackageCell.xib */,
+			);
+			path = PaidPackageCell;
+			sourceTree = "<group>";
+		};
 		E310170F28137E5700B01C84 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1456,6 +1630,8 @@
 		E39DC4FB2809E52400BAE09D /* PricesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E30659FA283908160011C1B9 /* Models */,
+				E30659F92838F8400011C1B9 /* Cells */,
 				E39DC4FC2809E54600BAE09D /* PricesViewController.swift */,
 			);
 			path = PricesViewController;
@@ -2201,6 +2377,7 @@
 		F148FD4225D5560300F5DDFC /* ItemDetailsControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E30659C628380BA50011C1B9 /* Cells */,
 				F1B8B58425D9128300AB3E83 /* CustomCollectionViewCell */,
 				F148FD4B25D55BC800F5DDFC /* CustomViews */,
 				F148FD4425D5562000F5DDFC /* DetailsViewController.swift */,
@@ -2749,7 +2926,6 @@
 				F107A1B925CFCC9F00FC6340 /* Frameworks */,
 				F107A1BA25CFCC9F00FC6340 /* Resources */,
 				06FBB889B14FFE6D83197E4D /* [CP] Embed Pods Frameworks */,
-				E34D94C82818B64500912AF7 /* Embed Frameworks */,
 				9A5FADC59048E93AFD173623 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -2800,6 +2976,7 @@
 			files = (
 				F1F352FC2647EDE3001A065B /* parking.png in Resources */,
 				17AA1C1C2788CDFE008B5409 /* CellPopupListItme.xib in Resources */,
+				E30659D628380C060011C1B9 /* AdTitleCell.xib in Resources */,
 				F12F02F42642170600989A1B /* motors.png in Resources */,
 				F11EDC2F262A538F004D6D91 /* DeleteAdView.xib in Resources */,
 				F1CC5A6A26473EF5008342BA /* bath.png in Resources */,
@@ -2846,6 +3023,7 @@
 				F1FFB7B4265A323B00BCBBEB /* WantedJobGridCollectionViewCell.xib in Resources */,
 				E380354927F8513D00FF0212 /* Misc.storyboard in Resources */,
 				F1F352F12647EDE3001A065B /* playground.png in Resources */,
+				E30659F828380CEB0011C1B9 /* VehicleNumberCell.xib in Resources */,
 				E380353E27F653E500FF0212 /* Adding.storyboard in Resources */,
 				F12F02F82642170600989A1B /* favo.png in Resources */,
 				E31E6EB5280798AC001A4E9A /* FormPreviewView.xib in Resources */,
@@ -2854,6 +3032,7 @@
 				F175E8CE25E64B9300873F20 /* ServicesFillter.xib in Resources */,
 				F107A1FA25CFEB9A00FC6340 /* car3.jpeg in Resources */,
 				F1F352FA2647EDE3001A065B /* gym.png in Resources */,
+				E3065A00283911BA0011C1B9 /* PaidPackageCell.xib in Resources */,
 				F1AD892625E52A4000326065 /* chat.png in Resources */,
 				F12F03072642172E00989A1B /* moto.png in Resources */,
 				F1DC097C2612F7B0007BC57F /* ChatItemView.xib in Resources */,
@@ -2879,7 +3058,9 @@
 				F1C53A432636EC1300476793 /* AddOpeningJobsView.xib in Resources */,
 				F107A1CC25CFCCA100FC6340 /* LaunchScreen.storyboard in Resources */,
 				E380354027F657E500FF0212 /* Items.storyboard in Resources */,
+				E30659EE28380C5D0011C1B9 /* AdMetaCell.xib in Resources */,
 				1782F6AA2797331700D880B8 /* RowCollecctionUsedCarCell.xib in Resources */,
+				E30659E628380C440011C1B9 /* AdDescriptionCell.xib in Resources */,
 				F1B8B5AE25D9636A00AB3E83 /* ServicesDetailsView.xib in Resources */,
 				F192DFA4265A3B9E00E122B0 /* ServiceRowCollectionViewCell.xib in Resources */,
 				F1DC098526133A75007BC57F /* ChangePasswordView.xib in Resources */,
@@ -2900,6 +3081,9 @@
 				E31E6EAC28075B1A001A4E9A /* FormLocationView.xib in Resources */,
 				F107A1C925CFCCA100FC6340 /* Assets.xcassets in Resources */,
 				F1CCE022266F736B00490501 /* bell-icon.png in Resources */,
+				E30659EA28380C510011C1B9 /* AdLocationMapCell.xib in Resources */,
+				E3065A04283911CB0011C1B9 /* FreePackageCell.xib in Resources */,
+				E30659DA28380C130011C1B9 /* AdLocationCell.xib in Resources */,
 				F19CC1E9261C56FB002CDE4F /* SavedSearchesTableViewCell.xib in Resources */,
 				F15800CA2611E8C100496668 /* ConversationCell.xib in Resources */,
 				F1DC098F26133FD2007BC57F /* ChangePhoneView.xib in Resources */,
@@ -2943,6 +3127,7 @@
 				F12F030E2642250900989A1B /* resume_cv.png in Resources */,
 				F12269D925E63B6500E30E30 /* PropertyFillterView.xib in Resources */,
 				F114DC71265567D2006B33CF /* AdConfirmationView.xib in Resources */,
+				E30659F428380CDE0011C1B9 /* MobileNumberCell.xib in Resources */,
 				F1D8216E25DA77CB0032A3E4 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				F1730F07262C846B00882749 /* LanguageView.xib in Resources */,
 				F10D3E58261DBA9C00AF1CAC /* testVideo.mov in Resources */,
@@ -2954,6 +3139,7 @@
 				F1FE010B2655194200A276D7 /* power_off.png in Resources */,
 				F114DCB926565752006B33CF /* Oval.png in Resources */,
 				F1CBEC482627A82F00DC7F05 /* Mask.png in Resources */,
+				E30659D228380BF80011C1B9 /* AdDetailsGalleryCell.xib in Resources */,
 				F150F81125D40C2B0077C970 /* logoTest.png in Resources */,
 				F15592432679DC5E007D7E1A /* plate_dubai.png in Resources */,
 				E380353627F64AB400FF0212 /* Meta.storyboard in Resources */,
@@ -2965,6 +3151,7 @@
 				F12F03042642172E00989A1B /* pers.png in Resources */,
 				F1F352DF2647EC35001A065B /* AmenitiesCollectionViewCell.xib in Resources */,
 				F107A1C725CFCC9F00FC6340 /* Main.storyboard in Resources */,
+				E30659DE28380C220011C1B9 /* AdDetailsCell.xib in Resources */,
 				CE8CC6E827E3ED9000DC0F85 /* Main2.storyboard in Resources */,
 				F1790E4625D3F1EC008E4D2C /* SilderImagesCollectionViewCell.xib in Resources */,
 				F12F02F12642170600989A1B /* num.png in Resources */,
@@ -2976,6 +3163,7 @@
 				F12A2C7B25E3BCD20043E3DA /* locationCollectionViewCell.xib in Resources */,
 				F1EDDDEC267923E100A3641E /* merc.png in Resources */,
 				F192DFA9265A3CE300E122B0 /* ServiceGridCollectionViewCell.xib in Resources */,
+				E30659E228380C380011C1B9 /* AdSpecificationCell.xib in Resources */,
 				F1730ED9262C38A400882749 /* MyAdsMotorsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3067,6 +3255,7 @@
 				E3A810FA28035AF4003A2CC0 /* FormContinueButton.swift in Sources */,
 				F135DCD425E15A5E00186FC5 /* MainTabBarViewController.swift in Sources */,
 				E3A0E8A72815CB240084D11D /* NumbersSubmission.swift in Sources */,
+				E30659E128380C380011C1B9 /* AdSpecificationCell.swift in Sources */,
 				F10348FC25E7905300785B07 /* BusinessMobilesFillter.swift in Sources */,
 				F17857D726302D6C00924DAB /* MotorsBrandsViewController.swift in Sources */,
 				F1BF3C7F266908D200DE6FCE /* AgencyViewController.swift in Sources */,
@@ -3084,6 +3273,7 @@
 				E39DC5142809FC3F00BAE09D /* Motors_Parts_Details_VC.swift in Sources */,
 				F1C049D925D297F300647170 /* BottomBar.swift in Sources */,
 				F11A4AFC261B379E003E70BD /* ChangeEmailView.swift in Sources */,
+				E30659FF283911BA0011C1B9 /* PaidPackageCell.swift in Sources */,
 				F12A2C7A25E3BCD20043E3DA /* locationCollectionViewCell.swift in Sources */,
 				F16B8CE72642B279002F9204 /* NotificationFillterView.swift in Sources */,
 				F15BC4BF2615AB060094ACF0 /* UIApplication+Extensions.swift in Sources */,
@@ -3100,9 +3290,11 @@
 				2862BAEE277D2B46009F4B7E /* AlertControler.swift in Sources */,
 				F17857DA263034A900924DAB /* BrandsTableViewCell.swift in Sources */,
 				F1D8217F25DA8E870032A3E4 /* AppIcons.swift in Sources */,
+				E30659F328380CDE0011C1B9 /* MobileNumberCell.swift in Sources */,
 				E39DC5012809EE0500BAE09D /* Motors_Machinery_VC.swift in Sources */,
 				F1FE00802653C9D000A276D7 /* JobsGridCollectionViewCell.swift in Sources */,
 				F1BA5939262ADC2C00B12D9C /* EditMotorsAdView.swift in Sources */,
+				E3065A03283911CB0011C1B9 /* FreePackageCell.swift in Sources */,
 				F1CBEC4E2627B2AA00DC7F05 /* OTPViewController.swift in Sources */,
 				E39DC52C280A035D00BAE09D /* Mobiles_VC.swift in Sources */,
 				F1B8B5B425D9645D00AB3E83 /* FloatRatingViewDelegate.swift in Sources */,
@@ -3143,6 +3335,7 @@
 				E3A810FC28036246003A2CC0 /* FormPhotoPicker.swift in Sources */,
 				E39DC53C280A2F9800BAE09D /* Motors_Boats_Details_Data.swift in Sources */,
 				E3FD214E27EA53E900FDA9DD /* BasicResponse.swift in Sources */,
+				E30659DD28380C220011C1B9 /* AdDetailsCell.swift in Sources */,
 				F19CC1E8261C56FB002CDE4F /* SavedSearchesTableViewCell.swift in Sources */,
 				E39DC4FA2809C71B00BAE09D /* MapPickerViewController.swift in Sources */,
 				E3C011F027EF3D56003126E9 /* EditProfileModel.swift in Sources */,
@@ -3231,6 +3424,7 @@
 				F132BD9926149E0900F83837 /* Terms_PrivacyViewController.swift in Sources */,
 				F1790E4525D3F1EC008E4D2C /* SilderImagesCollectionViewCell.swift in Sources */,
 				F107A1FE25CFECBA00FC6340 /* AdsCollectionViewCell.swift in Sources */,
+				E30659E528380C440011C1B9 /* AdDescriptionCell.swift in Sources */,
 				E37E9090282A90050070C351 /* ApiRequests+Filtering.swift in Sources */,
 				F107A1C225CFCC9F00FC6340 /* SceneDelegate.swift in Sources */,
 				E39DC516280A002100BAE09D /* Services_VC.swift in Sources */,
@@ -3238,6 +3432,7 @@
 				1ECB3B8127C1B43A004F3C91 /* ItemsCategoryVC.swift in Sources */,
 				CE8CC6EA27E3EDFB00DC0F85 /* BrandVc.swift in Sources */,
 				E39BAE2027FCDDF1001F5438 /* Motors_Used_VC.swift in Sources */,
+				E30659E928380C510011C1B9 /* AdLocationMapCell.swift in Sources */,
 				F13E6FF925ECDCB800A26E2D /* Add_BrandViewController.swift in Sources */,
 				F15BC4B82615A3210094ACF0 /* SignInViewController.swift in Sources */,
 				E39DC520280A010900BAE09D /* Motors_Export_Details_VC.swift in Sources */,
@@ -3261,7 +3456,10 @@
 				F135DCD125E1506200186FC5 /* CustomizedCenterTabBar.swift in Sources */,
 				F15800C92611E8C100496668 /* ConversationCell.swift in Sources */,
 				2862BAF8277D2D7D009F4B7E /* Helleber.swift in Sources */,
+				E30659D528380C060011C1B9 /* AdTitleCell.swift in Sources */,
+				E30659D128380BF80011C1B9 /* AdDetailsGalleryCell.swift in Sources */,
 				F1790E1625D3D378008E4D2C /* PropertyView.swift in Sources */,
+				E30659F728380CEB0011C1B9 /* VehicleNumberCell.swift in Sources */,
 				F15592472679E74B007D7E1A /* ViewOnCarCollectionViewCell.swift in Sources */,
 				E39DC57B280C5DFB00BAE09D /* FormFile.swift in Sources */,
 				E3FD213627EA524000FDA9DD /* TableState.swift in Sources */,
@@ -3294,6 +3492,7 @@
 				F1C3378D25DBB3CC00DD6BBA /* InfoCollectionViewCell.swift in Sources */,
 				F1708F11262F1A6500A298BE /* ApplayForJobViewController.swift in Sources */,
 				F1C04A0425D2C08A00647170 /* AllItemsTableViewCell.swift in Sources */,
+				E30659D928380C130011C1B9 /* AdLocationCell.swift in Sources */,
 				F1FFB7B3265A323B00BCBBEB /* WantedJobGridCollectionViewCell.swift in Sources */,
 				E3A0E8A92815CB310084D11D /* ElectronicsSubmission.swift in Sources */,
 				F12093CA25D13C4B004D5205 /* CountryModel.swift in Sources */,
@@ -3312,6 +3511,7 @@
 				F148FD4525D5562000F5DDFC /* DetailsViewController.swift in Sources */,
 				F11EDC32262A53A4004D6D91 /* DeleteAdView.swift in Sources */,
 				F1AD890D25E4F92100326065 /* MyAdsViewController.swift in Sources */,
+				E30659ED28380C5D0011C1B9 /* AdMetaCell.swift in Sources */,
 				E3FD213927EA524000FDA9DD /* Localize.swift in Sources */,
 				F1CBEC362627860200DC7F05 /* CardDetailsViewController.swift in Sources */,
 				F19CC1CD261C4FBA002CDE4F /* SavedSearchesViewController.swift in Sources */,
@@ -3583,7 +3783,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 3LL7ZXMCGD;
+				DEVELOPMENT_TEAM = H7424JCATY;
 				INFOPLIST_FILE = inSooqApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3591,7 +3791,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deyaeldeen.hudhud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudhud.insouqapplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -3609,7 +3809,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 3LL7ZXMCGD;
+				DEVELOPMENT_TEAM = H7424JCATY;
 				INFOPLIST_FILE = inSooqApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3617,7 +3817,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deyaeldeen.hudhud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudhud.insouqapplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

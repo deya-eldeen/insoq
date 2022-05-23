@@ -213,7 +213,10 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
     //    }
     
     @objc func goGetMoreViews() {
-        self.performSegue(withIdentifier: "EditAdsSegue", sender: nil)            // Your swipe action code!
+        
+        let targetVC = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController") as! PricesViewController
+        self.present(targetVC, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

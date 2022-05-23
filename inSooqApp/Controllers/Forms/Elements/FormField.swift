@@ -57,6 +57,7 @@ enum FieldID {
     case title
     case year
     case price
+    case milage
     case phoneNumber
     case jobTitle
     case plateNumber

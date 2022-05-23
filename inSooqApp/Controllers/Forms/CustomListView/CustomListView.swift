@@ -44,6 +44,11 @@ class CustomListView: UIView {
     
     func showView(show:Bool){
         self.isHidden = !show
+        
+        if(show == true) {
+            self.selectedItem = nil
+        }
+        
     }
     
     func setData(vc:UIViewController?, list: [Listable], hideOther:Bool? = false){
