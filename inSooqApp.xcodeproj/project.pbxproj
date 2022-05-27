@@ -102,6 +102,7 @@
 		E3488EC8282C657800D8E5F2 /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3488EC6282C657800D8E5F2 /* PlateView.swift */; };
 		E34D94C52818ACB000912AF7 /* ApiRequests+Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */; };
 		E34D94C62818B64500912AF7 /* Pods_inSooqApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA16C89C60362F53EDCEC6F /* Pods_inSooqApp.framework */; };
+		E365F34E283C2283004F6765 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365F34D283C2283004F6765 /* PaymentViewController.swift */; };
 		E37E9090282A90050070C351 /* ApiRequests+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37E908F282A90050070C351 /* ApiRequests+Filtering.swift */; };
 		E380353627F64AB400FF0212 /* Meta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353427F64AB400FF0212 /* Meta.storyboard */; };
 		E380353927F64CE000FF0212 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380353727F64CE000FF0212 /* User.storyboard */; };
@@ -658,6 +659,7 @@
 		E3488EC5282C657800D8E5F2 /* PlateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateView.xib; sourceTree = "<group>"; };
 		E3488EC6282C657800D8E5F2 /* PlateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateView.swift; sourceTree = "<group>"; };
 		E34D94C42818ACB000912AF7 /* ApiRequests+Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Submission.swift"; sourceTree = "<group>"; };
+		E365F34D283C2283004F6765 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		E37E908F282A90050070C351 /* ApiRequests+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Filtering.swift"; sourceTree = "<group>"; };
 		E380353527F64AB400FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Meta.storyboard; sourceTree = "<group>"; };
 		E380353827F64CE000FF0212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
@@ -1589,6 +1591,14 @@
 			path = SimView;
 			sourceTree = "<group>";
 		};
+		E365F34C283C226C004F6765 /* PaymentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E365F34D283C2283004F6765 /* PaymentViewController.swift */,
+			);
+			path = PaymentViewController;
+			sourceTree = "<group>";
+		};
 		E39BAE1927FC8E52001F5438 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
@@ -2169,6 +2179,7 @@
 		F107A1D525CFCD4100FC6340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E365F34C283C226C004F6765 /* PaymentViewController */,
 				E310170F28137E5700B01C84 /* ImagePicker */,
 				E39DC4FB2809E52400BAE09D /* PricesViewController */,
 				E39DC4F82809C6E100BAE09D /* MapPickerViewController */,
@@ -3586,6 +3597,7 @@
 				F11EDC2B262A486C004D6D91 /* SignUp_PhoneViewController.swift in Sources */,
 				F1D2BACE261C8B58000078B3 /* GuidlinesViewController.swift in Sources */,
 				F1C049C725D2869800647170 /* SubCategoriesViewController.swift in Sources */,
+				E365F34E283C2283004F6765 /* PaymentViewController.swift in Sources */,
 				F1AD892E25E533F600326065 /* CheckBox_RadioButtonTableViewCell.swift in Sources */,
 				F1D8219625DAC9A40032A3E4 /* AmentiesTableViewCell.swift in Sources */,
 				1EC584A327CD91DB002181DC /* ClassifiedModel.swift in Sources */,

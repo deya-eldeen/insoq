@@ -215,6 +215,7 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
     @objc func goGetMoreViews() {
         
         let targetVC = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController") as! PricesViewController
+        targetVC.paymentNavigationSource = .myAds
         self.present(targetVC, animated: true)
         
     }

@@ -149,5 +149,40 @@ class Mobiles_VC: FormViewController {
         
         self.customeListView.showListing(vc: self)
     }
+    
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.electronicsSubmission = ElectronicsSubmission(
+                Age: getPickerValue(id: .age),
+                Color: getPickerValue(id: .color),
+                Description: getDescriptionValue(),
+                Lat: String(describing: locationLatitude),
+                Lng: String(describing: locationLongitude),
+                Location: getPickerValue(id: .location),
+                Price: getFormValue(id: .price),
+                Title: getFormValue(id: .title),
+                Usage: getPickerValue(id: .usage),
+                Warranty: getPickerValue(id: .warranty),
+                Pictures: "",
+                MainPhoto: "",
+                SubCategoryId: "",
+                OtherSubCategory: "",
+                SubTypeId: "",
+                OtherSubType: "",
+                PhoneNumber: getFormValue(id: .phoneNumber),
+                Version: getPickerValue(id: .version),
+                Ram: getPickerValue(id: .ram),
+                Storage: getPickerValue(id: .storage),
+                Id: "",
+                AdId: "",
+                CategoryId: "")
+        }
+        
+        super.didTapContinue()
+
+
+    }
 
 }

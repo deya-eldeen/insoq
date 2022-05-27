@@ -62,5 +62,6 @@ enum FieldID {
     case jobTitle
     case plateNumber
     case position
+    case age
     case none
 }

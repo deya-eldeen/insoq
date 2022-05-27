@@ -15,15 +15,31 @@ class PricesViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func didTapContinue() {
+        self.navigate()
+    }
+    
     var previousVC: UIViewController?
     var packages = [PackageModel]()
+    var categoryId = 1
+    var paymentNavigationSource = PaymentNavigationSource.none
+
+    var selectedPackage: PackageModel?
     
-    func dismissThenPopToRoot() {
+    func navigate() {
     
-        self.dismiss(animated: true) {
-            self.previousVC?.navigationController?.popToRootViewController(animated: true)
+        guard let package = selectedPackage else { return }
+        let price = package.price ?? 0.0
+
+        if (price > 0.0) {
+            let target = ViewControllersAssembly.misc.makeViewController(with: "PaymentViewController") as! PaymentViewController
+            target.paymentNavigationSource = self.paymentNavigationSource
+            self.present(target, animated: true)
+        } else {
+            
         }
-    
+
+        
     }
     
     var isUpgrading = false
@@ -32,19 +48,19 @@ class PricesViewController: UIViewController {
         
         self.tableView.prepareTableView(vc: self, withCellsIDs: [PaidPackageCell.id, FreePackageCell.id])
         
-        ApiRequests.packages(CategoryId: FormViewController.adMainType.rawValue) { response in
+        self.categoryId = FormViewController.adMainType.rawValue
+        self.categoryId = 1
+        
+        ApiRequests.packages(CategoryId: self.categoryId) { response in
             self.packages = response.value ?? []
             if (self.isUpgrading == true) {
                 self.packages.removeAll(where: { $0.price == 0.0 } )
             }
             self.tableView.reloadData()
+            if(self.packages.count > 0) {
+                self.selectCell(indexPath: IndexPath.init(row: 0, section: 0))
+            }
         }
-        
-    }
-    
-    @IBAction func didTapContinue() {
-        
-        proceed()
         
     }
     
@@ -64,7 +80,7 @@ extension PricesViewController {
                     if let fullParams = fullParams {
                         ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                             print("submitMotor",formResponse)
-                            self.dismissThenPopToRoot()
+                            self.navigate()
                         }
                     }
                 }
@@ -78,7 +94,7 @@ extension PricesViewController {
                     if let fullParams = fullParams {
                         ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                             print("submitMotor",formResponse)
-                            self.dismissThenPopToRoot()
+                            self.navigate()
                         }
                     }
                 }
@@ -89,7 +105,7 @@ extension PricesViewController {
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                     print("submitMotor",formResponse)
-                    self.dismissThenPopToRoot()
+                    self.navigate()
                 }
             }
         case .electronics:
@@ -98,7 +114,7 @@ extension PricesViewController {
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                     print("submitMotor",formResponse)
-                    self.dismissThenPopToRoot()
+                    self.navigate()
                 }
             }
         case .classified:
@@ -110,7 +126,7 @@ extension PricesViewController {
                     if let fullParams = fullParams {
                         ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                             print("submitMotor",formResponse)
-                            self.dismissThenPopToRoot()
+                            self.navigate()
                         }
                     }
                 }
@@ -121,7 +137,7 @@ extension PricesViewController {
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                     print("submitMotor",formResponse)
-                    self.dismissThenPopToRoot()
+                    self.navigate()
                 }
             }
         case .business:
@@ -130,13 +146,24 @@ extension PricesViewController {
             if let fullParams = fullParams {
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                     print("submitMotor",formResponse)
-                    self.dismissThenPopToRoot()
+                    self.navigate()
                 }
             }
         case .none:
-            return
+            self.navigate()
         }
                 
+    }
+    
+    func selectCell(indexPath: IndexPath) {
+        
+        let package = self.packages[indexPath.row]
+        
+        for (index, _) in self.packages.enumerated() {
+            self.tableView.deselectRow(at: IndexPath.init(row: index, section: 0), animated: false)
+        }
+        
+        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
     }
     
 }
@@ -149,18 +176,24 @@ extension PricesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let package = self.packages[indexPath.row]
-        
-        switch package.price {
+        self.selectedPackage = self.packages[indexPath.row]
+
+        switch selectedPackage?.price {
         case 0.0:
             let cell = self.tableView.dequeueReusableCell(withIdentifier: FreePackageCell.id) as! FreePackageCell
             return cell
         default:
             let cell = self.tableView.dequeueReusableCell(withIdentifier: PaidPackageCell.id) as! PaidPackageCell
-            cell.renderCell(name: "N/A", price: package.price ?? 0.0)
+            cell.renderCell(name: selectedPackage?.details_En ?? "", price: selectedPackage?.price ?? 0.0, imageUrl: selectedPackage?.packImage ?? "")
             return cell
         }
 
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.selectCell(indexPath: indexPath)
+        
     }
     
 }

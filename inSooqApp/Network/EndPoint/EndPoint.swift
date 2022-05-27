@@ -48,7 +48,7 @@ extension EndPoint {
         let baseURL = "http://apinew.insouq.com/api/"
         switch self {
         case .CategoriesAdsGetByTypeId(let id):  return "\(baseURL)Ads/GetLatestAds?typeId=\(id)"
-        case .Register: return "\(baseURL)Users/Add"
+        case .Register: return "\(baseURL)User/Add"
         case .CategoriesGetByTypeId(let id): return "\(baseURL)Categories/GetByTypeId?id=\(id)"
         case .GetMotorMaker: return "\(baseURL)DropDowns/GetAllMotorMaker"
         case .GetAllMotorModelByMaker(let maker): return "\(baseURL)DropDowns/GetAllMotorModelByMaker?maker=\(maker)-"

@@ -23,11 +23,18 @@ class PaidPackageCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        self.statusImageView.alpha = (selected) ? (1.0) : (0.5)
     }
     
-    func renderCell(name: String, price: Double) {
+    func renderCell(name: String, price: Double, imageUrl: String) {
         self.packageNameLabel.text = name
-        self.packagePriceLabel.text = "\(price)"
+        self.packagePriceLabel.text = "\(price) AED"
+        
+        if let url = URL(string: imageUrl) {
+            self.planIconView.kf.setImage(with: url)
+        }
+        
     }
+    
     
 }

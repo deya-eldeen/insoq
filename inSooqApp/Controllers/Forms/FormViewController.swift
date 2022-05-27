@@ -311,6 +311,59 @@ class FormViewController: UIViewController {
         
     }
     
+    func getFormValue(id: FieldID) -> String {
+        
+        for element in formElements {
+            
+            if type(of: element) == FormField.self {
+                let field = (element as! FormField)
+                
+                if (field.id == id) {
+                    return field.text ?? ""
+                }
+                
+            }
+
+        }
+        
+        return ""
+    }
+    
+    func getPickerValue(id: PickerID) -> String {
+        
+        for element in formElements {
+            
+            if type(of: element) == FormPicker.self {
+                let picker = (element as! FormPicker)
+                
+                if (picker.id == id) {
+                    return picker.textfield.text ?? ""
+                }
+                
+            }
+
+        }
+        
+        return ""
+        
+    }
+    
+    
+    func getDescriptionValue() -> String {
+        
+        for element in formElements {
+            
+            if type(of: element) == FormTextView.self {
+                let textview = (element as! FormTextView)
+                return textview.textView.text ?? ""
+            }
+
+        }
+        
+        return ""
+        
+    }
+    
     func isValid() -> (Bool,FormValidationError) {
         
         //return (true, .none)
