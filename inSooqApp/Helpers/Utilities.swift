@@ -184,6 +184,13 @@ public func pushtoViewController(viewController: UIViewController,storyBoardId: 
     let detailsVC = mainStoryboard.instantiateViewController(identifier: storyBoardId)
     viewController.navigationController?.pushViewController(detailsVC, animated: animate)
 }
+
+public func presentViewController(viewController: UIViewController,storyBoardId: String,animate:Bool){
+    let mainStoryboard = UIStoryboard(name: sbFromVC(vcID: storyBoardId), bundle: nil)
+    let detailsVC = mainStoryboard.instantiateViewController(identifier: storyBoardId)
+    viewController.present(detailsVC, animated: true)
+}
+
 public func iPresentViewController(viewController: UIViewController,storyBoardId: String){
     let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         

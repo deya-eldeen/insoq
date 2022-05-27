@@ -236,6 +236,8 @@
 		E3FD214B27EA524000FDA9DD /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD213127EA524000FDA9DD /* SocialAuth.swift */; };
 		E3FD214C27EA524000FDA9DD /* AppleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD213227EA524000FDA9DD /* AppleAuth.swift */; };
 		E3FD214E27EA53E900FDA9DD /* BasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD214D27EA53E900FDA9DD /* BasicResponse.swift */; };
+		E3FF14A12840E41D00949418 /* BebasKai.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF149F2840E41D00949418 /* BebasKai.ttf */; };
+		E3FF14A22840E41D00949418 /* GlNummernschildMtl-LrZZ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF14A02840E41D00949418 /* GlNummernschildMtl-LrZZ.ttf */; };
 		F10348FC25E7905300785B07 /* BusinessMobilesFillter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10348FB25E7905300785B07 /* BusinessMobilesFillter.swift */; };
 		F10348FF25E7906B00785B07 /* Business_MobileFillter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F10348FE25E7906B00785B07 /* Business_MobileFillter.xib */; };
 		F103490325E7958F00785B07 /* PlatesFillter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F103490225E7958F00785B07 /* PlatesFillter.xib */; };
@@ -793,6 +795,8 @@
 		E3FD213127EA524000FDA9DD /* SocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAuth.swift; sourceTree = "<group>"; };
 		E3FD213227EA524000FDA9DD /* AppleAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleAuth.swift; sourceTree = "<group>"; };
 		E3FD214D27EA53E900FDA9DD /* BasicResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResponse.swift; sourceTree = "<group>"; };
+		E3FF149F2840E41D00949418 /* BebasKai.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasKai.ttf; sourceTree = "<group>"; };
+		E3FF14A02840E41D00949418 /* GlNummernschildMtl-LrZZ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlNummernschildMtl-LrZZ.ttf"; sourceTree = "<group>"; };
 		F10348FB25E7905300785B07 /* BusinessMobilesFillter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMobilesFillter.swift; sourceTree = "<group>"; };
 		F10348FE25E7906B00785B07 /* Business_MobileFillter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Business_MobileFillter.xib; sourceTree = "<group>"; };
 		F103490225E7958F00785B07 /* PlatesFillter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlatesFillter.xib; sourceTree = "<group>"; };
@@ -2128,6 +2132,13 @@
 			path = SocialAuth;
 			sourceTree = "<group>";
 		};
+		E3FF149E2840E3FE00949418 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		F107A1B325CFCC9F00FC6340 = {
 			isa = PBXGroup;
 			children = (
@@ -2149,6 +2160,7 @@
 		F107A1BE25CFCC9F00FC6340 /* inSooqApp */ = {
 			isa = PBXGroup;
 			children = (
+				E3FF149E2840E3FE00949418 /* New Group */,
 				E3A0E89F2815C6650084D11D /* Storyboards */,
 				CED301FB27E3DB2B0095B4AB /* Hudhud */,
 				17AA1C0E2788B66F008B5409 /* Custom UI */,
@@ -2740,6 +2752,8 @@
 		F1D8216925DA77B20032A3E4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E3FF149F2840E41D00949418 /* BebasKai.ttf */,
+				E3FF14A02840E41D00949418 /* GlNummernschildMtl-LrZZ.ttf */,
 				F1D8216A25DA77CA0032A3E4 /* Font Awesome 5 Brands-Regular-400.otf */,
 				F1D8216B25DA77CA0032A3E4 /* Font Awesome Pro-Light-300.otf */,
 				F1D8216D25DA77CB0032A3E4 /* Font Awesome Pro-Regular-400.otf */,
@@ -3092,6 +3106,7 @@
 				E31E6EAC28075B1A001A4E9A /* FormLocationView.xib in Resources */,
 				F107A1C925CFCCA100FC6340 /* Assets.xcassets in Resources */,
 				F1CCE022266F736B00490501 /* bell-icon.png in Resources */,
+				E3FF14A22840E41D00949418 /* GlNummernschildMtl-LrZZ.ttf in Resources */,
 				E30659EA28380C510011C1B9 /* AdLocationMapCell.xib in Resources */,
 				E3065A04283911CB0011C1B9 /* FreePackageCell.xib in Resources */,
 				E30659DA28380C130011C1B9 /* AdLocationCell.xib in Resources */,
@@ -3107,6 +3122,7 @@
 				F107A1F925CFEB9A00FC6340 /* car1.jpeg in Resources */,
 				F1CC5A5E26473996008342BA /* MotorsTableViewCell.xib in Resources */,
 				F148FD4D25D55BE800F5DDFC /* MotorsDetailsView.xib in Resources */,
+				E3FF14A12840E41D00949418 /* BebasKai.ttf in Resources */,
 				F1D8217125DA77CB0032A3E4 /* Font Awesome Pro-Regular-400.otf in Resources */,
 				F15592222679CC6D007D7E1A /* ViewonCarImage.xib in Resources */,
 				F1F352D72647DE7C001A065B /* SellerInfoView.xib in Resources */,

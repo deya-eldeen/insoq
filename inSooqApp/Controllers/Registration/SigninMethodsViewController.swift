@@ -22,7 +22,7 @@ class SigninMethodsViewController: UIViewController {
     @IBOutlet weak var lblTerms: UILabel!
     @IBOutlet weak var lblprivacy: UILabel!
 
-    let text = "By Signing up I agree on Terms & Conditions &"
+    let text = "By Signing up I agree on Terms & Conditions & Privacy Policy"
     let text2 = "Privacy Policy."
 
 
@@ -52,8 +52,8 @@ class SigninMethodsViewController: UIViewController {
     //MARK:-Private Methods-
     private func setTapGesture(){
         self.signin_Button.addTarget(self, action: #selector(self.signinAction), for: .touchUpInside)
-        self.facebook_Button.addTarget(self, action: #selector(self.facebookAction), for: .touchUpInside)
-        self.gmail_Button.addTarget(self, action: #selector(self.gmailAction), for: .touchUpInside)
+//        self.facebook_Button.addTarget(self, action: #selector(self.facebookAction), for: .touchUpInside)
+//        self.gmail_Button.addTarget(self, action: #selector(self.gmailAction), for: .touchUpInside)
         self.create_Button.addTarget(self, action: #selector(self.toSignupVC), for: .touchUpInside)
         self.forgetPassword_Button.addTarget(self, action: #selector(self.toForgetVC), for: .touchUpInside)
         //    self.agree_Button.addTarget(self, action: #selector(self.agreeAction), for: .touchUpInside)
@@ -78,15 +78,15 @@ class SigninMethodsViewController: UIViewController {
     }
     private func setDesign(){
         // emailTxt.delegate=self
-        debugPrint("facebook_Button.frame.height",facebook_Button.frame.height)
-        debugPrint("facebook_Button.frame.height",facebook_Button.frame.height/2)
-        emailTxt.addTarget(self, action: #selector(self.joinChange), for: .editingChanged)
-        objectCornerRadius(object: gmail_Button, cornerRadius: gmail_Button.frame.height/2)
-        objectCornerRadius(object: facebook_Button, cornerRadius: facebook_Button.frame.height/2)
-        objectCornerRadius(object: signin_Button, cornerRadius: signin_Button.frame.height/2)
+//        debugPrint("facebook_Button.frame.height",facebook_Button.frame.height)
+//        debugPrint("facebook_Button.frame.height",facebook_Button.frame.height/2)
+//        emailTxt.addTarget(self, action: #selector(self.joinChange), for: .editingChanged)
+//        objectCornerRadius(object: gmail_Button, cornerRadius: gmail_Button.frame.height/2)
+//        objectCornerRadius(object: facebook_Button, cornerRadius: facebook_Button.frame.height/2)
+//        objectCornerRadius(object: signin_Button, cornerRadius: signin_Button.frame.height/2)
        
-        lblTerms.text = text
-        lblprivacy.text = text2
+        //lblTerms.text = text
+        //lblprivacy.text = text2
         self.lblTerms.textColor =  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         self.lblTerms.textColor =  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let underlineAttriString = NSMutableAttributedString(string: text)
@@ -101,10 +101,10 @@ class SigninMethodsViewController: UIViewController {
         underlineAttriString2.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: range2)
         underlineAttriString2.addAttribute(NSAttributedString.Key.font, value: UIFont(name: "Arial", size: 12), range: range2)
         underlineAttriString2.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: range2)
-        lblprivacy.attributedText = underlineAttriString2
-        lblprivacy.isUserInteractionEnabled = true
-        lblprivacy.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(tapLabel2(gesture:))))
-        
+//        lblprivacy.attributedText = underlineAttriString2
+//        lblprivacy.isUserInteractionEnabled = true
+//        lblprivacy.addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(tapLabel2(gesture:))))
+//
 
         lblTerms.attributedText = underlineAttriString
         lblTerms.isUserInteractionEnabled = true
@@ -147,15 +147,15 @@ class SigninMethodsViewController: UIViewController {
     
   @objc  func tapLabel2(gesture: UITapGestureRecognizer) {
        // comment for now
-       let privacyRange = (text2 as NSString).range(of: "Privacy Policy")
-    if gesture.didTapAttributedTextInLabel(label: lblprivacy, inRange: privacyRange)
-       {
-        privacyAction()
-           print("Tapped privacy")
-       }
-    else {
-           print("Tapped none")
-       }
+//       let privacyRange = (text2 as NSString).range(of: "Privacy Policy")
+//    if gesture.didTapAttributedTextInLabel(label: lblprivacy, inRange: privacyRange)
+//       {
+//        privacyAction()
+//           print("Tapped privacy")
+//       }
+//    else {
+//           print("Tapped none")
+//       }
     }
     
   @objc  func tapLabel(gesture: UITapGestureRecognizer) {

@@ -11,9 +11,9 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var switchLanguage_Button: UIButton!
     @IBOutlet weak var signin_Button: UIButton!
-    @IBOutlet weak var pageController: UIPageControl!
+//    @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var register_Button: UIButton!
-    @IBOutlet weak var sliderCollectionView: UICollectionView!
+//    @IBOutlet weak var sliderCollectionView: UICollectionView!
     var counter:Int = 0
     var timer = Timer()
     var indexPath:Int = 0
@@ -30,8 +30,8 @@ class SignInViewController: UIViewController {
         setDesign()
         setTapGesture()
         setTimers()
-        sliderCollectionView.delegate=self
-        sliderCollectionView.dataSource=self
+//        sliderCollectionView.delegate=self
+//        sliderCollectionView.dataSource=self
         
 
     }
@@ -41,7 +41,7 @@ class SignInViewController: UIViewController {
         textLine(object: switchLanguage_Button)
         objectCornerRadius(object: signin_Button, cornerRadius: signin_Button.height/2)
         objectCornerRadius(object: register_Button, cornerRadius: register_Button.height/2)
-        self.pageController.numberOfPages = titles.count
+       // self.pageController.numberOfPages = titles.count
     }
     private func setTimers(){
         DispatchQueue.main.async {
@@ -58,7 +58,7 @@ private func setTapGesture(){
 }
     
     @objc func registerAction(){
-        pushtoViewController(viewController: self, storyBoardId: "SignUpViewController", animate: true)
+        presentViewController(viewController: self, storyBoardId: "SignUpViewController", animate: true)
     }
     
     @objc func signinAction(){
@@ -76,18 +76,18 @@ private func setTapGesture(){
         
         if counter < titles.count {
             let index = IndexPath.init(item: counter, section: 0)
-            if let rect = self.sliderCollectionView.layoutAttributesForItem(at: index)?.frame{
-                self.sliderCollectionView.scrollRectToVisible(rect, animated: true)}
-            pageController.currentPage = counter
+//            if let rect = self.sliderCollectionView.layoutAttributesForItem(at: index)?.frame{
+                //self.sliderCollectionView.scrollRectToVisible(rect, animated: true)}
+           // pageController.currentPage = counter
             counter += 1
         }
         else
         {
             counter = 0
             let index = IndexPath(item: counter, section: 0)
-            if let rect = self.sliderCollectionView.layoutAttributesForItem(at: index)?.frame{
-                self.sliderCollectionView.scrollRectToVisible(rect, animated: true)}
-            pageController.currentPage = counter
+//            if let rect = self.sliderCollectionView.layoutAttributesForItem(at: index)?.frame{
+                //self.sliderCollectionView.scrollRectToVisible(rect, animated: true)}
+            //pageController.currentPage = counter
             counter = 1
         }
         
@@ -95,28 +95,28 @@ private func setTapGesture(){
 }
 
 //MARK:-CollectionView Controllers-
-extension SignInViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return titles.count
-        }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let adsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
-        adsCell.setData(title: titles[indexPath.row])
-        return adsCell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = self.sliderCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 2, bottom: 5, right: 2)
-        layout.minimumInteritemSpacing = 2
-        layout.itemSize = CGSize(width: Int(sliderCollectionView.frame.width-20), height: Int(sliderCollectionView.frame.height-20) )
-        return layout.itemSize
-    }
+//extension SignInViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//            return titles.count
+//        }
 //
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        let adsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
+//        adsCell.setData(title: titles[indexPath.row])
+//        return adsCell
 //    }
-    
-}
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let layout = self.sliderCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.sectionInset = UIEdgeInsets(top: 5, left: 2, bottom: 5, right: 2)
+//        layout.minimumInteritemSpacing = 2
+//        layout.itemSize = CGSize(width: Int(sliderCollectionView.frame.width-20), height: Int(sliderCollectionView.frame.height-20) )
+//        return layout.itemSize
+//    }
+////
+////    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+////        return 0
+////    }
+//
+//}

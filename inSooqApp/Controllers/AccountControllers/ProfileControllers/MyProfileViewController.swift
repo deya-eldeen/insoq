@@ -202,10 +202,19 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func logout_Pressed(_ sender: Any) {
-        Shared.shared.saveIsLogin(login: false)
+        
+        let alertViewController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        alertViewController.addAction(.init(title: "Yes", style: .destructive, handler: { action in
+            Shared.shared.saveIsLogin(login: false)
+            newRoot(NavId: "RegistrationNav")
+        }))
+        alertViewController.addAction(.init(title: "No", style: .default))
+        
+        self.present(alertViewController, animated: true)
+        
 
-        newRoot(NavId: "RegistrationNav")
     }
     //MARK:-override touches-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)

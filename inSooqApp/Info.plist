@@ -74,6 +74,8 @@
 	<string>Application need to access gallery when taking a service photo</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>BebasKai.ttf</string>
+		<string>GlNummernschildMtl-LrZZ.ttf</string>
 		<string>Font Awesome 5 Brands-Regular-400.otf</string>
 		<string>Font Awesome Pro-Light-300.otf</string>
 		<string>Font Awesome Pro-Regular-400.otf</string>

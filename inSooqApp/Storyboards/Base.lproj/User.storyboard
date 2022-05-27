@@ -471,7 +471,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFI-6e-ArM">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-Ds-wiP">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-Ds-wiP">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwE-6P-Dpt">

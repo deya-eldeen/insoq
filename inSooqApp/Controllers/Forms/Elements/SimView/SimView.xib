@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,9 +17,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixq-bu-JOc" customClass="FormPreviewView" customModule="inSooqApp" customModuleProvider="target">
                     <rect key="frame" x="4" y="4" width="406" height="142"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-wW-PCc">
-                            <rect key="frame" x="4" y="4" width="398" height="134"/>
-                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="etisalat" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-wW-PCc">
+                            <rect key="frame" x="0.0" y="0.0" width="406" height="142"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="4"/>
@@ -30,11 +29,11 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="XFH-wW-PCc" firstAttribute="top" secondItem="Ixq-bu-JOc" secondAttribute="top" constant="4" id="0Lj-rN-xVz"/>
+                        <constraint firstItem="XFH-wW-PCc" firstAttribute="top" secondItem="Ixq-bu-JOc" secondAttribute="top" id="0Lj-rN-xVz"/>
                         <constraint firstAttribute="height" constant="142" id="7Cj-81-kff"/>
-                        <constraint firstItem="XFH-wW-PCc" firstAttribute="leading" secondItem="Ixq-bu-JOc" secondAttribute="leading" constant="4" id="ACV-G7-Q78"/>
-                        <constraint firstAttribute="trailing" secondItem="XFH-wW-PCc" secondAttribute="trailing" constant="4" id="OL4-aK-1uY"/>
-                        <constraint firstAttribute="bottom" secondItem="XFH-wW-PCc" secondAttribute="bottom" constant="4" id="fyY-EY-0WA"/>
+                        <constraint firstItem="XFH-wW-PCc" firstAttribute="leading" secondItem="Ixq-bu-JOc" secondAttribute="leading" id="ACV-G7-Q78"/>
+                        <constraint firstAttribute="trailing" secondItem="XFH-wW-PCc" secondAttribute="trailing" id="OL4-aK-1uY"/>
+                        <constraint firstAttribute="bottom" secondItem="XFH-wW-PCc" secondAttribute="bottom" id="fyY-EY-0WA"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -62,8 +61,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="etisalat" width="8334" height="4168"/>
     </resources>
 </document>
