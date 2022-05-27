@@ -43,9 +43,7 @@ extension Mobile_Numbers_VC {
         let specificationsLabel = FormLabel()
         specificationsLabel.text = "Specifications"
         
-
         //
-
         let operatorPicker = FormPicker()
         operatorPicker.id = .operator
         operatorPicker.setPlaceHolder("Please select an operator")
@@ -67,17 +65,13 @@ extension Mobile_Numbers_VC {
         locationPicker.id = .location
         
         //
-        
-
-        
         let locationView = FormLocationView().render()
-        
         let acceptView = FormAcceptView().render()
 
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("CONTINUE", for: .normal)
         
-        let adPreview = FormPreviewView().render()
+        let simPreview = SimView().render()
 
         return [
             header,
@@ -100,7 +94,7 @@ extension Mobile_Numbers_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview,
+            simPreview,
         ]
         
     }

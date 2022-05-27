@@ -9,8 +9,7 @@ import UIKit
 
 class SimView: UIView, FormElement {
     
-    @IBOutlet weak var adTitleLabel: UILabel!
-    @IBOutlet weak var adLocationLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
     
     @IBOutlet weak var adImage: UIImageView!
 

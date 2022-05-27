@@ -9,10 +9,11 @@ import UIKit
 
 class PlateView: UIView, FormElement {
     
-    @IBOutlet weak var adTitleLabel: UILabel!
-    @IBOutlet weak var adLocationLabel: UILabel!
-    
-    @IBOutlet weak var adImage: UIImageView!
+    @IBOutlet weak var lowerNumber: UILabel!
+    @IBOutlet weak var upperNumber: UILabel!
+
+    @IBOutlet weak var upperImageView: UIImageView!
+    @IBOutlet weak var lowerImageView: UIImageView!
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!

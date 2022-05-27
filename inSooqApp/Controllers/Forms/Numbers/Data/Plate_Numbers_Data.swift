@@ -73,7 +73,7 @@ extension Plate_Numbers_VC {
         let formContinueButton = FormContinueButton()
         formContinueButton.setTitle("CONTINUE", for: .normal)
         
-        let adPreview = FormPreviewView().render()
+        let plateView = PlateView().render()
 
         return [
             header,
@@ -95,7 +95,7 @@ extension Plate_Numbers_VC {
             locationView,
             acceptView,
             formContinueButton,
-            adPreview,
+            plateView,
         ]
         
     }
