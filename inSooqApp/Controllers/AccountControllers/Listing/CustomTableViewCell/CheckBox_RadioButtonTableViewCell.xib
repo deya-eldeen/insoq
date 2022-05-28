@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,24 +55,33 @@
                             <constraint firstItem="Zeh-BZ-uQ6" firstAttribute="leading" secondItem="YTW-HV-pOv" secondAttribute="trailing" constant="5" id="zPV-yP-qDJ"/>
                         </constraints>
                     </view>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dubaiFlag" translatesAutoresizingMaskIntoConstraints="NO" id="d1j-vN-7MH">
+                        <rect key="frame" x="288" y="19" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="2EF-eJ-vk8"/>
+                            <constraint firstAttribute="width" constant="24" id="fWp-lh-nzK"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" name="AppBackground"/>
                 <constraints>
                     <constraint firstItem="3jI-kI-Tvw" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="1Mu-SR-dPQ"/>
                     <constraint firstItem="3jI-kI-Tvw" firstAttribute="centerY" secondItem="j5B-Tb-CFo" secondAttribute="centerY" id="3A5-Da-xRE"/>
                     <constraint firstAttribute="trailing" secondItem="WYf-X7-1cE" secondAttribute="trailing" constant="10" id="4o8-uZ-hU1"/>
+                    <constraint firstAttribute="trailing" secondItem="d1j-vN-7MH" secondAttribute="trailing" constant="8" id="7ZX-OU-FMt"/>
                     <constraint firstItem="j5B-Tb-CFo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JSd-3l-Zsq"/>
                     <constraint firstItem="WYf-X7-1cE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OCR-ec-J0k"/>
                     <constraint firstAttribute="bottom" secondItem="WYf-X7-1cE" secondAttribute="bottom" constant="10" id="Pux-L9-2PO"/>
                     <constraint firstItem="j5B-Tb-CFo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RpR-5J-Kdb"/>
                     <constraint firstItem="WYf-X7-1cE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Scd-ab-uxx"/>
+                    <constraint firstItem="d1j-vN-7MH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gEl-ou-cUB"/>
                     <constraint firstItem="3jI-kI-Tvw" firstAttribute="leading" secondItem="j5B-Tb-CFo" secondAttribute="trailing" constant="10" id="kiz-Gw-akO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" name="AppBackground"/>
             <connections>
-                <outlet property="contentView" destination="H2p-sc-9uM" id="COn-19-Dsj"/>
+                <outlet property="flagImageView" destination="d1j-vN-7MH" id="L8w-Qg-S5i"/>
                 <outlet property="price" destination="Zeh-BZ-uQ6" id="DAR-xs-D9r"/>
                 <outlet property="priceView" destination="WYf-X7-1cE" id="pqE-2e-Dx4"/>
                 <outlet property="selectedButton" destination="j5B-Tb-CFo" id="wgM-T1-Hl9"/>
@@ -82,6 +91,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="dubaiFlag" width="22.5" height="16"/>
         <namedColor name="AppBackground">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

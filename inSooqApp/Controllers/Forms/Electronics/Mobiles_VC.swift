@@ -175,8 +175,8 @@ class Mobiles_VC: FormViewController {
                 Version: getPickerValue(id: .version),
                 Ram: getPickerValue(id: .ram),
                 Storage: getPickerValue(id: .storage),
-                Id: "",
-                AdId: "",
+                Id: "0",
+                AdId: "0",
                 CategoryId: "")
         }
         

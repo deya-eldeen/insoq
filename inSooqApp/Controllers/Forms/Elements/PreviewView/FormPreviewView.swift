@@ -12,6 +12,16 @@ class FormPreviewView: UIView, FormElement {
     @IBOutlet weak var adTitleLabel: UILabel!
     @IBOutlet weak var adLocationLabel: UILabel!
     
+    @IBOutlet weak var attribute1KeyIcon: UIImageView!
+    @IBOutlet weak var attribute2KeyIcon: UIImageView!
+    @IBOutlet weak var attribute3KeyIcon: UIImageView!
+
+    @IBOutlet weak var attribute1ValueLabel: UILabel!
+    @IBOutlet weak var attribute2ValueLabel: UILabel!
+    @IBOutlet weak var attribute3ValueLabel: UILabel!
+
+    @IBOutlet weak var priceLabel: UILabel!
+
     @IBOutlet weak var adImage: UIImageView!
 
     required init(coder aDecoder: NSCoder) {

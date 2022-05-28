@@ -7,8 +7,8 @@
 
 import UIKit
 
-class LanguageView: UIView,
-UITableViewDelegate,UITableViewDataSource {
+class LanguageView: UIView, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var viewTitle: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     
@@ -17,11 +17,12 @@ UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var setLanguage_Button: UIButton!
     @IBOutlet var contentView: UIView!
     var languages:[OptionsModel]=[OptionsModel(title: "Arabic", price: "", type: 1),OptionsModel(title: "English", price: "", type: 1)]
-    var contries:[OptionsModel]=[OptionsModel(title: "Jordan", price: "", type: 1),
-                                  OptionsModel(title: "UAE", price: "", type: 1)
-                                  ,OptionsModel(title: "UK", price: "", type: 1)
-                                  ,OptionsModel(title: "USA", price: "", type: 1)
-                                  ,OptionsModel(title: "Japan", price: "", type: 1)]
+    
+    var contries:[OptionsModel] = [
+        OptionsModel(title: "INSOUQ UAE", price: "", type: 1, image: UIImage(named: "971") ),
+        OptionsModel(title: "INSOUQ JORDAN SOON", price: "", type: 1, image: UIImage(named: "962") ),
+        OptionsModel(title: "INSOUQ SAUDI ARABIA SOON", price: "", type: 1, image: UIImage(named: "966") )
+    ]
 
     var vc:UIViewController?
     var viewTag:Int?
@@ -85,14 +86,14 @@ UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckBox_RadioButtonTableViewCell", for: indexPath ) as! CheckBox_RadioButtonTableViewCell
-        debugPrint("viewTag",viewTag)
-        switch self.viewTag{
+        switch self.viewTag {
         case 1:
             cell.setOptions(data:contries[indexPath.row])
-        return cell
+            cell.flagImageView.isHidden = false
+            return cell
         default:
             cell.setOptions(data:languages[indexPath.row])
-        return cell
+            return cell
         }
 
     }

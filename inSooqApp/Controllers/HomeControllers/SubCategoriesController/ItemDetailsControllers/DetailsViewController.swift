@@ -28,11 +28,44 @@ class DetailsViewController: UIViewController {
         
     }
     
+    var adType: AdMainType = .none
+    
+    var cellIDs = [
+        AdDetailsGalleryCell.id,
+        AdTitleCell.id,
+        AdLocationCell.id,
+        AdDetailsCell.id,
+        AdSpecificationCell.id,
+        AdDescriptionCell.id,
+        AdLocationMapCell.id,
+        AdMetaCell.id,
+        MobileNumberCell.id,
+        VehicleNumberCell.id
+    ]
+    
     // MARK: Functions
     func registerCells() {
+
+//        switch adType {
+//        case .motor:
+//            <#code#>
+//        case .job:
+//            <#code#>
+//        case .numbers:
+//            <#code#>
+//        case .electronics:
+//            <#code#>
+//        case .classified:
+//            <#code#>
+//        case .services:
+//            <#code#>
+//        case .business:
+//            <#code#>
+//        case .none:
+//            <#code#>
+//        }
         
-        let cellIDs = [AdDetailsGalleryCell.id, AdTitleCell.id, AdLocationCell.id, AdDetailsCell.id, AdSpecificationCell.id, AdDescriptionCell.id, AdLocationMapCell.id, AdMetaCell.id, MobileNumberCell.id, VehicleNumberCell.id]
-        
+        self.tableView.prepareTableView(vc: self, withCellsIDs: cellIDs)
         
     }
     
@@ -50,11 +83,48 @@ class DetailsViewController: UIViewController {
 extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.cellIDs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return .init()
+        
+        let cellID = self.cellIDs[indexPath.row]
+        
+        switch cellID {
+        case AdDetailsGalleryCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdDetailsGalleryCell
+            return cell
+        case AdTitleCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdTitleCell
+            return cell
+        case AdLocationCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdLocationCell
+            return cell
+        case AdDetailsCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdDetailsCell
+            return cell
+        case AdSpecificationCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdSpecificationCell
+            return cell
+        case AdDescriptionCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdDescriptionCell
+            return cell
+        case AdLocationMapCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdLocationMapCell
+            return cell
+        case AdMetaCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! AdMetaCell
+            return cell
+        case MobileNumberCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! MobileNumberCell
+            return cell
+        case VehicleNumberCell.id:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! VehicleNumberCell
+            return cell
+        default:
+            return .init()
+        }
+        
     }
     
 }

@@ -17,7 +17,6 @@ enum FormValidationError: String {
     case shouldSelectPhoto = "Please select at least a one photo"
     case shouldSelectFile = "Please select file"
     case incorrectYear = "Year is not valid"
-    
     case incorrectPrice = "Price is not valid (max is 10,000,000)"
     case incorrectMilage = "Milage is not valid (max is 99,999)"
     case incorrectPhone = "Phone is not valid"
@@ -67,7 +66,6 @@ class FormViewController: UIViewController {
     // document picker
     var documentPicker: UIDocumentPickerViewController? //(forOpeningContentTypes: [UTType.item], asCopy: false)
     var documentName: String?
-    
     
     //Motors
     static var motorInitialSubmission: MotorInitialSubmission?

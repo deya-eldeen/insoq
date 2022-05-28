@@ -20,17 +20,20 @@ class AdvertisingViewController: UIViewController {
     @IBOutlet weak var _PhoneNumberTxt: UITextField!
     @IBOutlet weak var _CompanyNameTxt: UITextField!
     
+    @IBOutlet weak var descriptionTextView: UITextView!
+
     var reasonsDropDown=DropDown()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bottomBar.setVC(viewController: self)
+        //bottomBar.setVC(viewController: self)
         // Do any additional setup after loading the view.
-        
-        ApiRequests.advertisingBudgetsList { r in
-            self.reasonsDropDown.dataSource = r.value?.compactMap { $0.en_Text }  ?? []
-        }
-        
+
+//        ApiRequests.advertisingBudgetsList { r in
+//            self.reasonsDropDown.dataSource = r.value?.compactMap { $0.en_Text }  ?? []
+//        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,17 +58,16 @@ class AdvertisingViewController: UIViewController {
     private func setDesign(){
         view.layoutIfNeeded()
 
-        bottomBorder(object: adsBudget)
-        bottomBorder(object: emailTxt)
-        bottomBorder(object: _FirstNameTxt)
-        bottomBorder(object: _LastNameTxt)
-        bottomBorder(object: _PhoneNumberTxt)
-        bottomBorder(object: _CompanyNameTxt)
+        for field in [emailTxt, _FirstNameTxt, _LastNameTxt, _PhoneNumberTxt, _CompanyNameTxt] {
+            field?.placeHolderColor = .orange
+            field?.underline()
+        }
+        
         view.setNeedsLayout()
     }
     
     private func addTargets(){
-        adsBudget.addTarget(self, action: #selector(adsBudgetAction), for: .touchUpInside)
+        //adsBudget.addTarget(self, action: #selector(adsBudgetAction), for: .touchUpInside)
         submitButton.addTarget(self, action: #selector(submitAction), for: .touchUpInside)
     }
     
@@ -76,9 +78,9 @@ class AdvertisingViewController: UIViewController {
             "FirstName": self._FirstNameTxt.text ?? "",
             "LastName": self._LastNameTxt.text ?? "",
             "Phone": self._PhoneNumberTxt.text ?? "",
-            //"AdvertisingBudgetId":self.reasonsDropDown.dataSource.first ?? "",
-            //"Company": self._CompanyNameTxt.text ?? "",
-            "Description": "_",
+            "AdvertisingBudgetId":"88",
+            "Company": self._CompanyNameTxt.text ?? "",
+            "Description": self.descriptionTextView.text ?? ""
         ]
 
 //        let params = [
@@ -105,16 +107,17 @@ class AdvertisingViewController: UIViewController {
     
     private func setupbrandsDropDown() {
         ///Draw Down down list...
-        reasonsDropDown.anchorView = adsBudget
-
-        reasonsDropDown.bottomOffset = CGPoint(x: 0, y: adsBudget.bounds.height)
-
-        reasonsDropDown.dataSource = []
-        
-        // Action triggered on selection
-        reasonsDropDown.selectionAction = { [weak self] (index, item) in
-            self?.adsBudget.setTitle(" \(item)", for: .normal)
-        }
+//        reasonsDropDown.anchorView = adsBudget
+//
+//        reasonsDropDown.bottomOffset = CGPoint(x: 0, y: adsBudget.bounds.height)
+//
+//        reasonsDropDown.dataSource = []
+//
+//        // Action triggered on selection
+//        reasonsDropDown.selectionAction = { [weak self] (index, item) in
+//            self?.adsBudget.setTitle(" \(item)", for: .normal)
+//        }
     }
     
 }
+

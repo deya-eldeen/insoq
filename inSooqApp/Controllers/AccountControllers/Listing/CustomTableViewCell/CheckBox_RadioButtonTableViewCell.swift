@@ -10,6 +10,7 @@ struct OptionsModel{
     var title:String
     var price:String
     var type:Int
+    var image: UIImage?
     // 1:CheckBox,0:RadioButton//2:RadioButton ShowPriceLabel
 }
 class CheckBox_RadioButtonTableViewCell: UITableViewCell {
@@ -18,6 +19,8 @@ class CheckBox_RadioButtonTableViewCell: UITableViewCell {
     @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var price: UILabel!
     
+    @IBOutlet weak var flagImageView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         priceView.isHidden=true
@@ -28,8 +31,10 @@ class CheckBox_RadioButtonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setOptions(data: OptionsModel){
-        self.title.text=data.title
+    func setOptions(data: OptionsModel) {
+        
+        self.title.text = data.title
+        self.flagImageView.image = data.image
         
         switch data.type {
         case 1:

@@ -274,11 +274,13 @@ public func presentDetailsVC(viewController: UIViewController, catIndex: Int , s
     let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
     let vc = mainStoryboard.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
-    vc.modalPresentationStyle = .fullScreen
-//    vc.data = data
-//    vc.selectedCategory = catIndex
-//    vc.jobSubCategoryIndex = subCatIndex
-    viewController.present(vc, animated: false)
+    
+    //vc.modalPresentationStyle = .automatic
+    //vc.data = data
+    //vc.selectedCategory = catIndex
+    //vc.jobSubCategoryIndex = subCatIndex
+    
+    viewController.present(vc, animated: true)
 }
 //HomeViewController
 //AddViewControllerNav
