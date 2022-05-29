@@ -53,7 +53,8 @@ extension Mobile_Numbers_VC {
         codePicker.setPlaceHolder("Please select a code")
         
         let mobileNumberField = FormField()
-        mobileNumberField.id = .plateNumber
+        mobileNumberField.id = .simNumber
+        mobileNumberField.keyboardType = .phonePad
         mobileNumberField.placeholder = "000000"
         
         let planPicker = FormPicker()

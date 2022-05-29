@@ -525,6 +525,11 @@ class FormViewController: UIViewController {
 
             }
             
+            if type(of: element) == SimView.self {
+                (element as! SimView).numberLabel.text = self.getFormValue(id: .simNumber)
+                
+            }
+            
         }
 
     }
@@ -586,22 +591,31 @@ extension FormViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if let formField = textField as? FormField {
+            
             if (formField.id == .price) {
                 let valueInt = Int(textField.text ?? "") ?? 0
                 if (valueInt > 100_000_000) {
                     return false
                 }
             }
-        }
-        
-        if let formField = textField as? FormField {
+            
             if (formField.id == .milage) {
                 let valueInt = Int(textField.text ?? "") ?? 0
                 if (valueInt > 99_999) {
                     return false
                 }
             }
+            
+            if (formField.id == .simNumber) {
+                let valueInt = (textField.text ?? "").count
+                let maxLength = 6
+                if (valueInt == maxLength) {
+                    formField.text = String((textField.text ?? "").prefix(maxLength-1))
+                    return false
+                }
+            }
         }
+        
         
 //        if let formField = textField as? FormField {
 //            if (formField.id == .phoneNumber) {

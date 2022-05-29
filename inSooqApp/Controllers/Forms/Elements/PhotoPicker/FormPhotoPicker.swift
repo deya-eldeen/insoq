@@ -11,6 +11,8 @@ class FormPhotoPicker: UIView, FormElement {
     
     var images = [UIImage]()
     
+    var mainImageIndex: Int?
+    
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
@@ -20,6 +22,16 @@ class FormPhotoPicker: UIView, FormElement {
     @IBOutlet weak var button7: UIButton!
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
+    
+    @IBOutlet weak var buttonSelect1: UIButton!
+    @IBOutlet weak var buttonSelect2: UIButton!
+    @IBOutlet weak var buttonSelect3: UIButton!
+    @IBOutlet weak var buttonSelect4: UIButton!
+    @IBOutlet weak var buttonSelect5: UIButton!
+    @IBOutlet weak var buttonSelect6: UIButton!
+    @IBOutlet weak var buttonSelect7: UIButton!
+    @IBOutlet weak var buttonSelect8: UIButton!
+    @IBOutlet weak var buttonSelect9: UIButton!
     
     @IBOutlet weak var buttonAdd: UIButton!
 
@@ -39,7 +51,17 @@ class FormPhotoPicker: UIView, FormElement {
     
     func renderPhotos() {
         let photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9]
+        
+        let selectButtons = [buttonSelect1, buttonSelect2, buttonSelect3, buttonSelect4, buttonSelect5, buttonSelect6, buttonSelect7, buttonSelect8, buttonSelect9]
 
+        if let mainImageIndex = mainImageIndex {
+            for sb in selectButtons {
+                sb?.alpha = 0.02
+            }
+            
+            selectButtons[mainImageIndex]?.alpha = 1.0
+        }
+        
         for photo in photos {
             photo?.image = nil
             photo?.setNeedsDisplay()
@@ -55,6 +77,17 @@ class FormPhotoPicker: UIView, FormElement {
     
     func appendImage(image: UIImage) {
         self.images.append(image)
+        renderPhotos()
+        
+    }
+    
+    @IBAction func didTapSelect(sender: UIButton) {
+        
+        let index = sender.tag - 1
+        self.mainImageIndex = index
+
+        print("_index",index)
+        
         renderPhotos()
         
     }

@@ -26,7 +26,7 @@ class SimView: UIView, FormElement {
     }
     
     func render() -> UIView {
-        let targetView = Bundle(for: FormPreviewView.self).loadNibNamed(String(describing: FormPreviewView.self), owner: nil, options: nil)![0] as! FormPreviewView
+        let targetView = Bundle(for: SimView.self).loadNibNamed(String(describing: SimView.self), owner: nil, options: nil)![0] as! SimView
         targetView.translatesAutoresizingMaskIntoConstraints = false
         return targetView
     }

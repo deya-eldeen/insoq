@@ -28,7 +28,7 @@ class PlateView: UIView, FormElement {
     }
     
     func render() -> UIView {
-        let targetView = Bundle(for: FormPreviewView.self).loadNibNamed(String(describing: FormPreviewView.self), owner: nil, options: nil)![0] as! FormPreviewView
+        let targetView = Bundle(for: PlateView.self).loadNibNamed(String(describing: PlateView.self), owner: nil, options: nil)![0] as! PlateView
         targetView.translatesAutoresizingMaskIntoConstraints = false
         return targetView
     }

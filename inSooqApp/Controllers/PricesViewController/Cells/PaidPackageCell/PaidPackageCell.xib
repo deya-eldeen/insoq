@@ -21,8 +21,8 @@
                         <rect key="frame" x="4" y="4" width="312" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep your ad free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uth-3f-lau">
-                                <rect key="frame" x="36" y="22" width="107.5" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <rect key="frame" x="36" y="23.5" width="93" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="package_elite" translatesAutoresizingMaskIntoConstraints="NO" id="aTh-vI-a2g">
-                                <rect key="frame" x="189" y="14" width="50" height="32"/>
+                                <rect key="frame" x="193" y="14" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5ZA-FU-P9u"/>
                                     <constraint firstAttribute="height" constant="32" id="83o-hv-SM1"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="uth-3f-lau" firstAttribute="centerY" secondItem="J1A-u6-m3w" secondAttribute="centerY" id="REV-XW-dzU"/>
                             <constraint firstItem="6OC-zx-5qb" firstAttribute="centerY" secondItem="4gt-Dx-YIT" secondAttribute="centerY" id="Wul-cO-AW9"/>
                             <constraint firstAttribute="trailing" secondItem="6OC-zx-5qb" secondAttribute="trailing" constant="8" id="iCe-nk-Z5x"/>
-                            <constraint firstItem="6OC-zx-5qb" firstAttribute="leading" secondItem="aTh-vI-a2g" secondAttribute="trailing" constant="8" id="ljW-q8-RQO"/>
+                            <constraint firstItem="6OC-zx-5qb" firstAttribute="leading" secondItem="aTh-vI-a2g" secondAttribute="trailing" constant="4" id="ljW-q8-RQO"/>
                             <constraint firstItem="J1A-u6-m3w" firstAttribute="centerY" secondItem="4gt-Dx-YIT" secondAttribute="centerY" id="tYl-Mq-Gpw"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
