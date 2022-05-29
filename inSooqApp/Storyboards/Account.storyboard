@@ -2724,7 +2724,7 @@
                                                             <constraint firstAttribute="width" constant="40" id="oqe-dV-XI3"/>
                                                         </constraints>
                                                         <color key="tintColor" red="0.3411764706" green="0.27450980390000002" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" image="square" catalog="system">
+                                                        <state key="normal" image="checked_checkbox">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
@@ -2885,7 +2885,7 @@
                                 </constraints>
                             </view>
                             <view alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9q-f7-jyG">
-                                <rect key="frame" x="1" y="-235" width="428" height="2880"/>
+                                <rect key="frame" x="2" y="-235" width="428" height="2880"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGm-zs-d7m" userLabel="CountryPicker">
@@ -3526,7 +3526,6 @@
         <image name="main_photo_icon" width="59" height="59"/>
         <image name="power_off.png" width="40" height="40"/>
         <image name="resume_cv.png" width="85" height="111"/>
-        <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="AppBackground">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

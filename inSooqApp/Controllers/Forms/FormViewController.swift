@@ -595,6 +595,7 @@ extension FormViewController: UITextFieldDelegate {
             if (formField.id == .price) {
                 let valueInt = Int(textField.text ?? "") ?? 0
                 if (valueInt > 100_000_000) {
+                    formField.text = "100000000"
                     return false
                 }
             }
@@ -602,6 +603,7 @@ extension FormViewController: UITextFieldDelegate {
             if (formField.id == .milage) {
                 let valueInt = Int(textField.text ?? "") ?? 0
                 if (valueInt > 99_999) {
+                    formField.text = "99999"
                     return false
                 }
             }

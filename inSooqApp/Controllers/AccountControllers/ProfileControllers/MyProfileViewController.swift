@@ -91,9 +91,9 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     }()
     //MARK:-VC Life cicle-
     static var _NewPhone:String=""
-    private var _isNewsChecked:Bool=true
-    private var _isAdsChecked:Bool=true
-    private var _hideData:Bool=true
+    private var _isNewsChecked:Bool=false
+    private var _isAdsChecked:Bool=false
+    private var _hideData:Bool=false
     
     var nationalitiesData = [ListItem]()
     var locationsData = [LocationModel]()
@@ -102,6 +102,10 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.renderAdsFlag()
+        self.renderDataFlag()
+        self.renderNewsFlag()
         
         let loc = Locale(identifier: "en")
         birthDate.locale = loc
@@ -257,7 +261,11 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     
     @IBAction func update_Pressed(_ sender: Any) {
         
-        let params = [
+        let HideInfromation = (_hideData == true) ? ("true") : ("false")
+        let offers = (_isAdsChecked == true) ? ("true") : ("false")
+        let newsletter = (_isNewsChecked == true) ? ("true") : ("false")
+        
+        let params: [String : Any] = [
             "FirstName": "\(self.firstNameTxt.text ?? "")", //="voluptate tempor"' \
             "LastName": "\(self.lastNameTxt.text ?? "")", //="sed aliqua laboris"' \
             "Gender": "\(self.genderButton.titleLabel?.text ?? "")", //="veniam aute quis dolor"' \
@@ -274,8 +282,10 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
             "CoverNote": "\(self.coverNoteTxv.text ?? "")", //="ipsum Lorem in"' \
             //"ProfilePictureFile": "u", //=@"/path/to/file"' \
             //"IndustryFile": "i", //=@"/path/to/file"' \
-            "HideInfromation": "true", //="true"'
-        ] as [String : Any]
+            "HideInfromation": HideInfromation, //="true"'
+            "offers": offers,
+            "newsletter": newsletter
+        ]
         
         let image = self.userImage.image
 //        let data = Data()
@@ -452,30 +462,41 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         adsCheck.addTarget(self, action: #selector(checkAds), for: .touchUpInside)
 
     }
-    @objc func checkNews(){
+    
+    func renderNewsFlag() {
         if _isNewsChecked {
             newsCheck.setImage(#imageLiteral(resourceName: "checked_checkbox"), for: .normal)
         }else{
             newsCheck.setImage(UIImage(systemName: "square"), for: .normal)
         }
-        _isNewsChecked = !_isNewsChecked
     }
-    @objc func checkAds(){
+    @objc func checkNews() {
+        _isNewsChecked.toggle()
+        renderNewsFlag()
+    }
+    func renderAdsFlag() {
         if _isAdsChecked {
             adsCheck.setImage(#imageLiteral(resourceName: "checked_checkbox"), for: .normal)
         }else{
             adsCheck.setImage(UIImage(systemName: "square"), for: .normal)
         }
-        _isAdsChecked = !_isAdsChecked
     }
-    @objc func hideData(){
+    @objc func checkAds() {
+        _isAdsChecked.toggle()
+        renderAdsFlag()
+    }
+    func renderDataFlag() {
         if _hideData {
             hideDataCheck.setImage(#imageLiteral(resourceName: "checked_checkbox"), for: .normal)
         }else{
             hideDataCheck.setImage(UIImage(systemName: "square"), for: .normal)
         }
-        _hideData = !_hideData
     }
+    @objc func hideData() {
+        _hideData.toggle()
+        renderDataFlag()
+    }
+    
     //MARK:-Upload Fiels
     
     var documentSelectionType = ""
