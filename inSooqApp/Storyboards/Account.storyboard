@@ -179,6 +179,33 @@
                                     <constraint firstAttribute="height" constant="70" id="z3x-7N-EcE"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrX-87-jNH" userLabel="StateView">
+                                <rect key="frame" x="57" y="348" width="300" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_ad" translatesAutoresizingMaskIntoConstraints="NO" id="2AN-aQ-MqO">
+                                        <rect key="frame" x="118" y="36" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="ACZ-9X-YZ7"/>
+                                            <constraint firstAttribute="height" constant="64" id="x7S-JU-Wal"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLQ-8O-LgF">
+                                        <rect key="frame" x="86" y="120" width="128" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GRS-7k-1yd"/>
+                                    <constraint firstItem="2AN-aQ-MqO" firstAttribute="centerX" secondItem="SrX-87-jNH" secondAttribute="centerX" id="Hsj-8j-tzl"/>
+                                    <constraint firstItem="uLQ-8O-LgF" firstAttribute="top" secondItem="2AN-aQ-MqO" secondAttribute="bottom" constant="20" id="Vu8-7A-dJx"/>
+                                    <constraint firstAttribute="height" constant="200" id="YgS-JI-EXa"/>
+                                    <constraint firstItem="uLQ-8O-LgF" firstAttribute="centerX" secondItem="2AN-aQ-MqO" secondAttribute="centerX" id="cEV-7b-xv2"/>
+                                    <constraint firstItem="2AN-aQ-MqO" firstAttribute="top" secondItem="SrX-87-jNH" secondAttribute="top" constant="36" id="ja9-ti-2cr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CCL-rg-Gqz"/>
                         <color key="backgroundColor" name="AppBackground"/>
@@ -188,12 +215,14 @@
                             <constraint firstItem="ZoA-Rb-Vtr" firstAttribute="leading" secondItem="CCL-rg-Gqz" secondAttribute="leading" id="FQz-CS-R7s"/>
                             <constraint firstItem="ZeV-b4-DE5" firstAttribute="top" secondItem="CCL-rg-Gqz" secondAttribute="top" id="Ly6-bH-LjH"/>
                             <constraint firstItem="IX4-Ju-9wx" firstAttribute="top" secondItem="ZeV-b4-DE5" secondAttribute="bottom" constant="10" id="YdC-pR-2Zk"/>
+                            <constraint firstItem="SrX-87-jNH" firstAttribute="centerX" secondItem="W38-N3-9wi" secondAttribute="centerX" id="aIA-Km-9EW"/>
                             <constraint firstItem="ZoA-Rb-Vtr" firstAttribute="top" secondItem="IX4-Ju-9wx" secondAttribute="bottom" constant="10" id="b5h-Ut-4Aa"/>
                             <constraint firstAttribute="bottom" secondItem="rj2-iE-For" secondAttribute="bottom" id="bdF-xp-m8F"/>
                             <constraint firstItem="IX4-Ju-9wx" firstAttribute="leading" secondItem="CCL-rg-Gqz" secondAttribute="leading" id="dFW-Tt-VQF"/>
                             <constraint firstItem="rj2-iE-For" firstAttribute="top" secondItem="ZoA-Rb-Vtr" secondAttribute="bottom" id="eEn-rc-UXZ"/>
                             <constraint firstItem="IX4-Ju-9wx" firstAttribute="trailing" secondItem="CCL-rg-Gqz" secondAttribute="trailing" id="nlP-ze-wXU"/>
                             <constraint firstItem="rj2-iE-For" firstAttribute="trailing" secondItem="CCL-rg-Gqz" secondAttribute="trailing" id="oUy-N0-Vml"/>
+                            <constraint firstItem="SrX-87-jNH" firstAttribute="centerY" secondItem="W38-N3-9wi" secondAttribute="centerY" id="rVq-ur-f4h"/>
                             <constraint firstItem="ZoA-Rb-Vtr" firstAttribute="trailing" secondItem="CCL-rg-Gqz" secondAttribute="trailing" id="tWG-j9-tsa"/>
                             <constraint firstItem="ZeV-b4-DE5" firstAttribute="leading" secondItem="CCL-rg-Gqz" secondAttribute="leading" id="yzE-RH-Ftg"/>
                         </constraints>
@@ -202,6 +231,7 @@
                         <outlet property="ItemsDataTableView" destination="ZoA-Rb-Vtr" id="7Ph-R9-J73"/>
                         <outlet property="bottomView" destination="rj2-iE-For" id="E5q-xf-sUJ"/>
                         <outlet property="categoriesCollectionView" destination="IX4-Ju-9wx" id="xjv-m5-Ulp"/>
+                        <outlet property="stateView" destination="SrX-87-jNH" id="g8k-yE-3BN"/>
                         <outlet property="topBar" destination="ZeV-b4-DE5" id="fH6-bO-kmQ"/>
                         <segue destination="sJn-RI-95e" kind="presentation" identifier="EditAdsSegue" modalPresentationStyle="fullScreen" id="REW-Ck-nGq"/>
                     </connections>
@@ -1000,6 +1030,33 @@
                                     <constraint firstAttribute="height" constant="70" id="2EP-cE-2lD"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnp-2l-PXD" userLabel="StateView">
+                                <rect key="frame" x="57" y="348" width="300" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_fav" translatesAutoresizingMaskIntoConstraints="NO" id="zo9-PU-Nlx">
+                                        <rect key="frame" x="118" y="36" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="245-rN-p5J"/>
+                                            <constraint firstAttribute="width" constant="64" id="j8c-jm-TJ7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no favorite ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-za-2jR">
+                                        <rect key="frame" x="55.5" y="120" width="189.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7zr-gd-C9h"/>
+                                    <constraint firstItem="zo9-PU-Nlx" firstAttribute="top" secondItem="Lnp-2l-PXD" secondAttribute="top" constant="36" id="SjY-AI-xbg"/>
+                                    <constraint firstItem="r3w-za-2jR" firstAttribute="top" secondItem="zo9-PU-Nlx" secondAttribute="bottom" constant="20" id="Ty8-rz-Llf"/>
+                                    <constraint firstItem="r3w-za-2jR" firstAttribute="centerX" secondItem="zo9-PU-Nlx" secondAttribute="centerX" id="Zue-Ii-6k3"/>
+                                    <constraint firstItem="zo9-PU-Nlx" firstAttribute="centerX" secondItem="Lnp-2l-PXD" secondAttribute="centerX" id="kX7-Rh-TCk"/>
+                                    <constraint firstAttribute="width" constant="300" id="kta-x5-227"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Raw-Pu-a7s"/>
                         <color key="backgroundColor" name="AppBackground"/>
@@ -1016,7 +1073,9 @@
                             <constraint firstItem="cVv-3n-D7G" firstAttribute="top" secondItem="Raw-Pu-a7s" secondAttribute="top" constant="90" id="h34-73-09h"/>
                             <constraint firstItem="mUG-ew-I3M" firstAttribute="trailing" secondItem="Raw-Pu-a7s" secondAttribute="trailing" id="j5b-ai-zs0"/>
                             <constraint firstItem="nlJ-eR-C0R" firstAttribute="leading" secondItem="Raw-Pu-a7s" secondAttribute="leading" id="nCw-RD-vdH"/>
+                            <constraint firstItem="Lnp-2l-PXD" firstAttribute="centerX" secondItem="M1Y-HC-KCP" secondAttribute="centerX" id="sLc-9j-XrU"/>
                             <constraint firstItem="0ed-PQ-Ncy" firstAttribute="trailing" secondItem="Raw-Pu-a7s" secondAttribute="trailing" id="tzQ-KC-65z"/>
+                            <constraint firstItem="Lnp-2l-PXD" firstAttribute="centerY" secondItem="M1Y-HC-KCP" secondAttribute="centerY" id="yzL-BJ-LS2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" selectedImage="heart.fill" id="hZt-Lx-8vZ"/>
@@ -1024,12 +1083,13 @@
                         <outlet property="ItemsDataTableView" destination="nlJ-eR-C0R" id="e0n-Dn-Hs5"/>
                         <outlet property="bottomBar" destination="0ed-PQ-Ncy" id="VE4-u5-ddq"/>
                         <outlet property="categoriesCollectionView" destination="cVv-3n-D7G" id="G76-ng-ZfN"/>
+                        <outlet property="stateView" destination="Lnp-2l-PXD" id="SHV-zx-BpY"/>
                         <outlet property="topBar" destination="mUG-ew-I3M" id="nEI-LE-REf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edd-1t-uqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920" y="2513"/>
+            <point key="canvasLocation" x="917" y="3226"/>
         </scene>
         <!--Saved Searches View Controller-->
         <scene sceneID="jBy-wD-faC">
@@ -1120,16 +1180,45 @@
                                     <constraint firstAttribute="height" constant="70" id="Db1-Nc-NPS"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3j-ip-J9D" userLabel="StateView">
+                                <rect key="frame" x="57" y="348" width="300" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_saved_searches" translatesAutoresizingMaskIntoConstraints="NO" id="he2-xO-N1g">
+                                        <rect key="frame" x="118" y="36" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="2ad-dl-rNA"/>
+                                            <constraint firstAttribute="width" constant="64" id="z2H-pQ-I3l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no saved ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSV-hx-mlk">
+                                        <rect key="frame" x="61.5" y="120" width="177.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pSV-hx-mlk" firstAttribute="top" secondItem="he2-xO-N1g" secondAttribute="bottom" constant="20" id="4wc-Fw-86t"/>
+                                    <constraint firstItem="he2-xO-N1g" firstAttribute="centerX" secondItem="Q3j-ip-J9D" secondAttribute="centerX" id="h27-Zz-cOv"/>
+                                    <constraint firstAttribute="height" constant="200" id="l2k-T5-EkL"/>
+                                    <constraint firstAttribute="width" constant="300" id="oBm-EQ-iBX"/>
+                                    <constraint firstItem="he2-xO-N1g" firstAttribute="top" secondItem="Q3j-ip-J9D" secondAttribute="top" constant="36" id="p1v-SC-6LX"/>
+                                    <constraint firstItem="pSV-hx-mlk" firstAttribute="centerX" secondItem="he2-xO-N1g" secondAttribute="centerX" id="qjI-zP-XW7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sTg-97-Dmg"/>
                         <color key="backgroundColor" name="AppBackground"/>
                         <constraints>
                             <constraint firstItem="ziH-UM-dky" firstAttribute="leading" secondItem="A41-Rs-FFM" secondAttribute="leading" id="4XB-JQ-mcP"/>
                             <constraint firstItem="mDy-I2-eXR" firstAttribute="leading" secondItem="sTg-97-Dmg" secondAttribute="leading" id="6ZX-qy-3Ow"/>
+                            <constraint firstItem="Q3j-ip-J9D" firstAttribute="centerX" secondItem="A41-Rs-FFM" secondAttribute="centerX" id="6qr-Jq-5Nl"/>
                             <constraint firstItem="sTg-97-Dmg" firstAttribute="trailing" secondItem="ziH-UM-dky" secondAttribute="trailing" id="74F-S9-MEl"/>
                             <constraint firstItem="mDy-I2-eXR" firstAttribute="top" secondItem="ziH-UM-dky" secondAttribute="bottom" constant="10" id="8IN-qY-Y9c"/>
                             <constraint firstItem="KVG-VY-esu" firstAttribute="top" secondItem="mDy-I2-eXR" secondAttribute="bottom" constant="10" id="9Ib-UG-iys"/>
                             <constraint firstAttribute="trailing" secondItem="mDy-I2-eXR" secondAttribute="trailing" id="BHY-hj-MEN"/>
+                            <constraint firstItem="Q3j-ip-J9D" firstAttribute="centerY" secondItem="A41-Rs-FFM" secondAttribute="centerY" id="DTI-Hg-WBt"/>
                             <constraint firstItem="ziH-UM-dky" firstAttribute="top" secondItem="sTg-97-Dmg" secondAttribute="top" id="HRQ-tu-MNH"/>
                             <constraint firstItem="2dp-C2-tX1" firstAttribute="leading" secondItem="A41-Rs-FFM" secondAttribute="leading" id="PRD-ht-uPO"/>
                             <constraint firstItem="KVG-VY-esu" firstAttribute="leading" secondItem="sTg-97-Dmg" secondAttribute="leading" constant="10" id="d4H-O8-nZr"/>
@@ -1143,6 +1232,7 @@
                         <outlet property="bottomBar" destination="2dp-C2-tX1" id="GPu-GQ-3fc"/>
                         <outlet property="categoriesCollectionView" destination="mDy-I2-eXR" id="XfG-9k-sg0"/>
                         <outlet property="savedSearchesTableView" destination="KVG-VY-esu" id="4W9-Y2-1yy"/>
+                        <outlet property="stateView" destination="Q3j-ip-J9D" id="pPS-CQ-aKp"/>
                         <outlet property="topBar" destination="ziH-UM-dky" id="aIa-8y-qgy"/>
                     </connections>
                 </viewController>
@@ -3509,7 +3599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yd-X5-elL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919.62616822429902" y="1811.6630669546437"/>
+            <point key="canvasLocation" x="918.84057971014499" y="1811.3839285714284"/>
         </scene>
     </scenes>
     <resources>
@@ -3519,6 +3609,9 @@
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="dubaiFlag" width="22.5" height="16"/>
+        <image name="empty_ad" width="256" height="256"/>
+        <image name="empty_fav" width="256" height="256"/>
+        <image name="empty_saved_searches" width="256" height="256"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>

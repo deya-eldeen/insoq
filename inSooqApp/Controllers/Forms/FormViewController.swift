@@ -35,6 +35,20 @@ enum AdMainType: Int {
     case none = 0
 }
 
+enum PackageStatus : Int {
+   case underReview = 1
+
+    var description: String {
+        switch self {
+        case .underReview:
+            return "Under Review"
+        default:
+            return "N/A"
+        }
+    }
+    
+}
+
 class FormViewController: UIViewController {
     
     var stackView = UIStackView()

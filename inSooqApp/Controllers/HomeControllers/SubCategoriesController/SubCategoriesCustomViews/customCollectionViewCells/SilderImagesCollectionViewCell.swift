@@ -18,6 +18,20 @@ class SilderImagesCollectionViewCell: UICollectionViewCell {
     }
 
     
+    func setSlider(pics: [Picture] , index: Int){
+        if let imgUrl = pics[safe: index]?.imageURL{
+            var imgUrlString = imgUrl
+            if imgUrlString.contains("\\")
+            {
+                imgUrlString = imgUrlString.replacingOccurrences(of: "\\", with: "/")
+                imgUrlString = imgUrlString.replacingOccurrences(of: " ", with: "%20")
+            }
+            if let url = URL(string: imgUrlString){
+                sliderImage.kf.setImage(with: url)
+            }
+        }
+    }
+    
     func setSlider(pics: [PictureModel] , index: Int){
         if let imgUrl = pics[safe: index]?.imageURL{
             var imgUrlString = imgUrl
@@ -31,4 +45,5 @@ class SilderImagesCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
 }

@@ -14,6 +14,8 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
     @IBOutlet weak var ItemsDataTableView: UITableView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
+    @IBOutlet weak var stateView: UIView!
+
     var motors_data = [MotorAdModel]()
     var jobs_data = [JobAdModel]()
     var numbers_data = [NumberAdModel]()
@@ -103,7 +105,7 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
             return itemsData
         case 3,4,5,7:
             let itemsData:ServicesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ServicesTableViewCell", for: indexPath) as! ServicesTableViewCell
-            itemsData.images=Statics.adsArray
+            //itemsData.images=Statics.adsArray
             switch index{
             case 4:
                 itemsData.serviceDate.textColor=#colorLiteral(red: 1, green: 0.7098039216, blue: 0.2745098039, alpha: 1)
@@ -195,36 +197,43 @@ class MyFavoritesViewController: UIViewController,UITableViewDataSource,UITableV
         case .motor:
             ApiRequests.favoriteMotorAds { r in
                 self.motors_data = r.value ?? []
+                self.stateView.isHidden = (self.motors_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .job:
             ApiRequests.favoriteJobAds { r in
                 self.jobs_data = r.value ?? []
+                self.stateView.isHidden = (self.jobs_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .numbers:
             ApiRequests.favoriteNumberAds { r in
                 self.numbers_data = r.value ?? []
+                self.stateView.isHidden = (self.numbers_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .electronics:
             ApiRequests.favoriteElectronicsAds { r in
                 self.electronics_data = r.value ?? []
+                self.stateView.isHidden = (self.electronics_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .classified:
             ApiRequests.favoriteClassifiedAds { r in
                 self.classified_data = r.value ?? []
+                self.stateView.isHidden = (self.classified_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .services:
             ApiRequests.favoriteServicesAds { r in
                 self.services_data = r.value ?? []
+                self.stateView.isHidden = (self.services_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .business:
             ApiRequests.favoriteBusinessAds { r in
                 self.business_data = r.value ?? []
+                self.stateView.isHidden = (self.business_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .none:

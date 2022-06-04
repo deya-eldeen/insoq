@@ -13,6 +13,7 @@ class MyAdsMotorsTableViewCell: UITableViewCell {
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var serviceTitle: UILabel!
     @IBOutlet weak var servicePrice: UILabel!
+    @IBOutlet weak var serviceLocationLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
     @IBOutlet weak var getMoreViewsButton: UIButton!
     @IBOutlet weak var imagesPageController: UIPageControl!
@@ -20,7 +21,8 @@ class MyAdsMotorsTableViewCell: UITableViewCell {
     var swipeHintDistance:CGFloat = 30
 
     @IBOutlet weak var mainView: UIView!
-    var images=[UIImage]()
+    var images = [Picture]()
+    
     var counter:Int=0
     
     override func awakeFromNib() {
@@ -34,6 +36,7 @@ class MyAdsMotorsTableViewCell: UITableViewCell {
         // Comment if you set Datasource and delegate in .xib
         self.imagesCollectionView.dataSource = self
         self.imagesCollectionView.delegate = self
+        self.imagesPageController.numberOfPages = self.images.count
 
     }
 
@@ -74,22 +77,21 @@ class MyAdsMotorsTableViewCell: UITableViewCell {
         }
     }
 
-
 }
+
 extension MyAdsMotorsTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return images.count
-}
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
 
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-   let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "SilderImagesCollectionViewCell", for: indexPath) as! SilderImagesCollectionViewCell
-    cell.setSlider(image: images[indexPath.row])
-    cell.sliderImage.roundCorner(corners: [.bottomLeft,.topLeft], radius: 5)
-
-    counter=indexPath.row
-    return  cell
-}
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "SilderImagesCollectionViewCell", for: indexPath) as! SilderImagesCollectionViewCell
+        cell.setSlider(pics: self.images, index: indexPath.row)
+        cell.sliderImage.roundCorner(corners: [.bottomLeft,.topLeft], radius: 5)
+        counter = indexPath.row
+        return  cell
+    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
@@ -113,8 +115,9 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
         if counter < Statics.adsArray.count {
             let index = IndexPath.init(item: counter, section: 0)
-            if let rect = self.imagesCollectionView.layoutAttributesForItem(at: index)?.frame{
-                self.imagesCollectionView.scrollRectToVisible(rect, animated: true)}
+            if let rect = self.imagesCollectionView.layoutAttributesForItem(at: index)?.frame {
+                self.imagesCollectionView.scrollRectToVisible(rect, animated: true)
+            }
             imagesPageController.currentPage = counter
             counter += 1
         }
@@ -122,8 +125,9 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
         {
             counter = 0
             let index = IndexPath(item: counter, section: 0)
-            if let rect = self.imagesCollectionView.layoutAttributesForItem(at: index)?.frame{
-                self.imagesCollectionView.scrollRectToVisible(rect, animated: true)}
+            if let rect = self.imagesCollectionView.layoutAttributesForItem(at: index)?.frame {
+                self.imagesCollectionView.scrollRectToVisible(rect, animated: true)
+            }
             imagesPageController.currentPage = counter
             counter = 1
         }
@@ -131,3 +135,4 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     }
     
     }
+

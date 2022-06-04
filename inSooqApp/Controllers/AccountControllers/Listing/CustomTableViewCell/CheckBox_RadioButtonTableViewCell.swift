@@ -36,10 +36,14 @@ class CheckBox_RadioButtonTableViewCell: UITableViewCell {
         self.title.text = data.title
         self.flagImageView.image = data.image
         
+        print("setOptions",data)
+        
         switch data.type {
         case 1:
+            print("priceView.isHidden=true")
             selectedButton.addBorders(borderWidth: 0.5, borderColor: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
             objectCornerRadius(object: selectedButton, cornerRadius: selectedButton.frame.width/2)
+            priceView.isHidden=true
         case 2:
             selectedButton.addBorders(borderWidth: 0.5, borderColor: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
             objectCornerRadius(object: selectedButton, cornerRadius: selectedButton.frame.width/2)

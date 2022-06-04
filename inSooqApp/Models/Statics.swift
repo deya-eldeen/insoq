@@ -32,18 +32,23 @@ class Statics {
     static  var icons=FontAwesomeIcons()
     
     //MARK: TEST DATA
-    static var testOptionsArray:[OptionsModel]
-        =
-        [OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2)
-         ,OptionsModel(title: "Feature your car for 15 days", price: "200", type: 2),
-         OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2),
-         OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2)
-         ,OptionsModel(title: "Feature your car for 15 days", price: "200", type: 2),
-         OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2),
-         OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2)
-         ,OptionsModel(title: "Feature your car for 15 days", price: "200", type: 2),
-         OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2)]
+    static var testOptionsArray:[OptionsModel] = [
+        OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2),
+        OptionsModel(title: "Feature your car for 15 days", price: "200", type: 2),
+        OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2),
+        OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2),
+        OptionsModel(title: "Feature your car for 15 days", price: "200", type: 2),
+        OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2),
+        OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2),
+        OptionsModel(title: "Feature your car for 15 days", price: "200", type: 2),
+        OptionsModel(title: "Feature your car for 30 days", price: "250", type: 2)
+    ]
   
+    static var deleteOptions:[OptionsModel] = [
+        OptionsModel(title: "Delete Ad Reason 1", price: "", type: 1),
+        OptionsModel(title: "Delete Ad Reason 2", price: "0", type: 1)
+    ]
+    
     static var testItemDetailsData:[RowDataModel] = [
         RowDataModel(icon: #imageLiteral(resourceName: "services_icon"), title: "Milage: ", data: "4029999 Km")
         ,RowDataModel(icon: #imageLiteral(resourceName: "tirmes_tab"), title: "Type", data: "BMW")
@@ -84,14 +89,14 @@ class Statics {
     
     
     static var favoModel:[CategoriesModel]=[
-        CategoriesModel(categoryName: "All", categoyID: "0", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: UIImage(named: "favo")!)
-        , CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))
+        //CategoriesModel(categoryName: "All", categoyID: "0", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: UIImage(named: "favo")!)
+        CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))
 //        , CategoriesModel(categoryName: "Property", categoyID: "2", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "property_icon") )
-        , CategoriesModel(categoryName: "Jobs", categoyID: "3", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "jobs_icon"))
-        , CategoriesModel(categoryName: "Services", categoyID: "4", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "services_icon"))
-        , CategoriesModel(categoryName: "Business", categoyID: "5", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "buissness_icon"))
-        , CategoriesModel(categoryName: "Classifieds", categoyID: "6", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "classified_icon"))
-        ,CategoriesModel(categoryName: "Numbers", categoyID: "7", categoyColor: #colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "plate_icon")),CategoriesModel(categoryName: "Electronics", categoyID: "8", categoyColor:#colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "mobile_icon"))
+        , CategoriesModel(categoryName: "Jobs", categoyID: "3", categoyColor: #colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "jobs_icon"))
+        , CategoriesModel(categoryName: "Services", categoyID: "4", categoyColor: #colorLiteral(red: 0, green: 0.831372549, blue: 0.9764705882, alpha: 1), categoryImage: #imageLiteral(resourceName: "services_icon"))
+        , CategoriesModel(categoryName: "Business", categoyID: "5", categoyColor: #colorLiteral(red: 0.4274509804, green: 0.831372549, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "buissness_icon"))
+        , CategoriesModel(categoryName: "Classifieds", categoyID: "6", categoyColor: #colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1), categoryImage: #imageLiteral(resourceName: "classified_icon"))
+        ,CategoriesModel(categoryName: "Numbers", categoyID: "7", categoyColor: #colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1), categoryImage: #imageLiteral(resourceName: "plate_icon")),CategoriesModel(categoryName: "Electronics", categoyID: "8", categoyColor:#colorLiteral(red: 0.787756741, green: 0.7996513247, blue: 0.8245124221, alpha: 1), categoryImage: #imageLiteral(resourceName: "mobile_icon"))
     ]
     static var sellItemModel:[CategoriesModel]=[
          CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), categoryImage: #imageLiteral(resourceName: "types_icon"))

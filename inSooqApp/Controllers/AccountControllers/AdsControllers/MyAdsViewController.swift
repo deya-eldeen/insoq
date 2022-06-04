@@ -14,6 +14,8 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
     @IBOutlet weak var topBar: TopNavigationbar!
     @IBOutlet weak var bottomView: BottomBar!
     
+    @IBOutlet weak var stateView: UIView!
+
     var motors_data = [MotorAdModel]()
     var jobs_data = [JobAdModel]()
     var numbers_data = [NumberAdModel]()
@@ -26,7 +28,7 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
     var index : Int = 0
     var icon = FontAwesomeIcons()
     
-    var adTypeIndex = 0
+    var adTypeIndex = 1
 
     func fetchData(adType: AdMainType) {
         
@@ -36,36 +38,44 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
         case .motor:
             ApiRequests.myMotorAds { r in
                 self.motors_data = r.value ?? []
+                print("self.motors_data",self.motors_data)
+                self.stateView.isHidden = (self.motors_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .job:
             ApiRequests.myJobAds { r in
                 self.jobs_data = r.value ?? []
+                self.stateView.isHidden = (self.jobs_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .numbers:
             ApiRequests.myNumberAds { r in
                 self.numbers_data = r.value ?? []
+                self.stateView.isHidden = (self.numbers_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .electronics:
             ApiRequests.myElectronicsAds { r in
                 self.electronics_data = r.value ?? []
+                self.stateView.isHidden = (self.electronics_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .classified:
             ApiRequests.myClassifiedAds { r in
                 self.classified_data = r.value ?? []
+                self.stateView.isHidden = (self.classified_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .services:
             ApiRequests.myServicesAds { r in
                 self.services_data = r.value ?? []
+                self.stateView.isHidden = (self.services_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .business:
             ApiRequests.myBusinessAds { r in
                 self.business_data = r.value ?? []
+                self.stateView.isHidden = (self.business_data.count > 0)
                 self.ItemsDataTableView.reloadData()
             }
         case .none:
@@ -78,6 +88,12 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         bottomView.setVC(viewController: self)
         topBar.setVC(viewController: self)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.categoriesCollectionView.selectItem(at: .init(row: 0, section: 0), animated: false, scrollPosition: .top)
+            self.fetchData(adType: AdMainType.motor)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,6 +110,14 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
                 cell?.animateSwipeHint()
             }
         }
+        
+
+        let selectedItems = self.categoriesCollectionView.indexPathsForSelectedItems ?? []
+        for ip in selectedItems {
+            categoriesCollectionView.deselectItem(at: ip, animated: false)
+        }
+        //categoriesCollectionView.reloadData()
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -111,6 +135,9 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
         categoriesCollectionView.dataSource=self
         ItemsDataTableView.delegate=self
         ItemsDataTableView.dataSource=self
+        
+        categoriesCollectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .top)
+       
     }
     
     @objc func deleteAction() {
@@ -139,16 +166,85 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Statics.adsArray.count
+        
+        let adType = AdMainType.init(rawValue: adTypeIndex) ?? AdMainType.none
+        
+        switch adType {
+        case .motor:
+            return self.motors_data.count
+        case .job:
+            return self.jobs_data.count
+        case .numbers:
+            return self.numbers_data.count
+        case .electronics:
+            return self.electronics_data.count
+        case .classified:
+            return self.classified_data.count
+        case .services:
+            return self.services_data.count
+        case .business:
+            return self.business_data.count
+        case .none:
+            return 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let itemsData:MyAdsMotorsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MyAdsMotorsTableViewCell", for: indexPath) as! MyAdsMotorsTableViewCell
-        itemsData.images=Statics.adsArray
-        //itemsData.mainView.addShadowToView(shadowRadius: 5)
-        itemsData.getMoreViewsButton.addTarget(self, action: #selector(goGetMoreViews), for: .touchUpInside)
-        return itemsData
+        let targetCell:MyAdsMotorsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MyAdsMotorsTableViewCell", for: indexPath) as! MyAdsMotorsTableViewCell
+        let adType = AdMainType.init(rawValue: adTypeIndex) ?? AdMainType.none
+
+        switch adType {
+        case .motor:
+            targetCell.images = self.motors_data[indexPath.row].pictures ?? []
+            targetCell.isLiveLabel.text = PackageStatus.init(rawValue: self.motors_data[indexPath.row].packageStatus ?? 0)?.description
+            targetCell.serviceTitle.text = self.motors_data[indexPath.row].title
+            targetCell.servicePrice.text = "\(self.motors_data[indexPath.row].price ?? 0.0) AED"
+            targetCell.serviceLocationLabel.text = self.motors_data[indexPath.row].enLocation ?? ""
+        case .job:
+            targetCell.images = self.jobs_data[indexPath.row].pictures ?? []
+            targetCell.isLiveLabel.text = PackageStatus.init(rawValue: self.jobs_data[indexPath.row].packageStatus ?? 0)?.description
+            targetCell.serviceTitle.text = self.jobs_data[indexPath.row].title
+            targetCell.servicePrice.text = "" //"\(self.jobs_data[indexPath.row].price ?? 0.0) AED"
+            targetCell.serviceLocationLabel.text = self.jobs_data[indexPath.row].enLocation ?? ""
+        case .numbers:
+            targetCell.images = []
+            targetCell.isLiveLabel.text = PackageStatus.init(rawValue: self.numbers_data[indexPath.row].packageStatus ?? 0)?.description
+            targetCell.serviceTitle.text = self.numbers_data[indexPath.row].title
+            targetCell.servicePrice.text = "" // "\(self.numbers_data[indexPath.row].price ?? 0.0) AED"
+            targetCell.serviceLocationLabel.text = self.numbers_data[indexPath.row].enLocation ?? ""
+        case .electronics:
+            targetCell.images = self.electronics_data[indexPath.row].pictures ?? []
+            targetCell.isLiveLabel.text = PackageStatus.init(rawValue: self.electronics_data[indexPath.row].packageStatus ?? 0)?.description
+            targetCell.serviceTitle.text = self.electronics_data[indexPath.row].title
+            targetCell.servicePrice.text = "" // "\(self.electronics_data[indexPath.row].price ?? 0.0) AED"
+            targetCell.serviceLocationLabel.text = self.electronics_data[indexPath.row].enLocation ?? ""
+        case .classified:
+            targetCell.images = self.classified_data[indexPath.row].pictures ?? []
+            targetCell.isLiveLabel.text = PackageStatus.init(rawValue: self.classified_data[indexPath.row].packageStatus ?? 0)?.description
+            targetCell.serviceTitle.text = self.classified_data[indexPath.row].title
+            targetCell.servicePrice.text = "" // "\(self.classified_data[indexPath.row].price ?? 0.0) AED"
+            targetCell.serviceLocationLabel.text = self.classified_data[indexPath.row].enLocation ?? ""
+        case .services:
+            targetCell.images = self.services_data[indexPath.row].pictures ?? []
+            targetCell.isLiveLabel.text = PackageStatus.init(rawValue: self.services_data[indexPath.row].packageStatus ?? 0)?.description
+            targetCell.serviceTitle.text = self.services_data[indexPath.row].title
+            targetCell.servicePrice.text = ""// "\(self.services_data[indexPath.row].pri ?? 0.0) AED"
+            targetCell.serviceLocationLabel.text = self.services_data[indexPath.row].enLocation ?? ""
+        case .business:
+            targetCell.images = self.business_data[indexPath.row].pictures ?? []
+            targetCell.isLiveLabel.text = PackageStatus.init(rawValue: self.business_data[indexPath.row].packageStatus ?? 0)?.description
+            targetCell.serviceTitle.text = self.business_data[indexPath.row].title
+            targetCell.servicePrice.text = "" //"\(self.business_data[indexPath.row].price ?? 0.0) AED"
+            targetCell.serviceLocationLabel.text = self.business_data[indexPath.row].enLocation ?? ""
+        case .none:
+            targetCell.images = []
+        }
+        
+        
+        targetCell.getMoreViewsButton.addTarget(self, action: #selector(goGetMoreViews), for: .touchUpInside)
+        return targetCell
         
     }
     
@@ -216,6 +312,7 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
         
         let targetVC = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController") as! PricesViewController
         targetVC.paymentNavigationSource = .myAds
+        targetVC.adType = .init(rawValue: self.adTypeIndex) ?? .none
         self.present(targetVC, animated: true)
         
     }
@@ -316,17 +413,25 @@ class MyAdsViewController: UIViewController ,UITableViewDataSource, UITableViewD
 
 
 extension MyAdsViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
+    
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let targetCell = cell as! CategoriesCollectionViewCell
+        targetCell.renderColors()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Statics.favoModel.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritesCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
         cell.setCategoriesData(data: Statics.favoModel[indexPath.row])
+        cell.catColor = Statics.favoModel[indexPath.row].categoyColor
+        
         //cell.contentView.layer.cornerRadius=cell.contentView.frame.height/2
-        if indexPath.row == 0{
+        if indexPath.row == 0 {
            // setGradientBackground(view: cell.coloredView, colorTop: #colorLiteral(red: 0.5490196078, green: 0.3882352941, blue: 0.9058823529, alpha: 1), colorBottom: #colorLiteral(red: 0.3411764706, green: 0.2745098039, blue: 0.9882352941, alpha: 1))
             cell.coloredView.backgroundColor=#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
             cell.coloredView.layer.cornerRadius=cell.coloredView.frame.height/2
@@ -336,14 +441,19 @@ extension MyAdsViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        debugPrint("Selected indexPath = ", indexPath.item)
-        debugPrint("Property selected")
-        
+
         let targetID = Int(Statics.favoModel[indexPath.row].categoyID) ?? 0
         self.adTypeIndex = targetID
         
         print("targetID",targetID)
         print("adTypeIndex",adTypeIndex)
+        
+        
+        let selectedItems = collectionView.indexPathsForSelectedItems ?? []
+        for ip in selectedItems {
+            collectionView.deselectItem(at: ip, animated: false)
+        }
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
         
         fetchData(adType: AdMainType.init(rawValue: targetID) ?? AdMainType.none)
         
@@ -352,7 +462,7 @@ extension MyAdsViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
         index=indexPath.row
         //   ItemsDataTableView.reloadData()
         //Reload Table View Data
-        /// didselect index == 0  : reload uitableVie wwith All cells Type else reload depending on Category...
+        // didselect index == 0  : reload uitableVie wwith All cells Type else reload depending on Category...
         
     }
     

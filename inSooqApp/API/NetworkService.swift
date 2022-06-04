@@ -67,6 +67,7 @@ class NetworkService {
                 if(withLoading == true) { UIViewController().hideLoading() }
             }
 
+            print("🛠response.error",response.error)
             if(response.error != nil){completion(response)}
             
             print("🛠Req\n",response.request?.cURL() ?? "","\n")

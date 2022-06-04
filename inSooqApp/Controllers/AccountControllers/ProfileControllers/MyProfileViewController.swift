@@ -91,6 +91,7 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     }()
     //MARK:-VC Life cicle-
     static var _NewPhone:String=""
+    
     private var _isNewsChecked:Bool=false
     private var _isAdsChecked:Bool=false
     private var _hideData:Bool=false
@@ -114,7 +115,7 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
         bottomBar.setVC(viewController: self)
         setGradientBackground(view: topBar, colorTop: #colorLiteral(red: 0.5490196078, green: 0.3882352941, blue: 0.9058823529, alpha: 1), colorBottom: #colorLiteral(red: 0.3411764706, green: 0.2745098039, blue: 0.9882352941, alpha: 1))
         
-        hideDataCheck.setImage(#imageLiteral(resourceName: "checked_checkbox"), for: .normal)
+//        hideDataCheck.setImage(#imageLiteral(resourceName: "checked_checkbox"), for: .normal)
 
 
         setTargets()
@@ -209,7 +210,7 @@ class MyProfileViewController: UIViewController, UIDocumentMenuDelegate {
     
     @IBAction func logout_Pressed(_ sender: Any) {
         
-        let alertViewController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        let alertViewController = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
         alertViewController.addAction(.init(title: "Yes", style: .destructive, handler: { action in
             Shared.shared.saveIsLogin(login: false)
             newRoot(NavId: "RegistrationNav")

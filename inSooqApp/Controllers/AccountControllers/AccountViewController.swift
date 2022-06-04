@@ -134,9 +134,10 @@ class AccountViewController: UIViewController {
         }
         listingView.isHidden = !listingView.isHidden
     }
+    
     @IBAction func logout_Pressed(_ sender: Any) {
 
-        let alertViewController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        let alertViewController = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
         alertViewController.addAction(.init(title: "Yes", style: .destructive, handler: { action in
             removeViewDataFromMemory(controller: self, vcToClear: AccountViewController.self)
             Shared.shared.saveIsLogin(login: false)
@@ -145,7 +146,6 @@ class AccountViewController: UIViewController {
         alertViewController.addAction(.init(title: "No", style: .default))
         
         self.present(alertViewController, animated: true)
-        
         
     }
     //MARK: listing Buttons...

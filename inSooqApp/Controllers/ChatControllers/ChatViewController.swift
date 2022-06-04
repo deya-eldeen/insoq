@@ -10,12 +10,16 @@ import UIKit
 class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
 //    @IBOutlet weak var topBar: MainNavView!
-    @IBOutlet weak var chatTableView: UITableView!
+    
     private var lastContentOffset: CGFloat = 0
+
+    @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var hiddenButton: UIButton!
     @IBOutlet weak var tabbarBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tabBarView: BottomView!
+    
     let testHeaders:[String]=["Active Chats", "Archive Chats"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
    //     topBar.setVC(viewController: self)
@@ -24,11 +28,15 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     }
     
+    @IBOutlet weak var stateView: UIView!
+
     override func viewWillAppear(_ animated: Bool) {
         chatTableView.delegate=self
         chatTableView.dataSource=self
     }
+    
     override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     private func registerXib(){
@@ -40,13 +48,13 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         chatTableView.sectionHeaderHeight=25
         chatTableView.estimatedSectionHeaderHeight=25
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ConversationCell", for: indexPath ) as! ConversationCell
-        
         return cell
     }
     
@@ -55,13 +63,13 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 30
+        return 30
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-            let header = self.chatTableView.dequeueReusableHeaderFooterView(withIdentifier: "ChatsTableViewHeader") as! ChatsTableViewHeader
+        let header = self.chatTableView.dequeueReusableHeaderFooterView(withIdentifier: "ChatsTableViewHeader") as! ChatsTableViewHeader
         header.setCustomHeaders(sectionTitle: testHeaders[section])
-            return header
+        return header
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,12 +78,10 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
 
     //MARK: - Contextual Actions
-  func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-      return UISwipeActionsConfiguration(actions: [
-          makeDeleteContextualAction(forRowAt: indexPath)
-      ])
-
-  }
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return UISwipeActionsConfiguration(actions: [makeDeleteContextualAction(forRowAt: indexPath)])
+    }
+    
   private func makeDeleteContextualAction(forRowAt indexPath: IndexPath) -> UIContextualAction {
       return UIContextualAction(style: .destructive, title: "Delete") { (action, swipeButtonView, completion) in
           print("DELETE HERE")

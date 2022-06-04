@@ -66,13 +66,14 @@ class DeleteAdView: UIView,UITableViewDelegate,UITableViewDataSource{
         resonsTableView.dataSource=self
         resonsTableView.isScrollEnabled=false
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return  Statics.testOptionsArray.count-5
+        return  Statics.deleteOptions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckBox_RadioButtonTableViewCell", for: indexPath ) as! CheckBox_RadioButtonTableViewCell
-            cell.setOptions(data:Statics.testOptionsArray[indexPath.row])
+            cell.setOptions(data:Statics.deleteOptions[indexPath.row])
 
         return cell
 

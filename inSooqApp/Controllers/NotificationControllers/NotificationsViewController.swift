@@ -23,6 +23,8 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
     @IBOutlet weak var sideMenuRightConstraint: NSLayoutConstraint!
     var  _sideMenuShown:Bool = true
 
+    @IBOutlet weak var stateView: UIView!
+
     var data = [NotificationModel]()
     
     override func viewDidLoad() {
@@ -37,6 +39,7 @@ class NotificationsViewController: UIViewController,UITableViewDataSource,UITabl
         ApiRequests.notifications { response in
             self.data = response.value ?? []
             self.notificationsTableView.reloadData()
+            self.stateView.isHidden = (self.data.count > 0)
         }
     }
     

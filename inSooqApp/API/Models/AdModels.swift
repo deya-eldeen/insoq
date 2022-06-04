@@ -75,7 +75,7 @@ struct MotorAdModel: Codable {
   var updatecount: Int?
   var arUsage: String?
   var arSellerType: String?
-  var kilometers: Int?
+  var kilometers: Double?
   var userId: Int?
   var enFuelType: String?
   var enColor: String?
@@ -111,7 +111,7 @@ struct MotorAdModel: Codable {
   var categoryEnName: String?
   var enNoOfCylinders: String?
   var pictures: [Picture]?
-  var price: Int?
+  var price: Double?
   var packageId: Int?
 
   init(from decoder: Decoder) throws {
@@ -128,7 +128,7 @@ struct MotorAdModel: Codable {
     updatecount = try container.decodeIfPresent(Int.self, forKey: .updatecount)
     arUsage = try container.decodeIfPresent(String.self, forKey: .arUsage)
     arSellerType = try container.decodeIfPresent(String.self, forKey: .arSellerType)
-    kilometers = try container.decodeIfPresent(Int.self, forKey: .kilometers)
+    kilometers = try container.decodeIfPresent(Double.self, forKey: .kilometers)
     userId = try container.decodeIfPresent(Int.self, forKey: .userId)
     enFuelType = try container.decodeIfPresent(String.self, forKey: .enFuelType)
     enColor = try container.decodeIfPresent(String.self, forKey: .enColor)
@@ -164,7 +164,7 @@ struct MotorAdModel: Codable {
     categoryEnName = try container.decodeIfPresent(String.self, forKey: .categoryEnName)
     enNoOfCylinders = try container.decodeIfPresent(String.self, forKey: .enNoOfCylinders)
     pictures = try container.decodeIfPresent([Picture].self, forKey: .pictures)
-    price = try container.decodeIfPresent(Int.self, forKey: .price)
+    price = try container.decodeIfPresent(Double.self, forKey: .price)
     packageId = try container.decodeIfPresent(Int.self, forKey: .packageId)
   }
 

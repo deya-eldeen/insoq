@@ -13,6 +13,9 @@ class SavedSearchesViewController: UIViewController,UITableViewDelegate,UITableV
     @IBOutlet weak var bottomBar: BottomBar!
     @IBOutlet weak var savedSearchesTableView: UITableView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    
+    @IBOutlet weak var stateView: UIView!
+
     var index:Int=0
     var sliderOn:Bool=true
 
@@ -21,6 +24,8 @@ class SavedSearchesViewController: UIViewController,UITableViewDelegate,UITableV
         bottomBar.setVC(viewController: self)
         topBar.setVC(viewController: self)
         registerXib()
+        
+        self.stateView.isHidden = false
     }
     override func viewWillAppear(_ animated: Bool) {
         setupDelegates()
@@ -48,7 +53,7 @@ class SavedSearchesViewController: UIViewController,UITableViewDelegate,UITableV
         }
     //MARK:-Table view delegate, data source-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

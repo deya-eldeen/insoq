@@ -8,7 +8,9 @@
 import UIKit
 import IQKeyboardManagerSwift
 import DropDown
+
 class SubCategoriesViewController: UIViewController {
+    
     //MARK:-LayoutConstraint for scorrling down and up
     private var lastContentOffset: CGFloat = 0
     private var duration:TimeInterval=6.0
@@ -579,7 +581,7 @@ extension SubCategoriesViewController: UICollectionViewDelegateFlowLayout,UIColl
                     
                 case 3,4,5,7:
                     let itemsData = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceGridCollectionViewCell", for: indexPath) as! ServiceGridCollectionViewCell
-                    itemsData.images=Statics.adsArray
+                    //itemsData.images=Statics.adsArray
                     switch subCategoryObject.index{
                     case 4:
                         itemsData.serviceDate.textColor=#colorLiteral(red: 1, green: 0.7098039216, blue: 0.2745098039, alpha: 1)
@@ -648,7 +650,7 @@ extension SubCategoriesViewController: UICollectionViewDelegateFlowLayout,UIColl
                     
                 case 3,4,5,7:
                     let itemsData = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceRowCollectionViewCell", for: indexPath) as! ServiceRowCollectionViewCell
-                    itemsData.images=Statics.adsArray
+                    //itemsData.images=Statics.adsArray
                     switch subCategoryObject.index{
                     case 3:
                         itemsData.images = Statics.normalImages

@@ -26,6 +26,8 @@ class PricesViewController: UIViewController {
 
     var selectedPackage: PackageModel?
     
+    var adType: AdMainType = .none
+    
     func navigate() {
     
         guard let package = selectedPackage else { return }
@@ -48,8 +50,7 @@ class PricesViewController: UIViewController {
         
         self.tableView.prepareTableView(vc: self, withCellsIDs: [PaidPackageCell.id, FreePackageCell.id])
         
-        self.categoryId = FormViewController.adMainType.rawValue
-        self.categoryId = 1
+        self.categoryId = self.adType.rawValue
         
         ApiRequests.packages(CategoryId: self.categoryId) { response in
             self.packages = response.value ?? []
@@ -69,8 +70,16 @@ class PricesViewController: UIViewController {
 extension PricesViewController {
     
     func proceed() {
-        switch FormViewController.adMainType {
         
+        var typeForSwitch = AdMainType.none
+        
+        if (adType != .none) {
+            typeForSwitch = adType
+        } else {
+            typeForSwitch = FormViewController.adMainType
+        }
+        
+        switch typeForSwitch {
         case .motor:
             let initialParams = try? FormViewController.motorInitialSubmission?.asDictionary()
             if let initialParams = initialParams {
