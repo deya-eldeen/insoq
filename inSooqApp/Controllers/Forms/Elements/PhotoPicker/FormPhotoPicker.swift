@@ -10,9 +10,11 @@ import UIKit
 class FormPhotoPicker: UIView, FormElement {
     
     var images = [UIImage]()
-    
+    var imagesNames = [String]()
+
     var mainImageIndex: Int?
-    
+    var mainImageName: String?
+
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
@@ -72,38 +74,37 @@ class FormPhotoPicker: UIView, FormElement {
             photos[index]?.setNeedsDisplay()
         }
         
-        
     }
     
-    func appendImage(image: UIImage) {
+    func appendImage(image: UIImage, name: String) {
         self.images.append(image)
+        self.imagesNames.append(name)
         renderPhotos()
-        
     }
     
     @IBAction func didTapSelect(sender: UIButton) {
-        
         let index = sender.tag - 1
+        if (self.images.count == 0 || sender.tag > self.images.count) {
+            return
+        }
         self.mainImageIndex = index
+        self.mainImageName = self.imagesNames[index]
 
-        print("_index",index)
-        
+        print("mainImageIndex",mainImageIndex)
+        print("mainImageName",mainImageName)
+
         renderPhotos()
         
     }
     
     @IBAction func didTapDelete(sender: UIButton) {
-        
         let index = sender.tag - 1
-        
-        print("_index",index)
         if index >= images.startIndex && index < images.endIndex {
             print("images_before",images)
             self.images.remove(at: index)
-            print("images_after",images)
+            self.imagesNames.remove(at: index)
             self.renderPhotos()
         }
-        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -117,11 +118,9 @@ class FormPhotoPicker: UIView, FormElement {
     }
     
     func commonInit() {
-                
         for photo in [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9] {
             photo?.contentMode = .scaleAspectFill
         }
-        
     }
     
     func render() -> UIView {

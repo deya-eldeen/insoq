@@ -16,7 +16,7 @@ class PricesViewController: UIViewController {
     }
     
     @IBAction func didTapContinue() {
-        self.navigate()
+        self.proceed()
     }
     
     var previousVC: UIViewController?
@@ -28,6 +28,9 @@ class PricesViewController: UIViewController {
     
     var adType: AdMainType = .none
     
+    var images = [UIImage]()
+    var imagesNames = [String]()
+
     func navigate() {
     
         guard let package = selectedPackage else { return }
@@ -41,7 +44,6 @@ class PricesViewController: UIViewController {
             
         }
 
-        
     }
     
     var isUpgrading = false
@@ -79,10 +81,13 @@ extension PricesViewController {
             typeForSwitch = FormViewController.adMainType
         }
         
+        print("typeForSwitch",typeForSwitch)
+        
         switch typeForSwitch {
         case .motor:
             let initialParams = try? FormViewController.motorInitialSubmission?.asDictionary()
             if let initialParams = initialParams {
+                print("initialParams",initialParams)
                 ApiRequests.submitMotor(params: initialParams) { response in
                     let fullParams = try? FormViewController.motorFullSubmission?.asDictionary()
                     let url = APIUrls.submitMotorFull()
@@ -97,6 +102,7 @@ extension PricesViewController {
         case .job:
             let initialParams = try? FormViewController.jobInitialSubmission?.asDictionary()
             if let initialParams = initialParams {
+                print("initialParams",initialParams)
                 ApiRequests.submitJob(params: initialParams) { response in
                     let fullParams = try? FormViewController.jobFullSubmission?.asDictionary()
                     let url = APIUrls.submitJobFull()
@@ -121,6 +127,14 @@ extension PricesViewController {
             let fullParams = try? FormViewController.electronicsSubmission?.asDictionary()
             let url = APIUrls.submitElectronics()
             if let fullParams = fullParams {
+                
+                for (image, imageName) in zip(self.images, self.imagesNames) {
+                    print("__Z \(image): \(imageName)")
+                }
+                
+                let combined2 = Array(zip(images, imagesNames))
+                print("__C \(combined2)")
+                
                 ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                     print("submitMotor",formResponse)
                     self.navigate()
@@ -129,6 +143,7 @@ extension PricesViewController {
         case .classified:
             let initialParams = try? FormViewController.classifiedInitialSubmission?.asDictionary()
             if let initialParams = initialParams {
+                print("initialParams",initialParams)
                 ApiRequests.submitClassified(params: initialParams) { response in
                     let fullParams = try? FormViewController.classifiedFullSubmission?.asDictionary()
                     let url = APIUrls.submitClassifiedFull()

@@ -18,8 +18,8 @@ struct ServicesSubmission: Codable {
     var SubCategoryId = "" //="-61403099"' \
     var OtherSubCategory = "" //="ex culpa do"' \
     var PhoneNumber = "" //="anim"' \
-    var CarLiftFrom = "" //="eiusmod Duis nulla ex"' \
-    var CarLiftTo = "" //="officia amet ut elit"' \
+//    var CarLiftFrom = "" //="eiusmod Duis nulla ex"' \
+//    var CarLiftTo = "" //="officia amet ut elit"' \
     var Id = "" //="90389247"' \
     var AdId = "" //="-94968753"' \
     var CategoryId = "" //="-36638958"'

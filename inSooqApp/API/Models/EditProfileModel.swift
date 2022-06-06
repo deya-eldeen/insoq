@@ -40,6 +40,7 @@ struct FullEditProfileModel: Codable {
     var user: EditProfileModel?
     var isSuccess: Bool?
     var message: String?
+    var adId: Int?
 }
 
 

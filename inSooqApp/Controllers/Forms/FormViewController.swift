@@ -36,14 +36,13 @@ enum AdMainType: Int {
 }
 
 enum PackageStatus : Int {
-   case underReview = 1
+    case underReview = 1
+    case active = 2
 
     var description: String {
         switch self {
-        case .underReview:
-            return "Under Review"
-        default:
-            return "N/A"
+        case .underReview: return "Under Review"
+        case .active: return "Active"
         }
     }
     
@@ -61,7 +60,8 @@ class FormViewController: UIViewController {
     var formElements = [UIView]()
     
     var images = [UIImage]()
-    
+    var imagesNames = [String]()
+
     var locationLatitude: Double?
     var locationLongitude: Double?
     
@@ -176,9 +176,12 @@ class FormViewController: UIViewController {
 
             if ( self.leadsToPrices == true ) {
                 let nextVC = (self.nextViewController as! PricesViewController)
+                nextVC.adType = FormViewController.adMainType
                 nextVC.modalPresentationStyle = .overCurrentContext
                 nextVC.modalTransitionStyle = .crossDissolve
                 nextVC.previousVC = self
+                nextVC.images = self.images
+                nextVC.imagesNames = self.imagesNames
                 navigationController?.present(nextVC, animated: true)
             } else {
                  navigationController?.pushViewController(self.nextViewController, animated: true)
@@ -349,7 +352,13 @@ class FormViewController: UIViewController {
                 let picker = (element as! FormPicker)
                 
                 if (picker.id == id) {
-                    return picker.textfield.text ?? ""
+                    if(picker.id == .warranty) {
+                        let value = picker.textfield.text ?? ""
+                        return (value.lowercased() == "yes") ? ("1") : ("0")
+                    } else {
+                        return picker.textfield.text ?? ""
+                    }
+                    
                 }
                 
             }
@@ -360,6 +369,24 @@ class FormViewController: UIViewController {
         
     }
     
+    func prepareImagesDataAndReturnMain() -> String {
+        
+        for element in formElements {
+            
+            if type(of: element) == FormPhotoPicker.self {
+                let photoPicker = (element as! FormPhotoPicker)
+                
+                self.images = photoPicker.images
+                self.imagesNames = photoPicker.imagesNames
+                
+                return photoPicker.mainImageName ?? ""
+            }
+
+        }
+        
+        return ""
+        
+    }
     
     func getDescriptionValue() -> String {
         
@@ -419,21 +446,7 @@ class FormViewController: UIViewController {
                         return (false,.incorrectYear)
                     }
                 }
-                
-//                if (field.id == .price) {
-//                    let valueInt = Int(text) ?? 0
-//                    if (valueInt > 100_000_000) {
-//                        return (false,.incorrectPrice)
-//                    }
-//                }
-                
-//                if (field.id == .milage) {
-//                    let valueInt = Int(text) ?? 0
-//                    if (valueInt > 99_999) {
-//                        return (false,.incorrectMilage)
-//                    }
-//                }
-                
+                                
                 if (field.id == .phoneNumber) {
                     let isValidPhone = text.isValidPhone()
                     if (isValidPhone == false) {
@@ -455,6 +468,9 @@ class FormViewController: UIViewController {
             if type(of: element) == FormPhotoPicker.self {
                 let photoPicker = (element as! FormPhotoPicker)
                 if (photoPicker.images.count == 0) {
+                    return (false,.shouldSelectPhoto)
+                }
+                if (photoPicker.mainImageIndex == nil) {
                     return (false,.shouldSelectPhoto)
                 }
             }
@@ -548,14 +564,14 @@ class FormViewController: UIViewController {
 
     }
     
-    func setPhoto(tag: Int, image: UIImage) {
+    func setPhoto(tag: Int, image: UIImage, name: String = "") {
         
         for element in formElements {
             
             if type(of: element) == FormPhotoPicker.self {
                 
                 let ppv = (element as! FormPhotoPicker)
-                ppv.appendImage(image: image)
+                ppv.appendImage(image: image, name: name)
                 
             }
             
@@ -660,7 +676,14 @@ extension FormViewController: UIScrollViewDelegate {
 }
 
 extension FormViewController: ImagePickerDelegate {
-
+    
+    func didSelect(image: UIImage?, name: String?) {
+        
+        if let image = image, let name = name {
+            setPhoto(tag: self.selectedPhotoTag, image: image, name: name)
+        }
+    }
+    
     func didSelect(image: UIImage?) {
         
         if let image = image {

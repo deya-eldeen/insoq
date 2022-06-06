@@ -64,6 +64,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = true
         
+//        {
+
+//        }
+        
+        
+        let postfix = "-"
+        let fullParams =
+                try! ElectronicsSubmission(
+                    Age: "0_1 months\(postfix)",
+                    Color: "Black\(postfix)",
+                    Description: "",
+                    Lat: "32.572339",
+                    Lng: "35.730077",
+                    Location: "Abu Dhabi\(postfix)",
+                    Price: "111111",
+                    Title: "23123123",
+                    Usage: "Daily use since purchase\(postfix)",
+                    Warranty: "1",
+                    MainPhoto: "B424F4F7-FF61-4772-9360-4B021B2BF7FC.jpeg",
+                    SubCategoryId: "15",
+                    OtherSubCategory: "",
+                    SubTypeId: "0",
+                    OtherSubType: "",
+                    PhoneNumber: "0797228550",
+                    Version: "INT\(postfix)",
+                    Ram: "12 GB\(postfix)",
+                    Storage: "1 TB\(postfix)",
+                    Id: "0",
+                    AdId: "0",
+                    CategoryId: "19"
+                ).asDictionary()
+        
+        let url = APIUrls.submitElectronics()
+
+        let imageID = "default_image"
+        let sampleImage = UIImage(named: imageID)!
+                     
+        ApiRequests.submitForm(url: url, files: [], images: [(sampleImage,imageID)], params: fullParams) { formResponse in
+            print("_____________________submitForm",formResponse)
+            //self.navigate()
+        }
+        
+        
         return true
     }
     // [START receive_message]

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Photos
 
-public protocol ImagePickerDelegate: class {
+public protocol ImagePickerDelegate: AnyObject {
     func didSelect(image: UIImage?)
+    func didSelect(image: UIImage?, name: String?)
 }
 
 open class ImagePicker: NSObject {
@@ -68,9 +70,14 @@ open class ImagePicker: NSObject {
 
     private func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?) {
         controller.dismiss(animated: true, completion: nil)
-
         self.delegate?.didSelect(image: image)
     }
+    
+    private func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?, name: String?) {
+        controller.dismiss(animated: true, completion: nil)
+        self.delegate?.didSelect(image: image, name: name)
+    }
+    
 }
 
 extension ImagePicker: UIImagePickerControllerDelegate {
@@ -79,13 +86,15 @@ extension ImagePicker: UIImagePickerControllerDelegate {
         self.pickerController(picker, didSelect: nil)
     }
 
-    public func imagePickerController(_ picker: UIImagePickerController,
-                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        guard let image = info[.editedImage] as? UIImage else {
-            return self.pickerController(picker, didSelect: nil)
-        }
-        self.pickerController(picker, didSelect: image)
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+
+        let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? NSURL
+        let imageName = imageUrl?.lastPathComponent ?? ""
+        let image = info[.editedImage] as? UIImage
+        self.pickerController(picker, didSelect: image, name: imageName)
+        
     }
+    
 }
 
 extension ImagePicker: UINavigationControllerDelegate {

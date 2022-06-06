@@ -11,13 +11,14 @@ import Defaults
 
 extension ApiRequests {
     
-    //typealias EditProfileCompletionHandler = (DataResponse<FullEditProfileModel,AFError>)
     
     static func submitForm(url: String, files: [(Data,String)], images: [(UIImage,String)], params: [String: Any], completion:@escaping (EditProfileCompletionHandler) -> Void) {
 
         let headers = NetworkService().uploadRequestHeaders()
         let unixTS = Int(NSDate().timeIntervalSince1970)
 
+        print("headers__",headers)
+        
         AF.upload(
             multipartFormData: { multipartFormData in
                 for param in params {
@@ -36,8 +37,8 @@ extension ApiRequests {
                     let image = imageMeta.0
                     let imageName = imageMeta.1
                     multipartFormData.append(image.jpegData(compressionQuality: 0.5)!,
-                        withName: imageName,
-                        fileName: "Image_\(unixTS)_.jpeg",
+                        withName: "Pictures",
+                        fileName: imageName,
                         mimeType: "image/jpeg")
                 }
 
@@ -49,9 +50,11 @@ extension ApiRequests {
         .responseDecodable { (response: EditProfileCompletionHandler) in
 
             UIViewController().hideLoading()
-            if(response.error != nil){completion(response)}
             print("submitForm",response.data)
             print("🛠\n",response.request?.cURL() ?? "","\n")
+            
+            if(response.error != nil){completion(response)}
+
             if let fullResponse = response.value {
                 let isSuccess = fullResponse.isSuccess ?? false
                 if isSuccess == true {

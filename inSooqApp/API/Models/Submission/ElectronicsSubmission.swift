@@ -20,7 +20,7 @@ struct ElectronicsSubmission: Codable {
     var Title = "" //="consequat dolore ad"' \
     var Usage = "" //="aliqua aliquip mollit occaecat sint"' \
     var Warranty = "" //="93935275"' \
-    var Pictures = "" //="[\"cupidatat nulla\",\"quis\"]"' \
+    //var Pictures = "" //="[\"cupidatat nulla\",\"quis\"]"' \
     var MainPhoto = "" //="occaecat est qui offi"' \
     var SubCategoryId = "" //="53006235"' \
     var OtherSubCategory = "" //="id ut"' \
