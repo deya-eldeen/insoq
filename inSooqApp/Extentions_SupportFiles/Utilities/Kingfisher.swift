@@ -40,7 +40,7 @@ extension UIImage {
     func aspectFittedToHeight(_ newHeight: CGFloat) -> UIImage {
         
         var newHeightClamped = newHeight
-        if(newHeightClamped > 512) { newHeightClamped = 512 }
+        if(newHeightClamped > 1024) { newHeightClamped = 1024 }
 
         let scale = newHeightClamped / self.size.height
         let newWidth = self.size.width * scale

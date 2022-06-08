@@ -56,11 +56,11 @@ class Motors_Export_VC: FormViewController {
         
         switch picker.id {
             case .carBrand:
-            customeListView.setData(vc:self,list: self.dataMakers)
+            customeListView.setData(vc:self,list: self.dataMakers, hideOther: false)
             case .model:
-            customeListView.setData(vc:self,list: self.dataMotorModels)
+            customeListView.setData(vc:self,list: self.dataMotorModels, hideOther: false)
             case .trim:
-            customeListView.setData(vc:self,list: self.dataMotorTrim)
+            customeListView.setData(vc:self,list: self.dataMotorTrim, hideOther: false)
             default: break
         }
         

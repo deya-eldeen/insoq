@@ -50,9 +50,9 @@ class Motors_Boats_VC: FormViewController {
         
         switch picker.id {
             case .boatCategory:
-            customeListView.setData(vc:self,list: self.dataSubcategories)
+            customeListView.setData(vc:self,list: self.dataSubcategories, hideOther: false)
             case .boatSubcategory:
-            customeListView.setData(vc:self,list: self.dataSubtypes)
+            customeListView.setData(vc:self,list: self.dataSubtypes, hideOther: false)
             default: break
         }
         

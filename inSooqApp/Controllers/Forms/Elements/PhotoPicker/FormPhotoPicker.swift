@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol FormPhotoPickerDelegate {
+    func didSelectPhoto(image: UIImage)
+}
+
 class FormPhotoPicker: UIView, FormElement {
+    
+    var delegate: FormPhotoPickerDelegate?
     
     var images = [UIImage]()
     var imagesNames = [String]()
@@ -94,6 +100,8 @@ class FormPhotoPicker: UIView, FormElement {
         print("mainImageName",mainImageName)
 
         renderPhotos()
+        
+        self.delegate?.didSelectPhoto(image: self.images[mainImageIndex ?? 0])
         
     }
     

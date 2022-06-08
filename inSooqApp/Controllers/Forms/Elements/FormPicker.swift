@@ -19,8 +19,8 @@ class FormPicker: UIView, FormElement {
         }
     }
     
-    let arabicValue = ""
-    let englishValue = ""
+    var arabicValue = ""
+    var englishValue = ""
     
     let button = PickerButton()
     let textfield = FormField()

@@ -51,16 +51,17 @@ class CustomListView: UIView {
         
     }
     
-    func setData(vc:UIViewController?, list: [Listable], hideOther:Bool? = false){
+    func setData(vc:UIViewController?, list: [Listable], hideOther: Bool? = true){
         
         var listFinal = list
-        if !(hideOther ?? false){
-            listFinal.append(itemOther)
+        if let hideOther = hideOther {
+            if (hideOther == false) {
+                listFinal.append(itemOther)
+            }
         }
+
         self.list = listFinal
-        
         self.vc = vc
-        
         showView(show: true)
         
     }

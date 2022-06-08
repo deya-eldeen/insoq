@@ -112,9 +112,9 @@ class Tablets_VC: FormViewController {
         switch picker.id {
             
             case .brand:
-            customeListView.setData(vc:self,list: self.data_brand)
+            customeListView.setData(vc:self,list: self.data_brand, hideOther: false)
             case .model:
-            customeListView.setData(vc:self,list: self.data_model)
+            customeListView.setData(vc:self,list: self.data_model, hideOther: false)
             case .version:
             customeListView.setData(vc:self,list: self.data_version)
             case .ram:

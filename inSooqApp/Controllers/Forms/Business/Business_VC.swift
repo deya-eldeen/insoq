@@ -62,7 +62,7 @@ class Business_VC: FormViewController {
             case .category:
             customeListView.setData(vc:self,list: self.dataCategory)
             case .subcategory:
-            customeListView.setData(vc:self,list: self.dataSubcategory)
+            customeListView.setData(vc:self,list: self.dataSubcategory, hideOther: false)
             case .location:
             customeListView.setData(vc:self,list: self.dataLocation)
             default: break

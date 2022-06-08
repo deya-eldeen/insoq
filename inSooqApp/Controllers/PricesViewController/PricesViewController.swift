@@ -82,7 +82,8 @@ extension PricesViewController {
         }
         
         print("typeForSwitch",typeForSwitch)
-        
+        let imagesWithNames = Array(zip(images, imagesNames))
+
         switch typeForSwitch {
         case .motor:
             let initialParams = try? FormViewController.motorInitialSubmission?.asDictionary()
@@ -92,7 +93,7 @@ extension PricesViewController {
                     let fullParams = try? FormViewController.motorFullSubmission?.asDictionary()
                     let url = APIUrls.submitMotorFull()
                     if let fullParams = fullParams {
-                        ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
+                        ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
                             print("submitMotor",formResponse)
                             self.navigate()
                         }
@@ -107,8 +108,8 @@ extension PricesViewController {
                     let fullParams = try? FormViewController.jobFullSubmission?.asDictionary()
                     let url = APIUrls.submitJobFull()
                     if let fullParams = fullParams {
-                        ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
-                            print("submitMotor",formResponse)
+                        ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                            print("submitJob",formResponse)
                             self.navigate()
                         }
                     }
@@ -118,8 +119,8 @@ extension PricesViewController {
             let fullParams = try? FormViewController.numbersSubmission?.asDictionary()
             let url = APIUrls.submitNumbers()
             if let fullParams = fullParams {
-                ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
-                    print("submitMotor",formResponse)
+                ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                    print("submitNumbers",formResponse)
                     self.navigate()
                 }
             }
@@ -127,16 +128,8 @@ extension PricesViewController {
             let fullParams = try? FormViewController.electronicsSubmission?.asDictionary()
             let url = APIUrls.submitElectronics()
             if let fullParams = fullParams {
-                
-                for (image, imageName) in zip(self.images, self.imagesNames) {
-                    print("__Z \(image): \(imageName)")
-                }
-                
-                let combined2 = Array(zip(images, imagesNames))
-                print("__C \(combined2)")
-                
-                ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
-                    print("submitMotor",formResponse)
+                ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                    print("submitElectronics",formResponse)
                     self.navigate()
                 }
             }
@@ -148,8 +141,8 @@ extension PricesViewController {
                     let fullParams = try? FormViewController.classifiedFullSubmission?.asDictionary()
                     let url = APIUrls.submitClassifiedFull()
                     if let fullParams = fullParams {
-                        ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
-                            print("submitMotor",formResponse)
+                        ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                            print("submitClassified",formResponse)
                             self.navigate()
                         }
                     }
@@ -159,8 +152,8 @@ extension PricesViewController {
             let fullParams = try? FormViewController.servicesSubmission?.asDictionary()
             let url = APIUrls.submitService()
             if let fullParams = fullParams {
-                ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
-                    print("submitMotor",formResponse)
+                ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                    print("submitServices",formResponse)
                     self.navigate()
                 }
             }
@@ -168,8 +161,8 @@ extension PricesViewController {
             let fullParams = try? FormViewController.businessSubmission?.asDictionary()
             let url = APIUrls.submitBusiness()
             if let fullParams = fullParams {
-                ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
-                    print("submitMotor",formResponse)
+                ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                    print("submitBusiness",formResponse)
                     self.navigate()
                 }
             }

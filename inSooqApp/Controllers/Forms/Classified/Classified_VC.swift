@@ -53,9 +53,9 @@ class Classified_VC: FormViewController {
         
         switch picker.id {
             case .category:
-            customeListView.setData(vc:self,list: self.dataCategory)
+            customeListView.setData(vc:self,list: self.dataCategory, hideOther: false)
             case .subcategory:
-            customeListView.setData(vc:self,list: self.dataSubcategory)
+            customeListView.setData(vc:self,list: self.dataSubcategory, hideOther: false)
             default: break
         }
         

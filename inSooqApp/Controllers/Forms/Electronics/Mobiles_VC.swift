@@ -25,6 +25,7 @@ class Mobiles_VC: FormViewController {
     var categoryId = 0
     var typeId = 0
     var subCategoryId = 0
+    var subTypeID = 0
     
     // Request
     func request_brand() {
@@ -112,9 +113,9 @@ class Mobiles_VC: FormViewController {
         switch picker.id {
             
             case .brand:
-            customeListView.setData(vc:self,list: self.data_brand)
+            customeListView.setData(vc:self,list: self.data_brand, hideOther: false)
             case .model:
-            customeListView.setData(vc:self,list: self.data_model)
+            customeListView.setData(vc:self,list: self.data_model, hideOther: false)
             case .version:
             customeListView.setData(vc:self,list: self.data_version)
             case .ram:
@@ -142,6 +143,10 @@ class Mobiles_VC: FormViewController {
             case .brand:
                 self.subCategoryId = item.id ?? 0
                 self.request_model()
+                print("didSelectListItem_subCategoryId",self.subCategoryId)
+            case .model:
+                self.subTypeID = item.id ?? 0
+                print("didSelectListItem_subTypeId",self.subTypeID)
             default: break
             }
             
@@ -166,7 +171,7 @@ class Mobiles_VC: FormViewController {
                 Usage: getPickerValue(id: .usage),
                 Warranty: getPickerValue(id: .warranty),
                 MainPhoto: self.prepareImagesDataAndReturnMain(),
-                SubCategoryId: "15",
+                SubCategoryId: "\(self.subTypeID)",
                 OtherSubCategory: "",
                 SubTypeId: "0",
                 OtherSubType: "",
@@ -176,7 +181,7 @@ class Mobiles_VC: FormViewController {
                 Storage: getPickerValue(id: .storage),
                 Id: "0",
                 AdId: "0",
-                CategoryId: "19")
+                CategoryId: "\(self.categoryId)")
             
             print("FormViewController.electronicsSubmission",FormViewController.electronicsSubmission)
             

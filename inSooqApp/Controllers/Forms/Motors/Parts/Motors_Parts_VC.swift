@@ -51,9 +51,9 @@ class Motors_Parts_VC: FormViewController {
         
         switch picker.id {
             case .category:
-            customeListView.setData(vc:self,list: self.data_category)
+            customeListView.setData(vc:self,list: self.data_category, hideOther: false)
             case .subcategory:
-            customeListView.setData(vc:self,list: self.data_subcategory)
+            customeListView.setData(vc:self,list: self.data_subcategory, hideOther: false)
             case .partName:
             customeListView.setData(vc:self,list: self.data_partName)
             default: break

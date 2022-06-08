@@ -106,8 +106,8 @@ class FormViewController: UIViewController {
     static var businessSubmission: BusinessSubmission?
     
     var dataWarranty = [
-        ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes"),
-        ListItem.init(id: 2, ar_Text: "No", en_Text: "No")
+        ListItem.init(id: 2, ar_Text: "No", en_Text: "No"),
+        ListItem.init(id: 1, ar_Text: "Yes", en_Text: "Yes")
     ]
     
     var dataGender = [
@@ -240,8 +240,9 @@ class FormViewController: UIViewController {
                 locationView.button.addTarget(self, action: #selector(self.didTapLocationPicker), for: .touchUpInside)
             }
             if type(of: element) == FormPhotoPicker.self {
-                let ppv = (element as! FormPhotoPicker)
-                ppv.buttonAdd?.addTarget(self, action: #selector(self.didTapPhoto(button:)), for: .touchUpInside)
+                let fpp = (element as! FormPhotoPicker)
+                fpp.buttonAdd?.addTarget(self, action: #selector(self.didTapPhoto(button:)), for: .touchUpInside)
+                fpp.delegate = self
             }
             if type(of: element) == FormFile.self {
                 let ff = (element as! FormFile)
@@ -297,6 +298,8 @@ class FormViewController: UIViewController {
                 let picker = (element as! FormPicker)
                 if picker.id == id {
                     picker.textfield.text = value.en_Text ?? value.en_Name
+                    picker.arabicValue = value.ar_Name ?? ""
+                    picker.englishValue = value.en_Name ?? ""
                 }
             }
         }
@@ -356,9 +359,8 @@ class FormViewController: UIViewController {
                         let value = picker.textfield.text ?? ""
                         return (value.lowercased() == "yes") ? ("1") : ("0")
                     } else {
-                        return picker.textfield.text ?? ""
+                        return "\(picker.textfield.text ?? "")-\(picker.textfield.text ?? "")"
                     }
-                    
                 }
                 
             }
@@ -495,7 +497,7 @@ class FormViewController: UIViewController {
         return (true, .none)
     }
     
-    func updatePreview() {
+    func updatePreview(image: UIImage? = nil) {
         
         for element in formElements {
             
@@ -518,7 +520,8 @@ class FormViewController: UIViewController {
                 (element as! FormPreviewView).adLocationLabel.text = (FormViewController.adLocation == "") ? ("Location") : FormViewController.adLocation
                 
                 let adImage = (element as! FormPreviewView).adImage.image
-                
+                let fpp = (element as! FormPreviewView)
+
                 if(adImage == nil) {
                     
                     let preview_business = Statics.preview_business
@@ -527,8 +530,6 @@ class FormViewController: UIViewController {
                     let preview_jobs = Statics.preview_jobs
                     let preview_motors = Statics.preview_motors
                     let preview_services = Statics.preview_services
-                    
-                    let fpp = (element as! FormPreviewView)
                     
                     switch FormViewController.adMainType {
                         
@@ -551,6 +552,9 @@ class FormViewController: UIViewController {
 
                     }
                     
+                } else {
+                    print("🟦_image",image)
+                    fpp.adImage.image = image
                 }
 
             }
@@ -575,12 +579,12 @@ class FormViewController: UIViewController {
                 
             }
             
-            if type(of: element) == FormPreviewView.self {
-                
-                let fpp = (element as! FormPreviewView)
-                fpp.adImage.image = image
-                
-            }
+//            if type(of: element) == FormPreviewView.self {
+//
+//                let fpp = (element as! FormPreviewView)
+//                fpp.adImage.image = image
+//
+//            }
             
         }
 
@@ -713,4 +717,10 @@ extension FormViewController: MapPickerViewControllerDelegate {
         self.locationLongitude = lon
     }
     
+}
+
+extension FormViewController: FormPhotoPickerDelegate {
+    func didSelectPhoto(image: UIImage) {
+        self.updatePreview(image: image)
+    }
 }

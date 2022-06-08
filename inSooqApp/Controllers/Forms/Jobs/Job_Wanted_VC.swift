@@ -39,7 +39,7 @@ class Job_Wanted_VC: FormViewController {
         
         switch picker.id {
             case .jobType:
-            customeListView.setData(vc:self,list: self.dataTypes)
+            customeListView.setData(vc:self,list: self.dataTypes, hideOther: false)
             default: break
         }
         
