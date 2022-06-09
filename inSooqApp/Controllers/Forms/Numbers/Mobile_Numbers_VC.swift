@@ -16,8 +16,10 @@ class Mobile_Numbers_VC: FormViewController {
     var data_locations = [LocationModel]()
 
     // Params
-    var emirate = ""
     var operatorName = ""
+    var operatorID = 0
+
+    var categoryId = 0
 
     // Requests
     func request_operator () {
@@ -26,7 +28,7 @@ class Mobile_Numbers_VC: FormViewController {
         }
     }
     func request_code () {
-        ApiRequests.numberCodes(operatorName: operatorName) { response in
+        ApiRequests.numberCodes(operatorID: operatorID) { response in
             self.data_code = response.value ?? []
         }
     }
@@ -46,6 +48,8 @@ class Mobile_Numbers_VC: FormViewController {
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
         self.leadsToPrices = true
         
+        self.categoryId = FormViewController.selectedCat.rawValue
+
         self.request_operator()
         self.request_code()
         self.request_mobilePlan()
@@ -76,10 +80,53 @@ class Mobile_Numbers_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            
+            print("DIDSELECT",item.id ?? 0)
+
+            switch picker.id {
+            case .operator:
+                self.operatorID = item.id ?? 0
+                self.request_code()
+            default: break
+            }
+            
             self.updateTextForPicker(with: pickerID, value: item)
         }
         
         self.customeListView.showListing(vc: self)
     }
 
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.numbersSubmission = NumbersSubmission(
+                                                                     description: getDescriptionValue(),
+                                                                     lat: String(describing: locationLatitude ?? 0.0),
+                                                                     lng: String(describing: locationLongitude ?? 0.0),
+                                                                     location: getPickerValue(id: .location),
+                                                                     number: getFormValue(id: .simNumber),
+                                                                     price: getFormValue(id: .price),
+                                                                     title: getFormValue(id: .title),
+                                                                     id: "0",
+                                                                     adId: "0",
+                                                                     categoryId: "\(self.categoryId)",
+                                                                     emirate: "",
+                                                                     plateType: "",
+                                                                     plateCode: "",
+                                                                     operator: getPickerValue(id: .operator),
+                                                                     code: "\(self.operatorID)",
+                                                                     mobileNumberPlan: getPickerValue(id: .mobilePlan),
+                                                                     phoneNumber: getFormValue(id: .phoneNumber)
+                                                                     )
+
+            
+            print("FormViewController.numbersSubmission",FormViewController.numbersSubmission)
+
+        }
+        
+        super.didTapContinue()
+
+    }
+    
 }

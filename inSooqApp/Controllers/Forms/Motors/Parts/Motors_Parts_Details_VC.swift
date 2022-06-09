@@ -66,10 +66,58 @@ class Motors_Parts_Details_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
         }
         
         self.customeListView.showListing(vc: self)
+    }
+    
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.motorFullSubmission = MotorFullSubmission(
+                Description: getDescriptionValue(),
+                Lat: String(describing: locationLatitude ?? 0.0),
+                Lng: String(describing: locationLongitude ?? 0.0),
+                Location: getPickerValue(id: .location),
+                AdId: "0",
+                CategoryId: "???????",
+                MainPhoto: self.prepareImagesDataAndReturnMain(),
+                Color: getPickerValue(id: .color),
+                Kilometers: "????????",
+                Doors: getPickerValue(id: .numberOfDoors),
+                Warranty: getPickerValue(id: .warranty),
+                Transmission: getPickerValue(id: .transmission),
+                RegionalSpecs: getPickerValue(id: .regional_specs),
+                BodyType: getPickerValue(id: .bodyType),
+                FuelType: getPickerValue(id: .fuelType),
+                NoOfCylinders: getPickerValue(id: .cylinders),
+                Horsepower: getPickerValue(id: .horsePower),
+                Condition: getPickerValue(id: .condition),
+                SellerType: getPickerValue(id: .sellerType),
+                FinalDriveSystem: getPickerValue(id: .finalDriveSystem),
+                MechanicalCondition: getPickerValue(id: .condition),
+                Price: getFormValue(id: .price),
+                Capacity: getPickerValue(id: .capacity),
+                EngineSize: getPickerValue(id: .engineSize),
+                Age: getPickerValue(id: .age),
+                Usage: getPickerValue(id: .usage),
+                Length: getPickerValue(id: .length),
+                Wheels: getPickerValue(id: .wheels),
+                SteeringSide: getPickerValue(id: .steeringSide),
+                NameOfPart: getPickerValue(id: .partName),
+                PhoneNumber: getFormValue(id: .phoneNumber)
+            )
+            
+            print("FormViewController.motorFullSubmission",FormViewController.motorFullSubmission)
+
+        }
+        
+        super.didTapContinue()
+
     }
 
 }

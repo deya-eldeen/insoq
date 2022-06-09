@@ -8,6 +8,8 @@
 import Foundation
 
 struct AdvertisingBudget: Codable, Listable {
+    var value: String?
+    
     
     let id:  Int?
     let ar_Text:  String?

@@ -181,6 +181,9 @@ class FormViewController: UIViewController {
                 nextVC.modalTransitionStyle = .crossDissolve
                 nextVC.previousVC = self
                 nextVC.images = self.images
+                for (index, image) in nextVC.images.enumerated() {
+                    nextVC.images[index] = image.aspectFittedToHeight(1024)
+                }
                 nextVC.imagesNames = self.imagesNames
                 navigationController?.present(nextVC, animated: true)
             } else {
@@ -297,7 +300,8 @@ class FormViewController: UIViewController {
             if type(of: element) == FormPicker.self {
                 let picker = (element as! FormPicker)
                 if picker.id == id {
-                    picker.textfield.text = value.en_Text ?? value.en_Name
+                    picker.textfield.text = value.en_Text ?? value.en_Name ?? value.value
+                    print("picker.textfield.text",picker.textfield.text)
                     picker.arabicValue = value.ar_Name ?? ""
                     picker.englishValue = value.en_Name ?? ""
                 }
@@ -358,6 +362,9 @@ class FormViewController: UIViewController {
                     if(picker.id == .warranty) {
                         let value = picker.textfield.text ?? ""
                         return (value.lowercased() == "yes") ? ("1") : ("0")
+                    }
+                    else if (picker.id == .plateCode) {
+                        return "\(picker.textfield.text ?? "")"
                     } else {
                         return "\(picker.textfield.text ?? "")-\(picker.textfield.text ?? "")"
                     }

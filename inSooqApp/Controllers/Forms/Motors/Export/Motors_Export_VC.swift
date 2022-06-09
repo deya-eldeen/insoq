@@ -19,6 +19,14 @@ class Motors_Export_VC: FormViewController {
     var selectedModelNameEn = ""
     var selectedModelNameAr = ""
 
+    // Other Params
+    var otherMaker = ""
+    var otherTrim = ""
+    var otherPartName = ""
+    var otherModel = ""
+    var otherSubCategory = ""
+    var otherSubType = ""
+    
     // Requests
     func requestMakers() {
         ApiRequests.motorMakers { response in
@@ -65,6 +73,8 @@ class Motors_Export_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {

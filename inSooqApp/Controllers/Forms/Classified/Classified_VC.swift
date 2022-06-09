@@ -60,6 +60,9 @@ class Classified_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {
@@ -74,4 +77,24 @@ class Classified_VC: FormViewController {
         self.customeListView.showListing(vc: self)
     }
 
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.classifiedInitialSubmission = ClassifiedInitialSubmission (
+                title: getFormValue(id: .title),
+                categoryId: "???????????????",
+                subCategoryId: "???????????????",
+                otherSubCategory: "",
+                subTypeId: "",
+                otherSubType: "")
+
+            print("FormViewController.classifiedInitialSubmission",FormViewController.classifiedInitialSubmission)
+
+        }
+        
+        super.didTapContinue()
+
+    }
+    
 }

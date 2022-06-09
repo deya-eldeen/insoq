@@ -15,7 +15,7 @@ struct BusinessSubmission: Codable {
     var Lng = "" //="pariatur nostrud consequat"' \
     var Location = "" //="voluptate aliquip esse deserunt"' \
     var Title = "" //="eu in magna"' \
-    var Pictures = "" //="[\"nulla\",\"eu dolore reprehenderit aute eiusmod\"]"' \
+//    var Pictures = "" //="[\"nulla\",\"eu dolore reprehenderit aute eiusmod\"]"' \
     var MainPhoto = "" //="anim ut"' \
 //    var OtherCategoryName = "" //="sunt anim ut"' \
     var SubCategoryId = "" //="-48635203"' \

@@ -17,6 +17,14 @@ class Motors_Boats_VC: FormViewController {
     var categoryId = 0
     var subCategoryId = 0
     
+    // Other Params
+    var otherMaker = ""
+    var otherTrim = ""
+    var otherPartName = ""
+    var otherModel = ""
+    var otherSubCategory = ""
+    var otherSubType = ""
+    
     // Requests
     func requestSubcategories() {
         ApiRequests.subcategories(categoryId: categoryId) { response in
@@ -57,6 +65,8 @@ class Motors_Boats_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {
@@ -71,4 +81,33 @@ class Motors_Boats_VC: FormViewController {
         self.customeListView.showListing(vc: self)
     }
 
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.motorInitialSubmission = MotorInitialSubmission(
+                categoryId: "????????????",
+                maker: getPickerValue(id: .carBrand),
+                otherMaker: self.otherMaker,
+                model: getPickerValue(id: .model),
+                otherModel: self.otherModel,
+                subCategoryId: "????????????",
+                otherSubCategory: self.otherSubCategory,
+                subTypeId: "0",
+                otherSubType: self.otherSubType,
+                year: self.getFormValue(id: .year),
+                title: self.getFormValue(id: .title),
+                trim: getPickerValue(id: .trim),
+                otherTrim: self.otherTrim,
+                partName: "???",
+                otherPartName: self.otherPartName
+            )
+            
+            print("FormViewController.motorInitialSubmission",FormViewController.motorInitialSubmission)
+
+        }
+        
+        super.didTapContinue()
+
+    }
 }

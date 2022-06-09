@@ -21,7 +21,7 @@ extension Services_Others_VC {
         tipLabel.textColor = self.formDarkGray
         
         let titleField = FormField()
-        titleField.id = .price
+        titleField.id = .title
         titleField.placeholder = "Ad Title"
 
         let categoryPicker = FormPicker()

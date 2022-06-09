@@ -17,6 +17,14 @@ class Motors_Bike_VC: FormViewController {
     var categoryId = 0
     var subCategoryId = 0
     
+    // Other Params
+    var otherMaker = ""
+    var otherTrim = ""
+    var otherPartName = ""
+    var otherModel = ""
+    var otherSubCategory = ""
+    var otherSubType = ""
+    
     // Requests
     func requestCategories() {
         ApiRequests.subcategories(categoryId: categoryId) { response in
@@ -56,6 +64,8 @@ class Motors_Bike_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {

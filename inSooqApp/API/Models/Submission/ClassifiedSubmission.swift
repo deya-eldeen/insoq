@@ -11,10 +11,10 @@ import Foundation
 struct ClassifiedInitialSubmission: Codable {
 
     var title = "" //": "amet sit",
-    var categoryId = 0 //": 50672786,
-    var subCategoryId = 0 //": -85238237,
+    var categoryId = "" //": 50672786,
+    var subCategoryId = "" //": -85238237,
     var otherSubCategory = "" //": "sunt ut",
-    var subTypeId = 0 //": -69440632,
+    var subTypeId = "" //": -69440632,
     var otherSubType = "" //": "ea sint "
     
 }
@@ -35,7 +35,7 @@ struct ClassifiedFullSubmission: Codable {
     var Price = ""  //="-41144122.13094258"' \
     var AdId = ""  //="-33511020"' \
     var CategoryId = ""  //="-85223905"' \
-    var Pictures = ""  //="[\"voluptate\",\"mollit proi\"]"' \
+//    var Pictures = ""  //="[\"voluptate\",\"mollit proi\"]"' \
     var MainPhoto = ""  //="eu in"' \
     var Age = ""  //="elit esse"' \
     var Usage = ""  //="magna dolor esse nisi"' \

@@ -30,8 +30,9 @@ extension ApiRequests {
     
     
     
-    // Numbers (FORM)
-
+    static func submitNumber(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.submitNumbers(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
+    }
     
     
     

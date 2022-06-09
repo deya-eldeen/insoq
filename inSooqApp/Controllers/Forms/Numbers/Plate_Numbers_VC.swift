@@ -17,7 +17,8 @@ class Plate_Numbers_VC: FormViewController {
     
     // Param
     var emirate = ""
-    
+    var categoryId = 0
+
     // Requests
     func request_emirate() {
         ApiRequests.emirates { response in
@@ -30,10 +31,21 @@ class Plate_Numbers_VC: FormViewController {
         }
     }
     func request_plateCode() {
-        ApiRequests.plateCodes { response in
-            self.data_plateCode = response.value ?? []
+        
+        let params = [
+            "plateType": self.getPickerValue(id: .plateType)+"-",
+            "emirate": self.getPickerValue(id: .emirate)+"-",
+        ]
+        print("params",params)
+        
+        let url = APIUrls.plateCodes()
+        
+        ApiRequests.submitGenericForm(url: url, files: [], images: [], params: params) { formResponse in
+            self.data_plateCode = formResponse.value ?? []
         }
+        
     }
+    
     func request_location() {
         ApiRequests.locations { response in
             self.data_location = response.value ?? []
@@ -45,9 +57,11 @@ class Plate_Numbers_VC: FormViewController {
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
         self.leadsToPrices = true
         
+        self.categoryId = FormViewController.selectedCat.rawValue
+
         request_emirate()
         request_plateType()
-        request_plateCode()
+        
         request_location()
         
     }
@@ -77,18 +91,55 @@ class Plate_Numbers_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {
             case .emirate:
                 self.emirate = "\(item.en_Name ?? item.en_Text ?? "")-\(item.en_Name ?? item.en_Text ?? "")"
                 self.request_plateType()
+            case .plateType:
+                self.request_plateCode()
             default: break
             }
             
         }
         
         self.customeListView.showListing(vc: self)
+    }
+
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.numbersSubmission = NumbersSubmission(
+                                                                     description: getDescriptionValue(),
+                                                                     lat: String(describing: locationLatitude ?? 0.0),
+                                                                     lng: String(describing: locationLongitude ?? 0.0),
+                                                                     location: getPickerValue(id: .location),
+                                                                     number: getFormValue(id: .plateNumber),
+                                                                     price: getFormValue(id: .price),
+                                                                     title: getFormValue(id: .title),
+                                                                     id: "0",
+                                                                     adId: "0",
+                                                                     categoryId: "\(self.categoryId)",
+                                                                     emirate: getPickerValue(id: .emirate),
+                                                                     plateType: getPickerValue(id: .plateType),
+                                                                     plateCode: getPickerValue(id: .plateCode),
+                                                                     operator: "",
+                                                                     code: "",
+                                                                     mobileNumberPlan: "",
+                                                                     phoneNumber: getFormValue(id: .phoneNumber)
+                                                                     )
+
+            print("FormViewController.numbersSubmission",FormViewController.numbersSubmission)
+
+        }
+        
+        super.didTapContinue()
+
     }
 
 }

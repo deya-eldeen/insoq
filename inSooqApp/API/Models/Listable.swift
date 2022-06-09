@@ -17,4 +17,5 @@ protocol Listable: Codable {
     var ar_Name: String? { get }
     var en_Name: String? { get }
 
+    var value: String? { get }
 }

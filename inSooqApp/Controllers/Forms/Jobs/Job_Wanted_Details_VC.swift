@@ -126,6 +126,9 @@ class Job_Wanted_Details_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            print("DIDSELECT",item.id ?? 0)
+
+            
             self.updateTextForPicker(with: pickerID, value: item)
             
         }
@@ -133,4 +136,38 @@ class Job_Wanted_Details_VC: FormViewController {
         self.customeListView.showListing(vc: self)
     }
 
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.jobFullSubmission = JobFullSubmission(
+                Description: getDescriptionValue(),
+                Lat: String(describing: locationLatitude ?? 0.0),
+                Lng: String(describing: locationLongitude ?? 0.0),
+                Location: getPickerValue(id: .location),
+                CategoryId: "????????????",
+                AdId: "0",
+                CV: "",
+                Gender: "???????????????",
+                Nationality: getPickerValue(id: .nationality),
+                CurrentLocation: getPickerValue(id: .location),
+                EducationLevel: getPickerValue(id: .educationLevel),
+                CurrentPosition: getPickerValue(id: .currentLocation),
+                WorkExperience: getPickerValue(id: .workExperience),
+                Commitment: getPickerValue(id: .commitment),
+                NoticePeriod: getPickerValue(id: .noticePeriod),
+                VisaStatus: getPickerValue(id: .visaStatus),
+                CareerLevel: getPickerValue(id: .professionalLevel),
+                ExpectedMonthlySalary: getPickerValue(id: .expectedMonthlySalary),
+                CvFile: "??????????????????"
+            )
+
+            print("FormViewController.jobFullSubmission",FormViewController.jobFullSubmission)
+
+        }
+        
+        super.didTapContinue()
+
+    }
+    
 }

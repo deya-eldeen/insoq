@@ -27,6 +27,10 @@ class Mobiles_VC: FormViewController {
     var subCategoryId = 0
     var subTypeID = 0
     
+    // Other Params
+    var OtherSubCategory = ""
+    var OtherSubType = ""
+    
     // Request
     func request_brand() {
         ApiRequests.subcategories(categoryId: categoryId) { response in
@@ -139,14 +143,23 @@ class Mobiles_VC: FormViewController {
         customeListView.didSelectListItem = { (item, pickerID) in
             self.updateTextForPicker(with: pickerID, value: item)
             
+            print("DIDSELECT",item.id ?? 0)
+            
             switch picker.id {
             case .brand:
                 self.subCategoryId = item.id ?? 0
                 self.request_model()
-                print("didSelectListItem_subCategoryId",self.subCategoryId)
+                if(item.id == 0) {
+                    self.OtherSubCategory = (item.en_Name ?? item.en_Text ?? "")
+                    print("didSelectListItem_subCategoryId",self.subCategoryId)
+                }
             case .model:
                 self.subTypeID = item.id ?? 0
-                print("didSelectListItem_subTypeId",self.subTypeID)
+                if(item.id == 0) {
+                    self.OtherSubType = (item.en_Name ?? item.en_Text ?? "")
+                    print("didSelectListItem_subTypeId",self.subTypeID)
+                }
+
             default: break
             }
             
@@ -159,7 +172,7 @@ class Mobiles_VC: FormViewController {
         
         if ( self.isValid().0 == true ) {
             
-            FormViewController.electronicsSubmission = ElectronicsSubmission(
+            FormViewController.electronicsSubmission = ElectronicsSubmission (
                 Age: getPickerValue(id: .age),
                 Color: getPickerValue(id: .color),
                 Description: getDescriptionValue(),
@@ -171,24 +184,24 @@ class Mobiles_VC: FormViewController {
                 Usage: getPickerValue(id: .usage),
                 Warranty: getPickerValue(id: .warranty),
                 MainPhoto: self.prepareImagesDataAndReturnMain(),
-                SubCategoryId: "\(self.subTypeID)",
-                OtherSubCategory: "",
-                SubTypeId: "0",
-                OtherSubType: "",
+                SubCategoryId: "\(self.subCategoryId)",
+                OtherSubCategory: self.OtherSubCategory,
+                SubTypeId: "\(self.subTypeID)",
+                OtherSubType: self.OtherSubType,
                 PhoneNumber: getFormValue(id: .phoneNumber),
                 Version: getPickerValue(id: .version),
                 Ram: getPickerValue(id: .ram),
                 Storage: getPickerValue(id: .storage),
                 Id: "0",
                 AdId: "0",
-                CategoryId: "\(self.categoryId)")
+                CategoryId: "\(self.categoryId)"
+            )
             
             print("FormViewController.electronicsSubmission",FormViewController.electronicsSubmission)
             
         }
         
         super.didTapContinue()
-
 
     }
 

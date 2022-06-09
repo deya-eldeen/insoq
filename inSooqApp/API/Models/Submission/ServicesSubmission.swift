@@ -23,7 +23,7 @@ struct ServicesSubmission: Codable {
     var Id = "" //="90389247"' \
     var AdId = "" //="-94968753"' \
     var CategoryId = "" //="-36638958"'
-    
+    var updatecount = "0"
 }
 
 //curl --location --request POST 'http://apinew.insouq.com/api/ServiceAds/Add' \

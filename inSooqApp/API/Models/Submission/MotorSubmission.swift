@@ -9,16 +9,16 @@ import Foundation
 
 // Motor Initial (NORMAL)
 struct MotorInitialSubmission: Codable {
-    var categoryId = 0 // -92098774
+    var categoryId = "" // -92098774
     var maker = "" // "sunt"
     var otherMaker = "" // "pariatur occaecat"
     var model = "" // "culpa cillum non amet nostrud"
     var otherModel = "" // "enim fugiat velit culpa"
-    var subCategoryId = 0 // 9894440
+    var subCategoryId = "" // 9894440
     var otherSubCategory = "" // "in ad culpa mollit ut"
-    var subTypeId = 0 // 25294557
+    var subTypeId = "" // 25294557
     var otherSubType = "" // "qui deserunt ea"
-    var year = 0 // 82968091
+    var year = "" // 82968091
     var title = "" // "eu qui Lorem pariatur"
     var trim = "" // "adipisicing nulla"
     var otherTrim = "" // "ull"
@@ -35,7 +35,7 @@ struct MotorFullSubmission: Codable {
     var Location = "" //"sed Excepteur ex"' \
     var AdId = "" //"9510503"' \
     var CategoryId = "" //"-78834482"' \
-    var Pictures = "" //"[\"reprehenderit mollit elit ullamco minim\",\"labore qui ea irure\"]"' \
+//    var Pictures = "" //"[\"reprehenderit mollit elit ullamco minim\",\"labore qui ea irure\"]"' \
     var MainPhoto = "" //"nisi Excepteur Lorem"' \
     var Color = "" //"nulla esse nisi"' \
     var Kilometers = "" //"79463700.37449357"' \

@@ -16,7 +16,12 @@ class Services_VC: FormViewController {
     
     // Params
     var categoryId = 0
-//    var subCategoryId = 0
+    var subTypeID = 0
+    
+    var subcategoryID = 0
+
+    // Other Params
+    var OtherSubCategory = ""
     
     // Requests
     func requestCategory() {
@@ -69,18 +74,46 @@ class Services_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
             
-//            switch picker.id {
-//            case .category:
-//                self.subCategoryId = item.id ?? 0
-//                self.requestSubcategory()
-//            default: break
-//            }
+            switch picker.id {
+            case .category:
+                self.subcategoryID = item.id ?? 0
+            default:
+                break
+            }
             
         }
         
         self.customeListView.showListing(vc: self)
+    }
+    
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.servicesSubmission = ServicesSubmission (
+                Description: getDescriptionValue(),
+                Lat: String(describing: locationLatitude ?? 0.0),
+                Lng: String(describing: locationLongitude ?? 0.0),
+                Location: getPickerValue(id: .location),
+                Title: getFormValue(id: .title),
+                SubCategoryId: "\(self.subcategoryID)",
+                OtherSubCategory: self.OtherSubCategory,
+                PhoneNumber: getFormValue(id: .phoneNumber),
+                Id: "0",
+                AdId: "0",
+                CategoryId: "\(self.categoryId)"
+            )
+            
+            print("FormViewController.servicesSubmission",FormViewController.servicesSubmission)
+            
+        }
+        
+        super.didTapContinue()
+
     }
 
 }

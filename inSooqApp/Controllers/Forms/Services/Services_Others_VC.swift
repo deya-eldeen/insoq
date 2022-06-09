@@ -13,10 +13,14 @@ class Services_Others_VC: FormViewController {
     var dataMotorModels = [MotorModel]()
     var dataMotorTrim = [MotorTrim]()
     
+    var subcategoryID = 0
+
     var selectedMakerID = 0
     var selectedModelNameEn = ""
     var selectedModelNameAr = ""
 
+    var OtherSubCategory = ""
+    
     // Requests
     func requestMakers() {
         ApiRequests.motorMakers { response in
@@ -64,12 +68,15 @@ class Services_Others_VC: FormViewController {
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
+            print("DIDSELECT",item.id ?? 0)
+
             self.updateTextForPicker(with: pickerID, value: item)
             
             switch picker.id {
             case .carBrand:
                 self.selectedMakerID = item.id ?? 0
                 self.requestModels()
+                
             case .model:
                 self.selectedModelNameEn = item.en_Text ?? ""
                 self.selectedModelNameAr = item.ar_Text ?? ""
@@ -80,6 +87,32 @@ class Services_Others_VC: FormViewController {
         }
         
         self.customeListView.showListing(vc: self)
+    }
+    
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.servicesSubmission = ServicesSubmission (
+                Description: getDescriptionValue(),
+                Lat: String(describing: locationLatitude ?? 0.0),
+                Lng: String(describing: locationLongitude ?? 0.0),
+                Location: getPickerValue(id: .location),
+                Title: getFormValue(id: .title),
+                SubCategoryId: "??????",
+                OtherSubCategory: self.OtherSubCategory,
+                PhoneNumber: getFormValue(id: .phoneNumber),
+                Id: "0",
+                AdId: "0",
+                CategoryId: "\(self.selectedMakerID)"
+            )
+            
+            print("FormViewController.servicesSubmission",FormViewController.servicesSubmission)
+
+        }
+        
+        super.didTapContinue()
+
     }
 
 }

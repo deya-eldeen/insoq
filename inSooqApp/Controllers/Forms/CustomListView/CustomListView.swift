@@ -129,7 +129,7 @@ extension CustomListView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdOrName, for: indexPath) as! CellPopupListItme
         let item = list[indexPath.row]
         
-        cell.lblName.text = item.en_Text ?? item.en_Name
+        cell.lblName.text = item.en_Text ?? item.en_Name ?? item.value
         
         cell.onClick =  {
             

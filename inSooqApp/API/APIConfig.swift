@@ -374,6 +374,10 @@ struct APIUrls {
         return "DropDowns/GetAllMobileNumberCodeByOperator?operatorName=\(operatorName)".fullUrl()
     }
     
+    static func numberCodes(operatorID: Int) -> String {
+        return "DropDowns/GetAllMobileNumberCodeByOperatorId?operatorId=\(operatorID)".fullUrl()
+    }
+    
     //numberPlans
     static func numberPlans() -> String {
         return "DropDowns/GetAllNumberPlans".fullUrl()

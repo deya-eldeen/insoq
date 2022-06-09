@@ -119,10 +119,12 @@ extension PricesViewController {
             let fullParams = try? FormViewController.numbersSubmission?.asDictionary()
             let url = APIUrls.submitNumbers()
             if let fullParams = fullParams {
-                ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
-                    print("submitNumbers",formResponse)
+                
+                ApiRequests.submitNumber(params: fullParams) { response in
+                    print("submitNumbers",response)
                     self.navigate()
                 }
+                
             }
         case .electronics:
             let fullParams = try? FormViewController.electronicsSubmission?.asDictionary()
@@ -152,7 +154,7 @@ extension PricesViewController {
             let fullParams = try? FormViewController.servicesSubmission?.asDictionary()
             let url = APIUrls.submitService()
             if let fullParams = fullParams {
-                ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                     print("submitServices",formResponse)
                     self.navigate()
                 }

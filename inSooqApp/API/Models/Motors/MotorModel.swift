@@ -16,4 +16,7 @@ struct MotorModel: Codable, Listable {
     
     var ar_Name: String?
     var en_Name: String?
+    
+    var value: String?
+
 }

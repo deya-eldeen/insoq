@@ -136,19 +136,16 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.emirates(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    static func plateCodes(completion:@escaping (ListableCompletionHandler) -> Void) {
-        NetworkService().simpleRequest(url: APIUrls.plateCodes(), method: .post) { (response: ListableCompletionHandler) in completion(response) }
-    }
+//    static func plateCodes(completion:@escaping (ListableCompletionHandler) -> Void) {
+//        NetworkService().simpleRequest(url: APIUrls.plateCodes(), method: .post) { (response: ListableCompletionHandler) in completion(response) }
+//    }
     
     static func plateTypes(emirate: String, completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.plateTypes(emirate: emirate), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    
-    
-    
-    static func numberCodes(operatorName: String, completion:@escaping (ListableCompletionHandler) -> Void) {
-        NetworkService().simpleRequest(url: APIUrls.numberCodes(operatorName: operatorName), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    static func numberCodes(operatorID: Int, completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.numberCodes(operatorID: operatorID), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
     static func numberPlans(completion:@escaping (ListableCompletionHandler) -> Void) {
