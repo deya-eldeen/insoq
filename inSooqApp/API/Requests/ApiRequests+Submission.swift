@@ -20,7 +20,7 @@ extension ApiRequests {
     
     // Job Initial (Normal)
     static func submitJob(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
-        NetworkService().submitForm(url: APIUrls.submitJobInitial(), params: params) { (response: NoDataCompletionHandler) in completion(response) }
+        NetworkService().simpleRequest(url: APIUrls.submitJobInitial(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
     }
     
     // Job Full (Normal)

@@ -21,9 +21,15 @@ class Job_Wanted_Details_VC: FormViewController {
     var data_professionalLevel = [ListItem]()
     var data_expectedMonthlySalary = [ListItem]()
     
+    // Params
+    var categoryId = 0
+    var typeId = 0
+    var subCategoryId = 0
+    var subTypeID = 0
+    
     // Requests
     func request_gender() {
-        //
+        self.data_gender = self.dataGender
     }
     func request_nationality() {
         ApiRequests.nationalities { response in
@@ -140,15 +146,17 @@ class Job_Wanted_Details_VC: FormViewController {
         
         if ( self.isValid().0 == true ) {
             
+            self.categoryId = FormViewController.selectedCat.rawValue
+            self.typeId = FormViewController.selectedTypeID
+            
             FormViewController.jobFullSubmission = JobFullSubmission(
                 Description: getDescriptionValue(),
                 Lat: String(describing: locationLatitude ?? 0.0),
                 Lng: String(describing: locationLongitude ?? 0.0),
                 Location: getPickerValue(id: .location),
-                CategoryId: "????????????",
-                AdId: "0",
-                CV: "",
-                Gender: "???????????????",
+                CategoryId: "\(self.categoryId)",
+                AdId: "",
+                Gender: getPickerValue(id: .gender),
                 Nationality: getPickerValue(id: .nationality),
                 CurrentLocation: getPickerValue(id: .location),
                 EducationLevel: getPickerValue(id: .educationLevel),
@@ -159,11 +167,14 @@ class Job_Wanted_Details_VC: FormViewController {
                 VisaStatus: getPickerValue(id: .visaStatus),
                 CareerLevel: getPickerValue(id: .professionalLevel),
                 ExpectedMonthlySalary: getPickerValue(id: .expectedMonthlySalary),
-                CvFile: "??????????????????"
+                CvFile: self.documentFileBase64
             )
-
+            
+            print("__________________________")
+            print("FormViewController.jobInitialSubmission",FormViewController.jobInitialSubmission)
             print("FormViewController.jobFullSubmission",FormViewController.jobFullSubmission)
-
+            print("__________________________")
+            
         }
         
         super.didTapContinue()

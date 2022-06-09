@@ -80,6 +80,7 @@ class FormViewController: UIViewController {
     // document picker
     var documentPicker: UIDocumentPickerViewController? //(forOpeningContentTypes: [UTType.item], asCopy: false)
     var documentName: String?
+    var documentFileBase64 = ""
     
     //Motors
     static var motorInitialSubmission: MotorInitialSubmission?
@@ -710,6 +711,16 @@ extension FormViewController: UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         
         self.documentName = urls.first?.absoluteString.components(separatedBy: "/").last
+        
+        guard let url = urls.first else {
+            print("no_first_url")
+            return
+        }
+        
+        let data: Data = try! Data(contentsOf: url)
+        
+        self.documentFileBase64 = data.base64EncodedString()
+        print("documentFileBase64",documentFileBase64)
         self.setDocumentName()
         
     }

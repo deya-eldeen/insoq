@@ -49,6 +49,14 @@ class Job_Wanted_VC: FormViewController {
             
             print("DIDSELECT",item.id ?? 0)
 
+            switch picker.id {
+            case .jobType:
+                if(item.id == 0) {
+                    self.otherJobType = (item.en_Name ?? item.en_Text ?? "")
+                }
+            default: break
+            }
+            
             self.updateTextForPicker(with: pickerID, value: item)
         }
         
@@ -58,20 +66,6 @@ class Job_Wanted_VC: FormViewController {
     override func didTapContinue() {
         
         if ( self.isValid().0 == true ) {
-                    
-//        Description: getDescriptionValue(),
-//        Lat: String(describing: locationLatitude ?? 0.0),
-//        Lng: String(describing: locationLongitude ?? 0.0),
-//        Location: getPickerValue(id: .location),
-//        PhoneNumber: getFormValue(id: .phoneNumber),
-//        Price: getFormValue(id: .price),
-//        AdId: "0",
-//        CategoryId: "??",
-//        MainPhoto: self.prepareImagesDataAndReturnMain(),
-//        Age: getPickerValue(id: .age),
-//        Usage: getPickerValue(id: .usage),
-//        Condition: getPickerValue(id: .condition),
-//        Brand: getPickerValue(id: .brand)
             
             FormViewController.jobInitialSubmission = JobInitialSubmission(
                 title: getFormValue(id: .title),
@@ -81,7 +75,7 @@ class Job_Wanted_VC: FormViewController {
                 phoneNumber: getFormValue(id: .phoneNumber)
             )
 
-            print("FormViewController.classifiedFullSubmission",FormViewController.classifiedInitialSubmission)
+            print("FormViewController.jobInitialSubmission",FormViewController.jobInitialSubmission)
 
         }
         

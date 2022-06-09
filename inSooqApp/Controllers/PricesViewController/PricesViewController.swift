@@ -105,10 +105,13 @@ extension PricesViewController {
             if let initialParams = initialParams {
                 print("initialParams",initialParams)
                 ApiRequests.submitJob(params: initialParams) { response in
+                    print("response")
+                    FormViewController.jobFullSubmission?.AdId = "\(response.value?.adId ?? 0)"
                     let fullParams = try? FormViewController.jobFullSubmission?.asDictionary()
                     let url = APIUrls.submitJobFull()
+                    print("fullParams",fullParams)
                     if let fullParams = fullParams {
-                        ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in
+                        ApiRequests.submitForm(url: url, files: [], images: [], params: fullParams) { formResponse in
                             print("submitJob",formResponse)
                             self.navigate()
                         }

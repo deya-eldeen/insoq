@@ -26,14 +26,14 @@ extension ApiRequests {
                     let value = (param.value as AnyObject).data(using: String.Encoding.utf8.rawValue)!
                     multipartFormData.append(value, withName: param.key)
                 }
-                for fileMeta in files {
-                    let file = fileMeta.0
-                    let fileName = fileMeta.1
-                    multipartFormData.append(file,
-                        withName: fileName,
-                        fileName: "File_\(unixTS).pdf",
-                        mimeType:"application/pdf")
-                }
+//                for fileMeta in files {
+//                    let file = fileMeta.0
+//                    let fileName = fileMeta.1
+//                    multipartFormData.append(file,
+//                        withName: fileName,
+//                        fileName: "File_\(unixTS).pdf",
+//                        mimeType:"application/pdf")
+//                }
                 for imageMeta in images {
                     let image = imageMeta.0
                     let imageName = imageMeta.1
@@ -123,7 +123,7 @@ extension ApiRequests {
                 
 //                let isSuccess = fullResponse.isSuccess ?? false
 //                if isSuccess == true {
-//                   
+//
 //                } else {
 //                    NetworkService().showError(error: response.value?.message ?? "")
 //                }

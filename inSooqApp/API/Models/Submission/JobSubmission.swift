@@ -29,7 +29,7 @@ struct JobFullSubmission: Codable {
     var Location = "" //="Ut anim enim"' \
     var CategoryId = "" //="-52078572"' \
     var AdId = "" //="43758957"' \
-    var CV = "" //="in in mollit Ut ea"' \
+//    var CV = "" //="in in mollit Ut ea"' \
     var Gender = "" //="in proident ad amet"' \
     var Nationality = "" //="consequat Ut sunt"' \
     var CurrentLocation = "" //="consequat exercitation dolore consectetur"' \
