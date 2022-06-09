@@ -50,7 +50,7 @@ extension ApiRequests {
     
     // Classified (NORMAL)
     static func submitClassified(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
-        NetworkService().submitForm(url: APIUrls.submitClassifiedInitial(), params: params) { (response: NoDataCompletionHandler) in completion(response) }
+        NetworkService().simpleRequest(url: APIUrls.submitClassifiedInitial(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
     }
     
     // Classified (FORM)

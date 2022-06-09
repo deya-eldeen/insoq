@@ -61,6 +61,7 @@
 		CEBFE11027E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */; };
 		CED3020127E3DC090095B4AB /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3020027E3DC090095B4AB /* Shared.swift */; };
 		E3030B17282902D4004D9179 /* FavAdsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3030B16282902D4004D9179 /* FavAdsCount.swift */; };
+		E305834A285232FB002F7B67 /* Experiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3058349285232FB002F7B67 /* Experiments.swift */; };
 		E30659D128380BF80011C1B9 /* AdDetailsGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659CF28380BF80011C1B9 /* AdDetailsGalleryCell.swift */; };
 		E30659D228380BF80011C1B9 /* AdDetailsGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30659D028380BF80011C1B9 /* AdDetailsGalleryCell.xib */; };
 		E30659D528380C060011C1B9 /* AdTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30659D328380C060011C1B9 /* AdTitleCell.swift */; };
@@ -621,6 +622,7 @@
 		CEBFE10F27E7366D006B5D32 /* GetAllMotorModelByMakerIdM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllMotorModelByMakerIdM.swift; sourceTree = "<group>"; };
 		CED3020027E3DC090095B4AB /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		E3030B16282902D4004D9179 /* FavAdsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAdsCount.swift; sourceTree = "<group>"; };
+		E3058349285232FB002F7B67 /* Experiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiments.swift; sourceTree = "<group>"; };
 		E30659CF28380BF80011C1B9 /* AdDetailsGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailsGalleryCell.swift; sourceTree = "<group>"; };
 		E30659D028380BF80011C1B9 /* AdDetailsGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdDetailsGalleryCell.xib; sourceTree = "<group>"; };
 		E30659D328380C060011C1B9 /* AdTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTitleCell.swift; sourceTree = "<group>"; };
@@ -2166,6 +2168,7 @@
 				17AA1C0E2788B66F008B5409 /* Custom UI */,
 				F1F941832633977B00862E98 /* GoogleService-Info.plist */,
 				F107A1BF25CFCC9F00FC6340 /* AppDelegate.swift */,
+				E3058349285232FB002F7B67 /* Experiments.swift */,
 				F107A1C825CFCCA100FC6340 /* Assets.xcassets */,
 				F107A1C125CFCC9F00FC6340 /* SceneDelegate.swift */,
 				F107A1C525CFCC9F00FC6340 /* Main.storyboard */,
@@ -3429,6 +3432,7 @@
 				F1EDDDE726790ABA00A3641E /* SeaveSearchsView.swift in Sources */,
 				E39DC530280A037300BAE09D /* Home_Electronics_VC.swift in Sources */,
 				F1730F0A262C84A200882749 /* LanguageView.swift in Sources */,
+				E305834A285232FB002F7B67 /* Experiments.swift in Sources */,
 				E3A8112828043268003A2CC0 /* Plate_Numbers_Data.swift in Sources */,
 				E3A810F428035669003A2CC0 /* FormSubLabel.swift in Sources */,
 				E31E6EA728075AAD001A4E9A /* FormLocationView.swift in Sources */,

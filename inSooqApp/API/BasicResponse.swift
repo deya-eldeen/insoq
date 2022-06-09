@@ -7,6 +7,8 @@ struct NoReply: Decodable {}
 
 struct BasicResponse<T>: Decodable where T: Decodable {
     
+    var isSuccess: Bool?
+    var id: Int?
     
     var response_status: BasicResponseData?
     var data: T?

@@ -31,11 +31,11 @@ class SigninMethodsViewController: UIViewController {
         
         #if DEBUG
             
-        emailTxt.text = "salah_3wadi91@yahoo.com"
-        passwordTxt.text = "Salah@1991" //"Qq123456-"
+//        emailTxt.text = "salah_3wadi91@yahoo.com"
+//        passwordTxt.text = "Salah@1991" //"Qq123456-"
         
-//        emailTxt.text = "samarelias3@gmail.com"
-//        passwordTxt.text = "Samar@1234"
+        emailTxt.text = "samarelias3@gmail.com"
+        passwordTxt.text = "Samar@1234"
         
         #endif
         

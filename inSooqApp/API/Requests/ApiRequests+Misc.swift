@@ -130,7 +130,9 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.commitments(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
     
-    
+    static func classifiedBrands(completion:@escaping (ListableCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.classifiedBrands(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
+    }
     
     static func emirates(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.emirates(), method: .get) { (response: ListableCompletionHandler) in completion(response) }

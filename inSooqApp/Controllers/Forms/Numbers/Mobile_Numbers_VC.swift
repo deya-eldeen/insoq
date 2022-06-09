@@ -18,6 +18,7 @@ class Mobile_Numbers_VC: FormViewController {
     // Params
     var operatorName = ""
     var operatorID = 0
+    var operatorValue = ""
 
     var categoryId = 0
 
@@ -81,12 +82,15 @@ class Mobile_Numbers_VC: FormViewController {
         
         customeListView.didSelectListItem = { (item, pickerID) in
             
-            print("DIDSELECT",item.id ?? 0)
+            print("DIDSELECT____",item)
 
             switch picker.id {
             case .operator:
                 self.operatorID = item.id ?? 0
                 self.request_code()
+            case .code:
+                self.operatorValue = item.value ?? ""
+                
             default: break
             }
             
@@ -115,7 +119,7 @@ class Mobile_Numbers_VC: FormViewController {
                                                                      plateType: "",
                                                                      plateCode: "",
                                                                      operator: getPickerValue(id: .operator),
-                                                                     code: "\(self.operatorID)",
+                                                                     code: "\(self.operatorValue)",
                                                                      mobileNumberPlan: getPickerValue(id: .mobilePlan),
                                                                      phoneNumber: getFormValue(id: .phoneNumber)
                                                                      )

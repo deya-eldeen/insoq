@@ -66,7 +66,8 @@ class NetworkService {
             DispatchQueue.main.async {
                 if(withLoading == true) { UIViewController().hideLoading() }
             }
-
+            
+            print("🛠escapedURL",escapedURL)
             print("🛠response.error",response.error)
             if(response.error != nil){completion(response)}
             

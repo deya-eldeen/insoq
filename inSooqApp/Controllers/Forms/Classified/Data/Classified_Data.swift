@@ -38,14 +38,19 @@ extension Classified_VC {
         let chooseLabel = FormLabel()
         chooseLabel.text = "Now choose the right category for your ad"
         
-        //
+        
         let categoryPicker = FormPicker()
         categoryPicker.id = .category
         categoryPicker.setPlaceHolder("Please select category")
-        
+
         let subcategoryPicker = FormPicker()
         subcategoryPicker.id = .subcategory
         subcategoryPicker.setPlaceHolder("Please select subcategory")
+        
+//        let itemNamePicker = FormPicker()
+//        itemNamePicker.id = .itemName
+//        itemNamePicker.setPlaceHolder("Please select Item name")
+//        
         //
 
         let formContinueButton = FormContinueButton()

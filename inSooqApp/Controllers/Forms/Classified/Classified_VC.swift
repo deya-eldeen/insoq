@@ -19,6 +19,12 @@ class Classified_VC: FormViewController {
     // Params
     var categoryId = 0
     var subCategoryId = 0
+    var typeId = 0
+    var subtypeId = 0
+
+    // Others
+    var otherSubCategory = ""
+    var otherSubType = ""
     
     // Requests
     func request_category() {
@@ -36,6 +42,7 @@ class Classified_VC: FormViewController {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Classified_Details_VC")
         self.categoryId = FormViewController.selectedCat.rawValue
+        self.typeId = FormViewController.selectedTypeID
         
         request_category()
         request_subcategories()
@@ -69,6 +76,15 @@ class Classified_VC: FormViewController {
             case .category:
                 self.subCategoryId = item.id ?? 0
                 self.request_subcategories()
+                
+                if(item.id == 0) {
+                    self.otherSubCategory = (item.en_Name ?? item.en_Text ?? "")
+                }
+            case .subcategory:
+                self.subtypeId = item.id ?? 0
+                if(item.id == 0) {
+                    self.otherSubType = (item.en_Name ?? item.en_Text ?? "")
+                }
             default: break
             }
             
@@ -83,11 +99,11 @@ class Classified_VC: FormViewController {
             
             FormViewController.classifiedInitialSubmission = ClassifiedInitialSubmission (
                 title: getFormValue(id: .title),
-                categoryId: "???????????????",
-                subCategoryId: "???????????????",
-                otherSubCategory: "",
-                subTypeId: "",
-                otherSubType: "")
+                categoryId: "\(self.categoryId)",
+                subCategoryId: "\(self.subCategoryId)",
+                otherSubCategory: self.otherSubCategory,
+                subTypeId: "\(self.subtypeId)",
+                otherSubType: self.otherSubType)
 
             print("FormViewController.classifiedInitialSubmission",FormViewController.classifiedInitialSubmission)
 

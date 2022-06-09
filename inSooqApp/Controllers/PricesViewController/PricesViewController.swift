@@ -140,6 +140,8 @@ extension PricesViewController {
             if let initialParams = initialParams {
                 print("initialParams",initialParams)
                 ApiRequests.submitClassified(params: initialParams) { response in
+                    FormViewController.classifiedFullSubmission?.AdId = "\(response.value?.id ?? 0)"
+                    
                     let fullParams = try? FormViewController.classifiedFullSubmission?.asDictionary()
                     let url = APIUrls.submitClassifiedFull()
                     if let fullParams = fullParams {

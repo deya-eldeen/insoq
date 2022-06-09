@@ -388,6 +388,11 @@ struct APIUrls {
         return "DropDowns/GetAllOperator".fullUrl()
     }
     
+    //classified brands
+    static func classifiedBrands() -> String {
+        return "DropDowns/GetAllClassifiedBrand".fullUrl()
+    }
+    
 //    //brand
 //        {{baseUrl}}/api/SubCategory/GetByCategoryId?categoryId=19
     

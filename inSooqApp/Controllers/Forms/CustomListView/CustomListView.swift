@@ -31,6 +31,11 @@ class CustomListView: UIView {
     
     @IBAction func closeAction(_ sender: Any) {
         
+        guard let _ = self.selectedItem?.id else {
+            showView(show: false)
+            return
+        }
+        
         // if the user has selected other
         if (self.selectedItem?.id == 0 ) {
             let otherItem = ListItem.init(id: 0, ar_Text: self.customValueField.text ?? "", en_Text: self.customValueField.text ?? "")

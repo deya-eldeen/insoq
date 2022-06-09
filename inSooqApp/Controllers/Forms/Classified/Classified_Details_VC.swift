@@ -43,14 +43,14 @@ class Classified_Details_VC: FormViewController {
         }
     }
     func requestCondition() {
-        ApiRequests.conditions(categoryId: categoryId) { response in
+        ApiRequests.conditions(categoryId: typeId) { response in
             self.dataCondition = response.value ?? []
         }
     }
     func requestBrand() {
-//        ApiRequests.conditions(categoryId: categoryId) { response in
-//            self.dataCondition = response.value ?? []
-//        }
+        ApiRequests.classifiedBrands { response in
+            self.dataBrand = response.value ?? []
+        }
     }
     func requestLocation() {
         ApiRequests.locations { response in
@@ -138,7 +138,7 @@ class Classified_Details_VC: FormViewController {
                                            PhoneNumber: getFormValue(id: .phoneNumber),
                                            Price: getFormValue(id: .price),
                                            AdId: "0",
-                                           CategoryId: "??",
+                                           CategoryId: FormViewController.classifiedInitialSubmission?.categoryId ?? "",
                                            MainPhoto: self.prepareImagesDataAndReturnMain(),
                                            Age: getPickerValue(id: .age),
                                            Usage: getPickerValue(id: .usage),
@@ -146,6 +146,7 @@ class Classified_Details_VC: FormViewController {
                                            Brand: getPickerValue(id: .brand)
                                         )
 
+            
             print("FormViewController.classifiedFullSubmission",FormViewController.classifiedInitialSubmission)
 
         }
