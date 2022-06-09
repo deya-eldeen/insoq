@@ -16,6 +16,8 @@ class Motors_Boats_VC: FormViewController {
     // Params
     var categoryId = 0
     var subCategoryId = 0
+    var typeId = 0
+    var subtypeId = 0
     
     // Other Params
     var otherMaker = ""
@@ -86,20 +88,20 @@ class Motors_Boats_VC: FormViewController {
         if ( self.isValid().0 == true ) {
             
             FormViewController.motorInitialSubmission = MotorInitialSubmission(
-                categoryId: "????????????",
+                categoryId: "\(self.categoryId)",
                 maker: getPickerValue(id: .carBrand),
                 otherMaker: self.otherMaker,
                 model: getPickerValue(id: .model),
                 otherModel: self.otherModel,
-                subCategoryId: "????????????",
+                subCategoryId: "\(self.subCategoryId)",
                 otherSubCategory: self.otherSubCategory,
-                subTypeId: "0",
+                subTypeId: "\(self.subtypeId)",
                 otherSubType: self.otherSubType,
                 year: self.getFormValue(id: .year),
                 title: self.getFormValue(id: .title),
                 trim: getPickerValue(id: .trim),
                 otherTrim: self.otherTrim,
-                partName: "???",
+                partName:  self.getPickerValue(id: .partName),
                 otherPartName: self.otherPartName
             )
             
@@ -110,4 +112,5 @@ class Motors_Boats_VC: FormViewController {
         super.didTapContinue()
 
     }
+    
 }

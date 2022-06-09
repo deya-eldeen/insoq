@@ -13,7 +13,11 @@ class Services_Others_VC: FormViewController {
     var dataMotorModels = [MotorModel]()
     var dataMotorTrim = [MotorTrim]()
     
-    var subcategoryID = 0
+    // Params
+    var categoryId = 0
+    var subCategoryId = 0
+    var typeId = 0
+    var subtypeId = 0
 
     var selectedMakerID = 0
     var selectedModelNameEn = ""

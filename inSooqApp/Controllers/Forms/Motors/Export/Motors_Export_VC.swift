@@ -19,6 +19,12 @@ class Motors_Export_VC: FormViewController {
     var selectedModelNameEn = ""
     var selectedModelNameAr = ""
 
+    // Params
+    var categoryId = 0
+    var subCategoryId = 0
+    var typeId = 0
+    var subtypeId = 0
+    
     // Other Params
     var otherMaker = ""
     var otherTrim = ""
@@ -91,6 +97,36 @@ class Motors_Export_VC: FormViewController {
         }
         
         self.customeListView.showListing(vc: self)
+    }
+    
+    override func didTapContinue() {
+        
+        if ( self.isValid().0 == true ) {
+            
+            FormViewController.motorInitialSubmission = MotorInitialSubmission(
+                categoryId: "\(self.categoryId)",
+                maker: getPickerValue(id: .carBrand),
+                otherMaker: self.otherMaker,
+                model: getPickerValue(id: .model),
+                otherModel: self.otherModel,
+                subCategoryId: "\(self.subCategoryId)",
+                otherSubCategory: self.otherSubCategory,
+                subTypeId: "\(self.subtypeId)",
+                otherSubType: self.otherSubType,
+                year: self.getFormValue(id: .year),
+                title: self.getFormValue(id: .title),
+                trim: getPickerValue(id: .trim),
+                otherTrim: self.otherTrim,
+                partName:  self.getPickerValue(id: .partName),
+                otherPartName: self.otherPartName
+            )
+            
+            print("FormViewController.motorInitialSubmission",FormViewController.motorInitialSubmission)
+
+        }
+        
+        super.didTapContinue()
+
     }
 
 }

@@ -24,6 +24,9 @@ class Motors_Export_Details_VC: FormViewController {
 
     // Params
     var categoryId = 0
+    var subCategoryId = 0
+    var typeId = 0
+    var subtypeId = 0
     
     // Requests
     func request_regionalSpec() {
@@ -152,10 +155,10 @@ class Motors_Export_Details_VC: FormViewController {
                 Lng: String(describing: locationLongitude ?? 0.0),
                 Location: getPickerValue(id: .location),
                 AdId: "0",
-                CategoryId: "???????",
+                CategoryId: "\(FormViewController.motorInitialSubmission?.categoryId ?? "")",
                 MainPhoto: self.prepareImagesDataAndReturnMain(),
                 Color: getPickerValue(id: .color),
-                Kilometers: "????????",
+                Kilometers: getFormValue(id: .milage),
                 Doors: getPickerValue(id: .numberOfDoors),
                 Warranty: getPickerValue(id: .warranty),
                 Transmission: getPickerValue(id: .transmission),
@@ -167,7 +170,7 @@ class Motors_Export_Details_VC: FormViewController {
                 Condition: getPickerValue(id: .condition),
                 SellerType: getPickerValue(id: .sellerType),
                 FinalDriveSystem: getPickerValue(id: .finalDriveSystem),
-                MechanicalCondition: getPickerValue(id: .condition),
+                MechanicalCondition: getPickerValue(id: .mechanicalCondition),
                 Price: getFormValue(id: .price),
                 Capacity: getPickerValue(id: .capacity),
                 EngineSize: getPickerValue(id: .engineSize),

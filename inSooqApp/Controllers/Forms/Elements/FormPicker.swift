@@ -119,6 +119,7 @@ enum PickerID {
     case machineryModel
     case capacity
     case condition
+    case mechanicalCondition
     case sellerType
     case machinery
     case partType
