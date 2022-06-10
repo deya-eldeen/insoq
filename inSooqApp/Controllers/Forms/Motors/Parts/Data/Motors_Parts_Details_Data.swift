@@ -40,6 +40,7 @@ extension Motors_Parts_Details_VC {
         specificationsLabel.text = "Specifications"
         
         let partName = FormField()
+        partName.id = .partName
         partName.placeholder = "Name of part"
         
         //

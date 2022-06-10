@@ -114,7 +114,7 @@ class Motors_Parts_Details_VC: FormViewController {
                 Length: getPickerValue(id: .length),
                 Wheels: getPickerValue(id: .wheels),
                 SteeringSide: getPickerValue(id: .steeringSide),
-                NameOfPart: getPickerValue(id: .partName),
+                NameOfPart: getFormValue(id: .partName),
                 PhoneNumber: getFormValue(id: .phoneNumber)
             )
             

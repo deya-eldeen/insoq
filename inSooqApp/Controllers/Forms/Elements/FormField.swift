@@ -54,6 +54,7 @@ class FormField: UITextField, FormElement {
 }
 
 enum FieldID {
+    case partName
     case title
     case year
     case price
