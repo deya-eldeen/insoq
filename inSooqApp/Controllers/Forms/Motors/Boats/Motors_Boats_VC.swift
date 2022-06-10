@@ -73,7 +73,11 @@ class Motors_Boats_VC: FormViewController {
             switch picker.id {
             case .boatCategory:
                 self.subCategoryId = item.id ?? 0
+                if(item.id == 0) { self.otherSubCategory = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
                 self.requestSubtypes()
+            case .boatSubcategory:
+                self.subtypeId = item.id ?? 0
+                if(item.id == 0) { self.otherSubType = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
             default: break
             }
             

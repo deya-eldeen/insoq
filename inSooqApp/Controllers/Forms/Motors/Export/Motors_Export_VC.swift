@@ -90,11 +90,15 @@ class Motors_Export_VC: FormViewController {
             switch picker.id {
             case .carBrand:
                 self.selectedMakerID = item.id ?? 0
+                if(item.id == 0) { self.otherMaker = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
                 self.requestModels()
             case .model:
                 self.selectedModelNameEn = item.en_Text ?? ""
                 self.selectedModelNameAr = item.ar_Text ?? ""
+                if(item.id == 0) { self.otherModel = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
                 self.requestTrims()
+            case .trim:
+                if(item.id == 0) { self.otherTrim = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
             default: break
             }
             
