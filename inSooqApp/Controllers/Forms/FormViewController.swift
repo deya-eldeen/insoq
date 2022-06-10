@@ -379,6 +379,41 @@ class FormViewController: UIViewController {
         
     }
     
+    func getFormValueForPreview(id: FieldID) -> String? {
+        
+        for element in formElements {
+            if type(of: element) == FormField.self {
+                let field = (element as! FormField)
+                if (field.id == id) {
+                    if let fieldText = field.text {
+                        if (fieldText.isEmpty) { return .none }
+                    }
+                    return field.text
+                }
+            }
+        }
+        
+        return .none
+    }
+    
+    func getPickerValueForPreview(id: PickerID) -> String? {
+        
+        for element in formElements {
+            if type(of: element) == FormPicker.self {
+                let picker = (element as! FormPicker)
+                if (picker.id == id) {
+                    if let fieldText = picker.textfield.text {
+                        if (fieldText.isEmpty) { return .none }
+                    }
+                    return picker.textfield.text
+                }
+            }
+        }
+        
+        return .none
+    }
+    
+    
     func prepareImagesDataAndReturnMain() -> String {
         
         for element in formElements {
@@ -524,11 +559,70 @@ class FormViewController: UIViewController {
             }
             
             if type(of: element) == FormPreviewView.self {
-                (element as! FormPreviewView).adTitleLabel.text = (FormViewController.adTitle == "") ? ("Ad Title") : (FormViewController.adTitle)
-                (element as! FormPreviewView).adLocationLabel.text = (FormViewController.adLocation == "") ? ("Location") : FormViewController.adLocation
+                let previewView = (element as! FormPreviewView)
+                previewView.adTitleLabel.text = (FormViewController.adTitle == "") ? ("Ad Title") : (FormViewController.adTitle)
+                previewView.adLocationLabel.text = (FormViewController.adLocation == "") ? ("Location") : FormViewController.adLocation
                 
-                let adImage = (element as! FormPreviewView).adImage.image
-                let fpp = (element as! FormPreviewView)
+                switch FormViewController.adMainType {
+                
+                case .motor:
+                    previewView.renderIcons (
+                        iconNames: ["kilometer_list","car_year"],
+                        values: [
+                            getFormValueForPreview(id: .milage) ?? "Milage",
+                            getFormValueForPreview(id: .year) ?? "Year"
+                        ], price: getFormValueForPreview(id: .price) ?? "0.0"
+                    )
+                case .job:
+                    previewView.renderIcons (
+                        iconNames: ["work_experience_img","commitment_img"],
+                        values: [
+                            getPickerValueForPreview(id: .jobType) ?? "Employment Type",
+                            getPickerValueForPreview(id: .workExperience) ?? "Work Experience"
+                        ], price: getFormValueForPreview(id: .price) ?? "0.0"
+                    )
+                case .numbers:
+                    print("N/A")
+                case .electronics:
+                    previewView.renderIcons (
+                        iconNames: ["color","age_list",""],
+                        values: [
+                            getPickerValueForPreview(id: .color) ?? "Color",
+                            getPickerValueForPreview(id: .age) ?? "Age",
+                            getPickerValueForPreview(id: .storage) ?? "Storage"
+                        ], price: getFormValueForPreview(id: .price) ?? "0.0"
+                    )
+                case .classified:
+                    previewView.renderIcons (
+                        iconNames: ["age_list","condition_2"],
+                        values: [
+                            getPickerValueForPreview(id: .age) ?? "Age",
+                            getPickerValueForPreview(id: .condition) ?? "Condition",
+                        ], price: getFormValueForPreview(id: .price) ?? "0.0"
+                    )
+                case .services:
+                    print("z")
+                    previewView.renderIcons (
+                        iconNames: ["age_list","condition_2"],
+                        values: [
+                            "N/A",
+                            getPickerValueForPreview(id: .category) ?? "Service Type",
+                        ], price: getFormValueForPreview(id: .price) ?? "0.0"
+                    )
+                case .business:
+                    previewView.renderIcons (
+                        iconNames: [""],
+                        values: [
+                            getPickerValueForPreview(id: .category) ?? "Category",
+                        ], price: getFormValueForPreview(id: .price) ?? "0.0"
+                    )
+                    print("WIP")
+                case .none:
+                    print("WIP")
+                }
+                
+                
+                let adImage = previewView.adImage.image
 
                 if(adImage == nil) {
                     
@@ -542,34 +636,36 @@ class FormViewController: UIViewController {
                     switch FormViewController.adMainType {
                         
                     case .motor:
-                        fpp.adImage.image = preview_motors
+                        previewView.adImage.image = preview_motors
                     case .job:
-                        fpp.adImage.image = preview_jobs
+                        previewView.adImage.image = preview_jobs
                     case .numbers:
-                        fpp.adImage.image = preview_jobs
+                        previewView.adImage.image = preview_jobs
                     case .electronics:
-                        fpp.adImage.image = preview_electronics
+                        previewView.adImage.image = preview_electronics
                     case .classified:
-                        fpp.adImage.image = preview_classified
+                        previewView.adImage.image = preview_classified
                     case .services:
-                        fpp.adImage.image = preview_services
+                        previewView.adImage.image = preview_services
                     case .business:
-                        fpp.adImage.image = preview_business
+                        previewView.adImage.image = preview_business
                     case .none:
-                        fpp.adImage.image = nil
+                        previewView.adImage.image = nil
 
                     }
                     
                 } else {
                     print("🟦_image",image)
-                    fpp.adImage.image = image
+                    if let image = image {
+                        previewView.adImage.image = image
+                    }
+                    
                 }
 
             }
             
             if type(of: element) == SimView.self {
                 (element as! SimView).numberLabel.text = self.getFormValue(id: .simNumber)
-                
             }
             
         }

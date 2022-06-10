@@ -20,6 +20,10 @@ class FormPreviewView: UIView, FormElement {
     @IBOutlet weak var attribute2ValueLabel: UILabel!
     @IBOutlet weak var attribute3ValueLabel: UILabel!
 
+    @IBOutlet weak var attributeStack1: UIStackView!
+    @IBOutlet weak var attributeStack2: UIStackView!
+    @IBOutlet weak var attributeStack3: UIStackView!
+    
     @IBOutlet weak var priceLabel: UILabel!
 
     @IBOutlet weak var adImage: UIImageView!
@@ -34,6 +38,29 @@ class FormPreviewView: UIView, FormElement {
     
     func commonInit() {
         self.backgroundColor = .darkGray
+    }
+    
+    func renderIcons(iconNames: [String], values: [String], price: String = "") {
+        
+        guard iconNames.count <= 3 else { return }
+        guard values.count <= 3 else { return }
+
+        let zippedDetails = zip(iconNames, values)
+        
+        let keyImageViews = [attribute1KeyIcon, attribute2KeyIcon, attribute3KeyIcon]
+        let attributedLabels = [attribute1ValueLabel, attribute2ValueLabel, attribute3ValueLabel]
+
+        for (index,pair) in zippedDetails.enumerated() {
+            keyImageViews[index]?.image = UIImage(named: pair.0)
+            attributedLabels[index]?.text = pair.1
+            
+            keyImageViews[index]?.isHidden = false
+            attributedLabels[index]?.isHidden = false
+            
+        }
+        
+        priceLabel.text = "AED " + price
+        
     }
     
     func render() -> UIView {
