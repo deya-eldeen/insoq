@@ -90,7 +90,10 @@ extension PricesViewController {
             if let initialParams = initialParams {
                 print("initialParams",initialParams)
                 ApiRequests.submitMotor(params: initialParams) { response in
+                    print("response",response)
+                    FormViewController.motorFullSubmission?.AdId = "\(response.value?.id ?? 0)"
                     let fullParams = try? FormViewController.motorFullSubmission?.asDictionary()
+                    print("fullParams",fullParams)
                     let url = APIUrls.submitMotorFull()
                     if let fullParams = fullParams {
                         ApiRequests.submitForm(url: url, files: [], images: imagesWithNames, params: fullParams) { formResponse in

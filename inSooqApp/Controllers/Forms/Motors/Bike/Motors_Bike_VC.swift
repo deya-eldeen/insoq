@@ -43,7 +43,10 @@ class Motors_Bike_VC: FormViewController {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Bike_Details_VC")
         self.categoryId = FormViewController.selectedCat.rawValue
-
+        self.typeId = FormViewController.selectedTypeID
+        
+        print("self.categoryId",self.categoryId)
+        print("self.typeId",self.typeId)
         self.requestCategories()
         self.requestSubcategories()
     }

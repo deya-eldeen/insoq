@@ -70,8 +70,12 @@ extension Motors_Machinery_Details_VC {
         sellerTypePicker.id = .sellerType
         
         let machineryPicker = FormPicker()
-        machineryPicker.setPlaceHolder("Please Select Machinery")
-        machineryPicker.id = .machinery
+        machineryPicker.setPlaceHolder("Please Select Mechanical Condition")
+        machineryPicker.id = .mechanicalCondition
+        
+        let capacityPicker = FormPicker()
+        capacityPicker.setPlaceHolder("Please Select Capacity")
+        capacityPicker.id = .capacity
         
         let locationPicker = FormPicker()
         locationPicker.setPlaceHolder("Location")
@@ -107,6 +111,7 @@ extension Motors_Machinery_Details_VC {
             sellerTypePicker,
             machineryPicker,
 
+            capacityPicker,
             locationPicker,
             locationView,
             acceptView,

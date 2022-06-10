@@ -42,7 +42,10 @@ class Motors_Parts_Details_VC: FormViewController {
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
         self.leadsToPrices = true
         self.categoryId = FormViewController.selectedCat.rawValue
+        self.typeId = FormViewController.selectedTypeID
         
+        print("self.categoryId",self.categoryId)
+        print("self.typeId",self.typeId)
         // Calls
         self.requestAge()
         self.requestCondition()

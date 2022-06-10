@@ -202,7 +202,7 @@
 		E3D2FEBB2801B61300EECA95 /* MotorMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2FEBA2801B61300EECA95 /* MotorMaker.swift */; };
 		E3D2FEBD2801B66E00EECA95 /* MotorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2FEBC2801B66E00EECA95 /* MotorModel.swift */; };
 		E3D2FEBF2801B6A500EECA95 /* MotorTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2FEBE2801B6A500EECA95 /* MotorTrim.swift */; };
-		E3D2FEC12801B7C200EECA95 /* ApiRequests+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2FEC02801B7C200EECA95 /* ApiRequests+Models.swift */; };
+		E3D2FEC12801B7C200EECA95 /* ApiRequests+Motors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2FEC02801B7C200EECA95 /* ApiRequests+Motors.swift */; };
 		E3D9AFAA27F0E079005D68B9 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */; };
 		E3D9AFAC27F0E4C7005D68B9 /* ApiRequests+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */; };
 		E3DB7DDE2835706B0061D213 /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB7DDC2835706B0061D213 /* SpacerView.swift */; };
@@ -762,7 +762,7 @@
 		E3D2FEBA2801B61300EECA95 /* MotorMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorMaker.swift; sourceTree = "<group>"; };
 		E3D2FEBC2801B66E00EECA95 /* MotorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorModel.swift; sourceTree = "<group>"; };
 		E3D2FEBE2801B6A500EECA95 /* MotorTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorTrim.swift; sourceTree = "<group>"; };
-		E3D2FEC02801B7C200EECA95 /* ApiRequests+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Models.swift"; sourceTree = "<group>"; };
+		E3D2FEC02801B7C200EECA95 /* ApiRequests+Motors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Motors.swift"; sourceTree = "<group>"; };
 		E3D9AFA927F0E079005D68B9 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequests+Notification.swift"; sourceTree = "<group>"; };
 		E3DB7DDC2835706B0061D213 /* SpacerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
@@ -2061,7 +2061,7 @@
 			isa = PBXGroup;
 			children = (
 				E3FD20F927EA508600FDA9DD /* ApiRequests.swift */,
-				E3D2FEC02801B7C200EECA95 /* ApiRequests+Models.swift */,
+				E3D2FEC02801B7C200EECA95 /* ApiRequests+Motors.swift */,
 				E3FD210227EA508600FDA9DD /* ApiRequests+Auth.swift */,
 				E39DC588280F126A00BAE09D /* ApiRequests+Form_Submission.swift */,
 				E3D9AFAB27F0E4C7005D68B9 /* ApiRequests+Notification.swift */,
@@ -3445,7 +3445,7 @@
 				E3DB7DDE2835706B0061D213 /* SpacerView.swift in Sources */,
 				2862BAFF277E5761009F4B7E /* Main.swift in Sources */,
 				F14A2698261EF5C30041FBB4 /* WantedJobsCollectionViewCell.swift in Sources */,
-				E3D2FEC12801B7C200EECA95 /* ApiRequests+Models.swift in Sources */,
+				E3D2FEC12801B7C200EECA95 /* ApiRequests+Motors.swift in Sources */,
 				F175E8E125E66A4D00873F20 /* DesignFonts.swift in Sources */,
 				E3A8110428042E51003A2CC0 /* Motors_Machinery_Data.swift in Sources */,
 				F103490625E795A500785B07 /* PlatesFillter.swift in Sources */,

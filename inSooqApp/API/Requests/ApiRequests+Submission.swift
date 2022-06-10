@@ -12,7 +12,7 @@ extension ApiRequests {
 
     // Motor Initial (NORMAL)
     static func submitMotor(params: [String:Any], completion:@escaping (NoDataCompletionHandler) -> Void) {
-        NetworkService().submitForm(url: APIUrls.submitMotorInitial(), params: params) { (response: NoDataCompletionHandler) in completion(response) }
+        NetworkService().simpleRequest(url: APIUrls.submitMotorInitial(), method: .post, params: params) { (response: NoDataCompletionHandler) in completion(response) }
     }
     
     // Motor full (FORM)

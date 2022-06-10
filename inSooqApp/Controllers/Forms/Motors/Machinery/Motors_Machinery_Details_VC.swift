@@ -16,8 +16,9 @@ class Motors_Machinery_Details_VC: FormViewController {
     var data_horsePower = [ListItem]()
     var data_condition = [ListItem]()
     var data_sellerType = [ListItem]()
-    var data_machinery = [ListItem]()
+    var data_mechanical_machinery = [ListItem]()
     var data_location = [LocationModel]()
+    var data_capacity = [ListItem]()
     
     // Params
     var categoryId = 0
@@ -51,10 +52,15 @@ class Motors_Machinery_Details_VC: FormViewController {
             self.data_sellerType = response.value ?? []
         }
     }
-    func request_machinery() {
-//        ApiRequests.noOfCylinders { response in
-//            self.data_cylinders = response.value ?? []
-//        }
+    func request_mechanical_condition() {
+        ApiRequests.motorMechanicalConditions { response in
+            self.data_mechanical_machinery = response.value ?? []
+        }
+    }
+    func request_capacity() {
+        ApiRequests.capacities { response in
+            self.data_capacity = response.value ?? []
+        }
     }
     func request_location() {
         ApiRequests.locations { response in
@@ -67,7 +73,10 @@ class Motors_Machinery_Details_VC: FormViewController {
         self.nextViewController = ViewControllersAssembly.misc.makeViewController(with: "PricesViewController")
         self.leadsToPrices = true
         self.categoryId = FormViewController.selectedCat.rawValue
+        self.typeId = FormViewController.selectedTypeID
         
+        print("self.categoryId",self.categoryId)
+        print("self.typeId",self.typeId)
         // Calls
 //        self.request_warranty()
         self.request_fuelType()
@@ -75,8 +84,9 @@ class Motors_Machinery_Details_VC: FormViewController {
         self.request_horsePower()
         self.request_condition()
         self.request_sellerType()
-        self.request_machinery()
+        self.request_mechanical_condition()
         self.request_location()
+        self.request_capacity()
     }
     
     override func feedStackView() {
@@ -99,18 +109,19 @@ class Motors_Machinery_Details_VC: FormViewController {
             customeListView.setData(vc:self,list: self.data_horsePower)
         case .condition:
             customeListView.setData(vc:self,list: self.data_condition)
+        case .mechanicalCondition:
+            customeListView.setData(vc:self,list: self.data_mechanical_machinery)
         case .sellerType:
             customeListView.setData(vc:self,list: self.data_sellerType)
-        case .machinery:
-            customeListView.setData(vc:self,list: self.data_machinery)
         case .location:
             customeListView.setData(vc:self,list: self.data_location)
+        case .capacity:
+            customeListView.setData(vc:self,list: self.data_capacity)
         default: break
         }
         
         customeListView.didSelectListItem = { (item, pickerID) in
             print("DIDSELECT",item.id ?? 0)
-
             self.updateTextForPicker(with: pickerID, value: item)
         }
         

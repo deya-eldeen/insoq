@@ -54,6 +54,12 @@ class Motors_Used_VC: FormViewController {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Used_Details_VC")
         
+        self.categoryId = FormViewController.selectedCat.rawValue
+        self.typeId = FormViewController.selectedTypeID
+        
+        print("self.categoryId",self.categoryId)
+        print("self.typeId",self.typeId)
+        
         // Calls
         self.requestTrims()
         self.requestMakers()

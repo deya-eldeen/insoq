@@ -38,12 +38,20 @@ class Motors_Machinery_VC: FormViewController {
             self.dataSubtypes = response.value ?? []
         }
     }
+    func requestMachinery() {
+        ApiRequests.subtypes(subCategoryId: subCategoryId) { response in
+            self.dataSubtypes = response.value ?? []
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Machinery_Details_VC")
         self.categoryId = FormViewController.selectedCat.rawValue
-
+        self.typeId = FormViewController.selectedTypeID
+        
+        print("self.categoryId",self.categoryId)
+        print("self.typeId",self.typeId)
         // Calls
         self.requestSubcategories()
         self.requestSubtypes()

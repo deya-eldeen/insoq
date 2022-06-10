@@ -43,7 +43,10 @@ class Motors_Boats_VC: FormViewController {
         super.viewDidLoad()
         self.nextViewController = ViewControllersAssembly.forms.makeViewController(with: "Motors_Boats_Details_VC") 
         self.categoryId = FormViewController.selectedCat.rawValue
+        self.typeId = FormViewController.selectedTypeID
         
+        print("self.categoryId",self.categoryId)
+        print("self.typeId",self.typeId)
         // Calls
         self.requestSubcategories()
         self.requestSubtypes()
