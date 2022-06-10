@@ -30,18 +30,28 @@ class PricesViewController: UIViewController {
     
     var images = [UIImage]()
     var imagesNames = [String]()
-
+    
     func navigate() {
     
         guard let package = selectedPackage else { return }
         let price = package.price ?? 0.0
-
+        
+        print("price_________________",price)
+        
         if (price > 0.0) {
             let target = ViewControllersAssembly.misc.makeViewController(with: "PaymentViewController") as! PaymentViewController
             target.paymentNavigationSource = self.paymentNavigationSource
             self.present(target, animated: true)
         } else {
             
+            let alertVC = UIAlertController(title: "Ad Posted Successfuly", message: "", preferredStyle: .alert)
+            alertVC.addAction(.init(title: "OK", style: .default, handler: { _ in
+                newHomeRoot(NavId: "HomeViewController")
+            }))
+
+            self.present(alertVC, animated: true)
+            
+            // reset to home !
         }
 
     }
@@ -54,14 +64,18 @@ class PricesViewController: UIViewController {
         
         self.categoryId = self.adType.rawValue
         
-        ApiRequests.packages(CategoryId: self.categoryId) { response in
+        ApiRequests.packages(CategoryId: self.categoryId) { [weak self] response in
+            guard let self = self else { return }
+
             self.packages = response.value ?? []
             if (self.isUpgrading == true) {
                 self.packages.removeAll(where: { $0.price == 0.0 } )
             }
             self.tableView.reloadData()
             if(self.packages.count > 0) {
+                
                 self.selectCell(indexPath: IndexPath.init(row: 0, section: 0))
+                self.selectedPackage = self.packages[0]
             }
         }
         
@@ -203,21 +217,24 @@ extension PricesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        self.selectedPackage = self.packages[indexPath.row]
-
-        switch selectedPackage?.price {
+        let targetPackage = self.packages[indexPath.row]
+        
+        switch targetPackage.price {
         case 0.0:
             let cell = self.tableView.dequeueReusableCell(withIdentifier: FreePackageCell.id) as! FreePackageCell
             return cell
         default:
             let cell = self.tableView.dequeueReusableCell(withIdentifier: PaidPackageCell.id) as! PaidPackageCell
-            cell.renderCell(name: selectedPackage?.details_En ?? "", price: selectedPackage?.price ?? 0.0, imageUrl: selectedPackage?.packImage ?? "")
+            cell.renderCell(name: targetPackage.details_En ?? "", price: targetPackage.price ?? 0.0, imageUrl: targetPackage.packImage ?? "")
             return cell
         }
 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.selectedPackage = self.packages[indexPath.row]
+        print("selectedPackage",selectedPackage)
         
         self.selectCell(indexPath: indexPath)
         

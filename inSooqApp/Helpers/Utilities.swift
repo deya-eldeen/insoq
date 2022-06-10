@@ -171,13 +171,19 @@ public func removeViewDataFromMemory(controller : UIViewController, vcToClear:An
     debugPrint("vcContainer",vcContainer)
 
 }
-public func newRoot(NavId:String)
-{
 
+public func newRoot(NavId:String) {
     let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     let tabController = mainStoryboard.instantiateViewController(identifier: NavId)
     UIApplication.shared.keyWindow?.rootViewController = tabController
 }
+
+public func newHomeRoot(NavId:String) {
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let tabController = mainStoryboard.instantiateViewController(identifier: NavId)
+    UIApplication.shared.keyWindow?.rootViewController = tabController
+}
+
 
 public func pushtoViewController(viewController: UIViewController,storyBoardId: String,animate:Bool){
     let mainStoryboard = UIStoryboard(name: sbFromVC(vcID: storyBoardId), bundle: nil)

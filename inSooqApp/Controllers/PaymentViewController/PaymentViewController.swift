@@ -23,6 +23,10 @@ class PaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        if #available(iOS 13.0, *) {
+            self.isModalInPresentation = true
+        }
+        
     }
     
     var myAdsVC: MyAdsViewController?
@@ -30,22 +34,29 @@ class PaymentViewController: UIViewController {
 
     func dismissThenPopToRoot() {
     
-        switch self.paymentNavigationSource {
-        case .myAds:
-            self.dismiss(animated: true) {
-                self.myAdsVC?.dismiss(animated: true) {
-                    
-                }
-                //self.previousVC?.navigationController?.popToRootViewController(animated: true)
-            }
-        case .posting:
-            self.dismiss(animated: true) {
-                self.pricesVC?.dismiss(animated: true)
-                //self.previousVC?.navigationController?.popToRootViewController(animated: true)
-            }
-        case .none:
-            break
-        }
+        let alertVC = UIAlertController(title: "Ad Posted Successfuly", message: "", preferredStyle: .alert)
+        alertVC.addAction(.init(title: "OK", style: .default, handler: { _ in
+            newHomeRoot(NavId: "HomeViewController")
+        }))
+
+        self.present(alertVC, animated: true)
+        
+//        switch self.paymentNavigationSource {
+//        case .myAds:
+//            self.dismiss(animated: true) {
+//                self.myAdsVC?.dismiss(animated: true) {
+//
+//                }
+//                //self.previousVC?.navigationController?.popToRootViewController(animated: true)
+//            }
+//        case .posting:
+//            self.dismiss(animated: true) {
+//                self.pricesVC?.dismiss(animated: true)
+//                //self.previousVC?.navigationController?.popToRootViewController(animated: true)
+//            }
+//        case .none:
+//            break
+//        }
 
     }
     
