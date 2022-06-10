@@ -28,10 +28,8 @@ class Motors_Export_VC: FormViewController {
     // Other Params
     var otherMaker = ""
     var otherTrim = ""
-    var otherPartName = ""
     var otherModel = ""
-    var otherSubCategory = ""
-    var otherSubType = ""
+
     
     // Requests
     func requestMakers() {
@@ -116,15 +114,15 @@ class Motors_Export_VC: FormViewController {
                 model: getPickerValue(id: .model),
                 otherModel: self.otherModel,
                 subCategoryId: "\(self.subCategoryId)",
-                otherSubCategory: self.otherSubCategory,
+                otherSubCategory: "",//self.otherSubCategory,
                 subTypeId: "\(self.subtypeId)",
-                otherSubType: self.otherSubType,
+                otherSubType: "",//self.otherSubType,
                 year: self.getFormValue(id: .year),
                 title: self.getFormValue(id: .title),
                 trim: getPickerValue(id: .trim),
                 otherTrim: self.otherTrim,
                 partName:  self.getPickerValue(id: .partName),
-                otherPartName: self.otherPartName
+                otherPartName: ""//self.otherPartName
             )
             
             print("FormViewController.motorInitialSubmission",FormViewController.motorInitialSubmission)

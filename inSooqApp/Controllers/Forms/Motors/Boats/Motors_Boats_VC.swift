@@ -20,10 +20,6 @@ class Motors_Boats_VC: FormViewController {
     var subtypeId = 0
     
     // Other Params
-    var otherMaker = ""
-    var otherTrim = ""
-    var otherPartName = ""
-    var otherModel = ""
     var otherSubCategory = ""
     var otherSubType = ""
     
@@ -93,9 +89,9 @@ class Motors_Boats_VC: FormViewController {
             FormViewController.motorInitialSubmission = MotorInitialSubmission(
                 categoryId: "\(self.categoryId)",
                 maker: getPickerValue(id: .carBrand),
-                otherMaker: self.otherMaker,
+                otherMaker: "",//self.otherMaker,
                 model: getPickerValue(id: .model),
-                otherModel: self.otherModel,
+                otherModel: "",//self.otherModel,
                 subCategoryId: "\(self.subCategoryId)",
                 otherSubCategory: self.otherSubCategory,
                 subTypeId: "\(self.subtypeId)",
@@ -103,9 +99,9 @@ class Motors_Boats_VC: FormViewController {
                 year: self.getFormValue(id: .year),
                 title: self.getFormValue(id: .title),
                 trim: getPickerValue(id: .trim),
-                otherTrim: self.otherTrim,
+                otherTrim: "",//self.otherTrim,
                 partName:  self.getPickerValue(id: .partName),
-                otherPartName: self.otherPartName
+                otherPartName: ""//self.otherPartName
             )
             
             print("FormViewController.motorInitialSubmission",FormViewController.motorInitialSubmission)
