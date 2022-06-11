@@ -495,7 +495,9 @@ extension String {
     func isValidPhone() -> Bool {
         let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-        return phoneTest.evaluate(with: self)
+        let match = phoneTest.evaluate(with: self)
+        let charCount = 10 // "0511122233"
+        return (match && self.count == charCount)
     }
     
 }

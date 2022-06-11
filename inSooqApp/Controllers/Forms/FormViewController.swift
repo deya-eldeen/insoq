@@ -56,7 +56,7 @@ class FormViewController: UIViewController {
     var formDarkGray = UIColor.darkGray
     var formLightGray = UIColor.lightGray
 
-    var offset: CGFloat = 8
+    var offset: CGFloat = 20
     var formElements = [UIView]()
     
     var images = [UIImage]()
@@ -75,8 +75,27 @@ class FormViewController: UIViewController {
     
     var leadsToPrices = false
     
+    lazy var titleStackView: UIStackView = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.text = "List an item"
+        titleLabel.font = titleLabel.font.withSize(14)
+
+        let subtitleLabel = UILabel()
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.text = "\( FormViewController.adMainType )"
+        subtitleLabel.textColor = .gray
+        subtitleLabel.font = subtitleLabel.font.withSize(12)
+        
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     static var adMainType = AdMainType.none
     
+    static var adMainTypeForTitle = AdMainType.none
+
     // document picker
     var documentPicker: UIDocumentPickerViewController? //(forOpeningContentTypes: [UTType.item], asCopy: false)
     var documentName: String?
@@ -132,6 +151,7 @@ class FormViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         renderLocation()
+        navigationItem.titleView = titleStackView
     }
     
     override func viewDidLoad() {
@@ -152,6 +172,18 @@ class FormViewController: UIViewController {
         documentPicker?.delegate = self
         documentPicker?.modalPresentationStyle = .formSheet
         
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        if view.traitCollection.horizontalSizeClass == .compact {
+            titleStackView.axis = .vertical
+            titleStackView.spacing = UIStackView.spacingUseDefault
+        } else {
+            titleStackView.axis = .horizontal
+            titleStackView.spacing = 20.0
+        }
     }
     
     @objc func didTapPickDocument() {
@@ -464,7 +496,11 @@ class FormViewController: UIViewController {
                 
                 if (field.id == .year) {
                     let valueInt = Int(field.text ?? "") ?? 0
-                    if (valueInt < 1900) {
+                    
+                    let minValue = 1900
+                    let maxValue = Calendar.current.component(.year, from: Date()) + 1
+                    
+                    if (valueInt < minValue || valueInt > maxValue) {
                         return (false,.incorrectYear)
                     }
                 }
@@ -601,7 +637,6 @@ class FormViewController: UIViewController {
                         ], price: getFormValueForPreview(id: .price) ?? "0.0"
                     )
                 case .services:
-                    print("z")
                     previewView.renderIcons (
                         iconNames: ["age_list","condition_2"],
                         values: [
@@ -738,6 +773,17 @@ extension FormViewController: UITextFieldDelegate {
                 }
             }
             
+            if (formField.id == .year) {
+                let valueInt = Int(textField.text ?? "") ?? 0
+                
+                let maxValue = Calendar.current.component(.year, from: Date()) + 1
+                
+                if (valueInt > maxValue) {
+                    formField.text = "\(maxValue)"
+                    return false
+                }
+            }
+            
             if (formField.id == .milage) {
                 let valueInt = Int(textField.text ?? "") ?? 0
                 if (valueInt > 99_999) {
@@ -757,13 +803,17 @@ extension FormViewController: UITextFieldDelegate {
         }
         
         
-//        if let formField = textField as? FormField {
-//            if (formField.id == .phoneNumber) {
-//                if ((textField.text ?? "").isNumeric == false) {
-//                    return false
-//                }
-//            }
-//        }
+        if let formField = textField as? FormField {
+            if (formField.id == .phoneNumber) {
+                
+                if ((textField.text ?? "").count > 10) {
+                    formField.text = String((textField.text ?? "").prefix(10-1))
+
+                    return false
+                }
+                
+            }
+        }
         
         return true
 

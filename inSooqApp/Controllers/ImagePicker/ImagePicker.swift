@@ -89,7 +89,8 @@ extension ImagePicker: UIImagePickerControllerDelegate {
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
 
         let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? NSURL
-        let imageName = imageUrl?.lastPathComponent ?? ""
+        let imageName = imageUrl?.lastPathComponent ?? "\(Int(NSDate().timeIntervalSince1970)).jpeg"
+        print("imageName",imageName)
         let image = info[.editedImage] as? UIImage
         self.pickerController(picker, didSelect: image, name: imageName)
         

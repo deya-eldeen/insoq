@@ -71,7 +71,7 @@
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="P8y-xD-bxY"/>
                                                             </connections>
@@ -113,7 +113,7 @@
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="gis-3K-fhy"/>
                                                             </connections>
@@ -155,7 +155,7 @@
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="a6Y-cd-3Qq"/>
                                                             </connections>
@@ -210,12 +210,12 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="89.5" height="80"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         </imageView>
-                                                        <button opaque="NO" alpha="0.019999999552965164" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcn-Qk-o70" userLabel="S4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89.5" height="80"/>
+                                                        <button opaque="NO" alpha="0.02" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcn-Qk-o70" userLabel="S4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="80"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="wfv-TY-WhA"/>
                                                             </connections>
@@ -252,12 +252,12 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="89" height="80"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         </imageView>
-                                                        <button opaque="NO" alpha="0.019999999552965164" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIr-4D-ab0" userLabel="S5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89" height="80"/>
+                                                        <button opaque="NO" alpha="0.02" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIr-4D-ab0" userLabel="S5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="80"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="ANp-07-SYk"/>
                                                             </connections>
@@ -294,12 +294,12 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="89.5" height="80"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         </imageView>
-                                                        <button opaque="NO" alpha="0.019999999552965164" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJE-6Z-5Mk" userLabel="S6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89.5" height="80"/>
+                                                        <button opaque="NO" alpha="0.02" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJE-6Z-5Mk" userLabel="S6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="80"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="jXF-Vs-oqg"/>
                                                             </connections>
@@ -354,13 +354,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="89.5" height="80"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         </imageView>
-                                                        <button opaque="NO" alpha="0.019999999552965164" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-Dc-PPL" userLabel="S7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89.5" height="80"/>
+                                                        <button opaque="NO" alpha="0.02" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-Dc-PPL" userLabel="S7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="uo1-9U-IHk"/>
                                                             </connections>
@@ -393,13 +393,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="89" height="80"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         </imageView>
-                                                        <button opaque="NO" alpha="0.019999999552965164" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuz-HJ-FS5" userLabel="S8">
-                                                            <rect key="frame" x="-0.5" y="0.0" width="89.5" height="80"/>
+                                                        <button opaque="NO" alpha="0.02" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuz-HJ-FS5" userLabel="S8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="1dU-lG-SqZ"/>
                                                             </connections>
@@ -432,13 +432,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="89.5" height="80"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         </imageView>
-                                                        <button opaque="NO" alpha="0.019999999552965164" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-xs-OVi" userLabel="S9">
-                                                            <rect key="frame" x="-0.5" y="0.0" width="89.5" height="80"/>
+                                                        <button opaque="NO" alpha="0.02" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-xs-OVi" userLabel="S9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="systemOrangeColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="round_square" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="round_square_2" title=" "/>
                                                             <connections>
                                                                 <action selector="didTapSelectWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="QiX-tT-fao"/>
                                                             </connections>
@@ -534,7 +534,7 @@
     </objects>
     <resources>
         <image name="main_photo_icon" width="59" height="59"/>
-        <image name="round_square" width="96" height="96"/>
+        <image name="round_square_2" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -193,6 +193,10 @@ struct APIUrls {
         return "DropDowns/GetAllMotorTrimByModel?model=\(modelNameAr)-\(modelNameEn)".fullUrl()
     }
 
+    static func motorTrims(by modelID: Int) -> String {
+        return "DropDowns/GetAllMotorTrimByModelId?modelId=\(modelID)".fullUrl()
+    }
+    
     //mechanical condition
     static func motorMechanicalCondition() -> String {
         return "DropDowns/GetAllMechanicalCondition".fullUrl()

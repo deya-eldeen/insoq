@@ -56,6 +56,7 @@ extension AddViewController: UICollectionViewDelegateFlowLayout,UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddItemCollectionViewCell", for: indexPath) as! CategoriesCollectionViewCell
         cell.setCategoriesData(data: Statics.sellItemModel[indexPath.row])
+        cell.shouldRenderColor = false
         cell.coloredView.addShadowToView()
         return cell
     }

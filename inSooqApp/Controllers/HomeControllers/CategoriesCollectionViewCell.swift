@@ -14,8 +14,10 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryIcon: UIImageView!
     
     var catColor = UIColor.clear
+    var shouldRenderColor = true
     
     func renderColors() {
+        guard (shouldRenderColor == true) else { return }
         self.coloredView.backgroundColor = isSelected ? self.catColor : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         self.categorylabel.textColor = isSelected ? UIColor.black : #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }

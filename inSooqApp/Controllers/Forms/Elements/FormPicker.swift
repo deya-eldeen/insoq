@@ -58,7 +58,7 @@ class FormPicker: UIView, FormElement {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         
         textfield.borderStyle = .none
-        textfield.textColor = .gray
+        textfield.textColor = .darkGray
         textfield.font = .boldSystemFont(ofSize: 14)
         
         textfield.backgroundColor = .white

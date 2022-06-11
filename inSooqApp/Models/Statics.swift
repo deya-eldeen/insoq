@@ -65,6 +65,29 @@ class Statics {
 //    new in business
 //    new in services
     
+    static func colorFrom(adType: AdMainType) -> UIColor {
+        
+        switch adType {
+        case .motor:
+            return #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1)
+        case .job:
+            return #colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1)
+        case .numbers:
+            return  #colorLiteral(red: 0.4470588235, green: 0.3333333333, blue: 0.9450980392, alpha: 1)
+        case .electronics:
+            return #colorLiteral(red: 1, green: 0.8274509804, blue: 0, alpha: 1)
+        case .classified:
+            return #colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1)
+        case .services:
+            return #colorLiteral(red: 0, green: 0.831372549, blue: 0.9764705882, alpha: 1)
+        case .business:
+            return #colorLiteral(red: 0.4274509804, green: 0.831372549, blue: 0, alpha: 1)
+        case .none:
+            return UIColor.gray
+        }
+        
+    }
+    
     static var categoyModelTop:[CategoriesModel] = [
         CategoriesModel(categoryName: "Motors", categoyID: "1", categoyColor: #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1), categoryImage: #imageLiteral(resourceName: "motors_icon"))
         , CategoriesModel(categoryName: "Jobs", categoyID: "3", categoyColor: #colorLiteral(red: 1, green: 0.4, blue: 0.3568627451, alpha: 1), categoryImage: #imageLiteral(resourceName: "jobs_icon"))

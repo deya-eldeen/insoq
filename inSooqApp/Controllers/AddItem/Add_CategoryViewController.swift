@@ -60,31 +60,59 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
         return model.count
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let targetCell = cell as! SubCategoriesTableViewCell
+        targetCell.shouldRenderColor = true
+        let typeID = model[indexPath.row].typeID
+        targetCell.catColor = Statics.colorFrom(adType: AdMainType(rawValue: typeID ?? 0) ?? .none)
+        targetCell.renderColors()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let subCategoryData:SubCategoriesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SubCategoriesTableViewCell", for: indexPath) as! SubCategoriesTableViewCell
         
+//        let typeID = model[indexPath.row].typeID
         subCategoryData.setSubCategoryDataModel(model: model[indexPath.row])
+//        subCategoryData.catColor = Statics.colorFrom(adType: AdMainType(rawValue: typeID ?? 0) ?? .none)
         
         return subCategoryData
     }
     
+//    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
+//
+//        let typeID = model[indexPath.row].typeID
+//
+//        if let cell = tableView.cellForRow(at: indexPath) as? SubCategoriesTableViewCell {
+//            cell.shouldRenderColor = true
+//            cell.catColor = Statics.colorFrom(adType: AdMainType(rawValue: typeID ?? 0) ?? .none)
+//            cell.renderColors()
+//        }
+//        return indexPath
+//    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let cell = tableView.cellForRow(at: indexPath) as? SubCategoriesTableViewCell {
-            cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0.4509803922, alpha: 1)
-            cell.subName.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        }
-           
         let id = model[indexPath.row].id
         let typeID = model[indexPath.row].typeID
         let catName = model[indexPath.row].enName
 
         let adType = AdCategory(rawValue: id ?? 0) ?? .none
         
+        if let cell = tableView.cellForRow(at: indexPath) as? SubCategoriesTableViewCell {
+            cell.isSelected = true
+            //cell.renderColors()
+        }
+        
         print("DID_SELECT_ID_TypeID",id,typeID)
         print("adType",adType)
         print("catName",catName)
 
+        let selectedItems = tableView.indexPathsForSelectedRows ?? []
+        for ip in selectedItems {
+            tableView.deselectRow(at: ip, animated: false) //deselectItem(at: ip, animated: false)
+        }
+        tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none) //selectItem(at: indexPath, animated: false, scrollPosition: .top)
+        
         var targetController: UIViewController?
         
         FormViewController.selectedCat = adType
@@ -153,26 +181,6 @@ extension Add_CategoryViewController: UITableViewDataSource, UITableViewDelegate
             navigationController?.pushViewController(tc, animated: true)
         }
                 
-    }
-    
-    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
-        if let cell = tableView.cellForRow(at: indexPath) as? SubCategoriesTableViewCell {
-            cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            cell.subName.textColor=#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            
-        }
-        return indexPath
-    }
-    
-    func goToBoats(category: Category){
-        let mainStoryboard = UIStoryboard(name: "addStory", bundle: nil)
-        
-        let vc = mainStoryboard.instantiateViewController(identifier: "AddBoatsVC") as! AddBoatsVC
-        vc.modalPresentationStyle = .fullScreen
-        vc.categoryId = Int(modelOfCategory?.categoyID ?? "-1") ?? -1
-        vc.subCategoryId = category.id ?? -1
-        
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

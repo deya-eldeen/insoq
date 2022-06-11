@@ -18,7 +18,8 @@ class Motors_Used_VC: FormViewController {
     var selectedMakerID = 0
     var selectedModelNameEn = ""
     var selectedModelNameAr = ""
-
+    var modelID = 0
+    
     // Params
     var categoryId = 0
     var subCategoryId = 0
@@ -42,7 +43,7 @@ class Motors_Used_VC: FormViewController {
         }
     }
     func requestTrims() {
-        ApiRequests.motorTrims(modelNameAr: selectedModelNameAr, modelNameEn: selectedModelNameEn) { response in
+        ApiRequests.motorTrimsBy(modelID: self.modelID) { response in
             self.dataMotorTrim = response.value ?? []
         }
     }
@@ -93,12 +94,13 @@ class Motors_Used_VC: FormViewController {
                 if(item.id == 0) { self.otherMaker = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
                 self.requestModels()
             case .model:
+                self.modelID = item.id ?? 0
                 self.selectedModelNameEn = item.en_Text ?? ""
                 self.selectedModelNameAr = item.ar_Text ?? ""
                 if(item.id == 0) { self.otherModel = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
+                self.requestTrims()
             case .trim:
                 if(item.id == 0) { self.otherTrim = (item.en_Name ?? item.en_Text ?? item.value ?? "") }
-                self.requestTrims()
             default: break
             }
             

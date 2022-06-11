@@ -15,7 +15,7 @@ class FormAcceptView: UIView, FormElement {
     
     @IBAction func didTapCheck() {
         self.isChecked.toggle()
-        let image = (self.isChecked) ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square")
+        let image = (self.isChecked) ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "square")
         checkButton.setImage(image, for: .normal)
     }
     

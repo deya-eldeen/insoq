@@ -28,7 +28,7 @@
                                     </constraints>
                                     <color key="tintColor" systemColor="systemPurpleColor"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" "/>
+                                    <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title=" "/>
                                     <connections>
                                         <action selector="didTapCheck" destination="iN0-l3-epB" eventType="touchUpInside" id="85K-9o-hAK"/>
                                     </connections>
@@ -67,7 +67,7 @@
         </view>
     </objects>
     <resources>
-        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

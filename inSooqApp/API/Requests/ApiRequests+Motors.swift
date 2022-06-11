@@ -25,6 +25,10 @@ extension ApiRequests {
         NetworkService().simpleRequest(url: APIUrls.motorTrims(modelNameAr: modelNameAr, modelNameEn: modelNameEn), method: .get) { (response: MotorTrimsCompletionHandler) in completion(response) }
     }
     
+    static func motorTrimsBy(modelID: Int, completion:@escaping (MotorTrimsCompletionHandler) -> Void) {
+        NetworkService().simpleRequest(url: APIUrls.motorTrims(by: modelID), method: .get) { (response: MotorTrimsCompletionHandler) in completion(response) }
+    }
+    
     static func motorMechanicalConditions(completion:@escaping (ListableCompletionHandler) -> Void) {
         NetworkService().simpleRequest(url: APIUrls.motorMechanicalCondition(), method: .get) { (response: ListableCompletionHandler) in completion(response) }
     }
